@@ -54,8 +54,24 @@ h2 .ic{font-size:1.4rem}
 .t-fly{background:#e0f2fe;color:#0369a1}
 .t-car{background:#dcfce7;color:#166534}
 .t-hotel{background:#fef3c7;color:#92400e}
+.t-food{background:#ffe4e6;color:#9f1239}
 .t-drive{background:#ede9fe;color:#6d28d9}
 .t-show{background:#fce7f3;color:#be185d}
+.t-work{background:#e2e8f0;color:#334155}
+
+/* Agenda por item (dentro de um dia da timeline) */
+.itin{margin-top:2px}
+.itin-item{display:flex;gap:13px;padding:11px 0;border-bottom:1px solid #f1f5f9}
+.itin-item:first-child{padding-top:4px}
+.itin-item:last-child{border-bottom:0;padding-bottom:2px}
+.itin-time{flex:0 0 46px;font-weight:800;color:var(--coral);font-size:.9rem;font-variant-numeric:tabular-nums;padding-top:2px}
+.itin-body{flex:1;min-width:0}
+.itin-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.itin-h .ttl{font-weight:700;font-size:.95rem;color:var(--ink)}
+.itin-h .tag{margin:0}
+.itin-addr{color:#334155;font-size:.86rem;margin-top:3px}
+.itin-meta{color:var(--muted);font-size:.8rem;margin-top:2px}
+.itin .status{font-size:.62rem;padding:2px 8px;letter-spacing:.8px}
 
 /* Info grid + cards */
 .grid{display:grid;grid-template-columns:1fr;gap:16px}
