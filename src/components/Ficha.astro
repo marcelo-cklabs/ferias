@@ -9,7 +9,8 @@ const { secao, cor } = Astro.props;
   <SecaoTitulo icone={secao.icone} titulo={secao.titulo} />
   {secao.cartoes.map((c: any) => (
     <article class="cartao">
-      {c.titulo && <h3>{c.titulo} {c.subtitulo && <span class="sub">{c.subtitulo}</span>}</h3>}
+      {/* titulo e subtitulo sao opcionais INDEPENDENTES no schema: so-subtitulo tambem renderiza. */}
+      {(c.titulo || c.subtitulo) && <h3>{c.titulo} {c.subtitulo && <span class="sub">{c.subtitulo}</span>}</h3>}
       <dl>
         {c.entradas.map((e: any) => (
           <div class="kv">

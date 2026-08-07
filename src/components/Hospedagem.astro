@@ -11,12 +11,14 @@ const { secao, cor } = Astro.props;
      e a mesma armadilha do Ficha/Voos — guard explicito por consistencia. */}
   {(secao.cartoes?.length ?? 0) > 0 && secao.cartoes.map((c: any) => (
     <article class="cartao">
-      {c.titulo && <h3>{c.titulo} {c.subtitulo && <span class="sub">{c.subtitulo}</span>}</h3>}
+      {(c.titulo || c.subtitulo) && <h3>{c.titulo} {c.subtitulo && <span class="sub">{c.subtitulo}</span>}</h3>}
       <dl>
         {c.entradas.map((e: any) => (
           <div class="kv"><dt>{e.rotulo}</dt><dd set:html={mdInline(e.valor)} /></div>
         ))}
       </dl>
+      {/* total renderiza igual ao Ficha — schema compartilha cartao */}
+      {c.total && <p class="total mono">{c.total}</p>}
     </article>
   ))}
   {/* role="list": list-style:none faz o VoiceOver descartar a semantica de lista. */}
@@ -42,6 +44,11 @@ const { secao, cor } = Astro.props;
   .kv { display: grid; grid-template-columns: minmax(90px, 130px) 1fr; gap: 10px; font-size: .82rem; }
   .kv dt { color: var(--muted); }
   .kv dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+  /* Identica a .total do Ficha — o cartao e o mesmo objeto do schema. */
+  .total {
+    margin: 10px 0 0; text-align: right; font-weight: 700; font-size: 1rem;
+    border-top: 2px dashed var(--linha); padding-top: 8px;
+  }
   .areservar { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
   .areservar li {
     background: var(--tiquete); border-radius: 10px; box-shadow: var(--sombra-mesa);
