@@ -1,0 +1,120 @@
+# yaml-language-server: $schema=../../../.astro/collections/viagens.schema.json
+titulo: "Férias no Nordeste"
+tituloCard: "Nordeste — Maceió & Costa"
+emoji: "🌴"
+subtitulo: "Maceió · São Miguel dos Milagres · Maragogi · Porto de Galinhas"
+rota:
+  origem: "GYN"
+  origemNome: "Goiânia"
+  destino: "MCZ"
+  destinoNome: "Maceió"
+  retorno: "REC"
+  retornoNome: "Recife"
+dataInicio: 2026-09-04
+dataCard: "4–12 set 2026"
+dataDisplay: "4 – 12 de setembro de 2026"
+pax: "Marcelo & Sabrina"
+status: confirmada
+statusLabel: "Voos + carro OK"
+cor: "#0e7490"
+resumoCard: "Maceió, São Miguel, Maragogi e Porto de Galinhas."
+bilhete: 2
+heroMeta:
+  - { rotulo: "LOC", valor: "WSFDPK · OZHNBN" }
+  - { rotulo: "CARRO", valor: "LOCALIZA MCZ→REC" }
+footer: "Voos e carro confirmados · Distâncias aproximadas · Atualizar conforme o plano evoluir 🌴"
+secoes:
+  - tipo: roteiro
+    dias:
+      - data: "04/09"
+        diaSemana: "Sexta"
+        local: "Maceió"
+        texto: "Chegada em Maceió às **16:30**. Retirada do carro na Localiza (aeroporto) às **17:00** e check-in na hospedagem."
+        tags: ["✈️ Voo GYN→MCZ", "🚗 Retira carro", "🏨 Check-in Maceió"]
+      - data: "05–07/09"
+        diaSemana: "Sáb · Dom · Seg"
+        local: "Maceió"
+        texto: "Dias livres em Maceió — praias (Pajuçara, Ponta Verde, Gunga), piscinas naturais, orla e gastronomia. *A detalhar.*"
+        tags: ["🏨 Maceió"]
+      - data: "08/09"
+        diaSemana: "Terça"
+        local: "→ S. Miguel"
+        texto: "Manhã final em Maceió. **Após o almoço**, seguir de carro para **São Miguel dos Milagres** pela Rota Ecológica (~105 km · ~2h)."
+        tags: ["🏨 Maceió (manhã)", "🚗 Maceió → S. Miguel"]
+      - data: "08–09/09"
+        diaSemana: "Ter · Qua"
+        local: "S. Miguel dos Milagres"
+        texto: "Rota Ecológica dos Milagres: praias desertas, piscinas naturais de barco, sossego. *Sugestão: 1 noite (ajustável).*"
+        tags: ["🏨 São Miguel dos Milagres"]
+      - data: "09–10/09"
+        diaSemana: "Qua · Qui"
+        local: "Maragogi"
+        texto: "Seguir para **Maragogi** (~55 km · ~1h). Galés de Maragogi (piscinas naturais em alto-mar), praias e vilas. *Sugestão: 1 noite.*"
+        tags: ["🚗 S. Miguel → Maragogi", "🏨 Maragogi"]
+      - data: "10–12/09"
+        diaSemana: "Qui · Sex"
+        local: "Porto de Galinhas"
+        texto: "Rumo a **Porto de Galinhas**/PE (~130 km · ~2h30). Piscinas naturais, praia dos Carneiros, jangadas. *Sugestão: 2 noites.*"
+        tags: ["🚗 Maragogi → Porto de Galinhas", "🏨 Porto de Galinhas"]
+      - data: "12/09"
+        diaSemana: "Sexta"
+        local: "Recife → Casa"
+        texto: "**Manhã:** sair de Porto de Galinhas direto para o aeroporto de Recife (~65 km · ~1h20). Devolução do carro às **11:00** e voo às **12:20**."
+        tags: ["🚗 → Aeroporto REC", "🚗 Devolve carro", "✈️ Voo REC→GYN"]
+  - tipo: voos
+    titulo: "Voos · GOL"
+    trechos:
+      - titulo: "Ida · 04/09 (sexta)"
+        localizador: "WSFDPK"
+        pernas:
+          - { de: "GYN", deHora: "09:50", deNome: "Goiânia", para: "GIG", paraHora: "11:40", paraNome: "Rio", voo: "G3-2061" }
+          - { de: "GIG", deHora: "13:55", deNome: "Rio", para: "MCZ", paraHora: "16:30", paraNome: "Maceió", voo: "G3-2078" }
+        conexao: "conexão no Rio · 2h15"
+      - titulo: "Volta · 12/09 (sexta)"
+        localizador: "OZHNBN"
+        pernas:
+          - { de: "REC", deHora: "12:20", deNome: "Recife", para: "SSA", paraHora: "13:50", paraNome: "Salvador", voo: "G3-1923" }
+          - { de: "SSA", deHora: "14:45", deNome: "Salvador", para: "GYN", paraHora: "16:50", paraNome: "Goiânia", voo: "G3-1904" }
+        conexao: "conexão em Salvador · 55min"
+    notas:
+      - "2 passageiros: Marcelo José Amador Filho e Sabrina Oliveira · Tarifa reembolsável (Smiles)."
+  - tipo: ficha
+    titulo: "Carro · Localiza"
+    icone: "🚗"
+    cartoes:
+      - titulo: "SUV compacto automático"
+        subtitulo: "(Grupo GC)"
+        entradas:
+          - { rotulo: "Retirada", valor: "Aeroporto de Maceió (MCZ) · 04/09 17:00" }
+          - { rotulo: "Devolução", valor: "Aeroporto de Recife (REC) · 12/09 11:00" }
+          - { rotulo: "Franquia de km", valor: "200 km/dia · 8 diárias" }
+          - { rotulo: "Total pago", valor: "R$ 1.636,49" }
+        total: "R$ 1.636,49"
+    lembretes:
+      - "Limite de **200 km/dia** (1.600 km no total). O trajeto Maceió → Recife pela costa consome bastante — acompanhar a quilometragem."
+      - "CNH física e cartão de crédito **no nome do motorista** (Marcelo) para retirar o carro."
+  - tipo: hospedagem
+    checklist:
+      - "**Maceió** — 4 noites (04–08/09) · *a reservar*"
+      - "**São Miguel dos Milagres** — 1 noite (08–09/09) · *a reservar*"
+      - "**Maragogi** — 1 noite (09–10/09) · *a reservar*"
+      - "**Porto de Galinhas** — 2 noites (10–12/09) · *a reservar*"
+    notas:
+      - "A divisão de noites é uma sugestão — dá pra remanejar conforme fecharmos o plano."
+  - tipo: gastos
+    linhas:
+      - { categoria: "Voos", descricao: "Ida GYN→MCZ (WSFDPK, 2 pax) — 63.400 milhas + taxas", status: pago, valor: 96.60 }
+      - { categoria: "Voos", descricao: "Volta REC→GYN (OZHNBN, 2 pax) — 115.600 milhas + taxas", status: pago, valor: 121.08 }
+      - { categoria: "Carro", descricao: "Aluguel Localiza SUV (8 diárias, one-way)", status: pago, valor: 1636.49 }
+    totais:
+      - { rotulo: "Total em dinheiro (fora milhas)", valor: 1854.17 }
+    notas:
+      - "Voos pagos com milhas Smiles (179.000 milhas no total) + taxas em dinheiro acima."
+  - tipo: checklist
+    titulo: "Próximos passos"
+    itens:
+      - { texto: "Definir a divisão de noites entre São Miguel, Maragogi e Porto de Galinhas" }
+      - { texto: "Reservar as hospedagens" }
+      - { texto: "Passeios: piscinas naturais (Pajuçara/Gunga), Galés de Maragogi, jangada em Porto de Galinhas" }
+      - { texto: "Restaurantes e transfers de barco" }
+      - { texto: "Conferir franquia/deductível da proteção do carro" }
