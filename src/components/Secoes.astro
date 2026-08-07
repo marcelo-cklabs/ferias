@@ -1,7 +1,9 @@
 ---
 import Ficha from './Ficha.astro';
 import Checklist from './Checklist.astro';
-/* Tasks 8–9 adicionam: Roteiro, Voos, Hospedagem, CupomGastos */
+import Roteiro from './Roteiro.astro';
+import Voos from './Voos.astro';
+/* Task 9 adiciona: Hospedagem, CupomGastos */
 interface Props { secoes: any[]; cor: string; tituloCard: string }
 const { secoes, cor, tituloCard } = Astro.props;
 ---
@@ -9,6 +11,8 @@ const { secoes, cor, tituloCard } = Astro.props;
   switch (secao.tipo) {
     case 'ficha': return <Ficha secao={secao} cor={cor} />;
     case 'checklist': return <Checklist secao={secao} cor={cor} />;
-    default: return null; /* tipos plugados nas Tasks 8-9 */
+    case 'roteiro': return <Roteiro secao={secao} cor={cor} />;
+    case 'voos': return <Voos secao={secao} cor={cor} />;
+    default: return null; /* tipos plugados na Task 9 */
   }
 })}
