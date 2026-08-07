@@ -7,6 +7,7 @@ export function formatBRL(valor) {
 
 /** Markdown inline restrito: escapa HTML, depois **negrito**, *italico*, [texto](url). */
 export function mdInline(s) {
+  if (s == null) return '';
   let out = String(s)
     .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;');
