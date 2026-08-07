@@ -30,11 +30,15 @@ const categoria = (t: string) =>
           {dia.local && <span class="onde">{dia.local}</span>}
         </header>
         {dia.texto && <p class="texto" set:html={mdInline(dia.texto)} />}
-        {dia.itens && (
+        {/* .length e nao so a existencia: `itens: []`/`tags: []` renderizariam caixas vazias. */}
+        {(dia.itens?.length ?? 0) > 0 && (
           <ul class="itens" role="list">
             {dia.itens.map((item: any) => (
               <li class="item">
-                <span class="hora mono">{item.hora ?? '—'}</span>
+                {/* Travessao e so preenchimento de coluna quando nao ha hora — nada a anunciar. */}
+                {item.hora
+                  ? <span class="hora mono">{item.hora}</span>
+                  : <span class="hora mono" aria-hidden="true">—</span>}
                 <div class="corpo">
                   <div class="linha1">
                     <b>{item.titulo}</b>
@@ -52,7 +56,7 @@ const categoria = (t: string) =>
             ))}
           </ul>
         )}
-        {dia.tags && <div class="tags">{dia.tags.map((t: string) => <span class:list={['tag', categoria(t)]}>{t}</span>)}</div>}
+        {(dia.tags?.length ?? 0) > 0 && <div class="tags">{dia.tags.map((t: string) => <span class:list={['tag', categoria(t)]}>{t}</span>)}</div>}
       </li>
     ))}
   </ol>
