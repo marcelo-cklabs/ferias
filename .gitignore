@@ -3,5 +3,13 @@ dist/
 .astro/
 .DS_Store
 
+# Variaveis de ambiente (guarda contra commit de segredos)
+.env
+.env.*
+!.env.example
+
+# Artefatos de screenshot do Playwright MCP
+.playwright-mcp/
+
 # Mockups do visual companion (brainstorming)
 .superpowers/
