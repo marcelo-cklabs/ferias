@@ -6,14 +6,15 @@ const { secao, cor } = Astro.props;
 ---
 <section style={`--cor:${cor}`}>
   <SecaoTitulo icone={secao.icone} titulo={secao.titulo} />
-  <ul class="etiquetas">
+  {/* role="list": list-style:none faz o VoiceOver descartar a semantica de lista. */}
+  <ul class="etiquetas" role="list">
     {secao.itens.map((item: any, i: number) => (
       <li class="etiqueta">
         <span class="furo" aria-hidden="true"></span>
         <div>
           <div class="texto" set:html={mdInline(item.texto)} />
           {item.detalhe && <div class="detalhe" set:html={mdInline(item.detalhe)} />}
-          <div class="num mono">ETIQUETA Nº {String(i + 1).padStart(2, '0')}</div>
+          <div class="num mono" aria-hidden="true">ETIQUETA Nº {String(i + 1).padStart(2, '0')}</div>
         </div>
       </li>
     ))}

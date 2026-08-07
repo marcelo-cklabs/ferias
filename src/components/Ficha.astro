@@ -21,7 +21,8 @@ const { secao, cor } = Astro.props;
       {c.total && <p class="total mono">{c.total}</p>}
     </article>
   ))}
-  {secao.lembretes && (
+  {/* .length e nao so a existencia: `lembretes: []` renderizaria a caixa vazia. */}
+  {(secao.lembretes?.length ?? 0) > 0 && (
     <aside class="lembretes">
       <b>⚠️ Lembretes:</b>
       <ul>{secao.lembretes.map((l: string) => <li set:html={mdInline(l)} />)}</ul>
