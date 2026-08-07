@@ -1,0 +1,63 @@
+/* ===== Tokens ===== */
+:root {
+  --papel: #fef3c7; --tiquete: #fff; --tinta: #1c1917;
+  --ambar: #f59e0b; --muted: #78716c; --muted-2: #a8a29e;
+  --linha: #e7e5e4; --ok: #15803d; --pend: #b45309;
+  --sombra-mesa: 0 5px 0 rgba(28, 25, 23, .12);
+  --f-display: 'Archivo Black', sans-serif;
+  --f-texto: 'Inter Variable', sans-serif;
+  --f-mono: 'IBM Plex Mono', monospace;
+  --f-carimbo: 'Special Elite', monospace;
+}
+
+/* ===== Base ===== */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--papel); color: var(--tinta);
+  font-family: var(--f-texto); line-height: 1.55;
+  font-size: 16px;
+}
+a { color: inherit; }
+img, svg { max-width: 100%; }
+.mono { font-family: var(--f-mono); }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px 48px; }
+:focus-visible { outline: 3px solid var(--ambar); outline-offset: 2px; border-radius: 4px; }
+
+h1, h2, h3 { line-height: 1.15; margin: 0; }
+
+footer.site {
+  text-align: center; font-family: var(--f-mono); font-size: .72rem;
+  color: var(--muted-2); padding: 28px 16px 40px;
+}
+
+/* ===== View Transitions (cross-document, sem JS) ===== */
+@view-transition { navigation: auto; }
+
+/* ===== Animações ===== */
+@keyframes deal {
+  from { opacity: 0; transform: translateY(30px) rotate(5deg) scale(.97); }
+}
+@keyframes stampin {
+  0% { opacity: 0; transform: scale(2.4) rotate(-16deg); }
+  55% { opacity: 1; transform: scale(.9) rotate(-1deg); }
+  100% { transform: scale(1) rotate(-3deg); }
+}
+@keyframes fly {
+  from { offset-distance: 0%; } to { offset-distance: 100%; }
+}
+@keyframes printout {
+  from { clip-path: inset(0 0 100% 0); transform: translateY(-8px); }
+  to { clip-path: inset(0 0 -2% 0); }
+}
+@keyframes swing {
+  25% { transform: rotate(2.6deg); } 55% { transform: rotate(-2deg); } 80% { transform: rotate(1deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  @view-transition { navigation: none; }
+}

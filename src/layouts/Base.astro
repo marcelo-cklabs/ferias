@@ -1,0 +1,36 @@
+---
+import '@fontsource/archivo-black';
+import '@fontsource-variable/inter';
+import '@fontsource/ibm-plex-mono/500.css';
+import '@fontsource/ibm-plex-mono/700.css';
+import '@fontsource/special-elite';
+import '../styles/global.css';
+
+interface Props { title: string }
+const { title } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>{title}</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>" />
+    {/* Cortina fail-closed: conteúdo invisível (tela e impressão) até auth.js liberar */}
+    <style id="gate-veil" is:inline>
+      html { visibility: hidden; }
+      @media print { body { display: none; } }
+    </style>
+  </head>
+  <body>
+    <slot />
+    <noscript>
+      <div style="visibility:visible;position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#fef3c7;color:#1c1917;font-family:sans-serif;padding:24px;text-align:center">
+        Habilite o JavaScript para entrar na área privada.
+      </div>
+    </noscript>
+    <script is:inline src={`${base}/auth.js`}></script>
+  </body>
+</html>
