@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import BoardingHero from '../../components/BoardingHero.astro';
 
@@ -7,6 +8,7 @@ export async function getStaticPaths() {
   const viagens = await getCollection('viagens');
   return viagens.map((viagem) => ({ params: { slug: viagem.id }, props: { viagem } }));
 }
+type Props = { viagem: CollectionEntry<'viagens'> };
 const { viagem } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---

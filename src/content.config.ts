@@ -110,7 +110,8 @@ const viagens = defineCollection({
       origem: z.string(), origemNome: z.string(),
       destino: z.string(), destinoNome: z.string(),
       retorno: z.string().optional(), retornoNome: z.string().optional(),
-    }).strict(),
+    }).strict()
+      .refine((r) => !r.retorno || !!r.retornoNome, { message: 'retornoNome e obrigatorio quando ha retorno' }),
     dataInicio: z.coerce.date(),
     dataCard: z.string(),
     dataDisplay: z.string(),

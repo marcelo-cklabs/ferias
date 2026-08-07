@@ -11,7 +11,7 @@ const d = viagem.data;
 const heroDe = d.rota.retorno ? d.rota.destino : d.rota.origem;
 const heroDeNome = d.rota.retorno ? d.rota.destinoNome : d.rota.origemNome;
 const heroPara = d.rota.retorno ?? d.rota.destino;
-const heroParaNome = d.rota.retornoNome ?? d.rota.destinoNome;
+const heroParaNome = d.rota.retorno ? (d.rota.retornoNome ?? d.rota.destinoNome) : d.rota.destinoNome;
 const mes = d.dataCard.toUpperCase();
 ---
 <header class="bpass" style={`--cor:${d.cor};view-transition-name:ticket-${viagem.id}`}>
