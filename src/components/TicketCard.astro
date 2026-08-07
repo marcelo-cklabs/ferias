@@ -42,9 +42,10 @@ const num = String(d.bilhete).padStart(3, '0');
   }
   /* O relógio da animação (stagger incluído) só destrava quando o gate libera. */
   :global(html.embarcado) .ticket { animation-play-state: running; }
-  /* rotação alternada sutil: pares/ímpares */
-  .ticket:nth-child(odd) { transform: rotate(-.6deg); }
-  .ticket:nth-child(even) { transform: rotate(.5deg); }
+  /* rotação alternada sutil: pares/ímpares. of-type e não child para a alternância
+     não desandar se algum dia entrar um separador no meio do grid. */
+  .ticket:nth-of-type(odd) { transform: rotate(-.6deg); }
+  .ticket:nth-of-type(even) { transform: rotate(.5deg); }
   .ticket:hover, .ticket:focus-visible {
     transform: translateY(-5px) rotate(0deg);
     box-shadow: 0 12px 22px rgba(28, 25, 23, .18);

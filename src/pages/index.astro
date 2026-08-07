@@ -25,12 +25,14 @@ const mural = [...ativas, ...realizadas];
       {mural.map((v, i) => <TicketCard viagem={v} index={i + 1} />)}
     </div>
   </main>
-  <footer class="site">ÁREA PRIVADA · CK-LABS · ATUALIZADO CONFORME OS PLANOS EVOLUEM 🌍</footer>
+  <footer class="site">ÁREA PRIVADA · CK-LABS · ATUALIZADO CONFORME OS PLANOS EVOLUEM <span aria-hidden="true">🌍</span></footer>
 </Base>
 
 <style>
   .hero { position: relative; max-width: 1080px; margin: 0 auto; padding: 56px 20px 28px; overflow: hidden; }
-  .trilha { position: absolute; top: 6px; left: 0; width: 100%; opacity: .55; }
+  /* pointer-events: none — o SVG decorativo cobre o overline e o h1, e sem isso
+     bloquearia a selecao do texto por baixo. */
+  .trilha { position: absolute; top: 6px; left: 0; width: 100%; opacity: .55; pointer-events: none; }
   /* Dentro do SVG: o offset-path usa as unidades do viewBox, entao aviao e
      trilha escalam juntos em qualquer largura. */
   .aviaozinho {
