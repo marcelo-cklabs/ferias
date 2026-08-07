@@ -10,7 +10,10 @@ const { status, label } = Astro.props;
     border: 2px solid var(--ok); border-radius: 6px; color: var(--ok);
     transform: rotate(-3deg); text-transform: uppercase;
     animation: stampin .38s cubic-bezier(.2, .8, .3, 1) .95s backwards;
+    animation-play-state: paused;
   }
+  /* O relógio da animação (delay incluído) só destrava quando o gate libera. */
+  :global(html.embarcado) .stamp { animation-play-state: running; }
   .planejando { color: var(--pend); border-color: var(--pend); border-style: dashed; }
   .realizada { color: var(--muted); border-color: var(--muted); }
 </style>

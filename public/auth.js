@@ -11,6 +11,9 @@
   function unveil() {
     var v = document.getElementById("gate-veil");
     if (v) v.remove();
+    /* Destrava as animacoes de entrada: elas nascem pausadas para nao
+       rodarem atras do veu, onde ninguem as veria. */
+    document.documentElement.classList.add("embarcado");
   }
 
   var authed = false;
