@@ -1,0 +1,9 @@
+---
+import { mdInline } from '../lib/format.js';
+interface Props { notas?: string[] }
+const { notas = [] } = Astro.props;
+---
+{notas.map((n) => <p class="nota" set:html={mdInline(n)} />)}
+<style>
+  .nota { font-size: .78rem; color: var(--muted); margin: 10px 2px 0; }
+</style>

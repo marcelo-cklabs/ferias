@@ -1,0 +1,53 @@
+---
+import { mdInline } from '../lib/format.js';
+import SecaoTitulo from './SecaoTitulo.astro';
+import Notas from './Notas.astro';
+interface Props { secao: any; cor: string }
+const { secao, cor } = Astro.props;
+---
+<section style={`--cor:${cor}`}>
+  <SecaoTitulo icone={secao.icone} titulo={secao.titulo} />
+  {secao.cartoes.map((c: any) => (
+    <article class="cartao">
+      {c.titulo && <h3>{c.titulo} {c.subtitulo && <span class="sub">{c.subtitulo}</span>}</h3>}
+      <dl>
+        {c.entradas.map((e: any) => (
+          <div class="kv">
+            <dt>{e.rotulo}</dt>
+            <dd set:html={mdInline(e.valor)} />
+          </div>
+        ))}
+      </dl>
+      {c.total && <p class="total mono">{c.total}</p>}
+    </article>
+  ))}
+  {secao.lembretes && (
+    <aside class="lembretes">
+      <b>⚠️ Lembretes:</b>
+      <ul>{secao.lembretes.map((l: string) => <li set:html={mdInline(l)} />)}</ul>
+    </aside>
+  )}
+  <Notas notas={secao.notas} />
+</section>
+<style>
+  .cartao {
+    background: var(--tiquete); border-radius: 12px; box-shadow: var(--sombra-mesa);
+    border-left: 4px solid var(--cor); padding: 14px 16px; margin-bottom: 12px;
+  }
+  h3 { font-size: .95rem; font-weight: 800; margin-bottom: 8px; }
+  .sub { font-weight: 600; color: var(--muted); font-size: .78rem; }
+  dl { margin: 0; display: grid; gap: 6px; }
+  .kv { display: grid; grid-template-columns: minmax(90px, 130px) 1fr; gap: 10px; font-size: .82rem; }
+  .kv dt { color: var(--muted); }
+  .kv dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+  .total {
+    margin: 10px 0 0; text-align: right; font-weight: 700; font-size: 1rem;
+    border-top: 2px dashed var(--linha); padding-top: 8px;
+  }
+  .lembretes {
+    background: #fffbeb; border: 1.5px dashed var(--ambar); border-radius: 10px;
+    padding: 10px 14px; font-size: .8rem; margin-top: 4px;
+  }
+  .lembretes ul { margin: 6px 0 0; padding-left: 18px; }
+  .lembretes li { margin: 3px 0; }
+</style>

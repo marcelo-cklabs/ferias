@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import BoardingHero from '../../components/BoardingHero.astro';
+import Secoes from '../../components/Secoes.astro';
 
 export async function getStaticPaths() {
   const viagens = await getCollection('viagens');
@@ -16,7 +17,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <main class="wrap">
     <a class="volta mono" href={`${base}/`}>← VOLTAR AO MURAL</a>
     <BoardingHero viagem={viagem} />
-    <div class="secoes"><!-- Task 7 pluga o dispatcher aqui --></div>
+    <div class="secoes">
+      <Secoes secoes={viagem.data.secoes} cor={viagem.data.cor} tituloCard={viagem.data.tituloCard} />
+    </div>
   </main>
   <footer class="site">{viagem.data.footer}</footer>
 </Base>
