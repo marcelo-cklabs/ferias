@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import BoardingHero from '../../components/BoardingHero.astro';
+
+export async function getStaticPaths() {
+  const viagens = await getCollection('viagens');
+  return viagens.map((viagem) => ({ params: { slug: viagem.id }, props: { viagem } }));
+}
+const { viagem } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Base title={`${viagem.data.tituloCard} · Férias CK-Labs`}>
+  <main class="wrap">
+    <a class="volta mono" href={`${base}/`}>← VOLTAR AO MURAL</a>
+    <BoardingHero viagem={viagem} />
+    <div class="secoes"><!-- Task 7 pluga o dispatcher aqui --></div>
+  </main>
+  <footer class="site">{viagem.data.footer}</footer>
+</Base>
+
+<style>
+  .volta {
+    display: inline-block; font-size: .7rem; letter-spacing: .12em;
+    color: #92400e; text-decoration: none; padding: 22px 0 0; min-height: 44px;
+  }
+  .volta:hover { text-decoration: underline; }
+  .secoes { display: grid; gap: 26px; margin-top: 26px; }
+</style>
