@@ -3,7 +3,8 @@ import Ficha from './Ficha.astro';
 import Checklist from './Checklist.astro';
 import Roteiro from './Roteiro.astro';
 import Voos from './Voos.astro';
-/* Task 9 adiciona: Hospedagem, CupomGastos */
+import Hospedagem from './Hospedagem.astro';
+import CupomGastos from './CupomGastos.astro';
 interface Props { secoes: any[]; cor: string; tituloCard: string }
 const { secoes, cor, tituloCard } = Astro.props;
 ---
@@ -13,6 +14,11 @@ const { secoes, cor, tituloCard } = Astro.props;
     case 'checklist': return <Checklist secao={secao} cor={cor} />;
     case 'roteiro': return <Roteiro secao={secao} cor={cor} />;
     case 'voos': return <Voos secao={secao} cor={cor} />;
-    default: return null; /* tipos plugados na Task 9 */
+    case 'hospedagem': return <Hospedagem secao={secao} cor={cor} />;
+    case 'gastos': return <CupomGastos secao={secao} cor={cor} tituloCard={tituloCard} />;
+    /* Os 6 tipos do union estao plugados: nao ha `default: return null`. Tipo novo
+       no schema sem case aqui DERRUBA o build (SSG) em vez de sumir com a secao
+       em silencio. Nao trocar por null/fallback. */
+    default: throw new Error(`Secoes.astro: tipo de secao sem case no dispatcher: "${secao.tipo}"`);
   }
 })}

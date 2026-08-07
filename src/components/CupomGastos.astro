@@ -1,0 +1,93 @@
+---
+import { formatBRL, mdInline } from '../lib/format.js';
+import SecaoTitulo from './SecaoTitulo.astro';
+import Notas from './Notas.astro';
+interface Props { secao: any; cor: string; tituloCard: string }
+const { secao, cor, tituloCard } = Astro.props;
+const rotuloStatus: Record<string, string> = { pago: 'Pago', recebido: 'Recebido', pendente: 'Pendente' };
+---
+<section style={`--cor:${cor}`}>
+  <SecaoTitulo icone={secao.icone} titulo={secao.titulo} />
+  <div class="cupom mono">
+    <p class="cab">CUPOM DE GASTOS ★ {tituloCard.toUpperCase()}</p>
+    <table>
+      <thead>
+        <tr><th scope="col">Categoria</th><th scope="col">Descrição</th><th scope="col">Status</th><th scope="col" class="val">Valor</th></tr>
+      </thead>
+      <tbody>
+        {secao.linhas.length === 0 && (
+          <tr><td colspan="4" class="vazio">Nenhum gasto lançado ainda.</td></tr>
+        )}
+        {secao.linhas.map((l: any) => (
+          <tr>
+            <td class="cat">{l.categoria}</td>
+            <td class="desc" set:html={mdInline(l.descricao)} />
+            <td class="st">{l.status ? <span class:list={['pill', l.status]}>{rotuloStatus[l.status]}</span> : ''}</td>
+            <td class:list={['val', { credito: l.valor < 0 }]}>{formatBRL(l.valor)}</td>
+          </tr>
+        ))}
+      </tbody>
+      <tfoot>
+        {(secao.totais.length ? secao.totais : [{ rotulo: 'Total', valor: 0 }]).map((t: any) => (
+          <tr><td colspan="3" class="trot">{t.rotulo}</td><td class:list={['val', 'tval', { credito: t.valor < 0 }]}>{formatBRL(t.valor)}</td></tr>
+        ))}
+      </tfoot>
+    </table>
+    <Notas notas={secao.notas} />
+    {/* Rodape ornamental do cupom — nao acrescenta informacao, so cheiro de papel. */}
+    <p class="fecho" aria-hidden="true">· · · OBRIGADO E BOA VIAGEM · · ·</p>
+  </div>
+</section>
+<style>
+  .cupom {
+    background: var(--tiquete); box-shadow: var(--sombra-mesa); border-radius: 4px;
+    padding: 16px 18px; font-size: .78rem;
+  }
+  /* printout e scroll-driven (view()), nao animacao de entrada de load: nao leva
+     o gate html.embarcado — o cupom entra na viewport depois do unlock e imprime
+     naturalmente. reduced-motion do global.css zera tudo isso. */
+  @supports (animation-timeline: view()) {
+    .cupom {
+      animation: printout 1.2s steps(14, end) both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+    }
+  }
+  .cab { text-align: center; font-weight: 700; letter-spacing: .14em; font-size: .72rem; margin: 0 0 10px; }
+  table { width: 100%; border-collapse: collapse; }
+  /* --muted (4,80:1 sobre branco) e nao --muted-2 (2,52:1): cabecalho de coluna
+     e informacao, nao decoracao. Mesmo criterio da .conexao no Voos. */
+  thead th {
+    text-align: left; font-size: .62rem; color: var(--muted); font-weight: 700;
+    border-bottom: 1.5px dashed var(--linha); padding: 4px 6px;
+  }
+  tbody td, tfoot td { padding: 6px; vertical-align: top; border-bottom: 1px dotted #f0efec; }
+  .cat { white-space: nowrap; color: var(--muted); }
+  .desc { font-family: var(--f-texto); font-size: .8rem; }
+  .val { text-align: right; white-space: nowrap; font-weight: 700; }
+  /* --ok 5,02:1 · --pend 5,02:1 · --cor 5,36:1 (#0e7490) sobre branco — as 6 cores
+     de viagem do acervo passam AA (min 6,70:1 nas outras cinco). */
+  .val.credito { color: var(--ok); }
+  /* Estado vazio e texto informativo: --muted, nunca --muted-2. */
+  .vazio { text-align: center; color: var(--muted); padding: 16px; }
+  .pill { font-size: .6rem; border: 1.5px solid var(--ok); color: var(--ok); border-radius: 5px; padding: 1px 6px; }
+  .pill.recebido { border-color: var(--cor); color: var(--cor); }
+  .pill.pendente { border-color: var(--pend); color: var(--pend); }
+  tfoot .trot { font-weight: 700; border-top: 1.5px dashed var(--linha); }
+  tfoot .tval { border-top: 1.5px dashed var(--linha); font-size: .85rem; }
+  /* Decorativo e aria-hidden — unico lugar do cupom onde --muted-2 e legitimo. */
+  .fecho { text-align: center; color: var(--muted-2); font-size: .66rem; margin: 12px 0 0; }
+
+  /* Mobile: células empilham — sem scroll horizontal */
+  @media (max-width: 639px) {
+    thead { position: absolute; clip-path: inset(50%); height: 1px; width: 1px; overflow: hidden; }
+    tbody tr { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; padding: 8px 0; border-bottom: 1px dotted #f0efec; }
+    tbody td { border: 0; padding: 0; }
+    .cat { font-size: .6rem; text-transform: uppercase; grid-column: 1; }
+    .st { grid-column: 2; grid-row: 1; text-align: right; }
+    .desc { grid-column: 1 / -1; }
+    .val { grid-column: 1 / -1; text-align: right; }
+    tfoot tr { display: flex; justify-content: space-between; gap: 10px; padding: 6px 0; }
+    tfoot td { border: 0; padding: 0; }
+  }
+</style>
