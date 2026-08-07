@@ -1,0 +1,16 @@
+---
+interface Props { status: 'planejando' | 'confirmada' | 'realizada'; label: string }
+const { status, label } = Astro.props;
+---
+<span class:list={['stamp', status]}>{label}</span>
+<style>
+  .stamp {
+    display: inline-block; font-family: var(--f-carimbo);
+    font-size: .68rem; line-height: 1.2; padding: 2px 8px;
+    border: 2px solid var(--ok); border-radius: 6px; color: var(--ok);
+    transform: rotate(-3deg); text-transform: uppercase;
+    animation: stampin .38s cubic-bezier(.2, .8, .3, 1) .95s backwards;
+  }
+  .planejando { color: var(--pend); border-color: var(--pend); border-style: dashed; }
+  .realizada { color: var(--muted); border-color: var(--muted); }
+</style>

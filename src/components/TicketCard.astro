@@ -1,0 +1,69 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Stamp from './Stamp.astro';
+import Barcode from './Barcode.astro';
+
+interface Props { viagem: CollectionEntry<'viagens'>; index: number }
+const { viagem, index } = Astro.props;
+const d = viagem.data;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const num = String(d.bilhete).padStart(3, '0');
+---
+<a
+  class:list={['ticket', { apagado: d.status === 'realizada' }]}
+  href={`${base}/viagens/${viagem.id}.html`}
+  style={`--cor:${d.cor};--i:${index};view-transition-name:ticket-${viagem.id}`}
+>
+  <span class="faixa" aria-hidden="true"></span>
+  <span class="corpo">
+    <span class="rota mono">
+      <b>{d.rota.origem}</b>
+      <span class="tracinho" aria-hidden="true"><span class="aviao">✈️</span></span>
+      <b>{d.rota.destino}</b>
+    </span>
+    <span class="nome">{d.emoji} {d.tituloCard}</span>
+    <span class="quando mono">{d.dataCard.toUpperCase()}</span>
+    <span class="resumo">{d.resumoCard}</span>
+    <Stamp status={d.status} label={d.status === 'realizada' ? 'Realizada' : d.statusLabel} />
+  </span>
+  <span class="rodape" aria-hidden="true">
+    <span class="mono num">BILHETE Nº {num}</span>
+    <Barcode />
+  </span>
+</a>
+<style>
+  .ticket {
+    display: flex; flex-direction: column; text-decoration: none;
+    background: var(--tiquete); border-radius: 12px; overflow: hidden;
+    box-shadow: var(--sombra-mesa); color: var(--tinta);
+    animation: deal .55s cubic-bezier(.2, .9, .3, 1.25) calc(var(--i) * 130ms) backwards;
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  /* rotação alternada sutil: pares/ímpares */
+  .ticket:nth-child(odd) { transform: rotate(-.6deg); }
+  .ticket:nth-child(even) { transform: rotate(.5deg); }
+  .ticket:hover, .ticket:focus-visible {
+    transform: translateY(-5px) rotate(0deg);
+    box-shadow: 0 12px 22px rgba(28, 25, 23, .18);
+  }
+  .apagado { opacity: .55; filter: saturate(.35); }
+  .faixa { height: 6px; background: var(--cor); }
+  .corpo { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px 10px; }
+  .rota { display: flex; align-items: baseline; gap: 10px; font-size: 1.25rem; font-weight: 700; }
+  .tracinho { flex: 1; border-bottom: 2px dashed var(--linha); position: relative; }
+  .aviao { position: absolute; left: 50%; top: -.7em; transform: translateX(-50%); font-size: .7em; }
+  .nome { font-weight: 800; font-size: 1rem; }
+  .quando { font-size: .72rem; color: var(--muted); }
+  .resumo { font-size: .8rem; color: var(--muted); }
+  .corpo > :global(.stamp) { align-self: flex-start; margin-top: 2px; }
+  .rodape {
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 2px dashed var(--linha); padding: 8px 16px; position: relative;
+  }
+  .rodape::before, .rodape::after {
+    content: ''; position: absolute; top: -9px; width: 18px; height: 18px;
+    border-radius: 50%; background: var(--papel);
+  }
+  .rodape::before { left: -9px; } .rodape::after { right: -9px; }
+  .num { font-size: .62rem; color: var(--muted-2); }
+</style>

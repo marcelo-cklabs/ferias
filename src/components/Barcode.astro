@@ -1,0 +1,11 @@
+---
+interface Props { largura?: number }
+const { largura = 60 } = Astro.props;
+---
+<span class="barcode" style={`width:${largura}px`} aria-hidden="true"></span>
+<style>
+  .barcode {
+    display: inline-block; height: 16px;
+    background: repeating-linear-gradient(90deg, var(--tinta) 0 1.5px, transparent 1.5px 4.5px);
+  }
+</style>
