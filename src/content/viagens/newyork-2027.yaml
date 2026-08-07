@@ -37,7 +37,7 @@ secoes:
     icone: "🗺️"
     cartoes:
       - entradas:
-          - { rotulo: "Roteiro", valor: "A montar. Definir datas, bairros, atrações e eventual bate-volta (ex.: Washington, Boston)." }
+          - { rotulo: "Situação", valor: "A montar. Definir datas, bairros, atrações e eventual bate-volta (ex.: Washington, Boston)." }
   - tipo: checklist
     titulo: "Atrações e passeios"
     icone: "🎡"
