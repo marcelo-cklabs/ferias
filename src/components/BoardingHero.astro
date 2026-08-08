@@ -12,23 +12,22 @@ const heroDe = d.rota.retorno ? d.rota.destino : d.rota.origem;
 const heroDeNome = d.rota.retorno ? d.rota.destinoNome : d.rota.origemNome;
 const heroPara = d.rota.retorno ?? d.rota.destino;
 const heroParaNome = d.rota.retorno ? (d.rota.retornoNome ?? d.rota.destinoNome) : d.rota.destinoNome;
-const mes = d.dataCard.toUpperCase();
 ---
 <header class="bpass" style={`--cor:${d.cor};view-transition-name:ticket-${viagem.id}`}>
   <div class="faixa mono">
     <span>CK-LABS AIRLINES · CARTÃO DE EMBARQUE</span>
-    <span>{mes}</span>
+    <span class="mes">{d.dataCard}</span>
   </div>
   <div class="meio">
     <div class="rota">
       <div class="ponto">
         <div class="cod">{heroDe}</div>
-        <div class="cid mono">{heroDeNome.toUpperCase()}</div>
+        <div class="cid mono">{heroDeNome}</div>
       </div>
       <div class="tracinho" aria-hidden="true"><span class="aviao">✈️</span></div>
       <div class="ponto fim">
         <div class="cod">{heroPara}</div>
-        <div class="cid mono">{heroParaNome.toUpperCase()}</div>
+        <div class="cid mono">{heroParaNome}</div>
       </div>
     </div>
     <h1><span aria-hidden="true">{d.emoji}</span> {d.titulo}</h1>
@@ -57,7 +56,11 @@ const mes = d.dataCard.toUpperCase();
   .meio { padding: 18px 20px 14px; }
   .rota { display: flex; align-items: center; gap: 14px; }
   .cod { font-family: var(--f-display); font-size: clamp(1.8rem, 6vw, 2.6rem); }
-  .cid { font-size: .62rem; color: var(--muted); }
+  /* Caixa alta por CSS e nao no dado ("Goiânia", "21–24 jul 2026"): com
+     .toUpperCase() no conteudo o leitor de tela soletra "G-O-I-A-N-I-A".
+     text-transform e so pintura — o texto acessivel continua natural. */
+  .cid { font-size: .62rem; color: var(--muted); text-transform: uppercase; }
+  .mes { text-transform: uppercase; }
   .fim { text-align: right; }
   .tracinho { flex: 1; border-bottom: 2px dashed var(--linha); position: relative; }
   .aviao { position: absolute; left: 50%; top: -.8em; transform: translateX(-50%); }

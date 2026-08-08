@@ -26,7 +26,7 @@ const categoria = (t: string) =>
       <li class="dia">
         <header class="cab">
           <span class="data mono">{dia.data}</span>
-          {dia.diaSemana && <span class="semana mono">{dia.diaSemana.toUpperCase()}</span>}
+          {dia.diaSemana && <span class="semana mono">{dia.diaSemana}</span>}
           {dia.local && <span class="onde">{dia.local}</span>}
         </header>
         {dia.texto && <p class="texto" set:html={mdInline(dia.texto)} />}
@@ -70,8 +70,10 @@ const categoria = (t: string) =>
   .cab { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
   .data { font-weight: 700; font-size: .85rem; color: var(--cor); }
   /* --muted (4,80:1 sobre o branco do cartao) e nao --muted-2 (2,52:1): dia da
-     semana, meta do item e conexao sao texto informativo, nao decoracao. */
-  .semana { font-size: .62rem; color: var(--muted); }
+     semana, meta do item e conexao sao texto informativo, nao decoracao.
+     text-transform (e nao .toUpperCase() no dado): o YAML traz "Sexta"/"Qua · Qui"
+     e caixa alta no conteudo faz leitor de tela soletrar "S-E-X-T-A". */
+  .semana { font-size: .62rem; color: var(--muted); text-transform: uppercase; }
   .onde { font-weight: 700; font-size: .85rem; }
   .texto { font-size: .84rem; margin: 8px 0 0; }
   .itens { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 10px; }
@@ -93,5 +95,8 @@ const categoria = (t: string) =>
   .tag.comida     { background: #ffe4e6; color: #881337; } /*  7,97:1 */
   .tag.trabalho   { background: #e2e8f0; color: #1e293b; } /* 11,87:1 */
   .tag.show       { background: #fee2e2; color: #7f1d1d; } /*  8,20:1 */
-  .tag.ok { background: #dcfce7; color: var(--ok); } /* 4,57:1 */
+  /* #14532d (verde-900) e nao --ok/#15803d (verde-700): sobre #dcfce7 o verde-700
+     da 4,57:1 — passa AA por 0,07. O 900 da 8,31:1 e alinha a .ok com o padrao
+     das outras seis tags, que ja usam o tom 900 da familia sobre o tom 100. */
+  .tag.ok { background: #dcfce7; color: #14532d; } /* 8,31:1 */
 </style>

@@ -40,6 +40,18 @@ const mural = [...ativas, ...realizadas];
     offset-rotate: auto 45deg;
     animation: fly 8s ease-in-out infinite;
   }
+  /* Degradacao no WebKit (Safari): ele aceita offset-path mas IGNORA
+     offset-distance em <text> de SVG — medido com a trilha congelada em
+     0/25/50/75/100%, o aviao nao sai de (-27, 156.6), o inicio do path, meio
+     cortado pela borda do SVG e por cima do H1 (no Chromium o desvio da trilha
+     fica < 1px em todos os pontos). Um `@supports not (offset-path: ...)` nao
+     resolve: CSS.supports('offset-path', "path('M 0 0 H 1')") e true no WebKit.
+     O discriminador medido que separa os dois e -webkit-hyphens (WebKit true,
+     Chromium false — usa hyphens sem prefixo). O aviao e decoracao pura (o SVG
+     inteiro e aria-hidden), entao no WebKit sobra so a trilha pontilhada. */
+  @supports (-webkit-hyphens: none) {
+    .aviaozinho { display: none; }
+  }
   .overline { font-size: .68rem; letter-spacing: .3em; color: #92400e; margin: 0; }
   h1 {
     font-family: var(--f-display);
@@ -47,7 +59,9 @@ const mural = [...ativas, ...realizadas];
     text-shadow: 3px 3px 0 var(--ambar);
     margin: 10px 0 6px;
   }
-  .sub { font-weight: 600; color: var(--muted); margin: 0 0 8px; font-size: clamp(.85rem, 2.5vw, 1rem); }
+  /* #57534e e nao --muted: a linha fica sobre --papel, e #78716c ali da 4,31:1 —
+     reprova AA em texto pequeno. Mesmo tom de footer.site e .nota: 6,85:1. */
+  .sub { font-weight: 600; color: #57534e; margin: 0 0 8px; font-size: clamp(.85rem, 2.5vw, 1rem); }
   .mural { display: grid; grid-template-columns: 1fr; gap: 16px; padding-top: 18px; }
   @media (min-width: 640px) { .mural { grid-template-columns: 1fr 1fr; } }
   @media (min-width: 1024px) { .mural { grid-template-columns: 1fr 1fr 1fr; } }

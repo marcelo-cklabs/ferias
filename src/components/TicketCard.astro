@@ -22,7 +22,7 @@ const num = String(d.bilhete).padStart(3, '0');
       <b>{d.rota.destino}</b>
     </span>
     <span class="nome"><span aria-hidden="true">{d.emoji}</span> {d.tituloCard}</span>
-    <span class="quando mono">{d.dataCard.toUpperCase()}</span>
+    <span class="quando mono">{d.dataCard}</span>
     <span class="resumo">{d.resumoCard}</span>
     <Stamp status={d.status} label={d.status === 'realizada' ? 'Realizada' : d.statusLabel} />
   </span>
@@ -57,7 +57,10 @@ const num = String(d.bilhete).padStart(3, '0');
   .tracinho { flex: 1; border-bottom: 2px dashed var(--linha); position: relative; }
   .aviao { position: absolute; left: 50%; top: -.7em; transform: translateX(-50%); font-size: .7em; }
   .nome { font-weight: 800; font-size: 1rem; }
-  .quando { font-size: .72rem; color: var(--muted); }
+  /* Caixa alta por CSS e nao no dado ("4–12 set 2026"): com .toUpperCase() no
+     conteudo o leitor de tela soletra "S-E-T". text-transform nao muda o texto
+     acessivel. Mesmo motivo em Roteiro .semana e BoardingHero .mes/.cid. */
+  .quando { font-size: .72rem; color: var(--muted); text-transform: uppercase; }
   .resumo { font-size: .8rem; color: var(--muted); }
   .corpo > :global(.stamp) { align-self: flex-start; margin-top: 2px; }
   .rodape {
