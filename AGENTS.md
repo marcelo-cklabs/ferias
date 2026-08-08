@@ -1,6 +1,6 @@
 # AGENTS.md
 
-This file provides guidance to Codex (Codex.ai/code) when working with code in this repository.
+This file provides guidance to Codex (Codex.ai/code) when working with code in this repository. Este arquivo é espelho de CLAUDE.md — mudou um, mude o outro.
 
 ## O que é este projeto
 
@@ -21,10 +21,10 @@ Design "cartão de embarque": home é um mural de tíquetes, cada viagem é um c
 - Schema dos dados: `src/content.config.ts` (zod). Dado inválido = build falha — esse é o teste do projeto.
 - Seções da página vêm de `secoes[]` no YAML (tipos: `ficha`, `roteiro`, `voos`, `hospedagem`, `gastos`, `checklist`), renderizadas por `src/components/Secoes.astro`.
 - Valores monetários em `gastos` são números (negativo = crédito/reembolso, exibido em verde); a formatação BRL é do componente (`src/lib/format.js`).
-- Strings de conteúdo aceitam markdown inline restrito: `**negrito**`, `*itálico*`, `[texto](url)`.
+- Campos de texto livre (`texto`, `meta`, `notas`, `descricao`, `valor` de entradas, `destaque`, `detalhe`, itens de checklist) aceitam markdown inline restrito: `**negrito**`, `*itálico*`, `[texto](url)`.
 - Tokens de design (cores/fontes/sombras): `src/styles/global.css`. Cor de cada viagem: campo `cor` do YAML.
 - Layout comum (head, favicon, noindex, gate de auth): `src/layouts/Base.astro` — toda página passa por ele.
-- O véu do gate funciona por herança de visibility: NUNCA use `visibility: visible` em componente (vaza conteúdo pré-auth). Os ids `ck-pass`, `ck-form` e `gate-veil` são reservados do `auth.js`.
+- O véu do gate funciona por herança de visibility: NUNCA use `visibility: visible` em componente (vaza conteúdo pré-auth). Os ids `ck-pass`, `ck-form`, `ck-err` e `gate-veil` são reservados do `auth.js`.
 - YAML de viagem NUNCA pode ter as chaves `$schema:` ou `slug:` (o schema strict derruba o build). Validação de editor: comentário `# yaml-language-server` no topo (ver YAMLs existentes).
 - URLs com parênteses em campos de link: escrever `(` `)` como `%28` `%29` (o markdown inline trunca no primeiro parêntese).
 - Animações de entrada novas devem seguir o padrão do gate: `animation-play-state: paused` + regra `:global(html.embarcado) ... { running }` (a classe `embarcado` é adicionada pelo `auth.js` no desbloqueio).
@@ -41,7 +41,7 @@ Push na `main` → GitHub Actions (`.github/workflows/pages.yml`) roda `npm ci &
 
 ## Segurança — leia antes de mexer no auth
 
-`public/auth.js` é uma **cortina visual, não segurança**: o conteúdo é servido integralmente independente do gate, e a senha está hardcoded nesse arquivo (único lugar permitido). O véu fail-closed (`#gate-veil` no `Base.astro`) esconde o conteúdo até autenticar, inclusive na impressão. A proteção real planejada é Basic Auth no nginx (servidor "TATOOINE"). Não trate dados como protegidos pelo gate, não "reforce" a proteção no client-side, e não exponha a senha em novos lugares. O site tem `noindex` e `robots.txt` com `Disallow: /`.
+`public/auth.js` é uma **cortina visual, não segurança**: o conteúdo é servido integralmente independente do gate, e a senha está hardcoded nesse arquivo (único lugar permitido). O véu fail-closed (`#gate-veil` no `Base.astro`) esconde o conteúdo até autenticar, inclusive na impressão. A proteção real planejada é Basic Auth no nginx (servidor "TATOOINE"). Não trate dados como protegidos pelo gate, não "reforce" a proteção no client-side, e não exponha a senha em novos lugares. O site tem `noindex` em toda página (mecanismo real); o `robots.txt` sai em `/ferias/robots.txt` e é inerte no GitHub Pages (crawlers leem só a raiz do origin).
 
 ## Histórico
 
