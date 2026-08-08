@@ -12,6 +12,7 @@ const mural = [...ativas, ...realizadas];
 <Base title="Férias CK-Labs">
   <header class="hero">
     <svg class="trilha" viewBox="0 0 400 70" aria-hidden="true">
+      {/* O `d` daqui e o path() do offset-path de .aviaozinho (no <style>) sao a MESMA trilha: mudou um, mude o outro. */}
       <path id="rota-aviao" d="M -10 58 Q 120 -12 200 30 T 410 18" fill="none"
         stroke="var(--ambar)" stroke-width="1.5" stroke-dasharray="1 7" stroke-linecap="round" />
       <text class="aviaozinho" font-size="8" text-anchor="middle" dominant-baseline="central">✈️</text>
@@ -36,6 +37,7 @@ const mural = [...ativas, ...realizadas];
   /* Dentro do SVG: o offset-path usa as unidades do viewBox, entao aviao e
      trilha escalam juntos em qualquer largura. */
   .aviaozinho {
+    /* Este path() DEVE ser identico ao `d` do <path id="rota-aviao"> acima — editar juntos. */
     offset-path: path('M -10 58 Q 120 -12 200 30 T 410 18');
     offset-rotate: auto 45deg;
     animation: fly 8s ease-in-out infinite;
@@ -56,6 +58,13 @@ const mural = [...ativas, ...realizadas];
   @supports (-webkit-hyphens: none) {
     .aviaozinho { animation: none; offset-distance: 50%; }
   }
+  /* Sem animacao (Chromium/Gecko), offset-distance volta a 0% e o aviao fica
+     recortado no inicio do path, por cima do H1. Estaciona no meio da trilha,
+     igual ao fallback do WebKit. A regra global de reduced-motion do
+     global.css so zera a animacao; a posicao e responsabilidade daqui. */
+  @media (prefers-reduced-motion: reduce) {
+    .aviaozinho { offset-distance: 50%; }
+  }
   .overline { font-size: .68rem; letter-spacing: .3em; color: #92400e; margin: 0; }
   h1 {
     font-family: var(--f-display);
@@ -65,7 +74,7 @@ const mural = [...ativas, ...realizadas];
   }
   /* #57534e e nao --muted: a linha fica sobre --papel, e #78716c ali da 4,31:1 —
      reprova AA em texto pequeno. Mesmo tom de footer.site e .nota: 6,85:1. */
-  .sub { font-weight: 600; color: #57534e; margin: 0 0 8px; font-size: clamp(.85rem, 2.5vw, 1rem); }
+  .sub { font-weight: 600; color: var(--muted-3); margin: 0 0 8px; font-size: clamp(.85rem, 2.5vw, 1rem); }
   .mural { display: grid; grid-template-columns: 1fr; gap: 16px; padding-top: 18px; }
   @media (min-width: 640px) { .mural { grid-template-columns: 1fr 1fr; } }
   @media (min-width: 1024px) { .mural { grid-template-columns: 1fr 1fr 1fr; } }

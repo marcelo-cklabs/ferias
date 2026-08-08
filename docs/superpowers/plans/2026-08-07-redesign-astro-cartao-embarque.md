@@ -15,7 +15,7 @@
 - `astro.config.mjs`: `site: 'https://marcelo-cklabs.github.io'`, `base: '/ferias'`, `build: { format: 'file' }` — URLs `viagens/<slug>.html` preservadas. Os 6 slugs atuais não mudam.
 - Todo link/asset interno usa `import.meta.env.BASE_URL` (padrão nos componentes: `const base = import.meta.env.BASE_URL.replace(/\/$/, '')`).
 - **Zero JS no site final exceto `public/auth.js`.** Nenhum framework de UI. Animações são CSS puro e TODAS desligam com `prefers-reduced-motion: reduce`.
-- Senha do gate inalterada: `mjaf1699` · chave `ferias_cklabs_auth` · `sessionStorage`. A senha só pode existir em `public/auth.js`.
+- Senha do gate inalterada: `<senha: ver public/auth.js>` · chave `ferias_cklabs_auth` · `sessionStorage`. A senha só pode existir em `public/auth.js`.
 - Conteúdo portado 1:1 — **nenhuma correção editorial**; contradições pré-existentes vão para a descrição do PR (lista na Task 14).
 - Cores por viagem (exatas): SP jul `#334155` · Nordeste `#0e7490` · Iron Maiden `#7f1d1d` · Eddie Vedder `#92400e` · Rush `#3730a3` · NY `#1d4ed8`. Âmbar da marca `#f59e0b`, papel `#fef3c7`, tinta `#1c1917`.
 - Responsividade imprescindível: zero scroll horizontal em 375/768/1280px nas 7 páginas.
@@ -625,7 +625,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
    Senha: alterar PASSWORD abaixo (único lugar permitido).
    ========================================================= */
 (function () {
-  var PASSWORD = "mjaf1699";
+  var PASSWORD = "<senha: ver public/auth.js>";
   var KEY = "ferias_cklabs_auth";
 
   function unveil() {
@@ -712,7 +712,7 @@ Expected: três `1` (ou mais) e `DIST_OK`.
 Run: `npm run dev` (background) e abrir `http://localhost:4321/ferias/`:
 1. Página abre com o checkpoint 🛂 visível e o conteúdo invisível atrás.
 2. Senha errada → "Senha incorreta.".
-3. `mjaf1699` + Enter → conteúdo aparece.
+3. `<senha: ver public/auth.js>` + Enter → conteúdo aparece.
 4. Recarregar → não pede senha de novo (sessionStorage).
 Matar o dev server ao final.
 Expected: os 4 comportamentos confirmados.

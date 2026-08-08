@@ -47,7 +47,7 @@ const categoria = (t: string) =>
                   </div>
                   {item.endereco && (
                     <div class="addr"><span aria-hidden="true">📍</span> {item.enderecoUrl
-                      ? <a href={item.enderecoUrl} target="_blank" rel="noopener">{item.endereco}</a>
+                      ? <a href={item.enderecoUrl} target="_blank" rel="noopener noreferrer">{item.endereco}</a>
                       : item.endereco}</div>
                   )}
                   {item.meta && <div class="meta" set:html={mdInline(item.meta)} />}

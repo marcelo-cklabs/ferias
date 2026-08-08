@@ -11,5 +11,5 @@ dist/
 # Artefatos de screenshot do Playwright MCP
 .playwright-mcp/
 
-# Mockups do visual companion (brainstorming)
+# Artefatos de sessao de agentes (brainstorm, ledger SDD, evidencias)
 .superpowers/
