@@ -40,17 +40,21 @@ const mural = [...ativas, ...realizadas];
     offset-rotate: auto 45deg;
     animation: fly 8s ease-in-out infinite;
   }
-  /* Degradacao no WebKit (Safari): ele aceita offset-path mas IGNORA
-     offset-distance em <text> de SVG — medido com a trilha congelada em
-     0/25/50/75/100%, o aviao nao sai de (-27, 156.6), o inicio do path, meio
-     cortado pela borda do SVG e por cima do H1 (no Chromium o desvio da trilha
-     fica < 1px em todos os pontos). Um `@supports not (offset-path: ...)` nao
-     resolve: CSS.supports('offset-path', "path('M 0 0 H 1')") e true no WebKit.
-     O discriminador medido que separa os dois e -webkit-hyphens (WebKit true,
-     Chromium false — usa hyphens sem prefixo). O aviao e decoracao pura (o SVG
-     inteiro e aria-hidden), entao no WebKit sobra so a trilha pontilhada. */
+  /* Degradacao no WebKit (Safari): o suporte a offset-path/offset-distance
+     existe e um valor ESTATICO pinta no lugar certo (screenshot com
+     offset-distance: 50% poe o aviao no meio da trilha, igual ao Chromium) —
+     o que falha e o REPAINT: a atualizacao quadro a quadro da animacao nao
+     invalida o desenho, e o aviao fica congelado no primeiro frame, perto do
+     inicio do path e por cima do H1. Nao e caso de `@supports not
+     (offset-path: ...)`: CSS.supports('offset-path', "path('M 0 0 H 1')") e
+     true no WebKit. Por isso o guard e o hack -webkit-hyphens, que discrimina
+     Safari (Chromium usa hyphens sem prefixo; Firefox nao entra aqui e segue
+     com a animacao). Em vez de esconder, estaciona o aviao no meio da trilha:
+     o enfeite sobrevive no Safari/iOS, que e onde o dono mais abre o site.
+     Evidencia medida no WebKit headless do Playwright (rev 2336) — Safari real
+     pode divergir; se um dia repintar direito, e so remover este bloco. */
   @supports (-webkit-hyphens: none) {
-    .aviaozinho { display: none; }
+    .aviaozinho { animation: none; offset-distance: 50%; }
   }
   .overline { font-size: .68rem; letter-spacing: .3em; color: #92400e; margin: 0; }
   h1 {

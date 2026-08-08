@@ -51,6 +51,15 @@ const num = String(d.bilhete).padStart(3, '0');
     box-shadow: 0 12px 22px rgba(28, 25, 23, .18);
   }
   .apagado { opacity: .55; filter: saturate(.35); }
+  /* AA dentro do tiquete apagado. A opacity .55 (efeito "tiquete usado",
+     aprovado nos mockups) compoe o cartao inteiro sobre o --papel e derruba o
+     contraste do texto: --muted caia para 2,09:1 e o .nome para 3,85:1. Preto
+     puro e o unico tom que ainda passa AA nessa composicao — nem --tinta
+     (#1c1917) basta, teto de 4,02:1. So o texto informativo muda de cor; o
+     .num (BILHETE Nº) fica em --muted-2 porque e aria-hidden. */
+  .apagado .nome, .apagado .quando, .apagado .resumo { color: #000; }
+  /* border-color junto: o contorno do carimbo e objeto grafico (1.4.11, 3:1). */
+  .apagado :global(.stamp.realizada) { color: #000; border-color: #000; }
   .faixa { height: 6px; background: var(--cor); }
   .corpo { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px 10px; }
   .rota { display: flex; align-items: baseline; gap: 10px; font-size: 1.25rem; font-weight: 700; }
