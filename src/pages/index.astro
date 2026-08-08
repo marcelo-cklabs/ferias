@@ -1,0 +1,81 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import TicketCard from '../components/TicketCard.astro';
+
+const todas = await getCollection('viagens');
+const porData = (a: any, b: any) => +a.data.dataInicio - +b.data.dataInicio;
+const ativas = todas.filter((v) => v.data.status !== 'realizada').sort(porData);
+const realizadas = todas.filter((v) => v.data.status === 'realizada').sort(porData);
+const mural = [...ativas, ...realizadas];
+---
+<Base title="Férias CK-Labs">
+  <header class="hero">
+    <svg class="trilha" viewBox="0 0 400 70" aria-hidden="true">
+      {/* O `d` daqui e o path() do offset-path de .aviaozinho (no <style>) sao a MESMA trilha: mudou um, mude o outro. */}
+      <path id="rota-aviao" d="M -10 58 Q 120 -12 200 30 T 410 18" fill="none"
+        stroke="var(--ambar)" stroke-width="1.5" stroke-dasharray="1 7" stroke-linecap="round" />
+      <text class="aviaozinho" font-size="8" text-anchor="middle" dominant-baseline="central">✈️</text>
+    </svg>
+    <p class="overline mono">CK-LABS AIRLINES · ÁREA PRIVADA</p>
+    <h1>NOSSAS<br />VIAGENS</h1>
+    <p class="sub">Marcelo &amp; Sabrina · roteiros, voos, hospedagem e gastos</p>
+  </header>
+  <main class="wrap">
+    <div class="mural">
+      {mural.map((v, i) => <TicketCard viagem={v} index={i + 1} />)}
+    </div>
+  </main>
+  <footer class="site">ÁREA PRIVADA · CK-LABS · ATUALIZADO CONFORME OS PLANOS EVOLUEM <span aria-hidden="true">🌍</span></footer>
+</Base>
+
+<style>
+  .hero { position: relative; max-width: 1080px; margin: 0 auto; padding: 56px 20px 28px; overflow: hidden; }
+  /* pointer-events: none — o SVG decorativo cobre o overline e o h1, e sem isso
+     bloquearia a selecao do texto por baixo. */
+  .trilha { position: absolute; top: 6px; left: 0; width: 100%; opacity: .55; pointer-events: none; }
+  /* Dentro do SVG: o offset-path usa as unidades do viewBox, entao aviao e
+     trilha escalam juntos em qualquer largura. */
+  .aviaozinho {
+    /* Este path() DEVE ser identico ao `d` do <path id="rota-aviao"> acima — editar juntos. */
+    offset-path: path('M -10 58 Q 120 -12 200 30 T 410 18');
+    offset-rotate: auto 45deg;
+    animation: fly 8s ease-in-out infinite;
+  }
+  /* Degradacao no WebKit (Safari): o suporte a offset-path/offset-distance
+     existe e um valor ESTATICO pinta no lugar certo (screenshot com
+     offset-distance: 50% poe o aviao no meio da trilha, igual ao Chromium) —
+     o que falha e o REPAINT: a atualizacao quadro a quadro da animacao nao
+     invalida o desenho, e o aviao fica congelado no primeiro frame, perto do
+     inicio do path e por cima do H1. Nao e caso de `@supports not
+     (offset-path: ...)`: CSS.supports('offset-path', "path('M 0 0 H 1')") e
+     true no WebKit. Por isso o guard e o hack -webkit-hyphens, que discrimina
+     Safari (Chromium usa hyphens sem prefixo; Firefox nao entra aqui e segue
+     com a animacao). Em vez de esconder, estaciona o aviao no meio da trilha:
+     o enfeite sobrevive no Safari/iOS, que e onde o dono mais abre o site.
+     Evidencia medida no WebKit headless do Playwright (rev 2336) — Safari real
+     pode divergir; se um dia repintar direito, e so remover este bloco. */
+  @supports (-webkit-hyphens: none) {
+    .aviaozinho { animation: none; offset-distance: 50%; }
+  }
+  /* Sem animacao (Chromium/Gecko), offset-distance volta a 0% e o aviao fica
+     recortado no inicio do path, por cima do H1. Estaciona no meio da trilha,
+     igual ao fallback do WebKit. A regra global de reduced-motion do
+     global.css so zera a animacao; a posicao e responsabilidade daqui. */
+  @media (prefers-reduced-motion: reduce) {
+    .aviaozinho { offset-distance: 50%; }
+  }
+  .overline { font-size: .68rem; letter-spacing: .3em; color: #92400e; margin: 0; }
+  h1 {
+    font-family: var(--f-display);
+    font-size: clamp(2.2rem, 7vw, 4rem);
+    text-shadow: 3px 3px 0 var(--ambar);
+    margin: 10px 0 6px;
+  }
+  /* #57534e e nao --muted: a linha fica sobre --papel, e #78716c ali da 4,31:1 —
+     reprova AA em texto pequeno. Mesmo tom de footer.site e .nota: 6,85:1. */
+  .sub { font-weight: 600; color: var(--muted-3); margin: 0 0 8px; font-size: clamp(.85rem, 2.5vw, 1rem); }
+  .mural { display: grid; grid-template-columns: 1fr; gap: 16px; padding-top: 18px; }
+  @media (min-width: 640px) { .mural { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1024px) { .mural { grid-template-columns: 1fr 1fr 1fr; } }
+</style>

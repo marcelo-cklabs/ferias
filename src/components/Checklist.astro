@@ -1,0 +1,41 @@
+---
+import { mdInline } from '../lib/format.js';
+import SecaoTitulo from './SecaoTitulo.astro';
+interface Props { secao: any; cor: string }
+const { secao, cor } = Astro.props;
+---
+<section style={`--cor:${cor}`}>
+  <SecaoTitulo icone={secao.icone} titulo={secao.titulo} />
+  {/* role="list": list-style:none faz o VoiceOver descartar a semantica de lista. */}
+  <ul class="etiquetas" role="list">
+    {secao.itens.map((item: any, i: number) => (
+      <li class="etiqueta">
+        <span class="furo" aria-hidden="true"></span>
+        <div>
+          <div class="texto" set:html={mdInline(item.texto)} />
+          {item.detalhe && <div class="detalhe" set:html={mdInline(item.detalhe)} />}
+          <div class="num mono" aria-hidden="true">ETIQUETA Nº {String(i + 1).padStart(2, '0')}</div>
+        </div>
+      </li>
+    ))}
+  </ul>
+</section>
+<style>
+  .etiquetas { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .etiqueta {
+    background: var(--tiquete); border-radius: 8px 14px 14px 8px;
+    border-left: 4px solid var(--cor);
+    padding: 10px 14px 10px 28px; position: relative;
+    box-shadow: var(--sombra-mesa); transform-origin: 14px 50%;
+  }
+  .etiqueta:nth-child(odd) { transform: rotate(-.5deg); }
+  .etiqueta:nth-child(even) { transform: rotate(.4deg); }
+  .etiqueta:hover { animation: swing .9s ease-in-out; }
+  .furo {
+    position: absolute; left: 9px; top: 50%; transform: translateY(-50%);
+    width: 9px; height: 9px; border: 2px solid var(--linha); border-radius: 50%;
+  }
+  .texto { font-size: .85rem; font-weight: 600; }
+  .detalhe { font-size: .75rem; color: var(--muted); margin-top: 2px; }
+  .num { font-size: .58rem; color: var(--muted-2); margin-top: 4px; }
+</style>

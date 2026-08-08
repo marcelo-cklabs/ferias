@@ -1,0 +1,216 @@
+# yaml-language-server: $schema=../../../.astro/collections/viagens.schema.json
+titulo: "São Paulo"
+tituloCard: "São Paulo"
+emoji: "🏙️"
+subtitulo: "Capital paulista"
+rota:
+  origem: "GYN"
+  origemNome: "Goiânia"
+  destino: "CGH"
+  destinoNome: "São Paulo"
+dataInicio: 2026-07-21
+dataCard: "21–24 jul 2026"
+dataDisplay: "21 – 24 de julho de 2026"
+pax: "Marcelo, Sabrina & Thaynara (Maple Bear)"
+status: realizada
+statusLabel: "Finalizada"
+cor: "#334155"
+resumoCard: "Realizada com a Thaynara (Maple Bear). Total R$ 4.876,46 · a receber R$ 81,25 da Thaynara (⅓ do Airbnb)."
+bilhete: 1
+heroMeta:
+  - { rotulo: "LOC", valor: "MEFCBQ" }
+  - { rotulo: "CARRO", valor: "MOVIDA CGH · MV4HN1LPU6VBR" }
+footer: "Viagem finalizada · gastos conciliados com o extrato em 02/08/2026 🏙️"
+secoes:
+  - tipo: roteiro
+    dias:
+      - data: "21/07"
+        diaSemana: "Terça"
+        local: "Chegada"
+        itens:
+          - hora: "10:20"
+            titulo: "Voo Goiânia → São Paulo"
+            tag: "✈️ Voo"
+            endereco: "GYN (Santa Genoveva) → CGH (Congonhas) · chega 11:55"
+            meta: "GOL · G3-1433 · localizador MEFCBQ · sem bagagem despachada"
+          - hora: "12:00"
+            titulo: "Retirada do carro · Movida"
+            tag: "🚗 Carro"
+            endereco: "Congonhas — estacionamento do aeroporto"
+            meta: "SUV compacto automático · cód. MV4HN1LPU6VBR · web check-in abre 4h antes"
+          - hora: "13:00"
+            titulo: "Almoço · Shihoma"
+            tag: "🍝 Almoço"
+            status: "confirmada"
+            endereco: "Rua Medeiros de Albuquerque, 431 — Jardim das Bandeiras"
+            meta: "3 pessoas · cód. 6O43XQ4k · reserva confirmada"
+          - hora: "15:00"
+            titulo: "Check-in flat · Consolação"
+            tag: "🏨 Airbnb"
+            endereco: "Rua Bela Cintra, 672 · apto 504 — Consolação · CEP 01415-002"
+            enderecoUrl: "https://maps.app.goo.gl/GsWeuRnuFW8ST8x6A"
+            meta: "Anfitrião João Paulo · cód. HM5W2ANRZR · Wi-Fi Brau / cossi2022"
+          - hora: "Tarde"
+            titulo: "Trabalho remoto · flat Consolação"
+            tag: "💻 Trabalho"
+            meta: "Marcelo, após o almoço · horário comercial"
+          - hora: "Noite"
+            titulo: "Jantar · Bella Paulista"
+            tag: "🍔 Jantar"
+            status: "realizado"
+            endereco: "Bella Paulista — Consolação"
+      - data: "22/07"
+        diaSemana: "Quarta"
+        local: "São Paulo"
+        itens:
+          - hora: "Manhã"
+            titulo: "Check-out · flat Consolação"
+            tag: "🏨 Airbnb"
+            meta: "Saída do flat e deslocamento para o Tatuapé"
+          - hora: "14:00"
+            titulo: "Check-in · Meliá Tatuapé"
+            tag: "🏨 Hotel"
+            endereco: "Rua Serra de Juréa, 351 — Tatuapé · CEP 03323-020"
+            enderecoUrl: "https://maps.app.goo.gl/XP8ayj7cc2oN2o8o9"
+            meta: "Confirmação 6155366952 · a partir de 14:00"
+          - titulo: "Marcelo · trabalho remoto"
+            tag: "💻 Trabalho"
+            meta: "Horário comercial, dia todo (manhã no flat, tarde no Meliá)"
+          - hora: "Noite"
+            titulo: "Jantar · Lanche Estadão"
+            tag: "🍔 Jantar"
+            endereco: "Lanche Estadão — Centro"
+            enderecoUrl: "https://maps.app.goo.gl/YxDB9ibCJoSfshTv9"
+      - data: "23/07"
+        diaSemana: "Quinta"
+        local: "Tatuapé"
+        itens:
+          - hora: "08:00"
+            titulo: "Sabrina & Thaynara · Maple Bear Tatuapé"
+            tag: "🏫 Trabalho"
+            endereco: "Maple Bear Tatuapé"
+            enderecoUrl: "https://maps.app.goo.gl/2RbPSGtCpyEf1Dpq6"
+            meta: "Expediente até 17:30"
+          - titulo: "Marcelo · trabalho remoto no hotel"
+            tag: "💻 Trabalho"
+            meta: "Horário comercial · no Meliá Tatuapé"
+      - data: "24/07"
+        diaSemana: "Sexta"
+        local: "Volta"
+        itens:
+          - hora: "08:00"
+            titulo: "Sabrina & Thaynara · Maple Bear Tatuapé"
+            tag: "🏫 Trabalho"
+            endereco: "Maple Bear Tatuapé"
+            enderecoUrl: "https://maps.app.goo.gl/2RbPSGtCpyEf1Dpq6"
+            meta: "Expediente até 17:30"
+          - hora: "12:00"
+            titulo: "Check-out · Meliá Tatuapé"
+            tag: "🏨 Hotel"
+            meta: "Check-out até 12:00"
+          - titulo: "Marcelo · trabalho remoto · café/coworking"
+            tag: "💻 Trabalho"
+            meta: "Horário comercial · à tarde em café/coworking no Tatuapé (após o check-out das 12:00)"
+          - hora: "19:00"
+            titulo: "Devolução do carro · Movida"
+            tag: "🚗 Carro"
+            endereco: "Congonhas — estacionamento do aeroporto"
+          - hora: "20:40"
+            titulo: "Voo São Paulo → Goiânia"
+            tag: "✈️ Voo"
+            endereco: "CGH (Congonhas) → GYN (Goiânia) · chega 22:25"
+            meta: "GOL · G3-1438 · localizador MEFCBQ"
+  - tipo: voos
+    titulo: "Voos · GOL"
+    trechos:
+      - titulo: "Ida · 21/07 (terça)"
+        localizador: "MEFCBQ"
+        pernas:
+          - { de: "GYN", deHora: "10:20", deNome: "Goiânia", para: "CGH", paraHora: "11:55", paraNome: "Congonhas", voo: "G3-1433" }
+      - titulo: "Volta · 24/07 (sexta)"
+        localizador: "MEFCBQ"
+        pernas:
+          - { de: "CGH", deHora: "20:40", deNome: "Congonhas", para: "GYN", paraHora: "22:25", paraNome: "Goiânia", voo: "G3-1438" }
+    notas:
+      - "2 passageiros: Marcelo José Amador Filho e Sabrina Oliveira · Econômica, tarifa LIGHT — **sem bagagem despachada** · Thaynara viaja com bilhete próprio."
+  - tipo: ficha
+    titulo: "Carro · Movida"
+    icone: "🚗"
+    cartoes:
+      - titulo: "SUV compacto automático"
+        subtitulo: "(Grupo H · Fiat Pulse, Renault Kardian ou similar)"
+        entradas:
+          - { rotulo: "Código", valor: "MV4HN1LPU6VBR" }
+          - { rotulo: "Status", valor: "Realizada — paga em 2× R$ 365,36 (inclui proteção fechada no balcão)" }
+          - { rotulo: "Retirada", valor: "Congonhas (estacionamento do aeroporto) · 21/07 12:00" }
+          - { rotulo: "Devolução", valor: "Congonhas (estacionamento do aeroporto) · 24/07 19:00" }
+          - { rotulo: "Diárias", valor: "3 diárias · KM livre" }
+          - { rotulo: "Total pago", valor: "R$ 730,72 · parcela 2/2 na fatura de agosto" }
+        total: "R$ 730,72"
+    lembretes:
+      - "**CNH física** obrigatória na retirada · web check-in abre **4h antes** e agiliza."
+      - "Tolerância de **1h** no horário de retirada — o voo pousa 11:55 e a retirada é 12:00; folga ok mesmo com atraso."
+      - "Devolução 24/07 às **19:00**, já no aeroporto do voo das **20:40**."
+  - tipo: hospedagem
+    cartoes:
+      - titulo: "Flat na Consolação — Airbnb"
+        subtitulo: "(1 noite · 21–22/07)"
+        entradas:
+          - { rotulo: "Check-in", valor: "ter 21/07 · a partir de 15:00" }
+          - { rotulo: "Check-out", valor: "qua 22/07" }
+          - { rotulo: "Endereço", valor: "[Rua Bela Cintra, 672 · apto 504 — Consolação](https://maps.app.goo.gl/GsWeuRnuFW8ST8x6A) · CEP 01415-002" }
+          - { rotulo: "Anfitrião", valor: "João Paulo · casa/apto inteiro (2 camas)" }
+          - { rotulo: "Anúncio", valor: '"Flat Próx a Paulista/Garagem/Arrumação de Quarto"' }
+          - { rotulo: "Confirmação", valor: "HM5W2ANRZR" }
+          - { rotulo: "Wi-Fi", valor: "Brau / brau5g · senha cossi2022" }
+          - { rotulo: "Total pago", valor: "R$ 243,76 · 05/07 · rateio ÷ 3 = R$ 81,25 por pessoa" }
+      - titulo: "São Paulo Tatuapé, Affiliated by Meliá"
+        subtitulo: "(2 noites · 22–24/07)"
+        entradas:
+          - { rotulo: "Check-in", valor: "qua 22/07 · a partir de 14:00" }
+          - { rotulo: "Check-out", valor: "sex 24/07 · até 12:00" }
+          - { rotulo: "Endereço", valor: "[Rua Serra de Juréa, 351 — Tatuapé](https://maps.app.goo.gl/XP8ayj7cc2oN2o8o9) · CEP 03323-020" }
+          - { rotulo: "Confirmação", valor: "6155366952" }
+          - { rotulo: "Reserva", valor: "Booking.com · em nome de Thaynara" }
+          - { rotulo: "Telefone", valor: "+55 11 2942-4900" }
+    destaque: "**🤝 Rateio do Airbnb (÷ 3 — Marcelo, Sabrina e Thaynara):** R$ 81,25 por pessoa · **a receber da Thaynara** · cota da Sabrina por conta do Marcelo."
+  - tipo: gastos
+    linhas:
+      - { categoria: "Carro", descricao: "Movida SUV compacto SP, Congonhas, 21–24/07 (MV4HN1LPU6VBR) · 2× R$ 365,36, inclui proteção fechada no balcão · parcela 2/2 na fatura de agosto", status: pago, valor: 730.72 }
+      - { categoria: "Carro", descricao: "Movida — carro em Goiânia com o Matheus (leva-e-traz do Enzo no day care)", status: pago, valor: 606.24 }
+      - { categoria: "Carro", descricao: "Combustível do carro de Goiânia — acerto com o Matheus (Pix), 25/07", status: pago, valor: 79.39 }
+      - { categoria: "Hospedagem", descricao: "Airbnb 1ª noite, Consolação, 21–22/07 (HM5W2ANRZR) · rateio ÷ 3", status: pago, valor: 243.76 }
+      - { categoria: "Hospedagem", descricao: "Meliá Tatuapé — 2 noites, 22–24/07 (parte não coberta pela Maple Bear)", status: pago, valor: 932.72 }
+      - { categoria: "Alimentação", descricao: "Pasta Shihoma — almoço, 3 pessoas, 21/07", status: pago, valor: 499.46 }
+      - { categoria: "Alimentação", descricao: "Bella Paulista — jantar, 21/07", status: pago, valor: 138.90 }
+      - { categoria: "Alimentação", descricao: "Fabrique, 22/07", status: pago, valor: 175.00 }
+      - { categoria: "Alimentação", descricao: "Rascal, 23/07", status: pago, valor: 284.34 }
+      - { categoria: "Alimentação", descricao: "Pati Piva, 23/07", status: pago, valor: 98.00 }
+      - { categoria: "Alimentação", descricao: "Bar e Restaurante 564, 24/07", status: pago, valor: 252.91 }
+      - { categoria: "Alimentação", descricao: "Cia da Costela, 24/07", status: pago, valor: 52.90 }
+      - { categoria: "Mercado", descricao: "Supermercado Mambo — Vila Madalena, 22/07", status: pago, valor: 209.39 }
+      - { categoria: "Mercado", descricao: "Carrefour Consolação — água e shampoo, 22/07", status: pago, valor: 41.56 }
+      - { categoria: "Mercado", descricao: "Carrefour Express Tuiuti, 24/07", status: pago, valor: 14.58 }
+      - { categoria: "Voo", descricao: "GOL — assento extra no voo de volta, 24/07", status: pago, valor: 188.00 }
+      - { categoria: "Coworking", descricao: "Coworking Higienópolis — Tv. Dona Paula, 13 (Pix DDI Centro de Negócios), 22/07", status: pago, valor: 70.00 }
+      - { categoria: "Coworking", descricao: "NI CO Núcleo Integrado — Tatuapé, diária, 24/07", status: pago, valor: 50.00 }
+      - { categoria: "Estacionamento", descricao: "Estacionamento no almoço do Pasta Shihoma (Pix Adelson), 21/07", status: pago, valor: 40.00 }
+      - { categoria: "Estacionamento", descricao: "Estacionamento Park Zone — parada na Fabrique, 22/07", status: pago, valor: 30.00 }
+      - { categoria: "Estacionamento", descricao: "Tatuapé Park — estacionamento do hotel, 24/07", status: pago, valor: 82.00 }
+      - { categoria: "Estacionamento", descricao: "EstacionamentoBom — estacionamento do NI CO, 24/07", status: pago, valor: 25.00 }
+      - { categoria: "Transporte", descricao: "Uber casa → aeroporto GYN (ida), 21/07", status: pago, valor: 31.59 }
+    totais:
+      - { rotulo: "Total da viagem", valor: 4876.46 }
+      - { rotulo: "A receber — Thaynara (⅓ do Airbnb da 1ª noite)", valor: -81.25 }
+      - { rotulo: "Custo final previsto", valor: 4795.21 }
+    notas:
+      - "✈️ Voos por conta da Maple Bear — só o **assento extra da volta (R$ 188,00)** entra aqui. O Meliá **não é integralmente coberto**: os R$ 932,72 são a parte por conta do Marcelo. Do total, **R$ 365,36** (parcela 2/2 do carro de SP) caem na fatura de agosto."
+      - "🤝 **Rateio do Airbnb (÷ 3 — Marcelo, Sabrina e Thaynara):** R$ 81,25 por pessoa · a receber da Thaynara · cota da Sabrina por conta do Marcelo. O combustível do carro de SP na devolução foi pago por outra pessoa do grupo — não entra nestes custos."
+      - "🔒 **Cauções (fora do total):** pré-autorizações da Movida — R$ 500,00 (carro de SP) e R$ 200,00 (carro de Goiânia) — tratadas como devolvidas; estornos a confirmar."
+      - "📊 Conciliado em 02/08/2026 com o relatório do projeto de finanças (Open Finance → Supabase, trip **sp-jul2026**, 23 lançamentos): o relatório fecha em R$ 4.632,70 porque não inclui o Airbnb da 1ª noite (R$ 243,76, pago em 05/07, antes da janela da viagem); somando o Airbnb, o total é R$ 4.876,46."
+  - tipo: checklist
+    titulo: "Pendências pós-viagem"
+    itens:
+      - { texto: "Receber da Thaynara o rateio do Airbnb — R$ 81,25 (⅓ de R$ 243,76)" }
+      - { texto: "Conferir a parcela 2/2 do carro de SP na fatura de agosto — R$ 365,36" }
+      - { texto: "Confirmar o estorno das cauções Movida — R$ 500,00 (carro de SP) e R$ 200,00 (carro de Goiânia)" }

@@ -1,6 +1,6 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository. AGENTS.md é espelho deste arquivo — mudou um, mude o outro.
+This file provides guidance to Codex (Codex.ai/code) when working with code in this repository. Este arquivo é espelho de CLAUDE.md — mudou um, mude o outro.
 
 ## O que é este projeto
 

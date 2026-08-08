@@ -1,0 +1,59 @@
+---
+import SecaoTitulo from './SecaoTitulo.astro';
+import Notas from './Notas.astro';
+interface Props { secao: any; cor: string }
+const { secao, cor } = Astro.props;
+---
+<section style={`--cor:${cor}`}>
+  <SecaoTitulo icone={secao.icone} titulo={secao.titulo} />
+  {/* .length e nao so a existencia: `trechos: []` renderizaria o grid vazio. */}
+  {(secao.trechos?.length ?? 0) > 0 && (
+    <div class="trechos">
+      {secao.trechos.map((t: any) => (
+        <article class="trecho">
+          <h3>{t.titulo}</h3>
+          {t.localizador && <p class="loc mono">LOCALIZADOR <span class="badge">{t.localizador}</span></p>}
+          {t.pernas.map((p: any, i: number) => (
+            <>
+              {/* conexao unica, entre as pernas 1 e 2 — schema tem 1 conexao por trecho */}
+              {i === 1 && t.conexao && <p class="conexao mono">{t.conexao}</p>}
+              <div class="perna">
+                <div><div class="ap mono">{p.de} {p.deHora}</div><div class="nome">{p.deNome}</div></div>
+                <div class="seta" aria-hidden="true">→</div>
+                <div class="fim"><div class="ap mono">{p.para} {p.paraHora}</div><div class="nome">{p.paraNome}{p.voo && ` · ${p.voo}`}</div></div>
+              </div>
+            </>
+          ))}
+        </article>
+      ))}
+    </div>
+  )}
+  <Notas notas={secao.notas} />
+</section>
+<style>
+  .trechos { display: grid; gap: 12px; }
+  @media (min-width: 768px) { .trechos { grid-template-columns: 1fr 1fr; } }
+  .trecho {
+    background: var(--tiquete); border-radius: 12px; box-shadow: var(--sombra-mesa);
+    border-left: 4px solid var(--cor); padding: 14px 16px;
+  }
+  h3 { font-size: .9rem; font-weight: 800; margin-bottom: 6px; }
+  .loc { font-size: .64rem; color: var(--muted); margin: 0 0 10px; }
+  .badge {
+    background: var(--tinta); color: var(--papel); border-radius: 5px;
+    padding: 2px 7px; letter-spacing: .12em;
+  }
+  .perna { display: flex; align-items: center; gap: 10px; padding: 5px 0; }
+  .ap { font-weight: 700; font-size: .95rem; }
+  .nome { font-size: .7rem; color: var(--muted); }
+  .fim { margin-left: auto; text-align: right; }
+  /* Seta decorativa (aria-hidden): a ordem dos blocos ja diz de→para. */
+  .seta { color: var(--ambar); }
+  /* --muted (4,80:1 sobre branco) e nao --muted-2 (2,52:1): "conexao no Rio ·
+     2h15" e informacao, nao decoracao. */
+  .conexao {
+    font-size: .64rem; color: var(--muted); text-align: center;
+    border-top: 1.5px dashed var(--linha); border-bottom: 1.5px dashed var(--linha);
+    padding: 3px 0; margin: 4px 0;
+  }
+</style>

@@ -1,0 +1,65 @@
+# yaml-language-server: $schema=../../../.astro/collections/viagens.schema.json
+titulo: "Nova York"
+tituloCard: "Nova York"
+emoji: "🗽"
+subtitulo: "A grande viagem de 2027"
+rota:
+  origem: "GYN"
+  origemNome: "Goiânia"
+  destino: "JFK"
+  destinoNome: "Nova York"
+dataInicio: 2027-03-01
+dataCard: "mar/abr/mai 2027"
+dataDisplay: "março, abril ou maio de 2027 (a definir)"
+pax: "Marcelo & Sabrina · econômica"
+status: planejando
+statusLabel: "Planejando"
+cor: "#1d4ed8"
+resumoCard: "2 passageiros, econômica. Data a definir."
+bilhete: 6
+heroMeta:
+  - { rotulo: "DURAÇÃO", valor: "~14 DIAS" }
+footer: "Página em construção · a grande viagem 🗽"
+secoes:
+  - tipo: ficha
+    titulo: "Visão geral"
+    icone: "🧭"
+    cartoes:
+      - entradas:
+          - { rotulo: "Destino", valor: "Nova York (EUA)" }
+          - { rotulo: "Duração prevista", valor: "~14 dias" }
+          - { rotulo: "Passageiros", valor: "2 (Marcelo & Sabrina), econômica" }
+          - { rotulo: "Janela", valor: "março / abril / maio 2027 — a definir" }
+    notas:
+      - '💡 A estratégia de milhas/pontos desta viagem é conduzida à parte, na página do Notion **"✈️ Viagens e Milhas"** (fonte de verdade de saldos e resgates). Esta página guarda só o roteiro.'
+  - tipo: ficha
+    titulo: "Roteiro"
+    icone: "🗺️"
+    cartoes:
+      - entradas:
+          - { rotulo: "Situação", valor: "A montar. Definir datas, bairros, atrações e eventual bate-volta (ex.: Washington, Boston)." }
+  - tipo: checklist
+    titulo: "Atrações e passeios"
+    icone: "🎡"
+    itens:
+      - { texto: "**Woodbury Common Premium Outlets**", detalhe: "bate-volta de compras (~1h15 de ônibus a partir do Port Authority)" }
+      - { texto: "**Rockefeller Center**", detalhe: "Top of the Rock" }
+      - { texto: "**B&H Photo Video**", detalhe: "a megaloja de foto/eletrônicos (atenção: fecha sexta à tarde e sábado)" }
+      - { texto: "**The Vessel (Hudson Yards)**", detalhe: 'a "colmeia" · dá para emendar com o High Line' }
+  - tipo: voos
+    notas:
+      - "A definir — resgate em milhas (ver Notion). Inserir localizador quando emitir."
+  - tipo: hospedagem
+    checklist:
+      - "**Nova York** — ~14 noites · *a definir bairro e reservar*"
+  - tipo: gastos
+    linhas: []
+    totais:
+      - { rotulo: "Total", valor: 0 }
+  - tipo: checklist
+    titulo: "Próximos passos"
+    itens:
+      - { texto: "Definir o mês (mar/abr/mai) e as datas exatas" }
+      - { texto: "Emitir voos com milhas (acompanhar disponibilidade — ver Notion)" }
+      - { texto: "Reservar hospedagem" }
+      - { texto: "Montar roteiro de atrações e passeios" }

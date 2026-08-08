@@ -23,16 +23,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Monta o site (somente arquivos publicos)
-        run: |
-          mkdir -p _site
-          cp index.html _site/
-          cp -r assets _site/assets
-          cp -r viagens _site/viagens
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Instala dependencias
+        run: npm ci
+
+      - name: Build do site (Astro)
+        run: npm run build
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: dist
 
       - id: deployment
         uses: actions/deploy-pages@v4

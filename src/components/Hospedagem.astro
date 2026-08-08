@@ -1,0 +1,68 @@
+---
+import { mdInline } from '../lib/format.js';
+import SecaoTitulo from './SecaoTitulo.astro';
+import Notas from './Notas.astro';
+interface Props { secao: any; cor: string }
+const { secao, cor } = Astro.props;
+---
+<section style={`--cor:${cor}`}>
+  <SecaoTitulo icone={secao.icone} titulo={secao.titulo} />
+  {/* .length e nao so a existencia: `cartoes: []` renderizaria nada visivel mas
+     e a mesma armadilha do Ficha/Voos — guard explicito por consistencia. */}
+  {(secao.cartoes?.length ?? 0) > 0 && secao.cartoes.map((c: any) => (
+    <article class="cartao">
+      {(c.titulo || c.subtitulo) && <h3>{c.titulo} {c.subtitulo && <span class="sub">{c.subtitulo}</span>}</h3>}
+      <dl>
+        {c.entradas.map((e: any) => (
+          <div class="kv"><dt>{e.rotulo}</dt><dd set:html={mdInline(e.valor)} /></div>
+        ))}
+      </dl>
+      {/* total renderiza igual ao Ficha — schema compartilha cartao */}
+      {c.total && <p class="total mono">{c.total}</p>}
+    </article>
+  ))}
+  {/* role="list": list-style:none faz o VoiceOver descartar a semantica de lista. */}
+  {(secao.checklist?.length ?? 0) > 0 && (
+    <ul class="areservar" role="list">
+      {secao.checklist.map((item: string) => (
+        <li><span class="box" aria-hidden="true"></span><span set:html={mdInline(item)} /></li>
+      ))}
+    </ul>
+  )}
+  {secao.destaque && <aside class="destaque" set:html={mdInline(secao.destaque)} />}
+  <Notas notas={secao.notas} />
+</section>
+<style>
+  .cartao {
+    background: var(--tiquete); border-radius: 12px; box-shadow: var(--sombra-mesa);
+    border-left: 4px solid var(--cor); padding: 14px 16px; margin-bottom: 12px;
+  }
+  h3 { font-size: .95rem; font-weight: 800; margin-bottom: 8px; }
+  /* --muted sobre --tiquete = 4,80:1 (AA para texto pequeno). Nunca --muted-2 aqui: 2,52:1. */
+  .sub { font-weight: 600; color: var(--muted); font-size: .78rem; }
+  dl { margin: 0; display: grid; gap: 6px; }
+  .kv { display: grid; grid-template-columns: minmax(90px, 130px) 1fr; gap: 10px; font-size: .82rem; }
+  .kv dt { color: var(--muted); }
+  .kv dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+  /* Identica a .total do Ficha — o cartao e o mesmo objeto do schema. */
+  .total {
+    margin: 10px 0 0; text-align: right; font-weight: 700; font-size: 1rem;
+    border-top: 2px dashed var(--linha); padding-top: 8px;
+  }
+  .areservar { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .areservar li {
+    background: var(--tiquete); border-radius: 10px; box-shadow: var(--sombra-mesa);
+    padding: 10px 14px; font-size: .84rem; display: flex; gap: 10px; align-items: baseline;
+  }
+  /* Quadradinho decorativo (aria-hidden): o texto do item ja diz "a reservar",
+     entao --muted-2 (2,52:1) e conforme como "pure decoration" (WCAG 1.4.11). */
+  .box {
+    flex: none; width: 12px; height: 12px; border: 2px solid var(--muted-2);
+    border-radius: 4px; transform: translateY(1px);
+  }
+  /* Texto herda --tinta sobre #ecfdf5 = 16,60:1. */
+  .destaque {
+    background: #ecfdf5; border: 1.5px dashed var(--ok); border-radius: 10px;
+    padding: 10px 14px; font-size: .8rem; margin-top: 12px;
+  }
+</style>

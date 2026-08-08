@@ -1,0 +1,102 @@
+# yaml-language-server: $schema=../../../.astro/collections/viagens.schema.json
+titulo: "São Paulo — Eddie Vedder"
+tituloCard: "São Paulo — Eddie Vedder"
+emoji: "🎸"
+subtitulo: "Best of Blues and Rock 2026"
+rota:
+  origem: "GYN"
+  origemNome: "Goiânia"
+  destino: "CGH"
+  destinoNome: "São Paulo"
+dataInicio: 2026-11-19
+dataCard: "19–23 nov 2026"
+dataDisplay: "19 – 23 de novembro de 2026"
+pax: "Marcelo, Sabrina, Edilson, Geovanka, Thaynara & Israel"
+status: confirmada
+statusLabel: "Ingressos + Airbnb OK"
+cor: "#92400e"
+resumoCard: "Best of Blues and Rock (show 22/11). Grupo de 6; Airbnb no Ibirapuera OK, voos a comprar."
+bilhete: 4
+heroMeta:
+  - { rotulo: "SHOW", valor: "DOM 22/11 · ARENA (GRAMADO)" }
+  - { rotulo: "AIRBNB", valor: "HMAWZKDF5S" }
+footer: "Ingressos e Airbnb garantidos · voos a comprar 🎸"
+secoes:
+  - tipo: ficha
+    titulo: "O show"
+    icone: "🎸"
+    cartoes:
+      - titulo: "Eddie Vedder · Best of Blues and Rock"
+        entradas:
+          - { rotulo: "Data", valor: "Domingo, 22 de novembro de 2026 · horário a confirmar" }
+          - { rotulo: "Local", valor: "São Paulo — a confirmar (Parque Ibirapuera?)" }
+          - { rotulo: "Ingressos", valor: "4× meia-entrada — Arena (Gramado) · Lote 2" }
+          - { rotulo: "Titulares", valor: "Marcelo, Sabrina, Israel (primo da Sabrina) e Thaynara (assistente da Sabrina)" }
+          - { rotulo: "Pedidos", valor: "2 pedidos de 2 ingressos — #78264953 (Visa Bradesco) + 1 no Mastercard C6 · aprovados 03/07/2026" }
+    notas:
+      - "🎟️ Ingressos garantidos (nominais). Confirmar local, horários e forma de entrega quando o festival divulgar."
+  - tipo: roteiro
+    dias:
+      - data: "Qui 19/11"
+        diaSemana: "Chegada"
+        local: "São Paulo"
+        texto: "Chegada a São Paulo e check-in no Airbnb (self check-in por fechadura inteligente, a partir das 15:00). *Voos a definir.*"
+        tags: ["✈️ Voo a definir", "🏨 Check-in Airbnb"]
+      - data: "Sex 20/11"
+        diaSemana: "Livre"
+        local: "São Paulo"
+        texto: "Dia livre na cidade. *A detalhar (programação, restaurantes, passeios).*"
+        tags: ["🏨 Airbnb Ibirapuera"]
+      - data: "Sáb 21/11"
+        diaSemana: "Livre"
+        local: "São Paulo"
+        texto: "Dia livre na cidade. *A detalhar.*"
+        tags: ["🏨 Airbnb Ibirapuera"]
+      - data: "Dom 22/11"
+        diaSemana: "Dia do show"
+        local: "Best of Blues and Rock"
+        texto: "Dia livre + **show do Eddie Vedder**. Arena (Gramado), meia-entrada lote 2."
+        tags: ["🎸 Eddie Vedder"]
+      - data: "Seg 23/11"
+        diaSemana: "Volta"
+        local: "Volta"
+        texto: "Check-out até 11:00 e retorno. *Voo a definir.*"
+        tags: ["✈️ Voo a definir"]
+  - tipo: voos
+    notas:
+      - "A definir — alvo: ida 19/11 e volta 23/11. Inserir quando comprar."
+  - tipo: hospedagem
+    cartoes:
+      - titulo: "Maestro Ibirapuera — Airbnb"
+        subtitulo: "(4 noites · 19–23/11)"
+        entradas:
+          - { rotulo: "Check-in", valor: "qui 19/11 · a partir de 15:00 · self check-in (fechadura inteligente)" }
+          - { rotulo: "Check-out", valor: "seg 23/11 · até 11:00" }
+          - { rotulo: "Região", valor: "Ibirapuera, São Paulo · endereço exato vem no self check-in (a caminho)" }
+          - { rotulo: "Anfitrião", valor: "Guilherme · casa/apto inteiro · +55 11 99243-3554" }
+          - { rotulo: "Hóspedes", valor: "6 adultos (máximo do anúncio)" }
+          - { rotulo: "Confirmação", valor: "HMAWZKDF5S" }
+          - { rotulo: "Wi-Fi", valor: "a informar no check-in" }
+          - { rotulo: "Total pago", valor: "R$ 2.788,70 · pago 07/07 · em 6× no Visa" }
+          - { rotulo: "Rateio", valor: "÷ 6 = R$ 464,78 por pessoa · entram Thaynara, Edilson e Geovanka · cotas de Sabrina e Israel por conta do Marcelo" }
+    destaque: "**✅ Airbnb confirmado e pago.** Cancelamento grátis até 14/11 às 15:00 — depois disso, reembolso apenas parcial se cancelar antes do check-in de 19/11."
+  - tipo: gastos
+    linhas:
+      - { categoria: "Show", descricao: "Ingressos Eddie Vedder (4× meia — Arena Gramado, Lote 2) · 2 pedidos parcelados 2× R$ 616,00 (Visa Bradesco + Mastercard C6)", status: pago, valor: 2464.00 }
+      - { categoria: "Hospedagem", descricao: "Airbnb 4 noites, Ibirapuera, 19–23/11 (HMAWZKDF5S) · 6× no Visa", status: pago, valor: 2788.70 }
+      - { categoria: "Reembolso", descricao: "Thaynara — ingresso dela (03/07)", status: recebido, valor: -616.00 }
+    totais:
+      - { rotulo: "Líquido até agora (pago − reembolso recebido)", valor: 4636.70 }
+      - { rotulo: "A receber — rateio do Airbnb (Thaynara, Edilson e Geovanka · 3× R$ 464,78)", valor: -1394.35 }
+      - { rotulo: "Custo final previsto — Marcelo (cobre as cotas de Sabrina e Israel)", valor: 3242.35 }
+    notas:
+      - "Ingressos: R$ 616,00 cada (meia, lote 2) · sem taxas adicionais · 4 ingressos em 2 pedidos de 2 (#78264953 no Visa Bradesco + 1 no Mastercard C6), aprovados em 03/07/2026 · desembolso bruto com o Airbnb: R$ 5.252,70. Thaynara já reembolsou o ingresso dela (R$ 616,00 · 03/07); de Sabrina e Israel não haverá reembolso."
+      - "Airbnb: R$ 665,00 × 4 noites − desconto de longa estadia + taxas = R$ 2.788,70 · rateio entre os 6 = R$ 464,78 por pessoa. Entram no rateio Thaynara, Edilson e Geovanka (a receber R$ 1.394,35); as cotas de Sabrina e Israel ficam por conta do Marcelo."
+  - tipo: checklist
+    titulo: "Próximos passos"
+    itens:
+      - { texto: "Confirmar local e horários do festival (line-up do dia 22/11)" }
+      - { texto: "Verificar a forma de entrega dos ingressos (e-ticket / retirada)" }
+      - { texto: "Comprar voos Goiânia ⇄ São Paulo (ida 19/11, volta 23/11)" }
+      - { texto: "Receber o rateio do Airbnb — R$ 464,78 de Thaynara, Edilson e Geovanka (R$ 1.394,35 no total)" }
+      - { texto: "Pegar o endereço exato e a senha do Wi-Fi com o anfitrião (Guilherme) mais perto da data" }

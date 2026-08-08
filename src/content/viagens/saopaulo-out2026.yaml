@@ -1,0 +1,75 @@
+# yaml-language-server: $schema=../../../.astro/collections/viagens.schema.json
+titulo: "São Paulo — Iron Maiden"
+tituloCard: "São Paulo — Iron Maiden"
+emoji: "🤘"
+subtitulo: "Run for Your Lives World Tour 2026"
+rota:
+  origem: "GYN"
+  origemNome: "Goiânia"
+  destino: "CGH"
+  destinoNome: "São Paulo"
+dataInicio: 2026-10-26
+dataCard: "27 out 2026"
+dataDisplay: "Terça, 27 de outubro de 2026 · 19:10"
+pax: "Marcelo & Leandro"
+status: confirmada
+statusLabel: "Ingressos OK"
+cor: "#7f1d1d"
+resumoCard: "Run for Your Lives Tour, Allianz Parque. Setor 103, fileira E."
+bilhete: 3
+heroMeta:
+  - { rotulo: "PEDIDO", valor: "1740356209" }
+  - { rotulo: "LUGAR", valor: "PORTÃO A · SETOR 103 · FILEIRA E" }
+footer: "Ingressos garantidos · voos e hospedagem a fechar 🤘"
+secoes:
+  - tipo: ficha
+    titulo: "O show"
+    icone: "🎸"
+    cartoes:
+      - titulo: "Iron Maiden · Allianz Parque (Nubank Parque)"
+        entradas:
+          - { rotulo: "Data", valor: "Terça, 27 de outubro de 2026 (show extra)" }
+          - { rotulo: "Abertura (Alter Bridge)", valor: "19:10" }
+          - { rotulo: "Iron Maiden", valor: "20:50" }
+          - { rotulo: "Local", valor: "R. Palestra Itália, 200 — Água Branca, SP" }
+          - { rotulo: "Ingressos", valor: "2× meia entrada — Cadeira Nível 1 Lateral" }
+          - { rotulo: "Lugares", valor: "Portão A · Setor 103 · Fileira E · Assentos 9 e 10" }
+          - { rotulo: "Pedido", valor: "1740356209 · Ticketdirect (PDF)" }
+    notas:
+      - "🎟️ Ingressos garantidos. Baixar os PDFs (Ticketdirect) antes da viagem."
+  - tipo: roteiro
+    dias:
+      - data: "Seg 26/10"
+        diaSemana: "Chegada"
+        local: "São Paulo"
+        texto: "Chegar a São Paulo e check-in. *Voos a definir.*"
+        tags: ["✈️ Voo a definir", "🏨 Check-in"]
+      - data: "Ter 27/10"
+        diaSemana: "Dia do show"
+        local: "Allianz Parque"
+        texto: "Dia livre + **show do Iron Maiden** à noite (abertura 19:10, banda 20:50). Portão A — Setor 103, fileira E, assentos 9 e 10."
+        tags: ["🤘 Iron Maiden"]
+      - data: "Qua 28/10"
+        diaSemana: "Volta"
+        local: "Volta"
+        texto: "Check-out e retorno. *Voo a definir.*"
+        tags: ["✈️ Voo a definir"]
+  - tipo: voos
+    notas:
+      - "A definir — alvo: ida 26/10 e volta 28/10. Inserir quando comprar."
+  - tipo: hospedagem
+    checklist:
+      - "**São Paulo** — perto do Allianz Parque / Água Branca · 26–28/10 (2 noites) · *a reservar*"
+  - tipo: gastos
+    linhas:
+      - { categoria: "Show", descricao: "Ingressos Iron Maiden (2× meia, Cadeira N1 — Setor 103)", status: pago, valor: 870.00 }
+    totais:
+      - { rotulo: "Total", valor: 870.00 }
+    notas:
+      - "Por ingresso: R$ 345,00 (meia) + taxa ADM R$ 21,00 + taxa de serviço R$ 69,00 = R$ 435,00 · entrega grátis · pedido 1740356209."
+  - tipo: checklist
+    titulo: "Próximos passos"
+    itens:
+      - { texto: "Baixar os ingressos em PDF (Ticketdirect) — pedido 1740356209" }
+      - { texto: "Comprar voos Goiânia ⇄ São Paulo (26 e 28/10)" }
+      - { texto: "Reservar hospedagem perto do Allianz (26–28/10)" }

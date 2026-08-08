@@ -1,0 +1,75 @@
+# yaml-language-server: $schema=../../../.astro/collections/viagens.schema.json
+titulo: "Brasília — Rush"
+tituloCard: "Brasília — Rush"
+emoji: "🥁"
+subtitulo: "Fifty Something — South American Tour"
+rota:
+  origem: "GYN"
+  origemNome: "Goiânia"
+  destino: "BSB"
+  destinoNome: "Brasília"
+dataInicio: 2027-02-03
+dataCard: "4 fev 2027"
+dataDisplay: "Quinta, 4 de fevereiro de 2027 · 20:00"
+pax: "Marcelo & Sabrina"
+status: confirmada
+statusLabel: "Ingressos OK"
+cor: "#3730a3"
+resumoCard: "Fifty Something Tour, Arena BRB Mané Garrincha. Cadeira Inferior."
+bilhete: 5
+heroMeta:
+  - { rotulo: "PEDIDO", valor: "1741554575 · EVENTIM.PASS" }
+footer: "Ingressos garantidos · transporte e hospedagem a fechar 🥁"
+secoes:
+  - tipo: ficha
+    titulo: "O show"
+    icone: "🎸"
+    cartoes:
+      - titulo: "Rush · Arena BRB Mané Garrincha"
+        entradas:
+          - { rotulo: "Data", valor: "Quinta, 4 de fevereiro de 2027 · 20:00" }
+          - { rotulo: "Local", valor: "Arena BRB Mané Garrincha — Brasília/DF" }
+          - { rotulo: "Formação", valor: "Geddy Lee, Alex Lifeson, Anika Nilles (bateria), Loren Gold (teclados)" }
+          - { rotulo: "Formato", valor: '"An evening with" — dois sets, repertório rotativo' }
+          - { rotulo: "Ingressos", valor: "2× meia estudante — Cadeira Inferior" }
+          - { rotulo: "Pedido", valor: "1741554575 · EVENTIM.Pass" }
+    notas:
+      - "Retorno da banda à América do Sul após 17 anos. 🎟️ Ingressos garantidos — entrega via EVENTIM.Pass (app; ativar antes do show)."
+  - tipo: roteiro
+    dias:
+      - data: "03/02"
+        diaSemana: "Qua"
+        local: "Chegada"
+        texto: "Chegar a Brasília e check-in. *Voos/transporte a definir (Goiânia → Brasília é curto — avaliar carro).*"
+        tags: ["🏨 Check-in"]
+      - data: "04/02"
+        diaSemana: "Quinta"
+        local: "Mané Garrincha"
+        texto: "Dia livre + **show do Rush** às 20:00 na Arena BRB Mané Garrincha. Cadeira Inferior (2× meia estudante)."
+        tags: ["🥁 Rush"]
+      - data: "05/02"
+        diaSemana: "Sexta"
+        local: "Volta"
+        texto: "Check-out e retorno. *A definir.*"
+  - tipo: ficha
+    titulo: "Transporte"
+    icone: "🚗"
+    cartoes:
+      - entradas:
+          - { rotulo: "Situação", valor: "Goiânia → Brasília ~210 km (~2h30 de carro). Avaliar ir de carro vs. voo curto. A definir." }
+  - tipo: hospedagem
+    checklist:
+      - "**Brasília** — 1 a 2 noites (03–05/02) · *a reservar*"
+  - tipo: gastos
+    linhas:
+      - { categoria: "Show", descricao: "Ingressos Rush (2× meia estudante, Cadeira Inferior)", status: pago, valor: 934.64 }
+    totais:
+      - { rotulo: "Total", valor: 934.64 }
+    notas:
+      - "Por ingresso: R$ 372,50 (meia estudante) + taxa de serviço R$ 81,21 + meio de pagamento R$ 13,61 = R$ 467,32 · entrega grátis · 1× R$ 934,64 · pedido 1741554575."
+  - tipo: checklist
+    titulo: "Próximos passos"
+    itens:
+      - { texto: "Instalar/ativar o EVENTIM.Pass e conferir os ingressos — pedido 1741554575" }
+      - { texto: "Decidir carro vs. voo" }
+      - { texto: "Reservar hospedagem" }

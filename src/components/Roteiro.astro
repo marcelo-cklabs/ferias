@@ -1,0 +1,102 @@
+---
+import { mdInline } from '../lib/format.js';
+import SecaoTitulo from './SecaoTitulo.astro';
+interface Props { secao: any; cor: string }
+const { secao, cor } = Astro.props;
+
+/* Spec §6 pede tags de categoria COLORIDAS mantendo o vocabulario atual. As tags
+   continuam strings simples no YAML ("🚗 Retira carro") — a categoria e derivada
+   do emoji inicial, sem campo novo no schema. Sem match => tag neutra (--papel).
+   '✈' entra sem o seletor de variacao U+FE0F de proposito: startsWith casa tanto
+   "✈️ Voo" quanto "✈ Voo". */
+const CATEGORIAS: [string, string][] = [
+  ['✈', 'voo'], ['🚗', 'carro'], ['🏨', 'hospedagem'],
+  ['🍝', 'comida'], ['🍔', 'comida'],
+  ['💻', 'trabalho'], ['🏫', 'trabalho'],
+  ['🤘', 'show'], ['🎸', 'show'], ['🥁', 'show'],
+];
+const categoria = (t: string) =>
+  CATEGORIAS.find(([e]) => String(t ?? '').trimStart().startsWith(e))?.[1] ?? '';
+---
+<section style={`--cor:${cor}`}>
+  <SecaoTitulo icone={secao.icone} titulo={secao.titulo} />
+  {/* role="list": list-style:none faz o VoiceOver descartar a semantica de lista. */}
+  <ol class="dias" role="list">
+    {secao.dias.map((dia: any) => (
+      <li class="dia">
+        <header class="cab">
+          <span class="data mono">{dia.data}</span>
+          {dia.diaSemana && <span class="semana mono">{dia.diaSemana}</span>}
+          {dia.local && <span class="onde">{dia.local}</span>}
+        </header>
+        {dia.texto && <p class="texto" set:html={mdInline(dia.texto)} />}
+        {/* .length e nao so a existencia: `itens: []`/`tags: []` renderizariam caixas vazias. */}
+        {(dia.itens?.length ?? 0) > 0 && (
+          <ul class="itens" role="list">
+            {dia.itens.map((item: any) => (
+              <li class="item">
+                {/* Travessao e so preenchimento de coluna quando nao ha hora — nada a anunciar. */}
+                {item.hora
+                  ? <span class="hora mono">{item.hora}</span>
+                  : <span class="hora mono" aria-hidden="true">—</span>}
+                <div class="corpo">
+                  <div class="linha1">
+                    <b>{item.titulo}</b>
+                    {item.tag && <span class:list={['tag', categoria(item.tag)]}>{item.tag}</span>}
+                    {item.status && <span class="tag ok">{item.status}</span>}
+                  </div>
+                  {item.endereco && (
+                    <div class="addr"><span aria-hidden="true">📍</span> {item.enderecoUrl
+                      ? <a href={item.enderecoUrl} target="_blank" rel="noopener noreferrer">{item.endereco}</a>
+                      : item.endereco}</div>
+                  )}
+                  {item.meta && <div class="meta" set:html={mdInline(item.meta)} />}
+                </div>
+              </li>
+            ))}
+          </ul>
+        )}
+        {(dia.tags?.length ?? 0) > 0 && <div class="tags">{dia.tags.map((t: string) => <span class:list={['tag', categoria(t)]}>{t}</span>)}</div>}
+      </li>
+    ))}
+  </ol>
+</section>
+<style>
+  .dias { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .dia {
+    background: var(--tiquete); border-radius: 12px; box-shadow: var(--sombra-mesa);
+    border-left: 4px solid var(--cor); padding: 12px 16px;
+  }
+  .cab { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+  .data { font-weight: 700; font-size: .85rem; color: var(--cor); }
+  /* --muted (4,80:1 sobre o branco do cartao) e nao --muted-2 (2,52:1): dia da
+     semana, meta do item e conexao sao texto informativo, nao decoracao.
+     text-transform (e nao .toUpperCase() no dado): o YAML traz "Sexta"/"Qua · Qui"
+     e caixa alta no conteudo faz leitor de tela soletrar "S-E-X-T-A". */
+  .semana { font-size: .62rem; color: var(--muted); text-transform: uppercase; }
+  .onde { font-weight: 700; font-size: .85rem; }
+  .texto { font-size: .84rem; margin: 8px 0 0; }
+  .itens { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 10px; }
+  .item { display: grid; grid-template-columns: 52px 1fr; gap: 10px; font-size: .82rem; }
+  .hora { color: var(--muted); font-size: .74rem; padding-top: 2px; }
+  .linha1 { display: flex; gap: 6px; align-items: baseline; flex-wrap: wrap; }
+  .addr { color: var(--muted); font-size: .76rem; margin-top: 2px; overflow-wrap: anywhere; }
+  .meta { color: var(--muted); font-size: .72rem; margin-top: 2px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+  .tag {
+    font-size: .64rem; font-weight: 700; background: var(--papel);
+    border-radius: 5px; padding: 2px 7px; white-space: nowrap;
+  }
+  /* Pares fundo/texto medidos com a formula WCAG 2.x (tags sao .64rem bold =
+     texto pequeno, minimo 4,5:1). Neutra: --papel + --tinta herdada = 15,71:1. */
+  .tag.voo        { background: #cffafe; color: #164e63; } /*  8,14:1 */
+  .tag.carro      { background: #fde68a; color: #78350f; } /*  7,28:1 */
+  .tag.hospedagem { background: #ede9fe; color: #4c1d95; } /*  9,23:1 */
+  .tag.comida     { background: #ffe4e6; color: #881337; } /*  7,97:1 */
+  .tag.trabalho   { background: #e2e8f0; color: #1e293b; } /* 11,87:1 */
+  .tag.show       { background: #fee2e2; color: #7f1d1d; } /*  8,20:1 */
+  /* #14532d (verde-900) e nao --ok/#15803d (verde-700): sobre #dcfce7 o verde-700
+     da 4,57:1 — passa AA por 0,07. O 900 da 8,31:1 e alinha a .ok com o padrao
+     das outras seis tags, que ja usam o tom 900 da familia sobre o tom 100. */
+  .tag.ok { background: #dcfce7; color: #14532d; } /* 8,31:1 */
+</style>

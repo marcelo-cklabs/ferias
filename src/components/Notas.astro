@@ -1,0 +1,12 @@
+---
+import { mdInline } from '../lib/format.js';
+interface Props { notas?: string[] }
+const { notas = [] } = Astro.props;
+---
+{notas.map((n) => <p class="nota" set:html={mdInline(n)} />)}
+<style>
+  /* #57534e e nao --muted: as notas ficam sobre --papel (sao irmas dos cartoes,
+     nao filhas), e #78716c ali da 4,31:1 — reprova AA em texto pequeno. Mesmo
+     tom que footer.site ja usa sobre papel: 6,85:1. */
+  .nota { font-size: .78rem; color: var(--muted-3); margin: 10px 2px 0; }
+</style>

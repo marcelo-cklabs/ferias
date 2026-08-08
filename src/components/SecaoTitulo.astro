@@ -1,0 +1,11 @@
+---
+interface Props { icone: string; titulo: string }
+const { icone, titulo } = Astro.props;
+---
+<h2><span aria-hidden="true">{icone}</span> {titulo}</h2>
+<style>
+  h2 {
+    font-family: var(--f-display); font-size: clamp(.95rem, 3vw, 1.15rem);
+    letter-spacing: .04em; text-transform: uppercase; margin-bottom: 12px;
+  }
+</style>

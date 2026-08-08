@@ -1,0 +1,84 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Stamp from './Stamp.astro';
+import Barcode from './Barcode.astro';
+
+interface Props { viagem: CollectionEntry<'viagens'> }
+const { viagem } = Astro.props;
+const d = viagem.data;
+/* Arco exibido no hero: com `retorno` (viagem itinerante, ex. Nordeste) mostra
+   destino→retorno (MCZ→REC, como no mockup aprovado); sem retorno, origem→destino. */
+const heroDe = d.rota.retorno ? d.rota.destino : d.rota.origem;
+const heroDeNome = d.rota.retorno ? d.rota.destinoNome : d.rota.origemNome;
+const heroPara = d.rota.retorno ?? d.rota.destino;
+const heroParaNome = d.rota.retorno ? (d.rota.retornoNome ?? d.rota.destinoNome) : d.rota.destinoNome;
+---
+<header class="bpass" style={`--cor:${d.cor};view-transition-name:ticket-${viagem.id}`}>
+  <div class="faixa mono">
+    <span>CK-LABS AIRLINES · CARTÃO DE EMBARQUE</span>
+    <span class="mes">{d.dataCard}</span>
+  </div>
+  <div class="meio">
+    <div class="rota">
+      <div class="ponto">
+        <div class="cod">{heroDe}</div>
+        <div class="cid mono">{heroDeNome}</div>
+      </div>
+      <div class="tracinho" aria-hidden="true"><span class="aviao">✈️</span></div>
+      <div class="ponto fim">
+        <div class="cod">{heroPara}</div>
+        <div class="cid mono">{heroParaNome}</div>
+      </div>
+    </div>
+    <h1><span aria-hidden="true">{d.emoji}</span> {d.titulo}</h1>
+    <p class="subtitulo">{d.subtitulo}</p>
+    <dl class="meta mono">
+      <div><dt>DATA</dt><dd>{d.dataDisplay}</dd></div>
+      <div><dt>PAX</dt><dd>{d.pax}</dd></div>
+      {d.heroMeta.map((m) => <div><dt>{m.rotulo}</dt><dd>{m.valor}</dd></div>)}
+    </dl>
+  </div>
+  <div class="rodape">
+    <Stamp status={d.status} label={d.status === 'realizada' ? 'Realizada' : d.statusLabel} />
+    <Barcode largura={90} />
+  </div>
+</header>
+<style>
+  .bpass {
+    background: var(--tiquete); border-radius: 14px; overflow: hidden;
+    box-shadow: var(--sombra-mesa); margin-top: 14px;
+  }
+  .faixa {
+    background: var(--cor); color: #fff; display: flex; flex-wrap: wrap; gap: 4px 12px;
+    justify-content: space-between; padding: 10px 18px;
+    font-size: .62rem; letter-spacing: .2em;
+  }
+  .meio { padding: 18px 20px 14px; }
+  .rota { display: flex; align-items: center; gap: 14px; }
+  .cod { font-family: var(--f-display); font-size: clamp(1.8rem, 6vw, 2.6rem); }
+  /* Caixa alta por CSS e nao no dado ("Goiânia", "21–24 jul 2026"): com
+     .toUpperCase() no conteudo o leitor de tela soletra "G-O-I-A-N-I-A".
+     text-transform e so pintura — o texto acessivel continua natural. */
+  .cid { font-size: .62rem; color: var(--muted); text-transform: uppercase; }
+  .mes { text-transform: uppercase; }
+  .fim { text-align: right; }
+  .tracinho { flex: 1; border-bottom: 2px dashed var(--linha); position: relative; }
+  .aviao { position: absolute; left: 50%; top: -.8em; transform: translateX(-50%); }
+  h1 { font-size: clamp(1.15rem, 4vw, 1.5rem); font-weight: 800; margin-top: 12px; font-family: var(--f-texto); }
+  .subtitulo { color: var(--muted); font-size: .85rem; margin: 4px 0 0; }
+  .meta { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 18px; margin: 14px 0 0; font-size: .72rem; }
+  @media (min-width: 640px) { .meta { display: flex; flex-wrap: wrap; gap: 18px; } }
+  /* margin-right (e nao um espaco no markup): dt e dd sao inline e vizinhos sem
+     whitespace entre as tags, entao sem isso sai "DATA4 - 12 de setembro". */
+  .meta dt { display: inline; color: var(--muted); font-weight: 700; margin-right: .45em; }
+  .meta dd { display: inline; margin: 0; }
+  .rodape {
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 2px dashed var(--linha); padding: 10px 18px; position: relative;
+  }
+  .rodape::before, .rodape::after {
+    content: ''; position: absolute; top: -9px; width: 18px; height: 18px;
+    border-radius: 50%; background: var(--papel);
+  }
+  .rodape::before { left: -9px; } .rodape::after { right: -9px; }
+</style>
