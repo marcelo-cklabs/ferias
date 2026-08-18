@@ -13,14 +13,15 @@ dataCard: "19–23 nov 2026"
 dataDisplay: "19 – 23 de novembro de 2026"
 pax: "Marcelo, Sabrina, Edilson, Geovanka, Thaynara & Israel"
 status: confirmada
-statusLabel: "Ingressos + Airbnb OK"
+statusLabel: "Voos + ingressos + Airbnb OK"
 cor: "#92400e"
-resumoCard: "Best of Blues and Rock (show 22/11). Grupo de 6; Airbnb no Ibirapuera OK, voos a comprar."
+resumoCard: "Best of Blues and Rock (show 22/11). Grupo de 6; voos GOL, ingressos e Airbnb no Ibirapuera confirmados."
 bilhete: 4
 heroMeta:
   - { rotulo: "SHOW", valor: "DOM 22/11 · ARENA (GRAMADO)" }
+  - { rotulo: "LOC", valor: "WXBUIZ" }
   - { rotulo: "AIRBNB", valor: "HMAWZKDF5S" }
-footer: "Ingressos e Airbnb garantidos · voos a comprar 🎸"
+footer: "Voos, ingressos e Airbnb garantidos · falta marcar assentos 🎸"
 secoes:
   - tipo: ficha
     titulo: "O show"
@@ -40,8 +41,8 @@ secoes:
       - data: "Qui 19/11"
         diaSemana: "Chegada"
         local: "São Paulo"
-        texto: "Chegada a São Paulo e check-in no Airbnb (self check-in por fechadura inteligente, a partir das 15:00). *Voos a definir.*"
-        tags: ["✈️ Voo a definir", "🏨 Check-in Airbnb"]
+        texto: "Voo **G3-1437**, Goiânia → Congonhas, **17:00 → 18:45** (direto). Check-in no Airbnb na sequência (self check-in por fechadura inteligente, a partir das 15:00)."
+        tags: ["✈️ GYN 17:00 → CGH 18:45", "🏨 Check-in Airbnb"]
       - data: "Sex 20/11"
         diaSemana: "Livre"
         local: "São Paulo"
@@ -60,18 +61,30 @@ secoes:
       - data: "Seg 23/11"
         diaSemana: "Volta"
         local: "Volta"
-        texto: "Check-out até 11:00 e retorno. *Voo a definir.*"
-        tags: ["✈️ Voo a definir"]
+        texto: "Voo **G3-1430**, Congonhas → Goiânia, **07:25 → 09:10** (direto). Saída do Airbnb de madrugada — o check-out vai bem antes do limite das 11:00."
+        tags: ["✈️ CGH 07:25 → GYN 09:10", "🏨 Check-out antecipado"]
   - tipo: voos
+    titulo: "Voos · GOL"
+    trechos:
+      - titulo: "Ida · 19/11 (quinta)"
+        localizador: "WXBUIZ"
+        pernas:
+          - { de: "GYN", deHora: "17:00", deNome: "Goiânia", para: "CGH", paraHora: "18:45", paraNome: "São Paulo", voo: "G3-1437" }
+      - titulo: "Volta · 23/11 (segunda)"
+        localizador: "WXBUIZ"
+        pernas:
+          - { de: "CGH", deHora: "07:25", deNome: "São Paulo", para: "GYN", paraHora: "09:10", paraNome: "Goiânia", voo: "G3-1430" }
     notas:
-      - "A definir — alvo: ida 19/11 e volta 23/11. Inserir quando comprar."
+      - "Diretos (1h45 cada), cabine econômica, **tarifa reembolsável** · 6 passageiros: Marcelo, Sabrina, Israel, Thaynara, Edilson e Geovanka. O localizador Smiles e o da GOL são o mesmo: **WXBUIZ**."
+      - "⚠️ **Nenhum assento marcado** e sem bagagem despachada contratada — ninguém aparece como elegível por categoria Smiles."
+      - "⏰ A volta sai **07:25 de Congonhas**: contar com saída do Airbnb ainda de madrugada."
   - tipo: hospedagem
     cartoes:
       - titulo: "Maestro Ibirapuera — Airbnb"
         subtitulo: "(4 noites · 19–23/11)"
         entradas:
           - { rotulo: "Check-in", valor: "qui 19/11 · a partir de 15:00 · self check-in (fechadura inteligente)" }
-          - { rotulo: "Check-out", valor: "seg 23/11 · até 11:00" }
+          - { rotulo: "Check-out", valor: "seg 23/11 · até 11:00 (na prática, de madrugada por causa do voo das 07:25)" }
           - { rotulo: "Região", valor: "Ibirapuera, São Paulo · endereço exato vem no self check-in (a caminho)" }
           - { rotulo: "Anfitrião", valor: "Guilherme · casa/apto inteiro · +55 11 99243-3554" }
           - { rotulo: "Hóspedes", valor: "6 adultos (máximo do anúncio)" }
@@ -84,19 +97,25 @@ secoes:
     linhas:
       - { categoria: "Show", descricao: "Ingressos Eddie Vedder (4× meia — Arena Gramado, Lote 2) · 2 pedidos parcelados 2× R$ 616,00 (Visa Bradesco + Mastercard C6)", status: pago, valor: 2464.00 }
       - { categoria: "Hospedagem", descricao: "Airbnb 4 noites, Ibirapuera, 19–23/11 (HMAWZKDF5S) · 6× no Visa", status: pago, valor: 2788.70 }
+      - { categoria: "Voos", descricao: "GOL GYN ⇄ CGH, 19–23/11 (WXBUIZ) · 6 passageiros · comprado na Smiles em 08/08 no Visa final 7238", status: pago, valor: 5117.04 }
       - { categoria: "Reembolso", descricao: "Thaynara — ingresso dela (03/07)", status: recebido, valor: -616.00 }
     totais:
-      - { rotulo: "Líquido até agora (pago − reembolso recebido)", valor: 4636.70 }
+      - { rotulo: "Líquido até agora (pago − reembolso recebido)", valor: 9753.74 }
       - { rotulo: "A receber — rateio do Airbnb (Thaynara, Edilson e Geovanka · 3× R$ 464,78)", valor: -1394.35 }
-      - { rotulo: "Custo final previsto — Marcelo (cobre as cotas de Sabrina e Israel)", valor: 3242.35 }
+      - { rotulo: "A receber — rateio dos voos (Thaynara, Edilson e Geovanka · 3× R$ 852,84)", valor: -2558.52 }
+      - { rotulo: "Custo final previsto — Marcelo (cobre as cotas de Sabrina e Israel)", valor: 5800.87 }
     notas:
-      - "Ingressos: R$ 616,00 cada (meia, lote 2) · sem taxas adicionais · 4 ingressos em 2 pedidos de 2 (#78264953 no Visa Bradesco + 1 no Mastercard C6), aprovados em 03/07/2026 · desembolso bruto com o Airbnb: R$ 5.252,70. Thaynara já reembolsou o ingresso dela (R$ 616,00 · 03/07); de Sabrina e Israel não haverá reembolso."
+      - "Ingressos: R$ 616,00 cada (meia, lote 2) · sem taxas adicionais · 4 ingressos em 2 pedidos de 2 (#78264953 no Visa Bradesco + 1 no Mastercard C6), aprovados em 03/07/2026. Thaynara já reembolsou o ingresso dela (R$ 616,00 · 03/07); de Sabrina e Israel não haverá reembolso."
       - "Airbnb: R$ 665,00 × 4 noites − desconto de longa estadia + taxas = R$ 2.788,70 · rateio entre os 6 = R$ 464,78 por pessoa. Entram no rateio Thaynara, Edilson e Geovanka (a receber R$ 1.394,35); as cotas de Sabrina e Israel ficam por conta do Marcelo."
+      - "Voos: **R$ 852,84 por pessoa** (bilhete ida R$ 2.220,84 + volta R$ 2.220,84 + taxas de embarque R$ 302,52 na ida e R$ 372,84 na volta) × 6 = R$ 5.117,04, pago 100% em dinheiro — **0 milhas**. Rateio aplicado pelo mesmo critério do Airbnb: Thaynara, Edilson e Geovanka devolvem a cota (R$ 2.558,52); Sabrina e Israel por conta do Marcelo. *Critério a confirmar.*"
+      - "Desembolso bruto do Marcelo: R$ 10.369,74 (ingressos + Airbnb + voos)."
   - tipo: checklist
     titulo: "Próximos passos"
     itens:
       - { texto: "Confirmar local e horários do festival (line-up do dia 22/11)" }
       - { texto: "Verificar a forma de entrega dos ingressos (e-ticket / retirada)" }
-      - { texto: "Comprar voos Goiânia ⇄ São Paulo (ida 19/11, volta 23/11)" }
+      - { texto: "Marcar os assentos dos 6 passageiros", detalhe: "Nenhum assento foi escolhido na compra e não há bagagem despachada contratada — avaliar se vale pagar." }
+      - { texto: "Combinar o transporte para Congonhas na volta", detalhe: "Voo às 07:25; contar com saída do Airbnb por volta das 05:00." }
       - { texto: "Receber o rateio do Airbnb — R$ 464,78 de Thaynara, Edilson e Geovanka (R$ 1.394,35 no total)" }
+      - { texto: "Receber o rateio dos voos — R$ 852,84 de Thaynara, Edilson e Geovanka (R$ 2.558,52 no total)" }
       - { texto: "Pegar o endereço exato e a senha do Wi-Fi com o anfitrião (Guilherme) mais perto da data" }

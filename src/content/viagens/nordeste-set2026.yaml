@@ -74,10 +74,11 @@ secoes:
         localizador: "OZHNBN"
         pernas:
           - { de: "REC", deHora: "12:20", deNome: "Recife", para: "SSA", paraHora: "13:50", paraNome: "Salvador", voo: "G3-1923" }
-          - { de: "SSA", deHora: "14:45", deNome: "Salvador", para: "GYN", paraHora: "16:50", paraNome: "Goiânia", voo: "G3-1904" }
-        conexao: "conexão em Salvador · 55min"
+          - { de: "SSA", deHora: "14:55", deNome: "Salvador", para: "GYN", paraHora: "17:00", paraNome: "Goiânia", voo: "G3-1904" }
+        conexao: "conexão em Salvador · 1h05"
     notas:
       - "2 passageiros: Marcelo José Amador Filho e Sabrina Oliveira · Tarifa reembolsável (Smiles)."
+      - "🔄 A GOL remarcou o trecho **Salvador → Goiânia** em 14/08/2026: saía 14:45 e chegava 16:50, agora sai **14:55** e chega **17:00**. Reserva segue confirmada, sem ação necessária."
   - tipo: ficha
     titulo: "Carro · Localiza"
     icone: "🚗"
