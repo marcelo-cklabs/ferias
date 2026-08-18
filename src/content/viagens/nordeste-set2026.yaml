@@ -57,7 +57,7 @@ secoes:
         texto: "Rumo a **Porto de Galinhas**/PE (~130 km · ~2h30). Piscinas naturais, praia dos Carneiros, jangadas. *Sugestão: 2 noites.*"
         tags: ["🚗 Maragogi → Porto de Galinhas", "🏨 Porto de Galinhas"]
       - data: "12/09"
-        diaSemana: "Sexta"
+        diaSemana: "Sábado"
         local: "Recife → Casa"
         texto: "**Manhã:** sair de Porto de Galinhas direto para o aeroporto de Recife (~65 km · ~1h20). Devolução do carro às **11:00** e voo às **12:20**."
         tags: ["🚗 → Aeroporto REC", "🚗 Devolve carro", "✈️ Voo REC→GYN"]
@@ -70,7 +70,7 @@ secoes:
           - { de: "GYN", deHora: "09:50", deNome: "Goiânia", para: "GIG", paraHora: "11:40", paraNome: "Rio", voo: "G3-2061" }
           - { de: "GIG", deHora: "13:55", deNome: "Rio", para: "MCZ", paraHora: "16:30", paraNome: "Maceió", voo: "G3-2078" }
         conexao: "conexão no Rio · 2h15"
-      - titulo: "Volta · 12/09 (sexta)"
+      - titulo: "Volta · 12/09 (sábado)"
         localizador: "OZHNBN"
         pernas:
           - { de: "REC", deHora: "12:20", deNome: "Recife", para: "SSA", paraHora: "13:50", paraNome: "Salvador", voo: "G3-1923" }
