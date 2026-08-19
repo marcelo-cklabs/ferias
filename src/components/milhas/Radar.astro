@@ -1,0 +1,80 @@
+---
+import { fmtDataIso, mdInline } from '../../lib/format.js';
+type Oportunidade = {
+  titulo: string; bonus?: string; prazo: string; detalhe?: string;
+  url?: string; recomendacao: 'AGIR HOJE' | 'MONITORAR'; tag?: string;
+};
+interface Props { oportunidades: Oportunidade[]; alertas: string[]; pisos: string[]; atualizadoEm: string }
+const { oportunidades, alertas, pisos, atualizadoEm } = Astro.props;
+---
+{oportunidades.length > 0 ? (
+  <div class="radar-lista">
+    {oportunidades.map((o) => (
+      <article class="oport">
+        <div class="rota">
+          {o.titulo}
+          {o.tag && <span class="meta-flag mono">{o.tag}</span>}
+        </div>
+        <p class="detalhe">
+          Prazo {o.prazo}{o.detalhe && <> · <span set:html={mdInline(o.detalhe)} /></>}{o.url && <> · <a href={o.url} target="_blank" rel="noopener noreferrer">página da promoção</a></>}
+        </p>
+        <div class="num-bonus">
+          <span class="pct mono">{o.bonus ?? '—'}</span>
+          <span class:list={['stamp', o.recomendacao === 'AGIR HOJE' ? 'agir' : 'monitorar']}>{o.recomendacao}</span>
+        </div>
+      </article>
+    ))}
+  </div>
+) : (
+  <p class="ceu-limpo"><span aria-hidden="true">☀️</span> <b>Céu limpo.</b> Nenhuma oportunidade acima dos pisos — radar verificado em {fmtDataIso(atualizadoEm)}.</p>
+)}
+{alertas.length > 0 && (
+  <aside class="alertas">
+    <b>⚠️ Pendências &amp; validades:</b>
+    <ul>{alertas.map((a) => <li set:html={mdInline(a)} />)}</ul>
+  </aside>
+)}
+{pisos.length > 0 && (
+  <p class="pisos mono"><span class="rotulo">Pisos do radar →</span> {pisos.map((p) => <span class="piso">{p}</span>)}</p>
+)}
+<style>
+  .radar-lista { display: flex; flex-direction: column; gap: 12px; }
+  .oport {
+    background: var(--tiquete); border-radius: 12px; box-shadow: var(--sombra-mesa);
+    padding: 12px 16px; display: grid; gap: 4px 16px;
+    grid-template-columns: 1fr auto; align-items: center;
+  }
+  .rota { font-weight: 800; font-size: .95rem; }
+  .meta-flag {
+    font-size: .6rem; letter-spacing: .08em; color: var(--pend);
+    border: 1.5px solid var(--dourado); background: #fffbeb;
+    border-radius: 999px; padding: 1px 8px; margin-left: 8px; white-space: nowrap;
+  }
+  .detalhe { grid-column: 1; font-size: .76rem; color: var(--muted); margin: 0; }
+  .detalhe a { color: var(--pend); font-weight: 600; }
+  .num-bonus { grid-row: 1 / span 2; display: flex; flex-direction: column; align-items: flex-end; gap: 5px; }
+  .pct { font-weight: 700; font-size: 1.5rem; font-variant-numeric: tabular-nums; }
+  .stamp {
+    font-family: var(--f-carimbo); font-size: .62rem; text-transform: uppercase;
+    border-radius: 6px; padding: 2px 8px; transform: rotate(-2deg); white-space: nowrap;
+  }
+  .stamp.agir { color: var(--pend); border: 2px solid var(--pend); background: #fffbeb; }
+  .stamp.monitorar { color: var(--muted); border: 2px dashed var(--muted-2); }
+  .ceu-limpo {
+    border: 1.5px dashed var(--muted-2); border-radius: 12px; padding: 14px 16px;
+    font-size: .82rem; color: var(--muted-3); background: rgba(255, 255, 255, .5); margin: 0;
+  }
+  .alertas {
+    background: #fffbeb; border: 1.5px dashed var(--ambar); border-radius: 10px;
+    padding: 10px 14px; font-size: .8rem; margin-top: 14px;
+  }
+  .alertas ul { margin: 6px 0 0; padding-left: 18px; }
+  .alertas li { margin: 3px 0; }
+  .pisos { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 0; }
+  .pisos .rotulo { color: var(--muted); font-size: .6rem; letter-spacing: .04em; align-self: center; text-transform: uppercase; }
+  .piso {
+    font-size: .6rem; letter-spacing: .04em; color: var(--muted-3);
+    border: 1px solid var(--linha); background: rgba(255, 255, 255, .6);
+    border-radius: 999px; padding: 2px 9px;
+  }
+</style>
