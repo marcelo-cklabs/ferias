@@ -13,3 +13,6 @@ dist/
 
 # Artefatos de sessao de agentes (brainstorm, ledger SDD, evidencias)
 .superpowers/
+
+# Worktrees locais do Claude Code
+.claude/worktrees/
