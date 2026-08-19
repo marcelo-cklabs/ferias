@@ -1,0 +1,29 @@
+---
+import { getEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import MemberCard from '../components/milhas/MemberCard.astro';
+
+const painel = await getEntry('milhas', 'painel');
+if (!painel) throw new Error('src/content/milhas/painel.yaml ausente');
+const d = painel.data;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Base title="Milhas & Pontos · Férias CK-Labs">
+  <main class="wrap">
+    <a class="volta mono" href={`${base}/`}>← VOLTAR AO MURAL</a>
+    <MemberCard atualizadoEm={d.atualizadoEm} programas={d.saldos.length} />
+    <div class="secoes">
+      {/* Seções entram nas Tasks 4–7: Carteira, Meta ativa, Radar, Manual de voo */}
+    </div>
+  </main>
+  <footer class="site">ÁREA PRIVADA · CK-LABS · O RADAR VERIFICA GMAIL + WEB TODA MANHÃ <span aria-hidden="true">📡</span></footer>
+</Base>
+
+<style>
+  .volta {
+    display: inline-block; font-size: .7rem; letter-spacing: .12em;
+    color: #92400e; text-decoration: none; padding: 22px 0 0; min-height: 44px;
+  }
+  .volta:hover { text-decoration: underline; }
+  .secoes { display: grid; gap: 34px; margin-top: 34px; }
+</style>

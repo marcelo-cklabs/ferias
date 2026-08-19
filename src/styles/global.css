@@ -4,6 +4,9 @@
   --ambar: #f59e0b; --muted: #78716c; --muted-2: #a8a29e; --muted-3: #57534e;
   --linha: #e7e5e4; --ok: #15803d; --pend: #b45309;
   --sombra-mesa: 0 5px 0 rgba(28, 25, 23, .12);
+  /* Tema do painel de milhas (member card escuro/dourado) */
+  --card-escuro: #211d1a; --card-escuro-2: #2c2724;
+  --dourado: #ca8a04; --gold-fio: #e3b341;
   --f-display: 'Archivo Black', sans-serif;
   --f-texto: 'Inter Variable', sans-serif;
   --f-mono: 'IBM Plex Mono', monospace;

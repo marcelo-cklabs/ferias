@@ -1,0 +1,76 @@
+---
+import { fmtDataIso } from '../../lib/format.js';
+interface Props { atualizadoEm: string; programas: number }
+const { atualizadoEm, programas } = Astro.props;
+---
+<header class="hero">
+  <p class="overline mono">CK-LABS AIRLINES · PROGRAMA DE FIDELIDADE</p>
+  <h1>MILHAS &amp;<br />PONTOS</h1>
+  <p class="sub">Carteira, radar diário de oportunidades e manual de decisão</p>
+  <div class="member">
+    <div class="member-card" style="view-transition-name: ticket-milhas">
+      <div class="topo">
+        <span class="cia mono">CK-LABS AIRLINES ★ FIDELIDADE</span>
+        <span class="tier">Clube Smiles 2000</span>
+      </div>
+      <p class="titular">Marcelo &amp; Sabrina</p>
+      <div class="linha-membro">
+        <span class="chip-cartao" aria-hidden="true"></span>
+        <dl class="mono">
+          <div><dt>Membro nº</dt><dd>CK 0001</dd></div>
+          <div><dt>Desde</dt><dd>jun 2026</dd></div>
+          <div><dt>Programas</dt><dd>{programas}</dd></div>
+        </dl>
+      </div>
+      <div class="barcode" aria-hidden="true"></div>
+    </div>
+    <span class="stamp-verif">Verificado {fmtDataIso(atualizadoEm)}</span>
+  </div>
+</header>
+<style>
+  .hero { position: relative; max-width: 1080px; margin: 0 auto; padding: 40px 0 8px; }
+  .overline { font-size: .68rem; letter-spacing: .3em; color: #92400e; margin: 0; }
+  h1 {
+    font-family: var(--f-display); font-size: clamp(2rem, 6.5vw, 3.6rem);
+    text-shadow: 3px 3px 0 var(--ambar); margin: 10px 0 6px;
+  }
+  .sub { font-weight: 600; color: var(--muted-3); margin: 0 0 26px; font-size: clamp(.85rem, 2.5vw, 1rem); }
+  .member { position: relative; max-width: 620px; }
+  .member-card {
+    background: linear-gradient(160deg, var(--card-escuro-2), var(--card-escuro) 55%);
+    color: #f5f0e6; border-radius: 16px; padding: 20px 22px 0;
+    box-shadow: 0 7px 0 rgba(28, 25, 23, .22); border: 1px solid #3d362f;
+    overflow: hidden; display: flex; flex-direction: column; gap: 14px;
+  }
+  .topo { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .cia { font-size: .66rem; letter-spacing: .28em; color: var(--gold-fio); }
+  .tier {
+    font-family: var(--f-carimbo); font-size: .72rem; color: var(--gold-fio);
+    border: 1.5px solid var(--gold-fio); border-radius: 6px; padding: 1px 8px;
+    transform: rotate(2deg); text-transform: uppercase;
+  }
+  .titular { font-family: var(--f-display); font-size: clamp(1.15rem, 4vw, 1.7rem); color: #fdfaf3; margin: 0; text-transform: uppercase; }
+  .linha-membro { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .chip-cartao {
+    width: 38px; height: 28px; border-radius: 6px; flex: none;
+    background: linear-gradient(135deg, #f3cf6f, var(--dourado));
+    box-shadow: inset 0 0 0 1.5px rgba(60, 42, 5, .45), inset 0 8px 0 -6px rgba(255, 255, 255, .7);
+  }
+  dl { display: flex; gap: 26px; flex-wrap: wrap; margin: 0; }
+  dt { font-size: .58rem; letter-spacing: .18em; color: #b5aa96; text-transform: uppercase; }
+  dd { margin: 0; font-weight: 700; font-size: .92rem; letter-spacing: .06em; text-transform: uppercase; }
+  .barcode {
+    height: 34px; margin: 4px -22px 0; opacity: .8; border-top: 2px dashed #4a423a;
+    background: repeating-linear-gradient(90deg, #efe6d2 0 2px, transparent 2px 5px, #efe6d2 5px 6px, transparent 6px 11px, #efe6d2 11px 14px, transparent 14px 17px);
+  }
+  /* rotate(-3deg) casa com o 100% do keyframe stampin global — outro ângulo pula no fim. */
+  .stamp-verif {
+    position: absolute; right: -8px; top: -14px;
+    font-family: var(--f-carimbo); font-size: .78rem; text-transform: uppercase;
+    color: var(--pend); border: 2px solid var(--pend); border-radius: 8px;
+    padding: 4px 10px; background: rgba(254, 243, 199, .92); transform: rotate(-3deg);
+    animation: stampin .38s cubic-bezier(.2, .8, .3, 1) .6s backwards;
+    animation-play-state: paused;
+  }
+  :global(html.embarcado) .stamp-verif { animation-play-state: running; }
+</style>
