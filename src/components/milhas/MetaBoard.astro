@@ -1,0 +1,43 @@
+---
+import { mdInline } from '../../lib/format.js';
+interface Props {
+  meta: { destino: string; alvo: string; pax: string; cabine?: string; duracao?: string; situacao: string; gatilhos: string[] };
+}
+const { meta } = Astro.props;
+---
+<div class="meta-board">
+  <div class="linha-voo mono">
+    <span class="destino">{meta.destino}</span>
+    <span class="dado">Alvo <b>{meta.alvo}</b></span>
+    <span class="dado">Pax <b>{meta.pax}</b></span>
+    {meta.cabine && <span class="dado">Cabine <b>{meta.cabine}</b></span>}
+    {meta.duracao && <span class="dado">Duração <b>{meta.duracao}</b></span>}
+  </div>
+  <p class="situacao" set:html={mdInline(meta.situacao)} />
+  {meta.gatilhos.length > 0 && (
+    <ul class="gatilhos mono">
+      {meta.gatilhos.map((g) => <li>{g}</li>)}
+    </ul>
+  )}
+</div>
+<style>
+  .meta-board {
+    background: var(--card-escuro); color: #f2ead8; border-radius: 14px;
+    box-shadow: 0 6px 0 rgba(28, 25, 23, .2); border: 1px solid #3d362f; overflow: hidden;
+  }
+  .linha-voo {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 22px;
+    padding: 16px 20px 12px; border-bottom: 1px solid #3d362f;
+  }
+  .destino { font-family: var(--f-display); font-size: clamp(1.3rem, 5vw, 2rem); color: var(--gold-fio); letter-spacing: .02em; text-transform: uppercase; }
+  .dado { font-size: .72rem; letter-spacing: .12em; color: #cbbfa6; text-transform: uppercase; }
+  .dado b { color: #fdfaf3; font-size: .85rem; }
+  .situacao { font-size: .85rem; line-height: 1.5; color: #e9e0cd; max-width: 62ch; padding: 12px 20px; margin: 0; }
+  .situacao :global(b) { color: var(--gold-fio); }
+  .gatilhos { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 20px 16px; margin: 0; list-style: none; }
+  .gatilhos li {
+    font-size: .62rem; letter-spacing: .05em; color: #e3d9c2;
+    border: 1.5px dashed #8a7c60; border-radius: 999px; padding: 3px 10px;
+  }
+  .gatilhos li::before { content: '📡 '; }
+</style>

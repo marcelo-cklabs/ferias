@@ -4,6 +4,7 @@ import Base from '../layouts/Base.astro';
 import MemberCard from '../components/milhas/MemberCard.astro';
 import SecaoTitulo from '../components/SecaoTitulo.astro';
 import SaldoCard from '../components/milhas/SaldoCard.astro';
+import MetaBoard from '../components/milhas/MetaBoard.astro';
 
 const painel = await getEntry('milhas', 'painel');
 if (!painel) throw new Error('src/content/milhas/painel.yaml ausente');
@@ -20,6 +21,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <div class="saldos">
           {d.saldos.map((s, i) => <SaldoCard s={s} index={i + 1} />)}
         </div>
+      </section>
+      <section>
+        <SecaoTitulo icone="🎯" titulo="Meta ativa" />
+        <MetaBoard meta={d.meta} />
       </section>
       {/* Seções entram nas Tasks 4–7: Carteira, Meta ativa, Radar, Manual de voo */}
     </div>
