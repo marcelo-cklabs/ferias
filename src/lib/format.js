@@ -17,3 +17,14 @@ export function mdInline(s) {
   out = out.replace(/\*([^*]+)\*/g, '<i>$1</i>');
   return out;
 }
+
+/** Inteiro com agrupamento pt-BR: 276117 → "276.117". */
+export function fmtInt(n) {
+  return new Intl.NumberFormat('pt-BR').format(n);
+}
+
+/** "2026-08-19" → "19/08/2026". Manipulação de string — nunca new Date() (fuso). */
+export function fmtDataIso(iso) {
+  const [a, m, d] = String(iso).split('-');
+  return `${d}/${m}/${a}`;
+}
