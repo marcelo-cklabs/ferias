@@ -1,0 +1,39 @@
+---
+import { fmtInt, mdInline } from '../../lib/format.js';
+interface Props {
+  s: { programa: string; saldo: number; unidade: string; tipo: 'flexivel' | 'terminal'; nota?: string };
+  index: number;
+}
+const { s, index } = Astro.props;
+---
+<article class:list={['saldo-card', s.tipo]} style={`--i:${index}`}>
+  <div class="prog">
+    <b>{s.programa}</b>
+    <span class="tag-moeda mono">{s.tipo === 'flexivel' ? 'Flexível' : 'Terminal'}</span>
+  </div>
+  <p class="saldo-num mono">{fmtInt(s.saldo)} <small>{s.unidade}</small></p>
+  {s.nota && <p class="saldo-nota" set:html={mdInline(s.nota)} />}
+</article>
+<style>
+  .saldo-card {
+    background: var(--tiquete); border-radius: 12px; box-shadow: var(--sombra-mesa);
+    border-top: 6px solid var(--dourado); padding: 14px 16px 12px;
+    display: flex; flex-direction: column; gap: 6px;
+    animation: deal .55s cubic-bezier(.2, .9, .3, 1.25) calc(var(--i) * 90ms) backwards;
+    animation-play-state: paused;
+  }
+  :global(html.embarcado) .saldo-card { animation-play-state: running; }
+  .saldo-card.terminal { border-top-color: var(--muted-2); }
+  .prog { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .prog b { font-size: .95rem; font-weight: 800; }
+  .tag-moeda {
+    font-size: .56rem; letter-spacing: .12em; text-transform: uppercase; flex: none;
+    color: var(--pend); border: 1.5px solid var(--dourado); background: #fffbeb;
+    border-radius: 999px; padding: 2px 8px;
+  }
+  .terminal .tag-moeda { color: var(--muted-3); border: 1.5px dashed var(--muted-2); background: #fafaf9; }
+  .saldo-num { margin: 0; font-weight: 700; font-size: 1.7rem; font-variant-numeric: tabular-nums; letter-spacing: .01em; }
+  .saldo-num small { font-size: .62rem; color: var(--muted); font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
+  .saldo-nota { font-size: .74rem; color: var(--muted); border-top: 2px dashed var(--linha); padding-top: 7px; margin: 2px 0 0; }
+  .saldo-nota :global(b) { color: var(--muted-3); }
+</style>
