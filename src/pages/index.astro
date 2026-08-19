@@ -1,13 +1,15 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import TicketCard from '../components/TicketCard.astro';
+import MilhasCard from '../components/milhas/MilhasCard.astro';
 
 const todas = await getCollection('viagens');
 const porData = (a: any, b: any) => +a.data.dataInicio - +b.data.dataInicio;
 const ativas = todas.filter((v) => v.data.status !== 'realizada').sort(porData);
 const realizadas = todas.filter((v) => v.data.status === 'realizada').sort(porData);
 const mural = [...ativas, ...realizadas];
+const painel = await getEntry('milhas', 'painel');
 ---
 <Base title="Férias CK-Labs">
   <header class="hero">
@@ -24,6 +26,7 @@ const mural = [...ativas, ...realizadas];
   <main class="wrap">
     <div class="mural">
       {mural.map((v, i) => <TicketCard viagem={v} index={i + 1} />)}
+      {painel && <MilhasCard atualizadoEm={painel.data.atualizadoEm} programas={painel.data.saldos.length} index={mural.length + 1} />}
     </div>
   </main>
   <footer class="site">ÁREA PRIVADA · CK-LABS · ATUALIZADO CONFORME OS PLANOS EVOLUEM <span aria-hidden="true">🌍</span></footer>

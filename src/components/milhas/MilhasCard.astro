@@ -1,0 +1,73 @@
+---
+import { fmtDataIso } from '../../lib/format.js';
+interface Props { atualizadoEm: string; programas: number; index: number }
+const { atualizadoEm, programas, index } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<a class="cartao-milhas" href={`${base}/milhas.html`} style={`--i:${index};view-transition-name:ticket-milhas`}>
+  <span class="faixa" aria-hidden="true"></span>
+  <span class="corpo">
+    <span class="rota mono">
+      <b>Acúmulo</b>
+      <span class="tracinho" aria-hidden="true"><span class="aviao">✈️</span></span>
+      <b>Emissão</b>
+    </span>
+    <span class="nome"><span aria-hidden="true">💳</span> Milhas &amp; Pontos</span>
+    <span class="quando mono">radar diário · {programas} programas</span>
+    <span class="resumo">Carteira, oportunidades do dia e manual de decisão</span>
+    <span class="carimbo">Verificado {fmtDataIso(atualizadoEm)}</span>
+  </span>
+  <span class="rodape" aria-hidden="true">
+    <span class="mono num">CARTÃO Nº 001</span>
+    <span class="barrinhas"></span>
+  </span>
+</a>
+<style>
+  .cartao-milhas {
+    display: flex; flex-direction: column; text-decoration: none;
+    background: linear-gradient(160deg, var(--card-escuro-2), var(--card-escuro) 55%);
+    color: #f5f0e6; border-radius: 12px; overflow: hidden;
+    box-shadow: var(--sombra-mesa); border: 1px solid #3d362f;
+    animation: deal .55s cubic-bezier(.2, .9, .3, 1.25) calc(var(--i) * 130ms) backwards;
+    animation-play-state: paused;
+    transition: transform .18s ease, box-shadow .18s ease;
+    transform: rotate(.5deg);
+  }
+  :global(html.embarcado) .cartao-milhas { animation-play-state: running; }
+  .cartao-milhas:hover, .cartao-milhas:focus-visible {
+    transform: translateY(-5px) rotate(0deg);
+    box-shadow: 0 12px 22px rgba(28, 25, 23, .28);
+  }
+  .faixa { height: 6px; background: linear-gradient(90deg, #f3cf6f, var(--dourado)); }
+  .corpo { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px 10px; }
+  .rota { display: flex; align-items: baseline; gap: 10px; font-size: 1.05rem; font-weight: 700; color: var(--gold-fio); letter-spacing: .04em; text-transform: uppercase; }
+  .tracinho { flex: 1; border-bottom: 2px dashed #4a423a; position: relative; }
+  .aviao { position: absolute; left: 50%; top: -.7em; transform: translateX(-50%); font-size: .7em; }
+  .nome { font-weight: 800; font-size: 1rem; color: #fdfaf3; }
+  .quando { font-size: .72rem; color: #b5aa96; text-transform: uppercase; }
+  .resumo { font-size: .8rem; color: #cbbfa6; }
+  .carimbo {
+    align-self: flex-start; margin-top: 2px;
+    font-family: var(--f-carimbo); font-size: .68rem; line-height: 1.2; padding: 2px 8px;
+    border: 2px solid var(--gold-fio); border-radius: 6px; color: var(--gold-fio);
+    transform: rotate(-3deg); text-transform: uppercase;
+    animation: stampin .38s cubic-bezier(.2, .8, .3, 1) .95s backwards;
+    animation-play-state: paused;
+  }
+  :global(html.embarcado) .carimbo { animation-play-state: running; }
+  .rodape {
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 2px dashed #4a423a; padding: 8px 16px; position: relative;
+  }
+  /* Furos do tíquete na cor do papel, como no TicketCard */
+  .rodape::before, .rodape::after {
+    content: ''; position: absolute; top: -9px; width: 18px; height: 18px;
+    border-radius: 50%; background: var(--papel);
+  }
+  .rodape::before { left: -9px; } .rodape::after { right: -9px; }
+  .num { font-size: .62rem; color: #8a7c60; }
+  .barrinhas {
+    width: 90px; height: 16px; opacity: .7;
+    background: repeating-linear-gradient(90deg, #8a7c60 0 2px, transparent 2px 4px, #8a7c60 4px 7px, transparent 7px 10px);
+  }
+</style>
