@@ -1,0 +1,102 @@
+---
+// Conteúdo estático curado: síntese do resumo crítico do ebook "Milhas Sem
+// Milhas", da aula de emissões e da régua do Notion. Editar AQUI (não é YAML).
+---
+<div class="manual">
+  <div class="man-card">
+    <h3>As duas moedas</h3>
+    <div class="duo-moedas">
+      <div class="flex">
+        <b>Flexível — Livelo · Esfera · Átomos</b>
+        <p>Vira qualquer moeda com bônus de 30–120%. Vale ~2× a terminal. É onde se acumula.</p>
+      </div>
+      <div class="term">
+        <b>Terminal — Smiles · LATAM Pass</b>
+        <p>Destino final: expira e desvaloriza. Só chegar aqui com bônus alto e emissão à vista.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cupom">
+    <h3 class="mono">Régua de decisão</h3>
+    <p class="sep mono" aria-hidden="true">· · · · · · · · · ·</p>
+    <p class="formula mono">custo da milha = ponto Livelo ÷ (1 + bônus)</p>
+    <div class="rolagem">
+      <table class="mono">
+        <thead>
+          <tr><th scope="col">Bônus</th><th scope="col">Livelo R$ 22*</th><th scope="col">Livelo R$ 30</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>70%</td><td>R$ 12,94</td><td>R$ 17,65</td></tr>
+          <tr class="destaque"><td>80%</td><td>R$ 12,22</td><td>R$ 16,67</td></tr>
+          <tr><td>90%</td><td>R$ 11,58</td><td>R$ 15,79</td></tr>
+          <tr><td>100%</td><td>R$ 11,00</td><td>R$ 15,00</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="sep mono" aria-hidden="true">· · · · · · · · · ·</p>
+    <p class="rodape-cupom mono">* custo real via Clube Livelo Classic<br />alvo Smiles 2026: ≤ R$ 16/milheiro · ≥ ~450k/trecho = preço dinâmico, ignorar</p>
+  </div>
+  <div class="man-card">
+    <h3>Hierarquia do acúmulo (por impacto real)</h3>
+    <ol>
+      <li><b>Bônus de boas-vindas de cartão</b> — só se a meta cabe no gasto natural</li>
+      <li><b>Transferência bonificada</b> — esperar o topo: Smiles 80–100%+, LATAM 60%+</li>
+      <li><b>Portais de compras</b> — preço primeiro, portal depois</li>
+      <li><b>Clube</b> — alavanca do bônus, não fonte de pontos</li>
+      <li><b>Acúmulo passivo</b> — higiene, não estratégia</li>
+    </ol>
+  </div>
+  <div class="man-card">
+    <h3>Regras de ouro</h3>
+    <ul>
+      <li>Acumule <b>flexível</b>; converta só com emissão em mãos</li>
+      <li><b>Cadastre-se na campanha antes</b> de transferir (lição de jul/2026)</li>
+      <li>Meça tudo em <b>R$/milheiro</b>, nunca em pontos</li>
+      <li>Sessão limpa no portal: clique → compra no mesmo dia, sem cupom no meio</li>
+      <li>Registre pedido, data, pontos prometidos e prazo (30–90 dias)</li>
+      <li>Validade se resolve <b>movimentando</b> o programa, não transferindo por medo</li>
+    </ul>
+  </div>
+  <div class="man-card">
+    <h3>Emissão em 3 passos (método da aula)</h3>
+    <ol>
+      <li><b>Google Flights</b> multiorigem (GRU·GIG·CNF·SSA·REC·BSB) + calendário de preços</li>
+      <li><b>Comparar</b> dinheiro × milhas na cia e nos parceiros (a régua decide)</li>
+      <li><b>Emitir</b> pelo programa certo no mapa de parcerias — só assento saver</li>
+    </ol>
+    <p class="obs">Referência de emissão boa: ≥ R$ 33/milheiro extraído · executiva internacional extrai 4–5× o custo do milheiro.</p>
+  </div>
+</div>
+<style>
+  .manual { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  @media (min-width: 900px) {
+    .manual { grid-template-columns: 1fr 1fr; }
+    .cupom { grid-row: span 2; }
+  }
+  .man-card { background: var(--tiquete); border-radius: 12px; box-shadow: var(--sombra-mesa); padding: 14px 18px; }
+  .man-card h3 { font-size: .92rem; font-weight: 800; margin-bottom: 8px; }
+  .man-card p, .man-card li { font-size: .8rem; }
+  .man-card ol, .man-card ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 5px; }
+  .obs { color: var(--muted); font-size: .72rem; margin: 8px 0 0; }
+  .duo-moedas { display: grid; grid-template-columns: 1fr; gap: 10px; }
+  @media (min-width: 520px) { .duo-moedas { grid-template-columns: 1fr 1fr; } }
+  .duo-moedas > div { border-radius: 10px; padding: 9px 12px; }
+  .duo-moedas .flex { border: 1.5px solid var(--dourado); background: #fffbeb; }
+  .duo-moedas .term { border: 1.5px dashed var(--muted-2); background: #fafaf9; }
+  .duo-moedas b { display: block; font-size: .78rem; }
+  .duo-moedas p { margin: 3px 0 0; font-size: .72rem; color: var(--muted-3); }
+  .cupom {
+    background: var(--tiquete); border-radius: 4px; padding: 16px 18px;
+    border: 1.5px dashed var(--muted-2); box-shadow: var(--sombra-mesa); align-self: start;
+  }
+  .cupom h3 { font-size: .8rem; letter-spacing: .14em; text-align: center; font-weight: 700; text-transform: uppercase; margin: 0; }
+  .sep { text-align: center; color: var(--muted-2); letter-spacing: .5em; margin: 6px 0; font-size: .7rem; }
+  .formula { font-size: .68rem; color: var(--muted-3); margin: 0 0 6px; }
+  .rolagem { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; min-width: 300px; font-size: .72rem; font-variant-numeric: tabular-nums; }
+  th, td { text-align: right; padding: 4px 6px; border-bottom: 1px dashed var(--linha); white-space: nowrap; }
+  th:first-child, td:first-child { text-align: left; }
+  thead th { color: var(--muted); font-weight: 500; font-size: .62rem; letter-spacing: .05em; }
+  .destaque td { font-weight: 700; background: #fffbeb; }
+  .rodape-cupom { font-size: .64rem; color: var(--muted); text-align: center; margin: 10px 0 0; }
+</style>
