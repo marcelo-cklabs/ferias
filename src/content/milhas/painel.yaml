@@ -1,0 +1,50 @@
+atualizadoEm: "2026-08-16"
+saldos:
+  - programa: "Livelo"
+    saldo: 15547
+    unidade: "pts"
+    tipo: flexivel
+    nota: "Clube ativo — **não expiram** · +9.477 a receber a partir de 02/09"
+  - programa: "Smiles"
+    saldo: 276117
+    unidade: "milhas"
+    tipo: terminal
+    nota: "65.869 vencem **mai/2027** · contestação de ~31.500 em aberto"
+  - programa: "Esfera"
+    saldo: 32556
+    unidade: "pts"
+    tipo: flexivel
+    nota: "Reativada em 07/08 · validade 2029 · **só transferir com bônus**"
+  - programa: "C6 Átomos"
+    saldo: 0
+    unidade: "átomos"
+    tipo: flexivel
+    nota: "Zerado — transferido p/ Smiles em jun (promo 70%)"
+  - programa: "LATAM Pass"
+    saldo: 16378
+    unidade: "milhas"
+    tipo: terminal
+    nota: "Sem movimento · Clube LATAM cancelado em jul/2026"
+alertas:
+  - "**Contestação Smiles/Esfera:** bônus de ~31.500 milhas não creditado — 2º contato em 16/08; próximo passo: chamado na Esfera + consumidor.gov.br"
+  - "**Smiles:** lote de 65.869 milhas vence em **mai/2027** — casar com a emissão NY"
+  - "**Livelo:** +9.477 pts entram a partir de 02/09"
+meta:
+  destino: "Nova York"
+  alvo: "março/2027"
+  pax: "2"
+  cabine: "econômica"
+  duracao: "14 dias"
+  situacao: "**Saldo cobre:** ida e volta do casal no saver direto da American ≈ 260–290k milhas Smiles. O gargalo não é milha — é **volta saver em 2027 com 2 assentos na mesma data**. Plano B: direto em dinheiro (~R$ 8–10k o casal) preservando Smiles para Roma/Buenos Aires."
+  gatilhos:
+    - "volta saver 2027 · 2 assentos"
+    - "bônus Esfera → Iberia (Avios)"
+    - "bônus p/ Smiles (Livelo/C6)"
+pisos:
+  - "Livelo→Smiles ≥ 70%"
+  - "Livelo→LATAM ≥ 30%"
+  - "Esfera→LATAM/Iberia ≥ 50%"
+  - "C6→Smiles/LATAM ≥ 50%"
+  - "Reativação Smiles ≥ 200%"
+  - "Clubes: bom senso"
+oportunidades: []

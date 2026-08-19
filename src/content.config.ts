@@ -129,4 +129,45 @@ const viagens = defineCollection({
   }).strict(),
 });
 
-export const collections = { viagens };
+// Painel de milhas: painel.yaml e escrito DIARIAMENTE pela tarefa agendada do
+// claude.ai (ver docs/prompt-tarefa-agendada-milhas.md). Enum so onde a
+// renderizacao ramifica; texto livre degrada exibicao sem derrubar build.
+const saldoPrograma = z.object({
+  programa: z.string(),
+  saldo: z.number().int().nonnegative(), // pega o classico 15.547 (float) — de proposito
+  unidade: z.string(),
+  tipo: z.enum(['flexivel', 'terminal']),
+  nota: z.string().optional(),
+}).strict();
+
+const oportunidade = z.object({
+  titulo: z.string(),
+  bonus: z.string().optional(),
+  prazo: z.string(),
+  detalhe: z.string().optional(),
+  url: z.string().url().optional(),
+  recomendacao: z.enum(['AGIR HOJE', 'MONITORAR']),
+  tag: z.string().optional(),
+}).strict();
+
+const milhas = defineCollection({
+  loader: glob({ pattern: 'painel.yaml', base: './src/content/milhas' }),
+  schema: z.object({
+    atualizadoEm: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'atualizadoEm deve ser AAAA-MM-DD'),
+    saldos: z.array(saldoPrograma).min(1),
+    alertas: z.array(z.string()).default([]),
+    meta: z.object({
+      destino: z.string(),
+      alvo: z.string(),
+      pax: z.string(),
+      cabine: z.string().optional(),
+      duracao: z.string().optional(),
+      situacao: z.string(),
+      gatilhos: z.array(z.string()).default([]),
+    }).strict(),
+    pisos: z.array(z.string()).default([]),
+    oportunidades: z.array(oportunidade).default([]),
+  }).strict(),
+});
+
+export const collections = { viagens, milhas };
