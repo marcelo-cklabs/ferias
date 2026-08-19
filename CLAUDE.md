@@ -29,6 +29,15 @@ Design "cartão de embarque": home é um mural de tíquetes, cada viagem é um c
 - URLs com parênteses em campos de link: escrever `(` `)` como `%28` `%29` (o markdown inline trunca no primeiro parêntese).
 - Animações de entrada novas devem seguir o padrão do gate: `animation-play-state: paused` + regra `:global(html.embarcado) ... { running }` (a classe `embarcado` é adicionada pelo `auth.js` no desbloqueio).
 
+## Painel de milhas — contrato
+
+A página `milhas.html` é gerada de `src/content/milhas/painel.yaml` (collection `milhas`, entrada única `painel`). **Esse YAML é escrito todos os dias pela tarefa agendada do claude.ai** (briefing de milhas) via conector GitHub — commits `milhas: briefing AAAA-MM-DD` na main. Não brigar com ela: edição manual nesse arquivo será sobrescrita na próxima execução; o dado canônico vem da página Notion "✈️ Viagens e Milhas".
+
+- **Schema e prompt são acoplados:** mudou o schema da collection `milhas` (`src/content.config.ts`), atualize `docs/prompt-tarefa-agendada-milhas.md` no MESMO commit — e o dono precisa recolar o prompt na tarefa do claude.ai.
+- `painel.yaml` NÃO leva comentário `# yaml-language-server` (arquivo escrito por máquina — exceção deliberada à regra dos YAMLs de viagem).
+- Conteúdo estático da página (Manual de voo, member card, tier do clube) é hardcoded em `src/pages/milhas.astro` e `src/components/milhas/` — editar lá, não no YAML.
+- O cartão da home vem de `src/components/milhas/MilhasCard.astro` ("CARTÃO Nº 001", numeração própria — não usa `bilhete` das viagens).
+
 ## Checklist de viagem nova
 
 1. Criar `src/content/viagens/<slug>.yaml` copiando a estrutura de um existente (identidade + `secoes[]`).
