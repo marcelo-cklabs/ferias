@@ -30,7 +30,7 @@ const { oportunidades, alertas, pisos, atualizadoEm } = Astro.props;
 )}
 {alertas.length > 0 && (
   <aside class="alertas">
-    <b>⚠️ Pendências &amp; validades:</b>
+    <b><span aria-hidden="true">⚠️ </span>Pendências &amp; validades:</b>
     <ul>{alertas.map((a) => <li set:html={mdInline(a)} />)}</ul>
   </aside>
 )}

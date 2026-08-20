@@ -145,7 +145,7 @@ const oportunidade = z.object({
   bonus: z.string().optional(),
   prazo: z.string(),
   detalhe: z.string().optional(),
-  url: z.string().url().optional(),
+  url: z.string().url().startsWith('https://').optional(),
   recomendacao: z.enum(['AGIR HOJE', 'MONITORAR']),
   tag: z.string().optional(),
 }).strict();

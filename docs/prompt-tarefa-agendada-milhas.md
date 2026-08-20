@@ -79,7 +79,8 @@ O QUE FAZER EM CADA EXECUÇÃO:
    - Atualize:
      - atualizadoEm: a data de hoje, formato AAAA-MM-DD
      - saldos / alertas / meta / pisos: espelhando a página Notion lida no passo 0
-     - oportunidades: os itens que passaram no filtro HOJE (AGIR HOJE e MONITORAR; IGNORE não entra) + itens de dias anteriores cujo prazo ainda não venceu. Remova os vencidos. Dia sem nada: oportunidades: [] (a chave sempre existe).
+     - oportunidades: os itens que passaram no filtro HOJE (AGIR HOJE e MONITORAR; IGNORAR não entra) + itens de dias anteriores cujo prazo ainda não venceu. Remova os vencidos. Dia sem nada: oportunidades: [] (a chave sempre existe).
+   - Se você usou o CONTEXTO DE FALLBACK no passo 0 (Notion indisponível): NÃO altere saldos, alertas, meta nem pisos — atualize somente atualizadoEm e oportunidades, e diga na linha de status que o Notion estava fora.
    - Grave com create_or_update_file (informe o sha do arquivo atual), mensagem de commit: milhas: briefing AAAA-MM-DD
    - REGRAS DO ARQUIVO (o build do site valida e FALHA se violar):
      - saldo é número INTEIRO sem separador de milhar (escreva 276117, nunca 276.117)
@@ -87,6 +88,7 @@ O QUE FAZER EM CADA EXECUÇÃO:
      - recomendacao só aceita: AGIR HOJE | MONITORAR
      - prazo é obrigatório em cada oportunidade; bonus é opcional (omita a linha se o % não for claro)
      - links de promoção vão SOMENTE no campo url (nunca como markdown dentro de detalhe)
+     - url deve começar com https://
      - texto livre aceita só **negrito** e *itálico* — nada de HTML, nada de links inline
      - NUNCA crie chaves novas, NUNCA use $schema: ou slug:, NUNCA toque outro arquivo do repo
    - Em caso de QUALQUER dúvida sobre o formato: NÃO grave e explique o motivo na linha de status.
