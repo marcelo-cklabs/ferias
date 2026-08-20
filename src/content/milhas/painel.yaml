@@ -16,17 +16,17 @@ saldos:
     tipo: flexivel
     nota: "Estável · validade 07/08/2029 · **só transferir com bônus**"
   - programa: "C6 Átomos"
-    saldo: 0
+    saldo: 4883
     unidade: "átomos"
     tipo: flexivel
-    nota: "Zerado — transferido p/ Smiles em jun (promo 70%)"
+    nota: "**Voltou a acumular** — 4.883,50 no app (print 20/08), gasto corrente do C6 Carbon"
   - programa: "LATAM Pass"
     saldo: 19478
     unidade: "milhas"
     tipo: terminal
     nota: "**Clube ainda creditando** (+1.500/mês em jul e ago) — cancelamento decidido em jul/2026 não efetivado"
 alertas:
-  - "**Clube LATAM Pass não foi cancelado:** decisão de 13/07 era cortar (~R$ 90,80/mês), mas o extrato mostra +3.100 milhas do clube desde jul — conferir/cancelar"
+  - "🔴 **CANCELAR Clube LATAM Pass:** decisão de 13/07 não efetivada — segue creditando (+3.100 desde jul) e cobrando ~R$ 90,80/mês"
   - "**Contestação Smiles/Esfera:** bônus de ~31.500 milhas não creditado — 2º contato em 16/08; próximo passo: chamado na Esfera + consumidor.gov.br"
   - "**Smiles:** lote de 65.869 milhas vence em **mai/2027** — casar com a emissão NY"
   - "**Livelo:** +10.511 pts entram a partir de 02/09"

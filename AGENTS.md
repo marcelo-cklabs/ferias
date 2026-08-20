@@ -37,6 +37,7 @@ A página `milhas.html` é gerada de `src/content/milhas/painel.yaml` (collectio
 - `painel.yaml` NÃO leva comentário `# yaml-language-server` (arquivo escrito por máquina — exceção deliberada à regra dos YAMLs de viagem).
 - Conteúdo estático da página (Manual de voo, member card, tier do clube) é hardcoded em `src/pages/milhas.astro` e `src/components/milhas/` — editar lá, não no YAML.
 - O cartão da home vem de `src/components/milhas/MilhasCard.astro` ("CARTÃO Nº 001", numeração própria — não usa `bilhete` das viagens).
+- Alerta do `painel.yaml` que começa com 🔴 ganha destaque vermelho no radar (convenção de dado, sem mudança de schema — o 🔴 nasce no texto do Notion e sobrevive à reescrita diária da tarefa).
 
 ## Checklist de viagem nova
 

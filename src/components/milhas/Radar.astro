@@ -31,7 +31,7 @@ const { oportunidades, alertas, pisos, atualizadoEm } = Astro.props;
 {alertas.length > 0 && (
   <aside class="alertas">
     <b><span aria-hidden="true">⚠️ </span>Pendências &amp; validades:</b>
-    <ul>{alertas.map((a) => <li set:html={mdInline(a)} />)}</ul>
+    <ul>{alertas.map((a) => <li class:list={[{ urgente: a.startsWith('🔴') }]} set:html={mdInline(a)} />)}</ul>
   </aside>
 )}
 {pisos.length > 0 && (
@@ -70,6 +70,13 @@ const { oportunidades, alertas, pisos, atualizadoEm } = Astro.props;
   }
   .alertas ul { margin: 6px 0 0; padding-left: 18px; }
   .alertas li { margin: 3px 0; }
+  /* Prefixo 🔴 no dado marca ação urgente: o item vira chip vermelho dentro da caixa */
+  .alertas li.urgente {
+    list-style: none; margin: 6px 0 6px -18px; padding: 6px 10px;
+    background: #fef2f2; border: 1.5px solid #dc2626; border-radius: 8px;
+    color: #991b1b; font-weight: 600;
+  }
+  .alertas li.urgente :global(b) { color: #991b1b; }
   .pisos { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 0; }
   .pisos .rotulo { color: var(--muted); font-size: .6rem; letter-spacing: .04em; align-self: center; text-transform: uppercase; }
   .piso {
