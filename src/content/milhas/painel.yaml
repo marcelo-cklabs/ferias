@@ -36,7 +36,7 @@ meta:
   pax: "2"
   cabine: "econômica"
   duracao: "14 dias"
-  situacao: "**Saldo cobre:** ida e volta do casal no saver direto da American ≈ 260–290k milhas Smiles. O gargalo não é milha — é **volta saver em 2027 com 2 assentos na mesma data**. Plano B: direto em dinheiro (~R$ 8–10k o casal) preservando Smiles para Roma/Buenos Aires."
+  situacao: "**Saldo cobre:** ida e volta do casal no saver direto da American ≈ 260–290k milhas Smiles. O gargalo — **volta saver em 2027** — começou a abrir: em 20/08 apareceram as primeiras voltas JFK→GIG de abr–jul/27 (GOL via Smiles, mas a 101k/trecho — reprova na régua de ≤75k). **Março/27 segue seco.** Plano B: direto em dinheiro (~R$ 8–10k o casal)."
   gatilhos:
     - "volta saver 2027 · 2 assentos"
     - "bônus Esfera → Iberia (Avios)"
@@ -48,4 +48,11 @@ pisos:
   - "C6→Smiles/LATAM ≥ 50%"
   - "Reativação Smiles ≥ 200%"
   - "Clubes: bom senso"
-oportunidades: []
+oportunidades:
+  - titulo: "Smiles: compra de milhas com até 355% de bônus"
+    bonus: "355%"
+    prazo: "31/08"
+    detalhe: "só com emissão identificada (regra de ouro) — a GOL GIG↔JFK a 101k/trecho reprova na régua; guardar p/ fechar gap se abrir saver AA mar/27"
+    url: "https://pd1a.com/4wHwYYv"
+    recomendacao: "MONITORAR"
+    tag: "🎯 META NY"
