@@ -31,31 +31,36 @@ secoes:
         local: "Maceió"
         texto: "Chegada em Maceió às **16:30**. Retirada do carro na Localiza (aeroporto) às **17:00** e check-in na hospedagem."
         tags: ["✈️ Voo GYN→MCZ", "🚗 Retira carro", "🏨 Check-in Maceió"]
-      - data: "05–07/09"
-        diaSemana: "Sáb · Dom · Seg"
-        local: "Maceió"
-        texto: "Dias livres em Maceió — praias (Pajuçara, Ponta Verde, Gunga), piscinas naturais, orla e gastronomia. *A detalhar.*"
-        tags: ["🏨 Maceió"]
+      - data: "05/09"
+        diaSemana: "Sábado"
+        local: "Praia do Francês"
+        texto: "Bate-volta à **Praia do Francês** (Marechal Deodoro, ~40 min ao sul) — mar calmo na área protegida pelos arrecifes e barracas com boa estrutura."
+        tags: ["🏖️ Praia do Francês", "🚗 Bate-volta ~40 min", "🏨 Maceió"]
+      - data: "06/09"
+        diaSemana: "Domingo"
+        local: "Ipioca"
+        texto: "Dia no **Hibiscus Beach Club**, na praia de **Ipioca** (~35 min ao norte) — day use com piscinas, coqueiral e mar esverdeado. *Vale reservar com antecedência.*"
+        tags: ["🌺 Hibiscus Beach Club", "🚗 Bate-volta ~35 min", "🏨 Maceió"]
+      - data: "07/09"
+        diaSemana: "Segunda"
+        local: "Ponta Verde → S. Miguel"
+        texto: "Manhã na praia da **Ponta Verde**, pertinho da hospedagem, e **checkout às 12:00**. À tarde, estrada pela Rota Ecológica até **São Miguel dos Milagres** (~105 km · ~2h)."
+        tags: ["🏖️ Ponta Verde", "🧳 Checkout 12:00", "🚗 Maceió → S. Miguel"]
       - data: "08/09"
         diaSemana: "Terça"
-        local: "→ S. Miguel"
-        texto: "Manhã final em Maceió. **Após o almoço**, seguir de carro para **São Miguel dos Milagres** pela Rota Ecológica (~105 km · ~2h)."
-        tags: ["🏨 Maceió (manhã)", "🚗 Maceió → S. Miguel"]
-      - data: "08–09/09"
-        diaSemana: "Ter · Qua"
         local: "S. Miguel dos Milagres"
-        texto: "Rota Ecológica dos Milagres: praias desertas, piscinas naturais de barco, sossego. *Sugestão: 1 noite (ajustável).*"
-        tags: ["🏨 São Miguel dos Milagres"]
-      - data: "09–10/09"
-        diaSemana: "Qua · Qui"
-        local: "Maragogi"
-        texto: "Seguir para **Maragogi** (~55 km · ~1h). Galés de Maragogi (piscinas naturais em alto-mar), praias e vilas. *Sugestão: 1 noite.*"
-        tags: ["🚗 S. Miguel → Maragogi", "🏨 Maragogi"]
-      - data: "10–12/09"
+        texto: "Bate-volta a **Maragogi** (~55 km · ~1h) para as **Galés** — piscinas naturais em alto-mar; o passeio sai conforme a maré baixa. Fim de tarde de volta ao sossego dos Milagres."
+        tags: ["🚤 Galés de Maragogi", "🚗 Bate-volta ~1h", "🏨 São Miguel dos Milagres"]
+      - data: "09/09"
+        diaSemana: "Quarta"
+        local: "→ Porto de Galinhas"
+        texto: "Manhã livre na Rota Ecológica (praia do Patacho ou Lages). Depois, estrada para **Porto de Galinhas**/PE (~170 km · ~3h) e check-in na última base."
+        tags: ["🏖️ Patacho/Lages", "🚗 S. Miguel → Porto de Galinhas", "🏨 Porto de Galinhas"]
+      - data: "10–11/09"
         diaSemana: "Qui · Sex"
         local: "Porto de Galinhas"
-        texto: "Rumo a **Porto de Galinhas**/PE (~130 km · ~2h30). Piscinas naturais, praia dos Carneiros, jangadas. *Sugestão: 2 noites.*"
-        tags: ["🚗 Maragogi → Porto de Galinhas", "🏨 Porto de Galinhas"]
+        texto: "Dias inteiros em **Porto de Galinhas**: jangada nas piscinas naturais (na maré baixa), vila e praias — com opção de bate-volta à **Praia dos Carneiros** (~40 min)."
+        tags: ["🏨 Porto de Galinhas"]
       - data: "12/09"
         diaSemana: "Sábado"
         local: "Recife → Casa"
@@ -96,12 +101,11 @@ secoes:
       - "CNH física e cartão de crédito **no nome do motorista** (Marcelo) para retirar o carro."
   - tipo: hospedagem
     checklist:
-      - "**Maceió** — 4 noites (04–08/09) · *a reservar*"
-      - "**São Miguel dos Milagres** — 1 noite (08–09/09) · *a reservar*"
-      - "**Maragogi** — 1 noite (09–10/09) · *a reservar*"
-      - "**Porto de Galinhas** — 2 noites (10–12/09) · *a reservar*"
+      - "**Maceió** — 3 noites (04–07/09) · checkout 12:00 · *a reservar*"
+      - "**São Miguel dos Milagres** — 2 noites (07–09/09) · *a reservar*"
+      - "**Porto de Galinhas** — 3 noites (09–12/09) · *a reservar*"
     notas:
-      - "A divisão de noites é uma sugestão — dá pra remanejar conforme fecharmos o plano."
+      - "Divisão fechada em 24/08/2026: Maragogi fica como bate-volta a partir de São Miguel (~1h) — sem noite lá."
   - tipo: gastos
     linhas:
       - { categoria: "Voos", descricao: "Ida GYN→MCZ (WSFDPK, 2 pax) — 63.400 milhas + taxas", status: pago, valor: 96.60 }
@@ -114,8 +118,8 @@ secoes:
   - tipo: checklist
     titulo: "Próximos passos"
     itens:
-      - { texto: "Definir a divisão de noites entre São Miguel, Maragogi e Porto de Galinhas" }
-      - { texto: "Reservar as hospedagens" }
-      - { texto: "Passeios: piscinas naturais (Pajuçara/Gunga), Galés de Maragogi, jangada em Porto de Galinhas" }
+      - { texto: "Reservar as hospedagens (Maceió 3n · São Miguel 2n · Porto de Galinhas 3n)" }
+      - { texto: "Reservar o day use no Hibiscus Beach Club (06/09)" }
+      - { texto: "Passeios: Galés de Maragogi (conferir tábua de marés de 08/09), jangada nas piscinas de Porto de Galinhas" }
       - { texto: "Restaurantes e transfers de barco" }
       - { texto: "Conferir franquia/deductível da proteção do carro" }
