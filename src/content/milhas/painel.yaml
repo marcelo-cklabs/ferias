@@ -4,7 +4,7 @@ saldos:
     saldo: 15586
     unidade: "pts"
     tipo: flexivel
-    nota: "Clube ativo — **não expiram** · +10.511 a receber a partir de 02/09"
+    nota: "Clube ativo — **não expiram** · +10.511 a receber a partir de 02/09 (**depois** do prazo da promo de hoje)"
   - programa: "Smiles"
     saldo: 278117
     unidade: "milhas"
@@ -14,7 +14,7 @@ saldos:
     saldo: 32556
     unidade: "pts"
     tipo: flexivel
-    nota: "Estável · validade 07/08/2029 · **só transferir com bônus**"
+    nota: "Estável · validade 07/08/2029 · **guardar para Iberia (Avios)** — é a única fonte de Avios da carteira"
   - programa: "C6 Átomos"
     saldo: 4883
     unidade: "átomos"
@@ -27,10 +27,10 @@ saldos:
     nota: "**Clube ainda creditando** (+1.500/mês em jul e ago) — cancelamento decidido em jul/2026 não efetivado"
 alertas:
   - "🔴 **CANCELAR Clube LATAM Pass:** decisão de 13/07 não efetivada — segue creditando (+3.100 desde jul) e cobrando ~R$ 90,80/mês"
-  - "🔴 **Promo perdida em 27/08:** Smiles pagou **80% de todos os parceiros** (Livelo e Esfera inclusos) das 10h às 23h59 de ontem — passava no piso de 70% e expirou antes do briefing de hoje. Campanhas *só hoje* abrem às 10h e morrem à meia-noite: valem checagem no mesmo dia"
+  - "🔴 **Hoje até 23h59:** Smiles paga **80%** de todos os parceiros. **Cadastrar na campanha ANTES de transferir** — sem cadastro prévio o bônus não vem"
+  - "**Lição de leitura de prazo:** os blogs publicaram *só hoje (27/08)*, mas o regulamento oficial diz **27/08 10h → 28/08 23h59** (janela de 48h). Manchete não é prazo — conferir sempre o regulamento"
   - "**Contestação Smiles/Esfera ENCERRADA em 24/08:** a transferência foi feita fora da vigência da promoção — o bônus de ~31.500 não era devido. Nada pendente"
   - "**Smiles:** lote de 65.869 milhas vence em **mai/2027** — casar com a emissão NY"
-  - "**Livelo:** +10.511 pts entram a partir de 02/09"
 meta:
   destino: "Nova York"
   alvo: "março/2027"
@@ -50,6 +50,25 @@ pisos:
   - "Reativação Smiles ≥ 200%"
   - "Clubes: bom senso"
 oportunidades:
+  - titulo: "Livelo → Smiles"
+    bonus: "80%"
+    prazo: "28/08 às 23h59"
+    detalhe: "**Passa no piso (70%).** Teto de 80% garantido pelo Clube Smiles Plano 2.000. Os 15.586 pts viram **~28.055 milhas**; ao custo do Clube Livelo (~R$ 22/milheiro) a milha Smiles sai a **~R$ 12,22** — bem abaixo do alvo de R$ 16. Os +10.511 pts de 02/09 **não** chegam a tempo. **Cadastrar na campanha antes de transferir.** Teto de bônus: 300 mil milhas/CPF"
+    url: "https://www.smiles.com.br/portal/campanhas/bancos-ate-80pc-milhas-bonus-08-2026"
+    recomendacao: "AGIR HOJE"
+    tag: "🎯 META NY"
+  - titulo: "C6 Átomos → Smiles"
+    bonus: "80%"
+    prazo: "28/08 às 23h59"
+    detalhe: "**Passa no piso (50%).** Mesma campanha, todos os parceiros. Os 4.883 átomos viram **~8.789 milhas**. Lote pequeno, mas o fluxo C6→Smiles já foi testado em 23/07 e o Clube garante o teto"
+    url: "https://www.smiles.com.br/portal/campanhas/bancos-ate-80pc-milhas-bonus-08-2026"
+    recomendacao: "AGIR HOJE"
+    tag: "🎯 META NY"
+  - titulo: "Esfera → Smiles (mesma promo) — **não fazer**"
+    prazo: "28/08 às 23h59"
+    detalhe: "A Esfera também entra nos 80% (32.556 pts ≈ 58,6k milhas), mas **queimaria a única fonte de Avios da carteira** — foi exatamente o desvio de estratégia registrado em 07/07. Com NY já coberta em Smiles, a Esfera vale mais guardada para **Iberia (Avios)**, que é gatilho ativo de Europa e Executiva. Só reconsiderar se a rota Avios for abandonada"
+    url: "https://www.smiles.com.br/portal/campanhas/bancos-ate-80pc-milhas-bonus-08-2026"
+    recomendacao: "MONITORAR"
   - titulo: "Smiles: compra de milhas com até 355% de bônus"
     bonus: "355%"
     prazo: "31/08"
