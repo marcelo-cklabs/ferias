@@ -1,4 +1,4 @@
-atualizadoEm: "2026-08-27"
+atualizadoEm: "2026-08-28"
 saldos:
   - programa: "Livelo"
     saldo: 15586
@@ -27,6 +27,7 @@ saldos:
     nota: "**Clube ainda creditando** (+1.500/mês em jul e ago) — cancelamento decidido em jul/2026 não efetivado"
 alertas:
   - "🔴 **CANCELAR Clube LATAM Pass:** decisão de 13/07 não efetivada — segue creditando (+3.100 desde jul) e cobrando ~R$ 90,80/mês"
+  - "🔴 **Promo perdida em 27/08:** Smiles pagou **80% de todos os parceiros** (Livelo e Esfera inclusos) das 10h às 23h59 de ontem — passava no piso de 70% e expirou antes do briefing de hoje. Campanhas *só hoje* abrem às 10h e morrem à meia-noite: valem checagem no mesmo dia"
   - "**Contestação Smiles/Esfera ENCERRADA em 24/08:** a transferência foi feita fora da vigência da promoção — o bônus de ~31.500 não era devido. Nada pendente"
   - "**Smiles:** lote de 65.869 milhas vence em **mai/2027** — casar com a emissão NY"
   - "**Livelo:** +10.511 pts entram a partir de 02/09"
@@ -52,7 +53,7 @@ oportunidades:
   - titulo: "Smiles: compra de milhas com até 355% de bônus"
     bonus: "355%"
     prazo: "31/08"
-    detalhe: "regulamento reconferido em 26/08: campanha de 19/08 (10h) a **31/08 às 21h**, milha a R$ 0,08. Escala por plano do Clube — **Plano 2.000 = 315%**; os 355% são do Plano 20.000/Magno-Diamante. Só com emissão identificada (regra de ouro): a GOL GIG↔JFK a 101k/trecho reprova na régua"
+    detalhe: "regulamento reconferido em 26/08: campanha de 19/08 (10h) a **31/08 às 21h**, milha a R$ 0,08. Escala por plano do Clube — **Plano 2.000 = 315%**; os 355% são do Plano 20.000/Magno-Diamante. Só com emissão identificada (regra de ouro): a GOL GIG↔JFK a 101k/trecho reprova na régua. **Vence em 3 dias**"
     url: "https://www.smiles.com.br/campanhas/compra-355-20260819"
     recomendacao: "MONITORAR"
     tag: "🎯 META NY"
