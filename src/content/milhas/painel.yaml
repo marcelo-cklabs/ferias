@@ -1,15 +1,15 @@
-atualizadoEm: "2026-08-28"
+atualizadoEm: "2026-08-29"
 saldos:
   - programa: "Livelo"
     saldo: 621
     unidade: "pts"
     tipo: flexivel
-    nota: "**15.000 transferidos p/ Smiles em 28/08** (promo 80%) · Clube ativo, não expiram · +10.511 a receber a partir de 02/09"
+    nota: "**15.000 transferidos p/ Smiles em 28/08** (promo 80%) — base ainda não creditada, prazo até 31/08 · Clube ativo, não expiram · +10.511 a receber a partir de 02/09"
   - programa: "Smiles"
-    saldo: 278117
+    saldo: 287664
     unidade: "milhas"
     tipo: terminal
-    nota: "**+36.547 a caminho** (Livelo 27.000 + C6 9.547, se o bônus vier a 80%) → projeção **~314.664** · 65.869 vencem **mai/2027**"
+    nota: "**+9.547 do C6 creditados em 28/08 já com os 80% cheios** (5.304 base + 4.243 bônus) · falta o lote Livelo: **+27.000 esperados** → projeção **~314.664** · 65.869 vencem **mai/2027**"
   - programa: "Esfera"
     saldo: 32556
     unidade: "pts"
@@ -19,7 +19,7 @@ saldos:
     saldo: 1
     unidade: "átomos"
     tipo: flexivel
-    nota: "**Zerado** — 5.304 transferidos p/ Smiles em 28/08 (restou 1,17) · volta a acumular com o gasto do C6 Carbon"
+    nota: "**Zerado** — 5.304 transferidos p/ Smiles em 28/08 e já creditados (restou 1,17) · volta a acumular com o gasto do C6 Carbon"
   - programa: "LATAM Pass"
     saldo: 19478
     unidade: "milhas"
@@ -27,9 +27,9 @@ saldos:
     nota: "**Clube ainda creditando** (+1.500/mês em jul e ago) — cancelamento decidido em jul/2026 não efetivado"
 alertas:
   - "🔴 **CANCELAR Clube LATAM Pass:** decisão de 13/07 não efetivada — segue creditando (+3.100 desde jul) e cobrando ~R$ 90,80/mês"
-  - "🔴 **Conferir o bônus da promo 80%:** a tela da Livelo mostrou só **50% aplicado (+7.500)** — os 30 p.p. restantes vêm da Smiles, creditados à parte **até 15/09**. Se parar em 50%, faltam **~6.091 milhas** nos dois lotes: contestar. Cadastro foi feito dentro da vigência e o Clube Plano 2.000 garante o teto"
-  - "**Prazos dos créditos:** base Livelo ~1 dia útil (até 31/08) · base C6 até **02/09** (5 dias úteis) · bônus da campanha até **15/09**"
-  - "**Lição de leitura de prazo:** os blogs publicaram *só hoje (27/08)*, mas o regulamento oficial dizia **27/08 10h → 28/08 23h59** (janela de 48h). Manchete não é prazo — conferir sempre o regulamento"
+  - "✅ **Bônus de 80% confirmado no lote C6:** creditado em 28/08 como *Bônus Transf. Pontos + CM - Bônus Agosto - 2026*, **4.243 milhas sobre 5.304 de base = 80% cheios**. O receio de parar em 50% não se confirmou — o Clube Plano 2.000 garantiu o teto"
+  - "**Falta o lote Livelo:** base de 15.000 até 31/08 e bônus de 12.000 até 15/09 (**+27.000**). A tela da Livelo mostrava só 50%, mas o C6 provou que os 30 p.p. restantes vêm da Smiles à parte. Se o total parar em 22.500, contestar — cadastro dentro da vigência"
+  - "**Lição de leitura de prazo:** os blogs publicaram *só hoje (27/08)*, mas o regulamento oficial dizia **27/08 10h → 28/08 23h59**. Manchete não é prazo — conferir sempre o regulamento"
   - "**Smiles:** lote de 65.869 milhas vence em **mai/2027** — casar com a emissão NY"
 meta:
   destino: "Nova York"
@@ -37,7 +37,7 @@ meta:
   pax: "2"
   cabine: "econômica"
   duracao: "14 dias"
-  situacao: "**Saldo cobre com folga maior:** com os ~36,5k a caminho, o pool vai a **~314k** contra ≈ 260–290k do casal no saver direto da American. O gargalo — **volta saver em 2027** — começou a abrir: em 20/08 apareceram as primeiras voltas JFK→GIG de abr–jul/27 (GOL via Smiles, mas a 101k/trecho — reprova na régua de ≤75k). **Março/27 segue seco.** Plano B: direto em dinheiro (~R$ 8–10k o casal)."
+  situacao: "**Saldo cobre com folga:** já são **287.664** milhas na conta e a projeção com o lote Livelo vai a **~314.664**, contra ≈ 260–290k do casal no saver direto da American. O gargalo segue sendo a **volta saver em 2027 com 2 assentos**: em 20/08 apareceram as primeiras voltas JFK→GIG de abr–jul/27 (GOL via Smiles, mas a 101k/trecho — reprova na régua de ≤75k). **Março/27 continua seco.** Plano B: direto em dinheiro (~R$ 8–10k o casal)."
   gatilhos:
     - "volta saver 2027 · 2 assentos"
     - "bônus Esfera → Iberia (Avios)"
@@ -52,7 +52,7 @@ oportunidades:
   - titulo: "Smiles: compra de milhas com até 355% de bônus"
     bonus: "355%"
     prazo: "31/08"
-    detalhe: "regulamento reconferido em 26/08: campanha de 19/08 (10h) a **31/08 às 21h**, milha a R$ 0,08. Escala por plano do Clube — **Plano 2.000 = 315%**; os 355% são do Plano 20.000/Magno-Diamante. Só com emissão identificada (regra de ouro): a GOL GIG↔JFK a 101k/trecho reprova na régua. Com o pool indo a ~314k, o caso de comprar fica ainda mais fraco. **Vence em 3 dias**"
+    detalhe: "campanha de 19/08 (10h) a **31/08 às 21h** — restam 2 dias. Escala por plano do Clube: **Plano 2.000 = 315%**; os 355% são do Plano 20.000/Magno-Diamante. Regra de ouro: só com emissão identificada, e a única na mesa (GOL GIG↔JFK a 101k/trecho) reprova na régua de ≤75k. Com o pool indo a ~314k, o caso de comprar fica ainda mais fraco"
     url: "https://www.smiles.com.br/campanhas/compra-355-20260819"
     recomendacao: "MONITORAR"
     tag: "🎯 META NY"
