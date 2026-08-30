@@ -1,10 +1,10 @@
-atualizadoEm: "2026-08-29"
+atualizadoEm: "2026-08-30"
 saldos:
   - programa: "Livelo"
     saldo: 621
     unidade: "pts"
     tipo: flexivel
-    nota: "**15.000 transferidos p/ Smiles em 28/08** (promo 80%) — base ainda não creditada, prazo até 31/08 · Clube ativo, não expiram · +10.511 a receber a partir de 02/09"
+    nota: "**15.000 transferidos p/ Smiles em 28/08** (promo 80%) — base **ainda não creditada** até 30/08, prazo até 31/08 · Clube ativo, não expiram · +10.511 a receber a partir de 02/09"
   - programa: "Smiles"
     saldo: 287664
     unidade: "milhas"
@@ -27,8 +27,8 @@ saldos:
     nota: "**Clube ainda creditando** (+1.500/mês em jul e ago) — cancelamento decidido em jul/2026 não efetivado"
 alertas:
   - "🔴 **CANCELAR Clube LATAM Pass:** decisão de 13/07 não efetivada — segue creditando (+3.100 desde jul) e cobrando ~R$ 90,80/mês"
+  - "🔴 **Lote Livelo ainda não caiu:** base de 15.000 tem prazo até **31/08** e o bônus de 12.000 até **15/09** (**+27.000**). Em 29/08 chegou só a pesquisa de satisfação da Livelo sobre a transferência; o extrato Smiles segue em 287.664. Se o total parar em 22.500, contestar — cadastro dentro da vigência"
   - "✅ **Bônus de 80% confirmado no lote C6:** creditado em 28/08 como *Bônus Transf. Pontos + CM - Bônus Agosto - 2026*, **4.243 milhas sobre 5.304 de base = 80% cheios**. O receio de parar em 50% não se confirmou — o Clube Plano 2.000 garantiu o teto"
-  - "**Falta o lote Livelo:** base de 15.000 até 31/08 e bônus de 12.000 até 15/09 (**+27.000**). A tela da Livelo mostrava só 50%, mas o C6 provou que os 30 p.p. restantes vêm da Smiles à parte. Se o total parar em 22.500, contestar — cadastro dentro da vigência"
   - "**Lição de leitura de prazo:** os blogs publicaram *só hoje (27/08)*, mas o regulamento oficial dizia **27/08 10h → 28/08 23h59**. Manchete não é prazo — conferir sempre o regulamento"
   - "**Smiles:** lote de 65.869 milhas vence em **mai/2027** — casar com a emissão NY"
 meta:
@@ -52,7 +52,7 @@ oportunidades:
   - titulo: "Smiles: compra de milhas com até 355% de bônus"
     bonus: "355%"
     prazo: "31/08"
-    detalhe: "campanha de 19/08 (10h) a **31/08 às 21h** — restam 2 dias. Escala por plano do Clube: **Plano 2.000 = 315%**; os 355% são do Plano 20.000/Magno-Diamante. Regra de ouro: só com emissão identificada, e a única na mesa (GOL GIG↔JFK a 101k/trecho) reprova na régua de ≤75k. Com o pool indo a ~314k, o caso de comprar fica ainda mais fraco"
+    detalhe: "**Último dia amanhã** — campanha de 19/08 (10h) até **31/08 às 21h**, vigência confirmada no regulamento. Escala por plano do Clube: **Plano 2.000 = 315%**; os 355% são do Plano 20.000/Magno-Diamante. Regra de ouro: só com emissão identificada, e a única na mesa (GOL GIG↔JFK a 101k/trecho) reprova na régua de ≤75k. Com o pool indo a ~314k, o caso de comprar fica ainda mais fraco"
     url: "https://www.smiles.com.br/campanhas/compra-355-20260819"
     recomendacao: "MONITORAR"
     tag: "🎯 META NY"
