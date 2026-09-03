@@ -32,6 +32,7 @@ alertas:
   - "**Livelo: +10.935 pontos a partir de hoje, 02/09** (Clube + fatura Bradesco) — conferir o crédito no extrato"
   - "❓ **Duas linhas *Convertidos — Shopping Livelo* em 24/08** (26.178 e 52.356, obs. *equivalente ao valor pago em dinheiro*) — sem sinal de mais ou menos e sem efeito no saldo. Abrir o detalhe para entender o que são"
   - "✅ **Promo de 80% conferida e encerrada em 31/08** — creditou integral e no mesmo dia, nada a contestar. A contestação do bônus Esfera de 07/07 também foi encerrada em 24/08: não era devida"
+  - "❌ **Clube Esfera (01→04/09) avaliado e recusado em 02/09.** Com os preços reais da página, o ponto sai a **R$ 37,62 (Pro) · R$ 36,65 (Master) · R$ 33,90 (VIP) · R$ 32,00 (Exclusive)** por milheiro — o que vira **R$ 64 a R$ 75 por milheiro de Avios** no 2:1 da Iberia. Contra os ~R$ 13-15 da Smiles comprada na promo de 80%, reprova. Os *60 mil bônus* da manchete são só do Exclusive, a R$ 799,90/mês; no plano realista o bônus é de 2.004 a 5.004 pontos"
   - "**Lição de leitura de prazo:** os blogs publicaram *só hoje (27/08)*, mas o regulamento oficial dizia **27/08 10h → 28/08 23h59**. Manchete não é prazo — conferir sempre o regulamento"
 meta:
   destino: "Nova York"
@@ -51,9 +52,4 @@ pisos:
   - "C6→Smiles/LATAM ≥ 50%"
   - "Reativação Smiles ≥ 200%"
   - "Clubes: bom senso"
-oportunidades:
-  - titulo: "Clube Esfera — adesão ou upgrade"
-    prazo: "04/09"
-    detalhe: "Até **60.000 pontos bônus em 12 meses**, janela curta de 01/09 a 04/09. Por plano: Pro 14.004 · Master 35.004 · VIP 75.000 · Exclusive 300.000 pontos; **CPM a partir de R$ 28,79** no Exclusive à vista. Casa com a virada de 31/08, que promoveu **Esfera → Iberia (Avios) a rota principal** e deixou *avaliar Clube Esfera* como pendência aberta. A confirmar antes de assinar: o regulamento fala em *clientes que nunca foram assinantes ou que cancelaram há mais de 12 meses*, e exige manter a assinatura ativa por 12 meses para receber o bônus cheio — checar em qual plano o desembolso se paga."
-    url: "https://passageirodeprimeira.com/ganhe-ate-60-000-pontos-bonus-em-12-meses-na-adesao-ou-upgrade-do-clube-esfera/"
-    recomendacao: "MONITORAR"
+oportunidades: []
