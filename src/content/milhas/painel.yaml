@@ -1,4 +1,4 @@
-atualizadoEm: "2026-09-08"
+atualizadoEm: "2026-09-09"
 saldos:
   - programa: "Livelo"
     saldo: 630
@@ -9,7 +9,7 @@ saldos:
     saldo: 314664
     unidade: "milhas"
     tipo: terminal
-    nota: "**Print de 31/08 conferido.** Promo de 80% creditada integral no mesmo dia (Livelo 15.000 + 12.000 e C6 5.304 + 4.243 = **+36.547**) · milhas bônus válidas até ~ago/2027 · 65.869 vencem **mai/2027** · qualificáveis no ano: 2.804 / 4 trechos · ⚠️ os e-mails Smiles de 05 e 06/09 informam **300.264 milhas** (saldo em 03 e 04/09) — ver alerta"
+    nota: "**Print de 31/08 conferido.** Promo de 80% creditada integral no mesmo dia (Livelo 15.000 + 12.000 e C6 5.304 + 4.243 = **+36.547**) · milhas bônus válidas até ~ago/2027 · 65.869 vencem **mai/2027** · qualificáveis no ano: 2.804 / 4 trechos · ⚠️ os e-mails Smiles de 05, 06 e 08/09 informam **300.264 milhas** (saldos de 03, 04 e 06/09) — ver alerta"
   - programa: "Esfera"
     saldo: 32556
     unidade: "pts"
@@ -26,15 +26,15 @@ saldos:
     tipo: terminal
     nota: "**Clube LATAM Pass + Embarque cancelado em 31/08** sem multa — benefícios até 15/09/2026 · economia ~R$ 1.090/ano · print de 20/08"
 alertas:
-  - "🔴 **Smiles: 14.400 milhas a menos, sem operação registrada.** Os e-mails da Smiles de 05 e 06/09 repetem *300.264 milhas* (saldos de 03 e 04/09) — contra as **314.664** conferidas por print em 31/08. Diferença exata de **14.400**, e não há resgate, transferência ou expiração anotada no log entre as duas datas. O número não se moveu em dois dias, então não é lançamento em trânsito. **Abrir o extrato Smiles, achar o lançamento e, se não houver, contestar**"
+  - "🔴 **Smiles: 14.400 milhas a menos, e o buraco não fechou em 5 dias.** Os e-mails da Smiles de 05, 06 e **08/09** repetem *300.264 milhas* (saldos de 03, 04 e 06/09) — contra as **314.664** conferidas por print em 31/08. Diferença exata de **14.400**, sem resgate, transferência ou expiração anotada no log entre as duas datas. Três leituras iguais em quatro dias descartam lançamento em trânsito. **Abrir o extrato Smiles, achar o lançamento e, se não houver, contestar** — a emissão REC→GYN de 12/09 já está paga, então o saldo não deveria se mexer sozinho"
   - "🔴 **LATAM Pass — conferir a expiração das milhas depois de 15/09.** Com o fim do clube, as 19.478 milhas voltam à regra padrão de validade. Já houve perdas por expiração (-3.723 e -442 em set/2025, -3.500 em jan/2026). Abrir o extrato após 15/09, anotar a nova data e decidir se vale queimar num trecho doméstico barato"
-  - "✈️ **Emissão confirmada REC → GYN em 12/09/2026** (115.600 milhas, 2 pax, tarifa turbinada com bagagem) — daqui a 4 dias"
+  - "✈️ **Emissão confirmada REC → GYN em 12/09/2026** (115.600 milhas, 2 pax, tarifa turbinada com bagagem) — daqui a 3 dias"
   - "**Livelo: +10.935 pontos liberados desde 02/09** (Clube + fatura Bradesco) — o crédito ainda não aparece no saldo de referência (630). Abrir o extrato e conferir"
   - "🔄 **Mudança de rota (31/08): o gasto principal migra do Bradesco para o Santander**, alimentando a Esfera; o C6 vira a frente da Sabrina. Duas frentes paralelas: Esfera → Iberia/LATAM (Europa e Executiva) e Átomos → Smiles (EUA e América do Sul). A definir: condição de isenção da anuidade Santander Unlimited (R$ 2.200/ano), destino do Bradesco Infinite e se o Clube Livelo (R$ 538/ano) será renovado em 02/06/2027"
   - "⚠️ **O gasto do dia a dia continua caindo no C6, não no Bradesco.** Os átomos voltaram a acumular 224,51 em três dias enquanto a Livelo só recebeu Uber — insumo direto da mudança de rota acima"
   - "❓ **Duas linhas *Convertidos — Shopping Livelo* em 24/08** (26.178 e 52.356, obs. *equivalente ao valor pago em dinheiro*) — sem sinal de mais ou menos e sem efeito no saldo. Abrir o detalhe para entender o que são"
   - "✅ **Promo de 80% conferida e encerrada em 31/08** — creditou integral e no mesmo dia, nada a contestar. A contestação do bônus Esfera de 07/07 também foi encerrada em 24/08: não era devida"
-  - "❌ **Clube Esfera (01→04/09) avaliado e recusado — janela encerrada em 04/09.** Com os preços reais da página, o ponto saía a **R$ 37,62 (Pro) · R$ 36,65 (Master) · R$ 33,90 (VIP) · R$ 32,00 (Exclusive)** por milheiro — o que vira **R$ 64 a R$ 75 por milheiro de Avios** no 2:1 da Iberia. Contra os ~R$ 13-15 da Smiles comprada na promo de 80%, reprovou. Os *60 mil bônus* da manchete eram só do Exclusive, a R$ 799,90/mês. **Reavaliar quando a Esfera já estiver sendo alimentada pelo Santander**"
+  - "❌ **Clube Esfera reapareceu em 08/09 com a mesma manchete de *até 60 mil pontos bônus* — segue reprovado.** É a mesma oferta avaliada e recusada na janela de 01→04/09: os 60 mil são só do plano Exclusive a R$ 799,90/mês, e o ponto sai a **R$ 32,00 a R$ 37,62** por milheiro, o que vira **R$ 64 a R$ 75 por milheiro de Avios** no 2:1 da Iberia. **Reavaliar só quando a Esfera já estiver sendo alimentada pelo Santander**"
   - "❌ **Mês de 10 anos do Clube Livelo (set/26) não serve para este perfil.** A oferta boa — Classic Flex a 12x R$ 24,90 ou 25 mil pontos com o cupom QUEROPONTOS, até 14/09 — é só para **novos assinantes ou quem cancelou há mais de 14 dias**, e o upgrade Classic→Special com 24 mil extras fechou em 02/09. As rodadas de *Pink Hour* de 03 e 04/09 (upgrade para Plus/Special, milheiro a partir de ~R$ 19) eram de um dia só e já fecharam — e comprar ponto Livelo contraria a mudança de rota de 31/08"
   - "**Lição de leitura de prazo:** os blogs publicaram *só hoje (27/08)*, mas o regulamento oficial dizia **27/08 10h → 28/08 23h59**. Manchete não é prazo — conferir sempre o regulamento"
 meta:
