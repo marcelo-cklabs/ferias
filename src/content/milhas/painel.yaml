@@ -1,4 +1,4 @@
-atualizadoEm: "2026-09-09"
+atualizadoEm: "2026-09-10"
 saldos:
   - programa: "Livelo"
     saldo: 630
@@ -9,7 +9,7 @@ saldos:
     saldo: 300264
     unidade: "milhas"
     tipo: terminal
-    nota: "Saldo informado pela própria Smiles em 03, 04 e 06/09. As **14.400** de diferença contra o print de 31/08 (314.664) são, segundo o Marcelo, a **compra de bagagem** da viagem ao Nordeste — confirmar no extrato após o retorno · promo de 80% creditada integral em 28/08 (**+36.547**) · milhas bônus válidas até ~ago/2027 · 65.869 vencem **mai/2027** · qualificáveis no ano: 2.804 / 4 trechos"
+    nota: "Saldo repetido pela própria Smiles nos e-mails de 09/09 (saldo em 09/09). As **14.400** de diferença contra o print de 31/08 (314.664) são, segundo o Marcelo, a **compra de bagagem** da viagem ao Nordeste — confirmar no extrato após o retorno · promo de 80% creditada integral em 28/08 (**+36.547**) · milhas bônus válidas até ~ago/2027 · 65.869 vencem **mai/2027** · qualificáveis no ano: 2.804 / 4 trechos"
   - programa: "Esfera"
     saldo: 32556
     unidade: "pts"
@@ -26,7 +26,7 @@ saldos:
     tipo: terminal
     nota: "**Clube LATAM Pass + Embarque cancelado em 31/08** sem multa — benefícios até 15/09/2026 · economia ~R$ 1.090/ano · print de 20/08"
 alertas:
-  - "🟡 **As 14.400 milhas Smiles têm explicação: compra de bagagem.** Marcelo indicou em 09/09 que comprou bagagem para a viagem ao Nordeste, o que cobre a diferença entre as **314.664** do print de 31/08 e as **300.264** repetidas nos e-mails de 05, 06 e 08/09 (saldos de 03, 04 e 06/09). **Contestação suspensa** — não abrir chamado. Falta só confirmar o lançamento no extrato depois do retorno (sábado, 12/09) e então encerrar o alerta"
+  - "🟡 **As 14.400 milhas Smiles têm explicação: compra de bagagem.** Marcelo indicou em 09/09 que comprou bagagem para a viagem ao Nordeste, o que cobre a diferença entre as **314.664** do print de 31/08 e as **300.264** repetidas nos e-mails da Smiles (último em 09/09). **Contestação suspensa** — não abrir chamado. Falta só confirmar o lançamento no extrato depois do retorno (sábado, 12/09) e então encerrar o alerta"
   - "🔴 **LATAM Pass — conferir a expiração das milhas depois de 15/09.** Com o fim do clube, as 19.478 milhas voltam à regra padrão de validade. Já houve perdas por expiração (-3.723 e -442 em set/2025, -3.500 em jan/2026). Abrir o extrato após 15/09, anotar a nova data e decidir se vale queimar num trecho doméstico barato"
   - "✈️ **Volta da viagem ao Nordeste: REC → GYN no sábado, 12/09/2026** (115.600 milhas, 2 pax, tarifa turbinada com bagagem) — emissão já paga e confirmada"
   - "**Livelo: +10.935 pontos liberados desde 02/09** (Clube + fatura Bradesco) — o crédito ainda não aparece no saldo de referência (630). Abrir o extrato e conferir"
@@ -34,7 +34,7 @@ alertas:
   - "⚠️ **O gasto do dia a dia continua caindo no C6, não no Bradesco.** Os átomos voltaram a acumular 224,51 em três dias enquanto a Livelo só recebeu Uber — insumo direto da mudança de rota acima"
   - "❓ **Duas linhas *Convertidos — Shopping Livelo* em 24/08** (26.178 e 52.356, obs. *equivalente ao valor pago em dinheiro*) — sem sinal de mais ou menos e sem efeito no saldo. Abrir o detalhe para entender o que são"
   - "✅ **Promo de 80% conferida e encerrada em 31/08** — creditou integral e no mesmo dia, nada a contestar. A contestação do bônus Esfera de 07/07 também foi encerrada em 24/08: não era devida"
-  - "❌ **Clube Esfera reapareceu em 08/09 com a mesma manchete de *até 60 mil pontos bônus* — segue reprovado.** É a mesma oferta avaliada e recusada na janela de 01→04/09: os 60 mil são só do plano Exclusive a R$ 799,90/mês, e o ponto sai a **R$ 32,00 a R$ 37,62** por milheiro, o que vira **R$ 64 a R$ 75 por milheiro de Avios** no 2:1 da Iberia. **Reavaliar só quando a Esfera já estiver sendo alimentada pelo Santander**"
+  - "❌ **Clube Esfera — janela do *Mês do Cliente* fecha em 11/09/2026 às 23h59 e segue reprovada.** É a mesma oferta avaliada e recusada em 01→04/09 e de novo em 08/09: os 60 mil pontos são só do plano Exclusive a R$ 799,90/mês, e o ponto sai a **R$ 32,00 a R$ 37,62** por milheiro, o que vira **R$ 64 a R$ 75 por milheiro de Avios** no 2:1 da Iberia. **Reavaliar só quando a Esfera já estiver sendo alimentada pelo Santander** — e, na próxima rodada, confirmar se o Clube eleva o teto de bônus em transferências, que é a pendência aberta desde 31/08"
   - "❌ **Mês de 10 anos do Clube Livelo (set/26) não serve para este perfil.** A oferta boa — Classic Flex a 12x R$ 24,90 ou 25 mil pontos com o cupom QUEROPONTOS, até 14/09 — é só para **novos assinantes ou quem cancelou há mais de 14 dias**, e o upgrade Classic→Special com 24 mil extras fechou em 02/09. As rodadas de *Pink Hour* de 03 e 04/09 (upgrade para Plus/Special, milheiro a partir de ~R$ 19) eram de um dia só e já fecharam — e comprar ponto Livelo contraria a mudança de rota de 31/08"
   - "**Lição de leitura de saldo:** um saldo menor que o esperado nem sempre é erro do programa. Antes de montar contestação, checar os gastos avulsos do próprio período — bagagem, assento, upgrade — que saem do saldo sem aparecer como *resgate*"
 meta:
