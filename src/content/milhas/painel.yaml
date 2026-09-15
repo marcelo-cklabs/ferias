@@ -1,20 +1,20 @@
-atualizadoEm: "2026-09-14"
+atualizadoEm: "2026-09-15"
 saldos:
   - programa: "Livelo"
     saldo: 23236
     unidade: "pts"
     tipo: flexivel
-    nota: "✅ **Conferido por print do extrato em 14/09 11:24.** Composição exata desde 31/08: 630 + **1.000** Clube (02/09) + **300** GIFTTY (100 e 200 em 03/09) + **21.306 Fidelidade Bradesco (10/09)** = 23.236 ✅ · **sem pontos a expirar** (Clube ativo) · **9.635 novos a receber a partir de 19/09/2026** · mínimo de transferência p/ Smiles: 10.000 pts, taxa padrão 1:1 sem bônus hoje"
+    nota: "✅ **Conferido por print do extrato em 14/09 11:24.** Composição exata desde 31/08: 630 + **1.000** Clube (02/09) + **300** GIFTTY (100 e 200 em 03/09) + **21.306 Fidelidade Bradesco (10/09)** = 23.236 ✅ · **sem pontos a expirar** (Clube ativo) · **9.635 novos a receber a partir de 19/09/2026** · mínimo de transferência p/ Smiles: 10.000 pts · **hoje há 80% de bônus** (Clube Smiles Day, até 15/09 23h59) — os 23.236 viram ≈ **41.800 milhas**"
   - programa: "Smiles"
-    saldo: 300264
+    saldo: 305291
     unidade: "milhas"
     tipo: terminal
-    nota: "Saldo repetido pela própria Smiles nos e-mails de 06, 07, 08 e 09/09. As **14.400** de diferença contra o print de 31/08 (314.664) são, segundo o Marcelo, a **compra de bagagem** da viagem ao Nordeste — confirmar no extrato agora que a viagem acabou · promo de 80% creditada integral em 28/08 (**+36.547**) · milhas bônus válidas até ~ago/2027 · 65.869 vencem **mai/2027** · qualificáveis no ano: 2.804 / 4 trechos"
+    nota: "Saldo do e-mail transacional Smiles de **15/09** (era 300.264 de 06 a 14/09; +5.027 creditados em 15/09 — conferir a origem no extrato) · **categoria subiu para Prata em 14/09** · o teto de 80% em transferências segue vindo do **Clube Smiles Plano 2.000**, não da categoria · as 14.400 de diferença contra o print de 31/08 (314.664) são a **compra de bagagem** da viagem ao Nordeste · milhas bônus válidas até ~ago/2027 · 65.869 vencem **mai/2027**"
   - programa: "Esfera"
     saldo: 32556
     unidade: "pts"
     tipo: flexivel
-    nota: "**Intacta e conferida em 31/08** — não entrou na promo de 28/08 por decisão · validade **07/08/2029**, sem urgência · **reservada para Iberia (Avios, 2:1 ≈ 16,3k)**, caminho de Europa e Executiva · vira o **motor principal** com a migração do gasto para o Santander"
+    nota: "**Intacta e conferida em 31/08** — não entrou na promo de 28/08 por decisão · validade **07/08/2029**, sem urgência · **reservada para Iberia (Avios, 2:1 ≈ 16,3k)**, caminho de Europa e Executiva · vira o **motor principal** com a migração do gasto para o Santander · participa do bônus de 80% de hoje para a Smiles, mas **a decisão é não tocar** — o aniversário da Esfera em 22/09 é o gatilho da rota Avios"
   - programa: "C6 Átomos"
     saldo: 226
     unidade: "átomos"
@@ -24,18 +24,18 @@ saldos:
     saldo: 19478
     unidade: "milhas"
     tipo: terminal
-    nota: "**Clube LATAM Pass + Embarque cancelado em 31/08** sem multa — benefícios até 15/09/2026 · economia ~R$ 1.090/ano · print de 20/08"
+    nota: "**Clube LATAM Pass + Embarque cancelado em 31/08** sem multa — os benefícios encerram **hoje, 15/09/2026** · economia ~R$ 1.090/ano · print de 20/08"
 alertas:
-  - "🔴 **LATAM Pass — o clube encerra amanhã, 15/09.** Com o fim da assinatura as 19.478 milhas voltam à regra padrão de validade e perdem os 3 anos garantidos pelo clube. Já houve perdas por expiração (-3.723 e -442 em set/2025, -3.500 em jan/2026). **Ação para 16/09:** abrir o extrato, anotar a nova data de expiração e decidir se vale queimar num trecho doméstico barato"
-  - "❌ **Não existe promo de 80% Livelo → Smiles hoje.** A página `livelo-para-parceiros/smiles/SMLTransfer` é a **página fixa** da parceria e mostra a taxa padrão **1:1**, mínimo 10.000 pts. A campanha de 80% era a `bancos-ate-80pc-milhas-bonus-08-2026`, cujo próprio regulamento diz *Promoção encerrada dia 28/08/2026 às 23h59; a página fica disponível para consulta até 28/11/2026* — foi a que o Marcelo aproveitou (−15.000 em 28/08, visível no extrato). **Regra:** página de parceiro sempre aberta ≠ campanha vigente; conferir a cláusula de vigência na página da campanha da Smiles"
+  - "🔴 **LATAM Pass — o clube encerra HOJE, 15/09.** Com o fim da assinatura as 19.478 milhas voltam à regra padrão de validade e perdem os 3 anos garantidos pelo clube. Já houve perdas por expiração (-3.723 e -442 em set/2025, -3.500 em jan/2026). **Ação para amanhã, 16/09:** abrir o extrato, anotar a nova data de expiração e decidir se vale queimar num trecho doméstico barato"
+  - "🟠 **Corrige o alerta de 14/09: a promo de 80% Livelo → Smiles EXISTE hoje.** É o **Clube Smiles Day**, campanha `clubesmiles-day/bancos-09-2026`, com vigência declarada no regulamento de **14/09 às 10h00 até 15/09 às 23h59**. Clube Smiles, Diamante ou Magno pegam **80%**; os demais, 50%. **Cadastro prévio obrigatório** antes de transferir. Teto de 300.000 milhas bônus por CPF. A regra de 14/09 segue valendo — página fixa de parceiro ≠ campanha vigente —, mas desta vez a cláusula de vigência confere"
   - "📈 **+21.306 pontos da Fidelidade Bradesco em 10/09 — o maior crédito do ano, e ele contradiz o diagnóstico de 31/08.** Aquele log concluiu que o gasto não estava indo no Bradesco (só Uber desde 07/08); uma fatura que rende 21,3 mil pontos diz o contrário. **Confirmar a origem** (fatura gorda, acúmulo de ciclos ou campanha de bônus) — é a resposta que decide se a **mudança de rota Bradesco → Santander** de 31/08 continua de pé"
+  - "🟡 **Smiles subiu 5.027 milhas entre 14 e 15/09** (300.264 → 305.291) e a **categoria virou Prata**. Dois e-mails transacionais de acúmulo chegaram na manhã de 15/09. Conferir no extrato o que creditou — e lembrar que o teto de 80% vem do Clube Plano 2.000, que segue ativo"
   - "✈️ **Viagem ao Nordeste encerrada — REC → GYN voou em 12/09/2026** (115.600 milhas, 2 pax, tarifa turbinada com bagagem), emissão já paga e confirmada. **Ação pendente:** abrir o extrato Smiles, localizar o lançamento da bagagem e fechar de vez o alerta das 14.400"
-  - "🟡 **As 14.400 milhas Smiles têm explicação: compra de bagagem.** A diferença entre as **314.664** do print de 31/08 e as **300.264** repetidas pela Smiles até 09/09 está coberta. **Contestação suspensa** — não abrir chamado. Falta só confirmar o lançamento no extrato, agora que a viagem terminou, e encerrar o alerta"
-  - "📅 **Aniversário da Esfera em 22/09 é a próxima data a vigiar — faltam 8 dias.** Em 2025 a casa ofereceu **até 30% de bônus em transferências para o Iberia Club** na mesma janela — é exatamente o gatilho da rota Avios. Não é promessa, é data histórica: monitorar a partir do dia 20"
-  - "✅ **Livelo: crédito conferido e fechado.** O saldo saiu de 630 para **23.236 pts**, com a composição batendo linha a linha no extrato de 14/09. Pendência de 31/08 encerrada · **próximo lote: 9.635 a partir de 19/09**"
+  - "📅 **Aniversário da Esfera em 22/09 é a próxima data a vigiar — faltam 7 dias.** Em 2025 a casa ofereceu **até 30% de bônus em transferências para o Iberia Club** na mesma janela — é exatamente o gatilho da rota Avios. Não é promessa, é data histórica: monitorar a partir do dia 20. **É por isso que a Esfera não entra no bônus de 80% de hoje**"
+  - "✅ **Livelo: crédito conferido e fechado.** O saldo saiu de 630 para **23.236 pts**, com a composição batendo linha a linha no extrato de 14/09. Pendência de 31/08 encerrada · **próximo lote: 9.635 a partir de 19/09** — esses não chegam a tempo do bônus de hoje"
   - "🔄 **Mudança de rota (31/08): o gasto principal migra do Bradesco para o Santander**, alimentando a Esfera; o C6 vira a frente da Sabrina. Duas frentes paralelas: Esfera → Iberia/LATAM (Europa e Executiva) e Átomos → Smiles (EUA e América do Sul). A definir: condição de isenção da anuidade Santander Unlimited (R$ 2.200/ano), destino do Bradesco Infinite e se o Clube Livelo (R$ 538/ano) será renovado em 02/06/2027"
   - "❓ **Duas linhas *Convertidos — Shopping Livelo* em 24/08** (26.178 e 52.356, obs. *equivalente ao valor pago em dinheiro*) — sem sinal de mais ou menos e sem efeito no saldo. Abrir o detalhe para entender o que são"
-  - "❌ **Clube Esfera — a janela do *Mês do Cliente* fechou em 11/09/2026 às 23h59 e a oferta seguiu reprovada.** Era a mesma avaliada e recusada em 01→04/09 e de novo em 08/09: os 60 mil pontos são só do plano Exclusive a R$ 799,90/mês, e o ponto sai a **R$ 32,00 a R$ 37,62** por milheiro, o que vira **R$ 64 a R$ 75 por milheiro de Avios** no 2:1 da Iberia. **Reavaliar só quando a Esfera já estiver sendo alimentada pelo Santander** — e, na próxima rodada, confirmar se o Clube eleva o teto de bônus em transferências, que é a pendência aberta desde 31/08"
+  - "🟠 **Clube Esfera volta à mesa numa versão melhor que as reprovadas.** A janela do *Mês do Cliente* (60 mil pontos, milheiro a R$ 32,00–37,62) fechou em 11/09 e foi recusada três vezes. A oferta de agora é **até 100.000 pontos em 12 meses** com milheiro a partir de **R$ 25,40** no Exclusive anual à vista — ainda caro no 2:1 da Iberia (~R$ 51/milheiro de Avios), mas é o melhor número até aqui. Segue a pendência de 31/08: **confirmar se o Clube eleva o teto de bônus em transferências**"
   - "🚫 **Clube Livelo *até 25 mil pontos* (prorrogado até 22/09, bônus Elo até 30/09): não se aplica.** O regulamento limita a oferta a **novas adesões** do Classic Flex anual — o Marcelo já é assinante do Classic Anual até 02/06/2027. Mesma coisa com o *até 37 mil milhas* do Clube Smiles 2.000, que ele já assina. Nenhum dos dois entra como oportunidade"
   - "**Lição de leitura de saldo:** um saldo menor que o esperado nem sempre é erro do programa. Antes de montar contestação, checar os gastos avulsos do próprio período — bagagem, assento, upgrade — que saem do saldo sem aparecer como *resgate*"
 meta:
@@ -44,7 +44,7 @@ meta:
   pax: "2"
   cabine: "econômica"
   duracao: "14 dias"
-  situacao: "**Saldo cobre e o acúmulo está encerrado:** **300.264** milhas contra ≈ 260–290k do casal no saver direto da American — folga menor depois da bagagem do Nordeste, mas ainda cobre. O gargalo é só **volta saver em 2027 com 2 assentos**: em 20/08 apareceram as primeiras voltas JFK→GIG de abr–jul/27 (GOL via Smiles, a 101k/trecho — reprova na régua de ≤75k) e **março/27 continua seco**. Origens aceitas além de GRU: GIG, CNF, SSA, REC e BSB, o que amplia a caça a datas de volta. Plano B: direto em dinheiro (~R$ 8–10k o casal)."
+  situacao: "**Saldo cobre com folga:** **305.291** milhas contra ≈ 260–290k do casal no saver direto da American — e o bônus de 80% de hoje pode somar mais ≈ 41,8k pela ponta Livelo. O gargalo é só **volta saver em 2027 com 2 assentos**: em 20/08 apareceram as primeiras voltas JFK→GIG de abr–jul/27 (GOL via Smiles, a 101k/trecho — reprova na régua de ≤75k) e **março/27 continua seco**. Origens aceitas além de GRU: GIG, CNF, SSA, REC e BSB, o que amplia a caça a datas de volta. Plano B: direto em dinheiro (~R$ 8–10k o casal)."
   gatilhos:
     - "volta saver 2027 · 2 assentos"
     - "bônus Esfera → Iberia (Avios)"
@@ -56,4 +56,16 @@ pisos:
   - "C6→Smiles/LATAM ≥ 50%"
   - "Reativação Smiles ≥ 200%"
   - "Clubes: bom senso"
-oportunidades: []
+oportunidades:
+  - titulo: "Livelo → Smiles"
+    bonus: "80%"
+    prazo: "15/09 23h59"
+    detalhe: "**Clube Smiles Day.** Teto de 80% garantido pelo Clube Smiles Plano 2.000; sem Clube seriam 50%. **Cadastro prévio obrigatório** antes de transferir, e o mínimo da Livelo é 10.000 pts. Os **23.236 pts** disponíveis viram ≈ **41.800 milhas** — a milha Smiles sai a ≈ **R$ 12,22** no custo do Clube Livelo (~R$ 22/milheiro), bem abaixo do alvo de R$ 16. Os 9.635 pontos do próximo lote só entram em 19/09 e não dão tempo. A **Esfera também participa, mas fica de fora por decisão**: está reservada para a Iberia e o aniversário da casa em 22/09 é o gatilho da rota Avios."
+    url: "https://www.smiles.com.br/portal/campanhas/clubesmiles-day/bancos-09-2026"
+    recomendacao: "AGIR HOJE"
+    tag: "🎯 META EUA"
+  - titulo: "Clube Esfera — adesão ou upgrade"
+    prazo: "20/09"
+    detalhe: "Melhor versão da oferta até agora: até **100.000 pontos bônus em 12 meses**, milheiro a partir de **R$ 25,40** no Exclusive anual à vista, contra os R$ 32,00–37,62 da rodada do Mês do Cliente que foi reprovada em 11/09. Os 100 mil pontos são só do plano **Exclusive** e caem em **12 parcelas mensais** — exige manter a assinatura o ano inteiro. No 2:1 da Iberia o Avios ainda sai a ≈ **R$ 51/milheiro**. **A confirmar antes de decidir:** se o Clube eleva o teto de bônus em transferências (pendência aberta desde 31/08) e qual o custo mensal real do plano contratado."
+    url: "https://passageirodeprimeira.com/ganhe-ate-100-000-pontos-bonus-em-12-meses-na-adesao-ou-upgrade-do-clube-esfera-milheiro-a-partir-de-r-2540-4/"
+    recomendacao: "MONITORAR"
