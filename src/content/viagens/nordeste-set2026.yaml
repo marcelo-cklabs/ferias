@@ -14,15 +14,15 @@ dataInicio: 2026-09-04
 dataCard: "4–12 set 2026"
 dataDisplay: "4 – 12 de setembro de 2026"
 pax: "Marcelo & Sabrina"
-status: confirmada
-statusLabel: "Voos, carro e hospedagens OK"
+status: realizada
+statusLabel: "Finalizada"
 cor: "#0e7490"
-resumoCard: "Maceió, São Miguel, Maragogi e Porto de Galinhas."
+resumoCard: "Realizada. Maceió, São Miguel, Maragogi e Porto de Galinhas · R$ 3.769,85 lançados até agora, fora as milhas."
 bilhete: 2
 heroMeta:
   - { rotulo: "LOC", valor: "WSFDPK · OZHNBN" }
   - { rotulo: "CARRO", valor: "LOCALIZA MCZ→REC" }
-footer: "Voos, carro e hospedagens confirmados · Distâncias aproximadas 🌴"
+footer: "Viagem finalizada em 12/09/2026 · gastos ainda a conciliar com o extrato 🌴"
 secoes:
   - tipo: roteiro
     dias:
@@ -148,9 +148,9 @@ secoes:
     notas:
       - "Voos pagos com milhas Smiles (179.000 milhas no total) + taxas em dinheiro acima."
   - tipo: checklist
-    titulo: "Próximos passos"
+    titulo: "Pendências pós-viagem"
     itens:
-      - { texto: "Reservar o day use no Hibiscus Beach Club (06/09)" }
-      - { texto: "Passeios: Galés de Maragogi (conferir tábua de marés de 08/09), jangada nas piscinas de Porto de Galinhas" }
-      - { texto: "Restaurantes e transfers de barco" }
-      - { texto: "Conferir franquia/deductível da proteção do carro" }
+      - { texto: "Conciliar os gastos com o relatório do projeto de finanças", detalhe: "Open Finance → Supabase · conferir lançamentos fora da janela 04–12/09" }
+      - { texto: "Lançar os gastos de viagem que faltam", detalhe: "alimentação, passeios (Galés, jangada), combustível, pedágios e estacionamentos" }
+      - { texto: "Conferir a cobrança final da Localiza", detalhe: "franquia de 200 km/dia, combustível e estorno da caução" }
+      - { texto: "Escrever o fechamento da viagem no second brain" }

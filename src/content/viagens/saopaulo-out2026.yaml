@@ -8,19 +8,20 @@ rota:
   origemNome: "Goiânia"
   destino: "CGH"
   destinoNome: "São Paulo"
-dataInicio: 2026-10-26
-dataCard: "27 out 2026"
-dataDisplay: "Terça, 27 de outubro de 2026 · 19:10"
+dataInicio: 2026-10-27
+dataCard: "27–28 out 2026"
+dataDisplay: "27 – 28 de outubro de 2026"
 pax: "Marcelo & Leandro"
 status: confirmada
-statusLabel: "Ingressos OK"
+statusLabel: "Ingressos e voos OK"
 cor: "#7f1d1d"
-resumoCard: "Run for Your Lives Tour, Allianz Parque. Setor 103, fileira E."
+resumoCard: "Run for Your Lives Tour, Allianz Parque. Voos fechados — falta a hospedagem."
 bilhete: 3
 heroMeta:
-  - { rotulo: "PEDIDO", valor: "1740356209" }
+  - { rotulo: "LOC", valor: "GBNQTZ" }
   - { rotulo: "LUGAR", valor: "PORTÃO A · SETOR 103 · FILEIRA E" }
-footer: "Ingressos garantidos · voos e hospedagem a fechar 🤘"
+  - { rotulo: "PEDIDO", valor: "1740356209" }
+footer: "Ingressos e voos garantidos · hospedagem a fechar 🤘"
 secoes:
   - tipo: ficha
     titulo: "O show"
@@ -39,37 +40,54 @@ secoes:
       - "🎟️ Ingressos garantidos. Baixar os PDFs (Ticketdirect) antes da viagem."
   - tipo: roteiro
     dias:
-      - data: "Seg 26/10"
-        diaSemana: "Chegada"
-        local: "São Paulo"
-        texto: "Chegar a São Paulo e check-in. *Voos a definir.*"
-        tags: ["✈️ Voo a definir", "🏨 Check-in"]
       - data: "Ter 27/10"
-        diaSemana: "Dia do show"
-        local: "Allianz Parque"
-        texto: "Dia livre + **show do Iron Maiden** à noite (abertura 19:10, banda 20:50). Portão A — Setor 103, fileira E, assentos 9 e 10."
-        tags: ["🤘 Iron Maiden"]
+        diaSemana: "Chegada & show"
+        local: "São Paulo"
+        texto: "Voo **GYN → CGH** às 10:05, pousando em Congonhas às **11:50**. Check-in, tarde livre e, à noite, o **show do Iron Maiden** no Allianz Parque — Alter Bridge às 19:10 e Maiden às 20:50. Portão A · Setor 103 · fileira E · assentos 9 e 10."
+        tags: ["✈️ GYN→CGH 10:05", "🏨 Check-in", "🤘 Iron Maiden"]
       - data: "Qua 28/10"
         diaSemana: "Volta"
-        local: "Volta"
-        texto: "Check-out e retorno. *Voo a definir.*"
-        tags: ["✈️ Voo a definir"]
+        local: "Congonhas → Casa"
+        texto: "Checkout cedo por causa do voo das **09:35** — sair do hotel por volta das **07:15**. Chegada em Goiânia às **11:20**."
+        tags: ["🧳 Checkout cedo", "✈️ CGH→GYN 09:35"]
   - tipo: voos
+    titulo: "Voos · GOL"
+    trechos:
+      - titulo: "Ida · ter 27/10 · direto (1h45)"
+        localizador: "GBNQTZ"
+        pernas:
+          - { de: "GYN", deHora: "10:05", deNome: "Goiânia", para: "CGH", paraHora: "11:50", paraNome: "São Paulo", voo: "G3-1433" }
+      - titulo: "Volta · qua 28/10 · direto (1h45)"
+        localizador: "GBNQTZ"
+        pernas:
+          - { de: "CGH", deHora: "09:35", deNome: "São Paulo", para: "GYN", paraHora: "11:20", paraNome: "Goiânia", voo: "G3-1432" }
     notas:
-      - "A definir — alvo: ida 26/10 e volta 28/10. Inserir quando comprar."
+      - "2 passageiros: **Marcelo Amador** (Smiles 158648965) e **Leandro Francisco dos Santos** (Smiles 589033712) · emitido em 16/09/2026."
+      - "Tarifa **LIGHT** · econômica (classe N) · Boeing 737-800. A LIGHT não inclui bagagem despachada — só bagagem de mão."
+      - "🪑 **Assentos ainda não marcados** nos dois trechos — escolher no app da GOL."
+      - "Bilhetes eletrônicos: Marcelo **1272312012992** · Leandro **1272312012987**."
+      - "⚠️ A ida pousa no **próprio dia do show**: qualquer atraso grande come a margem. Vale acompanhar o status do voo na véspera."
   - tipo: hospedagem
     checklist:
-      - "**São Paulo** — perto do Allianz Parque / Água Branca · 26–28/10 (2 noites) · *a reservar*"
+      - "**São Paulo** — 1 noite (27–28/10) · *a reservar*"
+    notas:
+      - "Duas escolhas possíveis: **perto do Allianz Parque** (Água Branca / Barra Funda / Perdizes), a pé ou a poucos minutos do show, ou **perto de Congonhas**, que facilita o voo das 09:35. Como a volta do show é tarde da noite, ficar perto do Allianz tende a valer mais — de lá a Congonhas são ~30–40 min de carro no começo da manhã."
   - tipo: gastos
     linhas:
       - { categoria: "Show", descricao: "Ingressos Iron Maiden (2× meia, Cadeira N1 — Setor 103)", status: pago, valor: 870.00 }
+      - { categoria: "Voos", descricao: "GOL GYN⇄CGH (GBNQTZ, 2 pax) — reserva fechada em 16/09, autorização 440570", status: pago, valor: 3077.68 }
     totais:
-      - { rotulo: "Total", valor: 870.00 }
+      - { rotulo: "Reserva + ingressos", valor: 3947.68 }
+      - { rotulo: "Parte do Leandro nos voos (Crédito GOL)", valor: -1500.00 }
+      - { rotulo: "Custo do Marcelo", valor: 2447.68 }
     notas:
       - "Por ingresso: R$ 345,00 (meia) + taxa ADM R$ 21,00 + taxa de serviço R$ 69,00 = R$ 435,00 · entrega grátis · pedido 1740356209."
+      - "✈️ **Voos, R$ 3.077,68 no total:** a parte do Leandro (**R$ 1.500,00**) saiu em **Crédito GOL** e a do Marcelo (**R$ 1.577,68**) foi 1× no cartão final **5739**. Só a parte do Marcelo entra no custo acima."
+      - "🎟️ Os **dois ingressos** (R$ 870,00) foram pagos pelo Marcelo — se a metade do Leandro for acertada depois, lançar aqui como a receber."
   - tipo: checklist
     titulo: "Próximos passos"
     itens:
+      - { texto: "Marcar os assentos dos dois trechos no app da GOL" }
+      - { texto: "Reservar hospedagem para a noite de 27/10 (1 noite)" }
       - { texto: "Baixar os ingressos em PDF (Ticketdirect) — pedido 1740356209" }
-      - { texto: "Comprar voos Goiânia ⇄ São Paulo (26 e 28/10)" }
-      - { texto: "Reservar hospedagem perto do Allianz (26–28/10)" }
+      - { texto: "Conferir bagagem de mão", detalhe: "tarifa LIGHT não dá direito a bagagem despachada" }
