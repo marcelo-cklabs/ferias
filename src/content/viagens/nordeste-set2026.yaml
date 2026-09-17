@@ -17,12 +17,12 @@ pax: "Marcelo & Sabrina"
 status: realizada
 statusLabel: "Finalizada"
 cor: "#0e7490"
-resumoCard: "Realizada. Maceió, São Miguel, Maragogi e Porto de Galinhas · R$ 3.769,85 lançados até agora, fora as milhas."
+resumoCard: "Realizada. Maceió, São Miguel, Maragogi e Porto de Galinhas · R$ 8.922,34 no total, fora as milhas."
 bilhete: 2
 heroMeta:
   - { rotulo: "LOC", valor: "WSFDPK · OZHNBN" }
   - { rotulo: "CARRO", valor: "LOCALIZA MCZ→REC" }
-footer: "Viagem finalizada em 12/09/2026 · gastos ainda a conciliar com o extrato 🌴"
+footer: "Viagem finalizada em 12/09/2026 · gastos levantados do extrato em 17/09 🌴"
 secoes:
   - tipo: roteiro
     dias:
@@ -143,14 +143,30 @@ secoes:
       - { categoria: "Carro", descricao: "Aluguel Localiza SUV (8 diárias, one-way)", status: pago, valor: 1636.49 }
       - { categoria: "Hospedagem", descricao: "Airbnb Casa Akua, S. Miguel dos Milagres (2 noites) — R$ 1.000 em créditos Airbnb + R$ 5 no cartão", status: pago, valor: 1005.00 }
       - { categoria: "Hospedagem", descricao: "Airbnb Encanto das Ondas, Porto de Galinhas (3 noites) — R$ 500 em créditos Airbnb + R$ 410,68 no cartão", status: pago, valor: 910.68 }
+      - { categoria: "Alimentação", descricao: "Restaurantes, bares e lanches — 22 lançamentos (Amado Camarão, Cancelier, Muro Alto, Seu Lampião, aeroportos…)", status: pago, valor: 1777.58 }
+      - { categoria: "Praia e passeios", descricao: "Barracas, vendedores, passeios e estacionamento — 21 lançamentos em PIX e débito", status: pago, valor: 1395.70 }
+      - { categoria: "Combustível", descricao: "Posto da Lagosta (09/09) e Servicar antes de devolver o carro (12/09)", status: pago, valor: 430.20 }
+      - { categoria: "Compras", descricao: "Lolla Cestarias (R$ 388,00) e Casa do Artesanato (R$ 38,00)", status: pago, valor: 426.00 }
+      - { categoria: "Mercado", descricao: "Supermercados Palato, Porto de Galinhas e Frutos de Goiás — 4 lançamentos", status: pago, valor: 373.93 }
+      - { categoria: "Voos", descricao: "Extras GOL — marcação de assentos (R$ 360,00), bagagem (R$ 220,00) e Wi-Fi a bordo (R$ 25,00)", status: pago, valor: 605.00 }
+      - { categoria: "Carro", descricao: "Cobrança extra da Localiza na retirada (R$ 57,44) e pedágio (R$ 11,60)", status: pago, valor: 69.04 }
+      - { categoria: "Farmácia", descricao: "Drogasil 4140, Porto de Galinhas (10/09)", status: pago, valor: 75.04 }
     totais:
-      - { rotulo: "Total em dinheiro (fora milhas)", valor: 3769.85 }
+      - { rotulo: "Reservado antes da viagem (voos, carro, hospedagem)", valor: 3769.85 }
+      - { rotulo: "Gasto durante a viagem", valor: 5152.49 }
+      - { rotulo: "Total em dinheiro (fora milhas)", valor: 8922.34 }
     notas:
       - "Voos pagos com milhas Smiles (179.000 milhas no total) + taxas em dinheiro acima."
+      - "📊 Os gastos de viagem vieram do extrato via Open Finance em 17/09/2026: **57 lançamentos** entre 04 e 12/09 — a maior parte no **cartão Santander 6094**, o resto em débito/PIX do Santander e no **Bradesco Visa 7238** (extras da GOL)."
+      - "⚠️ A fatura do **Santander 6094 ainda estava aberta** quando isso foi levantado (lançamentos `PENDING`, fecha ~29/09) — conferir se algum valor mudou depois do fechamento."
+      - "⚠️ O **Bradesco estava com incidente no provedor de Open Finance** (\"transações de conta corrente não retornadas\") e uma das contas correntes veio vazia — pode haver gasto de viagem não capturado ali. **C6 e Nubank não foram consultados.**"
+      - "Ficaram de fora, por serem gastos normais do período: combustível em Goiânia no dia da ida (R$ 274,06), alimentação do Enzo (R$ 111,00) e reembolso de compra da casa (R$ 90,00)."
   - tipo: checklist
     titulo: "Pendências pós-viagem"
     itens:
-      - { texto: "Conciliar os gastos com o relatório do projeto de finanças", detalhe: "Open Finance → Supabase · conferir lançamentos fora da janela 04–12/09" }
-      - { texto: "Lançar os gastos de viagem que faltam", detalhe: "alimentação, passeios (Galés, jangada), combustível, pedágios e estacionamentos" }
+      - { texto: "Conferir a fatura do Santander 6094 depois do fechamento (~29/09)", detalhe: "os 27 lançamentos do cartão ainda estavam PENDING quando foram levantados" }
+      - { texto: "Refazer a busca no Bradesco quando o incidente do provedor passar", detalhe: "uma conta corrente veio vazia — pode ter gasto de viagem escondido ali" }
+      - { texto: "Checar se houve gasto da viagem no C6 ou no Nubank" }
+      - { texto: "Cruzar com o relatório do projeto de finanças", detalhe: "Open Finance → Supabase · conferir lançamentos fora da janela 04–12/09" }
       - { texto: "Conferir a cobrança final da Localiza", detalhe: "franquia de 200 km/dia, combustível e estorno da caução" }
       - { texto: "Escrever o fechamento da viagem no second brain" }
