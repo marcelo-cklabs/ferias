@@ -140,19 +140,23 @@ secoes:
   - tipo: gastos
     linhas:
       - { categoria: "Show", descricao: "Ingressos Iron Maiden (2× meia, Cadeira N1 — Setor 103)", status: pago, valor: 870.00 }
+      - { categoria: "Show", descricao: "Reembolso do Leandro — metade dos ingressos", status: recebido, valor: -435.00 }
       - { categoria: "Voos", descricao: "GOL GYN⇄CGH (GBNQTZ, 2 pax) — reserva fechada em 16/09, autorização 440570", status: pago, valor: 3077.68 }
       - { categoria: "Hospedagem", descricao: "Airbnb Studio na Consolação (HMY5SHCXKY) — 1 noite, 27–28/10", status: pago, valor: 198.00 }
     totais:
-      - { rotulo: "Ingressos + voos + hospedagem", valor: 4145.68 }
+      - { rotulo: "Total lançado", valor: 3710.68 }
       - { rotulo: "Parte do Leandro nos voos (Crédito GOL)", valor: -1500.00 }
-      - { rotulo: "Custo do Marcelo", valor: 2645.68 }
+      - { rotulo: "Custo do Marcelo hoje", valor: 2210.68 }
+      - { rotulo: "A receber — metade do Airbnb", valor: -99.00 }
+      - { rotulo: "Custo final previsto", valor: 2111.68 }
     notas:
       - "Por ingresso: R$ 345,00 (meia) + taxa ADM R$ 21,00 + taxa de serviço R$ 69,00 = R$ 435,00 · entrega grátis · pedido 1740356209."
       - "✈️ **Voos, R$ 3.077,68 no total:** a parte do Leandro (**R$ 1.500,00**) saiu em **Crédito GOL** e a do Marcelo (**R$ 1.577,68**) foi 1× no cartão final **5739**. Só a parte do Marcelo entra no custo acima."
-      - "🎟️ Os **dois ingressos** (R$ 870,00) foram pagos pelo Marcelo — se a metade do Leandro for acertada depois, lançar aqui como a receber."
+      - "🤝 **Acerto com o Leandro:** os dois ingressos saíram no cartão do Marcelo e ele **já devolveu a metade dele (R$ 435,00)**. O voo dele foi coberto pelo Crédito GOL. Falta só a **metade do Airbnb — R$ 99,00**."
   - tipo: checklist
     titulo: "Próximos passos"
     itens:
       - { texto: "Marcar os assentos dos dois trechos no app da GOL" }
+      - { texto: "Receber do Leandro a metade do Airbnb — R$ 99,00" }
       - { texto: "Resolver a volta do show", detalhe: "~6 km até a Consolação, show acaba perto das 23h e o metrô fecha por volta da meia-noite" }
       - { texto: "Baixar os ingressos em PDF (Ticketdirect) — pedido 1740356209" }
