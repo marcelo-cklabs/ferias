@@ -90,14 +90,14 @@ secoes:
         diaSemana: "Volta"
         local: "Consolação → Congonhas"
         itens:
-          - hora: "06:30"
-            titulo: "Café da manhã perto do Airbnb"
-            tag: "☕ Café"
-            meta: "janela curta — o voo é às 09:35"
-          - hora: "07:15"
-            titulo: "Saída para Congonhas"
+          - hora: "07:00"
+            titulo: "Saída direto para Congonhas"
             tag: "🚕 Transporte"
             meta: "~25–35 min no trânsito da manhã · checkout é até 12:00, mas a saída é bem antes"
+          - hora: "07:40"
+            titulo: "Café da manhã em Congonhas"
+            tag: "☕ Café"
+            meta: "café no aeroporto em vez de correr na Consolação · check-in fecha 08:35"
           - hora: "09:35"
             titulo: "Voo São Paulo → Goiânia"
             tag: "✈️ Voo"
@@ -126,7 +126,7 @@ secoes:
         subtitulo: "Airbnb · apto inteiro · anfitrião Bruno"
         entradas:
           - { rotulo: "Check-in", valor: "ter 27/10 · a partir das 15:00" }
-          - { rotulo: "Checkout", valor: "qua 28/10 · até 12:00 — mas a saída é ~07:15 por causa do voo" }
+          - { rotulo: "Checkout", valor: "qua 28/10 · até 12:00 — mas a saída é ~07:00 por causa do voo" }
           - { rotulo: "Hóspedes", valor: "2 adultos (máximo 3)" }
           - { rotulo: "Endereço", valor: "Viaduto Nove de Julho, 200 — Consolação, São Paulo/SP · 01050-060" }
           - { rotulo: "Confirmação", valor: "[HMY5SHCXKY](https://www.airbnb.com.br/rooms/33167444)" }
