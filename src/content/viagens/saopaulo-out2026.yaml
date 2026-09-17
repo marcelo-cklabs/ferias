@@ -13,15 +13,15 @@ dataCard: "27–28 out 2026"
 dataDisplay: "27 – 28 de outubro de 2026"
 pax: "Marcelo & Leandro"
 status: confirmada
-statusLabel: "Ingressos e voos OK"
+statusLabel: "Tudo reservado"
 cor: "#7f1d1d"
-resumoCard: "Run for Your Lives Tour, Allianz Parque. Voos fechados — falta a hospedagem."
+resumoCard: "Run for Your Lives Tour, Allianz Parque. Ingressos, voos e studio na Consolação — tudo fechado."
 bilhete: 3
 heroMeta:
   - { rotulo: "LOC", valor: "GBNQTZ" }
   - { rotulo: "LUGAR", valor: "PORTÃO A · SETOR 103 · FILEIRA E" }
   - { rotulo: "PEDIDO", valor: "1740356209" }
-footer: "Ingressos e voos garantidos · hospedagem a fechar 🤘"
+footer: "Ingressos, voos e hospedagem garantidos 🤘"
 secoes:
   - tipo: ficha
     titulo: "O show"
@@ -43,8 +43,8 @@ secoes:
       - data: "Ter 27/10"
         diaSemana: "Chegada & show"
         local: "São Paulo"
-        texto: "Voo **GYN → CGH** às 10:05, pousando em Congonhas às **11:50**. Check-in, tarde livre e, à noite, o **show do Iron Maiden** no Allianz Parque — Alter Bridge às 19:10 e Maiden às 20:50. Portão A · Setor 103 · fileira E · assentos 9 e 10."
-        tags: ["✈️ GYN→CGH 10:05", "🏨 Check-in", "🤘 Iron Maiden"]
+        texto: "Voo **GYN → CGH** às 10:05, pousando em Congonhas às **11:50**. Check-in no studio da Consolação só a partir das **15:00** — almoço no Centro no meio do caminho. À noite, o **show do Iron Maiden** no Allianz Parque: Alter Bridge às 19:10 e Maiden às 20:50. Portão A · Setor 103 · fileira E · assentos 9 e 10."
+        tags: ["✈️ GYN→CGH 10:05", "🏨 Check-in 15:00", "🤘 Iron Maiden"]
       - data: "Qua 28/10"
         diaSemana: "Volta"
         local: "Congonhas → Casa"
@@ -68,18 +68,31 @@ secoes:
       - "Bilhetes eletrônicos: Marcelo **1272312012992** · Leandro **1272312012987**."
       - "⚠️ A ida pousa no **próprio dia do show**: qualquer atraso grande come a margem. Vale acompanhar o status do voo na véspera."
   - tipo: hospedagem
-    checklist:
-      - "**São Paulo** — 1 noite (27–28/10) · *a reservar*"
+    cartoes:
+      - titulo: "Studio no centro de São Paulo, próximo ao metrô"
+        subtitulo: "Airbnb · apto inteiro · anfitrião Bruno"
+        entradas:
+          - { rotulo: "Check-in", valor: "ter 27/10 · a partir das 15:00" }
+          - { rotulo: "Checkout", valor: "qua 28/10 · até 12:00 — mas a saída é ~07:15 por causa do voo" }
+          - { rotulo: "Hóspedes", valor: "2 adultos (máximo 3)" }
+          - { rotulo: "Endereço", valor: "Viaduto Nove de Julho, 200 — Consolação, São Paulo/SP · 01050-060" }
+          - { rotulo: "Confirmação", valor: "[HMY5SHCXKY](https://www.airbnb.com.br/rooms/33167444)" }
+          - { rotulo: "Anfitrião", valor: "Bruno · +55 11 98726-6952" }
+          - { rotulo: "Pagamento", valor: "R$ 198,00 · 1 noite · Visa final 7238 · pago em 02/08" }
+        total: "R$ 198,00"
     notas:
-      - "Duas escolhas possíveis: **perto do Allianz Parque** (Água Branca / Barra Funda / Perdizes), a pé ou a poucos minutos do show, ou **perto de Congonhas**, que facilita o voo das 09:35. Como a volta do show é tarde da noite, ficar perto do Allianz tende a valer mais — de lá a Congonhas são ~30–40 min de carro no começo da manhã."
+      - "⏰ **O voo pousa 11:50 e o check-in só abre às 15:00** — combinar com o Bruno para largar as malas antes, ou emendar um almoço no Centro."
+      - "🎸 Do Viaduto Nove de Julho até o Allianz Parque são ~6 km. O show deve acabar perto das 23h e o metrô fecha por volta da meia-noite — vale já contar com carro na volta."
+      - "Cancelamento gratuito até **15:00 de 22/10**; depois **não é reembolsável**. Sem pets · silêncio das 22:00 às 08:00 · o anúncio não informa detector de monóxido de carbono."
   - tipo: gastos
     linhas:
       - { categoria: "Show", descricao: "Ingressos Iron Maiden (2× meia, Cadeira N1 — Setor 103)", status: pago, valor: 870.00 }
       - { categoria: "Voos", descricao: "GOL GYN⇄CGH (GBNQTZ, 2 pax) — reserva fechada em 16/09, autorização 440570", status: pago, valor: 3077.68 }
+      - { categoria: "Hospedagem", descricao: "Airbnb Studio na Consolação (HMY5SHCXKY) — 1 noite, 27–28/10", status: pago, valor: 198.00 }
     totais:
-      - { rotulo: "Reserva + ingressos", valor: 3947.68 }
+      - { rotulo: "Ingressos + voos + hospedagem", valor: 4145.68 }
       - { rotulo: "Parte do Leandro nos voos (Crédito GOL)", valor: -1500.00 }
-      - { rotulo: "Custo do Marcelo", valor: 2447.68 }
+      - { rotulo: "Custo do Marcelo", valor: 2645.68 }
     notas:
       - "Por ingresso: R$ 345,00 (meia) + taxa ADM R$ 21,00 + taxa de serviço R$ 69,00 = R$ 435,00 · entrega grátis · pedido 1740356209."
       - "✈️ **Voos, R$ 3.077,68 no total:** a parte do Leandro (**R$ 1.500,00**) saiu em **Crédito GOL** e a do Marcelo (**R$ 1.577,68**) foi 1× no cartão final **5739**. Só a parte do Marcelo entra no custo acima."
@@ -88,6 +101,7 @@ secoes:
     titulo: "Próximos passos"
     itens:
       - { texto: "Marcar os assentos dos dois trechos no app da GOL" }
-      - { texto: "Reservar hospedagem para a noite de 27/10 (1 noite)" }
+      - { texto: "Combinar o check-in com o Bruno", detalhe: "o voo pousa 11:50 e o check-in abre 15:00 — acertar onde deixar as malas" }
+      - { texto: "Resolver a volta do show", detalhe: "~6 km até a Consolação, show acaba perto das 23h e o metrô fecha por volta da meia-noite" }
       - { texto: "Baixar os ingressos em PDF (Ticketdirect) — pedido 1740356209" }
       - { texto: "Conferir bagagem de mão", detalhe: "tarifa LIGHT não dá direito a bagagem despachada" }
