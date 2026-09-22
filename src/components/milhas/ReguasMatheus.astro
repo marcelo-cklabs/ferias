@@ -1,0 +1,177 @@
+---
+// Conteúdo estático: réguas de referência publicadas na descrição do grupo de
+// WhatsApp "Milhas com Matheus" (Matheus Ferro), anotadas em 22/09/2026.
+// Transcrição fiel da fonte — editar AQUI (não é YAML). Referência externa:
+// NÃO alimenta os pisos do radar, que vêm do Notion via painel.yaml.
+const transferencias = [
+  { rota: 'Bancos → Smiles', bom: '80%+' },
+  { rota: 'Bancos → Azul', bom: '80–100%+' },
+  { rota: 'Bancos → LATAM', bom: '20–25%' },
+  { rota: 'Esfera → Iberia', bom: '20–25%' },
+];
+// Compra direta: teto do milheiro (R$) em cada faixa; `meta` = alvo único, sem faixas.
+// Célula sem "R$ " de propósito: cabe em 375px sem rolagem. SUMA é em euro.
+const compraDireta = [
+  { programa: 'LATAM', meta: '≤ 24,00' },
+  { programa: 'Smiles', meta: '≤ 16,00' },
+  { programa: 'Azul', meta: '≤ 14,50' },
+  { programa: 'Livelo', ok: '31,50', bom: '30,80', otimo: '≤ 29,00' },
+  { programa: 'Esfera', ok: '35,00', bom: '32,20', otimo: '≤ 31,50' },
+  { programa: 'Iberia', ok: '60,00', bom: '55,00', otimo: '≤ 52,00' },
+  { programa: 'SUMA', ok: '—', bom: '—', otimo: '€ 10,00' },
+  { programa: 'Aeroplan · ConnectMiles · LifeMiles', ok: '70,00', bom: '65,00', otimo: '≤ 62,00' },
+];
+// Clube: teto do milheiro pago na assinatura (a fonte repete < R$ 24 para todos os planos Livelo).
+const clubes = [
+  { clube: 'Livelo', planos: [{ plano: 'Classic · Special · Plus · Mega · Top', teto: '< R$ 24' }] },
+  { clube: 'Esfera', planos: [
+    { plano: 'Exclusive', teto: '< R$ 30' },
+    { plano: 'Demais planos', teto: '< R$ 35' },
+  ] },
+  { clube: 'Smiles', planos: [
+    { plano: 'Clube 1.000', teto: '< R$ 15' },
+    { plano: 'Demais clubes', teto: '< R$ 20' },
+    { plano: 'Clube 20.000 (status Diamante)', teto: '< R$ 25' },
+  ] },
+  { clube: 'Azul', planos: [
+    { plano: 'Clubes 1.000 a 5.000', teto: '< R$ 16' },
+    { plano: 'Clubes 10.000 e 20.000 (Safira · Diamante)', teto: '< R$ 20' },
+  ] },
+  { clube: 'LATAM', planos: [{ plano: 'Clube LATAM Pass', teto: '< R$ 24' }] },
+];
+const escala = [
+  { faixa: 'Ruim', pts: '1–2', cls: 'ruim' },
+  { faixa: 'Normal', pts: '3–4', cls: 'normal' },
+  { faixa: 'Bom', pts: '5–6', cls: 'bom' },
+  { faixa: 'Excelente', pts: '7–15', cls: 'excelente' },
+  { faixa: 'Fora da curva', pts: '> 15', cls: 'fora' },
+];
+---
+<div class="reguas">
+  <div class="pilha">
+    <div class="cupom">
+      <h3 class="mono">Transferência bonificada</h3>
+      <p class="sep mono" aria-hidden="true">· · · · · · · · · ·</p>
+      <table class="mono">
+        <thead>
+          <tr><th scope="col">Rota</th><th scope="col">Bônus bom</th></tr>
+        </thead>
+        <tbody>
+          {transferencias.map((t) => (
+            <tr><th scope="row">{t.rota}</th><td class="forte">{t.bom}</td></tr>
+          ))}
+        </tbody>
+      </table>
+      <p class="sep mono" aria-hidden="true">· · · · · · · · · ·</p>
+      <p class="rodape-cupom mono">faixa em que o bônus já é considerado bom</p>
+    </div>
+    <div class="cupom">
+      <h3 class="mono">Compra direta · R$/milheiro</h3>
+      <p class="sep mono" aria-hidden="true">· · · · · · · · · ·</p>
+      <div class="rolagem">
+        <table class="mono">
+          <thead>
+            <tr><th scope="col">Programa</th><th scope="col">Ok</th><th scope="col">Bom</th><th scope="col">Ótimo</th></tr>
+          </thead>
+          <tbody>
+            {compraDireta.map((c) => (
+              <tr>
+                <th scope="row">{c.programa}</th>
+                {c.meta
+                  ? <td colspan="3" class="forte">meta {c.meta}</td>
+                  : <><td>{c.ok}</td><td>{c.bom}</td><td class="forte">{c.otimo}</td></>}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="sep mono" aria-hidden="true">· · · · · · · · · ·</p>
+      <p class="rodape-cupom mono">valores em R$ = teto do milheiro em cada faixa<br />LATAM · Smiles · Azul: meta única · SUMA em euro</p>
+    </div>
+  </div>
+  <div class="pilha">
+    <div class="man-card">
+      <h3>Clube · teto do milheiro na assinatura</h3>
+      <div class="rolagem">
+        <table class="clubes">
+          <thead>
+            <tr><th scope="col">Clube</th><th scope="col">Plano</th><th scope="col">Teto</th></tr>
+          </thead>
+          {clubes.map((g) => (
+            <tbody>
+              {g.planos.map((p, i) => (
+                <tr>
+                  {i === 0 && <th scope="rowgroup" rowspan={g.planos.length}>{g.clube}</th>}
+                  <td>{p.plano}</td>
+                  <td class="teto mono">{p.teto}</td>
+                </tr>
+              ))}
+            </tbody>
+          ))}
+        </table>
+      </div>
+      <p class="obs">Milheiro do clube = mensalidade ÷ milheiros creditados no mês. Status mais alto (Diamante, Safira) explica o teto maior.</p>
+    </div>
+    <div class="man-card">
+      <h3>Compras bonificadas · Livelo e Esfera</h3>
+      <ol class="escala" aria-label="Pontos por real gasto, do pior ao melhor">
+        {escala.map((e) => (
+          <li class={e.cls}><span class="faixa">{e.faixa}</span><span class="pts mono">{e.pts}<small> pts/R$</small></span></li>
+        ))}
+      </ol>
+      <p><b>Exceção:</b> parceiros que sempre pontuam alto, como a <b>Insider</b> — lá 10 pts/R$ é o normal.</p>
+      <p><b>Termômetro p/ milhas:</b> multiplique a escala por <b>1,25</b> (LATAM), <b>1,8</b> (Smiles) ou <b>1,9</b> (Azul) para ter base comparativa — ex.: <i>bom</i> na Smiles ≈ 9–10,8 milhas/R$.</p>
+    </div>
+  </div>
+</div>
+<p class="fonte mono">Fonte: descrição do grupo <i>Milhas com Matheus</i> (Matheus Ferro) no WhatsApp · anotado em 22/09/2026 · referência externa — os pisos do radar seguem vindo do Notion</p>
+<style>
+  .reguas { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  @media (min-width: 900px) { .reguas { grid-template-columns: 1fr 1fr; align-items: start; } }
+  .pilha { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+  .man-card { background: var(--tiquete); border-radius: 12px; box-shadow: var(--sombra-mesa); padding: 14px 18px; }
+  .man-card h3 { font-size: .92rem; font-weight: 800; margin-bottom: 8px; }
+  .man-card p { font-size: .8rem; margin: 8px 0 0; }
+  .man-card .obs { color: var(--muted); font-size: .72rem; }
+  .cupom {
+    background: var(--tiquete); border-radius: 4px; padding: 16px 18px;
+    border: 1.5px dashed var(--muted-2); box-shadow: var(--sombra-mesa);
+  }
+  .cupom h3 { font-size: .8rem; letter-spacing: .14em; text-align: center; font-weight: 700; text-transform: uppercase; margin: 0; }
+  .sep { text-align: center; color: var(--muted-2); letter-spacing: .5em; margin: 6px 0; font-size: .7rem; }
+  .rolagem { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: .72rem; font-variant-numeric: tabular-nums; }
+  th, td { text-align: right; padding: 4px 6px; border-bottom: 1px dashed var(--linha); white-space: nowrap; }
+  th:first-child, tbody th { text-align: left; }
+  thead th { color: var(--muted); font-weight: 500; font-size: .62rem; letter-spacing: .05em; }
+  tbody th { font-weight: 500; white-space: normal; }
+  .forte { font-weight: 700; }
+  .rodape-cupom { font-size: .64rem; color: var(--muted); text-align: center; margin: 10px 0 0; }
+  /* Tabela de clubes: texto normal (não mono), grupo por programa */
+  .clubes { font-size: .76rem; }
+  .clubes td { text-align: left; white-space: normal; }
+  .clubes th[scope='rowgroup'] { font-weight: 800; vertical-align: top; padding-right: 10px; }
+  .clubes tbody + tbody { border-top: 1.5px solid var(--linha); }
+  .clubes .teto { text-align: right; white-space: nowrap; font-weight: 700; }
+  /* Escala de compras bonificadas: lista no celular, régua de 5 faixas a partir de 520px */
+  .escala { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+  .escala li {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 10px;
+    border-radius: 8px; padding: 6px 10px; font-size: .78rem; border: 1.5px solid var(--linha);
+  }
+  .escala .faixa { font-weight: 700; }
+  .escala .pts { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .escala small { font-weight: 500; font-size: .62rem; }
+  .escala .ruim { border-style: dashed; border-color: var(--muted-2); color: var(--muted); background: #fafaf9; }
+  .escala .normal { background: #fff; }
+  .escala .bom { border-color: var(--ok); color: var(--ok); background: #f0fdf4; }
+  .escala .excelente { border-color: var(--dourado); color: var(--pend); background: #fffbeb; }
+  .escala .fora { border-color: var(--card-escuro); color: var(--gold-fio); background: var(--card-escuro); }
+  @media (min-width: 520px) {
+    .escala { display: grid; grid-template-columns: repeat(5, 1fr); }
+    .escala li { flex-direction: column; align-items: center; justify-content: flex-start; text-align: center; gap: 2px; padding: 8px 4px; }
+    .escala .faixa { font-size: .66rem; letter-spacing: .04em; text-transform: uppercase; line-height: 1.2; }
+    .escala small { display: block; }
+  }
+  .fonte { font-size: .62rem; color: var(--muted); margin: 12px 0 0; line-height: 1.5; }
+</style>

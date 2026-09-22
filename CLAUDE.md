@@ -35,7 +35,7 @@ A página `milhas.html` é gerada de `src/content/milhas/painel.yaml` (collectio
 
 - **Schema e prompt são acoplados:** mudou o schema da collection `milhas` (`src/content.config.ts`), atualize `docs/prompt-tarefa-agendada-milhas.md` no MESMO commit — e o dono precisa recolar o prompt na tarefa do claude.ai.
 - `painel.yaml` NÃO leva comentário `# yaml-language-server` (arquivo escrito por máquina — exceção deliberada à regra dos YAMLs de viagem).
-- Conteúdo estático da página (Manual de voo, member card, tier do clube) é hardcoded em `src/pages/milhas.astro` e `src/components/milhas/` — editar lá, não no YAML.
+- Conteúdo estático da página (Manual de voo, Réguas do Matheus, member card, tier do clube) é hardcoded em `src/pages/milhas.astro` e `src/components/milhas/` — editar lá, não no YAML. As Réguas do Matheus (`ReguasMatheus.astro`) são referência externa do grupo *Milhas com Matheus*: não alimentam os `pisos` do radar.
 - O cartão da home vem de `src/components/milhas/MilhasCard.astro` ("CARTÃO Nº 001", numeração própria — não usa `bilhete` das viagens).
 - Alerta do `painel.yaml` que começa com 🔴 ganha destaque vermelho no radar (convenção de dado, sem mudança de schema — o 🔴 nasce no texto do Notion e sobrevive à reescrita diária da tarefa).
 

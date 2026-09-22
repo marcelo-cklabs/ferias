@@ -7,6 +7,7 @@ import SaldoCard from '../components/milhas/SaldoCard.astro';
 import MetaBoard from '../components/milhas/MetaBoard.astro';
 import Radar from '../components/milhas/Radar.astro';
 import ManualVoo from '../components/milhas/ManualVoo.astro';
+import ReguasMatheus from '../components/milhas/ReguasMatheus.astro';
 
 const painel = await getEntry('milhas', 'painel');
 if (!painel) throw new Error('src/content/milhas/painel.yaml ausente');
@@ -31,6 +32,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <section>
         <SecaoTitulo icone="📡" titulo="Radar do dia" />
         <Radar oportunidades={d.oportunidades} alertas={d.alertas} pisos={d.pisos} atualizadoEm={d.atualizadoEm} />
+      </section>
+      <section>
+        <SecaoTitulo icone="📏" titulo="Réguas do Matheus" />
+        <ReguasMatheus />
       </section>
       <section>
         <SecaoTitulo icone="📓" titulo="Manual de voo" />
