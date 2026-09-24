@@ -1,0 +1,151 @@
+titulo: "Consultoria · Estratégia Marcelo"
+subtitulo: "Plano personalizado de cartão, acúmulo, transferência e emissão"
+consultor: "Matheus Ferro · Milhas com Matheus"
+data: "23/09/2026"
+resumo: "Consultoria individual contratada em 23/09/2026 (lançamento *MP MILHASCOMMATHEUS* no extrato Esfera). Seis blocos: cartão de crédito, acúmulo de pontos, clubes, transferência bonificada, preço-teto de compra e emissão — incluindo a passagem de Nova York que ele encontrou. As réguas genéricas do grupo de WhatsApp ficam na seção *Réguas do Matheus*, no painel de milhas; aqui está só o que é específico deste portfólio."
+secoes:
+  - tipo: lista
+    titulo: "Cartão de crédito"
+    icone: "💳"
+    intro: "1ª sugestão: **Santander Unlimited** — 3 pontos por USD na base, podendo subir para **3,45 · 3,9 · 4,5 pts/USD** por conta do Santander Rewards."
+    itens:
+      - texto: "Centralizar os gastos seus e da Sabrina no Unlimited para tentar isentar a anuidade"
+        detalhe: "Convergente com a mudança de rota de 31/08 — o gasto corrente já migrou: 38 dos 39 lançamentos Esfera de setembro são do Unique Mastercard BL"
+      - texto: "Salas VIP ilimitadas exigem média de gasto de **R$ 10.000 nas últimas 3 faturas**"
+      - texto: "O cartão da bandeira secundária não pode ficar inativo (sem transações em 90 dias) ou o acesso cai"
+        detalhe: "Deixe alguma assinatura recorrente rodando nele"
+      - texto: "**Mastercard** → salas LoungeKey, pelo app Mastercard Airport Experiences"
+      - texto: "**Visa** → salas Dragon Pass, pelo app Visa Airport Companion"
+  - tipo: lista
+    titulo: "Acúmulo · cuidados em compras por parceiros"
+    icone: "🛒"
+    intro: "Consultar todos os parceiros da Esfera/Livelo e comprar por lá quando oportuno. **Priorizar a Esfera pelo acúmulo de Avios.** Cada item abaixo é uma causa conhecida de compra que não pontua."
+    itens:
+      - texto: "Ler o regulamento da campanha antes"
+      - texto: "Ver se precisa aplicar cupom na compra"
+      - texto: "Limpar o carrinho no site parceiro"
+      - texto: "Conferir que o CPF da conta no parceiro é o mesmo CPF logado na Esfera/Livelo"
+      - texto: "Não clicar com o botão direito e *abrir em nova guia* — isso derruba a pontuação"
+      - texto: "Não usar extensão de navegador (Méliuz, Buscapé e afins)"
+      - texto: "A conta Esfera/Livelo tem que ser da mesma titularidade do cartão principal"
+  - tipo: tabela
+    titulo: "Acúmulo · onde vale a pena no dia a dia"
+    icone: "🏷️"
+    intro: "Piso de pontos por real em cada categoria — abaixo disso, comprar por fora não compensa o desvio."
+    colunas: ["Categoria", "Parceiros", "Piso"]
+    linhas:
+      - ["Higiene e banho", "Natura · O Boticário · Avon · Granado", "8 pts/R$ ou mais"]
+      - ["Granola", "Tia Sônia", "5 pts/R$ ou mais"]
+      - ["Beleza feminina", "Amo Beleza · Beleza na Web · Quem Disse, Berenice? · Sephora · Época Cosméticos · Renner", "5 pts/R$ ou mais"]
+      - ["Mercado", "Sam's Club · Carrefour Mercado · Mercado Livre · Magalu", "—"]
+      - ["Remédios", "Pague Menos (via Esfera)", "3 pts/R$ já está ótimo"]
+      - ["Coisas de casa", "Camicado", "8 pts/R$ ou mais"]
+      - ["Roupas e calçados", "várias opções", "5 pts/R$ · esporte 7 pts/R$ pra cima"]
+  - tipo: lista
+    titulo: "Clubes"
+    icone: "🎟️"
+    itens:
+      - texto: "Manter **Clube Livelo**"
+        detalhe: "⚠️ Conflito com a decisão do painel de 31/08, que aponta para **não renovar** em 02/06/2027 depois da migração para Santander/Esfera. Em aberto"
+      - texto: "Assinar **Clube Esfera**, podendo ser o **Pro**"
+        detalhe: "✅ Feito em 18/09/2026 — plano Pro, R$ 43,90/mês. Pagou-se na primeira transferência: os 15% extras de assinante valeram 2.700 Avios na operação de 22/09"
+  - tipo: lista
+    titulo: "Transferência de pontos"
+    icone: "🔁"
+    itens:
+      - texto: "Só transferir dos programas bancários para as cias **durante promoções de transferência bonificada**"
+      - texto: "**Sempre se cadastrar na página da campanha ANTES de enviar os pontos**"
+        detalhe: "É exatamente a lição que custou ~31.500 milhas em jul/2026 — a transferência saiu fora da vigência e a contestação não procedeu"
+  - tipo: tabela
+    titulo: "Régua de bônus · quando vale transferir"
+    icone: "📏"
+    intro: "⚠️ **Estes números são mais baixos que os pisos que o radar usa hoje.** O conflito está registrado abaixo e ainda não foi decidido — os pisos do briefing seguem vindo do Notion."
+    colunas: ["Destino", "Bônus bom (Matheus)", "Piso do radar hoje"]
+    linhas:
+      - ["Smiles", "70–90%", "Livelo→Smiles ≥ 70%"]
+      - ["LATAM", "20–25%", "Livelo→LATAM ≥ 30% · Esfera→LATAM ≥ 50%"]
+      - ["Iberia", "20% · sempre via Esfera", "Esfera→Iberia ≥ 50%"]
+      - ["Azul", "80–100% + adicional por tempo de clube", "— (sem conta Azul)"]
+    nota: "Sem histórico de bonificada da Livelo para Iberia, nem da Revolut Brasil — a Esfera é a única porta para Avios."
+  - tipo: tabela
+    titulo: "Calendário · quando costumam sair as melhores promoções"
+    icone: "📅"
+    colunas: ["Mês", "O que acontece"]
+    linhas:
+      - ["Janeiro", "Aniversário do Clube Azul, da Caixa e da GOL"]
+      - ["Março", "Mês do consumidor (mini black friday)"]
+      - ["Maio", "Aniversário do Clube Esfera"]
+      - ["Junho", "Aniversário da Livelo"]
+      - ["Agosto", "Aniversário do Azul Fidelidade"]
+      - ["Setembro", "Aniversário da Esfera, da Smiles e do Clube Livelo"]
+      - ["Outubro", "Aniversário do LATAM Pass (30/09)"]
+      - ["Novembro", "Black Friday"]
+      - ["Dezembro", "Aniversário da Azul"]
+    nota: "Explica por que setembro concentrou quatro janelas de 80% da Smiles e a campanha Esfera→Iberia."
+  - tipo: tabela
+    titulo: "Preço-teto para comprar milhas"
+    icone: "💰"
+    intro: "Fórmula: **preço pago ÷ milheiros acumulados**. No *pontos + dinheiro*, calcule o milheiro no carrinho, multiplique pela paridade e divida pelo bônus."
+    colunas: ["Programa", "Comprar por até", "Como costuma sair"]
+    linhas:
+      - ["Smiles", "R$ 15,80", "pontos + dinheiro da Livelo ou Esfera"]
+      - ["LATAM", "R$ 24,00", "pontos Livelo baratos + transferência com bônus"]
+      - ["Azul", "R$ 14,50", "pontos + dinheiro da Livelo ou Esfera"]
+      - ["Livelo", "R$ 30,80", "apenas pensando em LATAM"]
+      - ["Esfera", "R$ 32,20", "exclusivamente pensando em Iberia"]
+      - ["Iberia (Avios)", "R$ 55,00", "Esfera barata + bônus, ou pontos + dinheiro da Esfera"]
+    nota: "**Ex. 1** — Livelo→Smiles com 80%: milheiro no carrinho a R$ 28 ÷ 1,8 = **R$ 15,55**. · **Ex. 2** — Esfera→Iberia com 20%: milheiro a R$ 31,50 × 2 (paridade 2:1) ÷ 1,2 = **R$ 52,50**."
+  - tipo: lista
+    titulo: "Emissões com milhas · método"
+    icone: "🔎"
+    itens:
+      - texto: "Na LATAM, o preço em milhas é correlacionado ao preço em dinheiro"
+        detalhe: "Use o Google Voos com filtro *apenas LATAM*, ache a melhor combinação de ida e volta no dinheiro e busque a mesma coisa no site da LATAM em milhas — essa será a melhor passagem"
+      - texto: "Para a Europa, use **Avios saindo de Fortaleza e Recife**. Emita com muita antecedência"
+      - texto: "**Viaje Fácil (Smiles):** reserva a passagem agora e permite quitar só **60 dias antes do voo**"
+        detalhe: "Custa **R$ 250**. Siga a emissão até a tela de pagamento que a opção aparece. ⚠️ **Não fica em débito automático — quitar manualmente.** É a resposta direta ao gargalo da meta: trava o assento hoje sem precisar ter a milha toda em conta"
+  - tipo: passagem
+    titulo: "A passagem de Nova York que ele encontrou"
+    icone: "✈️"
+    intro: "Busca Smiles em metal American, **abril de 2027** — a janela que o painel já vinha mapeando como plano B de março/27."
+    trechos:
+      - rotulo: "Ida"
+        data: "Terça, 6 de abril"
+        cia: "American Airlines"
+        cabine: "Econômica"
+        de: "GRU"
+        deHora: "22h30"
+        para: "JFK"
+        paraHora: "07h10"
+        duracao: "Direto · 09h40"
+        milhas: "57.000 / viajante"
+        total: "114.000 para 2 viajantes"
+        marcadores: ["Menor preço", "Mais rápido", "Recomendado", "Outlet Clube Smiles"]
+        veredito: "✅ **Aprova com folga na régua de ≤ 75k/trecho** — e fica abaixo do próprio benchmark saver de 59,4k"
+      - rotulo: "Volta"
+        data: "Terça, 13 de abril"
+        cia: "American Airlines"
+        cabine: "Premium economy"
+        de: "JFK"
+        deHora: "20h20"
+        para: "GRU"
+        paraHora: "06h55"
+        duracao: "Direto · 09h35"
+        milhas: "121.700 / viajante"
+        total: "243.400 para 2 viajantes"
+        marcadores: ["Mais rápido"]
+        veredito: "❌ **Reprova.** É premium economy, não econômica — 121,7k/trecho está muito acima da régua. A volta em econômica precisa ser caçada à parte"
+    nota: "Total do casal como está: **357.400 milhas** — acima do pool de 307.291. Mas a ida a 57k é a melhor evidência até hoje de que **abril/27 tem assento saver de verdade**, enquanto março/27 segue seco. O trabalho que sobra é achar a volta em econômica; com o Viaje Fácil, a ida pode ser travada antes disso."
+conflitos:
+  - titulo: "Piso de bônus para Iberia e LATAM"
+    consultoria: "Iberia 20% já é bom · LATAM 20–25% já é bom"
+    painel: "Esfera→Iberia/LATAM ≥ 50% · Livelo→LATAM ≥ 30%"
+    status: "Em aberto — pelo piso do Matheus, a campanha Esfera→Iberia de 22/09 (25%) e a Esfera→LATAM desta semana (25%) seriam oportunidades; pelo piso do radar, as duas reprovam. A de Iberia acabou sendo feita mesmo assim, por exceção de meta"
+  - titulo: "Clube Livelo"
+    consultoria: "Manter"
+    painel: "Provável não renovar em 02/06/2027, depois da migração do gasto para o Santander"
+    status: "Em aberto — a consultoria não sabia da migração de rota de 31/08. Reavaliar em maio/2027"
+  - titulo: "Alvo de compra da Smiles"
+    consultoria: "R$ 15,80"
+    painel: "R$ 16,00"
+    status: "Praticamente o mesmo número — adotar R$ 15,80 como alvo não muda nenhuma decisão em aberto"
