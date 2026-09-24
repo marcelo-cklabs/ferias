@@ -1,5 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { consultoria } from './lib/consultoria.schema';
 
 const kv = z.object({ rotulo: z.string(), valor: z.string() }).strict();
 
@@ -170,4 +171,7 @@ const milhas = defineCollection({
   }).strict(),
 });
 
-export const collections = { viagens, milhas };
+// `consultoria` mora em src/lib/consultoria.schema.ts para nao inchar este
+// arquivo. Documento de referencia externo, escrito a mao — nao e tocado pela
+// tarefa agendada e NAO alimenta os pisos do radar.
+export const collections = { viagens, milhas, consultoria };

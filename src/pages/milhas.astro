@@ -36,6 +36,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <section>
         <SecaoTitulo icone="📏" titulo="Réguas do Matheus" />
         <ReguasMatheus />
+        <a class="atalho" href={`${base}/consultoria`}>
+          <span class="ic" aria-hidden="true">📋</span>
+          <span class="txt">
+            <b>Consultoria · Estratégia Marcelo</b>
+            <small>O plano personalizado: cartão, acúmulo, clubes, calendário, preço-teto e a passagem de NY em abr/27</small>
+          </span>
+          <span class="seta mono" aria-hidden="true">→</span>
+        </a>
       </section>
       <section>
         <SecaoTitulo icone="📓" titulo="Manual de voo" />
@@ -56,4 +64,18 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   .saldos { display: grid; grid-template-columns: 1fr; gap: 14px; }
   @media (min-width: 640px) { .saldos { grid-template-columns: 1fr 1fr; } }
   @media (min-width: 1024px) { .saldos { grid-template-columns: repeat(3, 1fr); } }
+  /* Atalho para a consultoria: mora sob as reguas porque e a mesma fonte
+     (Matheus) — la ficam as reguas genericas do grupo, aqui o plano individual. */
+  .atalho {
+    display: flex; align-items: center; gap: 12px; margin-top: 14px;
+    background: var(--tiquete); border-radius: 12px; box-shadow: var(--sombra-mesa);
+    border-left: 3px solid var(--dourado); padding: 12px 16px;
+    text-decoration: none; color: inherit; min-height: 44px;
+  }
+  .atalho:hover { background: #fffbeb; }
+  .atalho .ic { font-size: 1.1rem; }
+  .atalho .txt { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .atalho b { font-size: .85rem; }
+  .atalho small { font-size: .7rem; color: var(--muted-3); }
+  .atalho .seta { margin-left: auto; color: var(--dourado); font-weight: 700; }
 </style>
