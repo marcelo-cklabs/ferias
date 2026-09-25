@@ -47,6 +47,26 @@ secoes:
     notas:
       - '📊 O financiamento desta viagem é acompanhado **todo dia** no [painel de milhas](/ferias/milhas) — saldos, janelas de bônus e cronograma de compra. A página do Notion **"✈️ Viagens e Milhas"** segue como fonte dos pisos.'
       - '📋 O plano que originou esta busca está em [/consultoria](/ferias/consultoria) — foi a consultoria do Matheus que apontou abril/maio de 2027 e o Viaje Fácil.'
+  - tipo: checklist
+    titulo: "Passageiros · visto e passaporte"
+    icone: "🛂"
+    itens:
+      - texto: "**Christopher Hoxsie**"
+        detalhe: "visto americano: *a verificar* · passaporte válido até junho/2027: *a verificar*"
+      - texto: "**Ana Claudia Hoxsie**"
+        detalhe: "visto americano: *a verificar* · passaporte válido até junho/2027: *a verificar*"
+      - texto: "**Luci Oliveira**"
+        detalhe: "visto americano: *a verificar* · passaporte válido até junho/2027: *a verificar*"
+      - texto: "**Ulisses Paiva**"
+        detalhe: "visto americano: *a verificar* · passaporte válido até junho/2027: *a verificar*"
+      - texto: "**Marcelo**"
+        detalhe: "visto americano: *a verificar* · passaporte válido até junho/2027: *a verificar*"
+      - texto: "**Sabrina**"
+        detalhe: "visto americano: *a verificar* · passaporte válido até junho/2027: *a verificar*"
+      - texto: "🚨 **Conferir os nomes da reserva contra os passaportes, letra por letra**"
+        detalhe: "A reserva já foi feita com os nomes que estão lá. Correção de nome em bilhete Smiles é cara quando é possível — e são seis. Fazer isso agora, não em março"
+      - texto: "⏳ **Quem não tiver visto vigente entra na fila hoje**"
+        detalhe: "É a única pendência da viagem que nenhuma milha resolve e que não depende de dinheiro. Agendamento de visto americano no Brasil tem fila — descobrir em março, com o bilhete travado, seria o pior momento possível"
   - tipo: voos
     titulo: "Voos"
     icone: "✈️"
@@ -72,7 +92,7 @@ secoes:
     notas:
       - "**Tarifa reembolsável.** Cancelamento custa **US$ 180 por viajante**, cobrado no ato — e as milhas voltam."
       - "A ida tem tag **Outlet Clube Smiles**; a volta não. Conferir as regras de remarcação da tarifa outlet antes de mexer em qualquer data."
-      - "🚨 **O bilhete parte de GUARULHOS e o grupo está em Goiânia.** Faltam os trechos **GYN→GRU** e **GRU→GYN** para seis pessoas — 12 pernas que ainda não existem em lugar nenhum. Decidir entre milhas (doméstico sai barato), dinheiro ou estrada, e **reservar com folga na conexão**: chegar em GRU no mesmo dia do voo das 22h30 é risco desnecessário com seis pessoas."
+      - "🚨 **O bilhete parte de GUARULHOS e o grupo está em Goiânia.** Faltam **GYN→GRU** e **GRU→GYN** para seis pessoas — 12 pernas que ainda não existem em lugar nenhum. Decidir entre milhas (doméstico sai barato e o LATAM Pass tem 19.478 paradas), dinheiro ou estrada. **Chegar em GRU na véspera, não no dia:** pousar no mesmo dia do voo das 22h30 com seis pessoas é risco desnecessário, e um atraso no doméstico custaria as 729.000."
       - "Sem localizador ainda — ele só nasce quando o bilhete for emitido. Inserir aqui na quitação."
   - tipo: ficha
     titulo: "Como as 729.000 milhas serão pagas"
@@ -113,31 +133,33 @@ secoes:
       - "R$ 494,84 por pessoa só de taxa de embarque — preço normal para os EUA."
       - "A previsão de compra varia entre **R$ 3.848 e R$ 6.298** conforme o canal e a promo. Atualizar esta linha a cada lote comprado."
       - "Ao quitar, voltam **4.000 milhas de bônus** (dobro por ser assinante do Clube). É cashback depois da emissão — **não ajuda a pagar**."
-      - "Ainda fora da conta: GYN↔GRU dos seis, hospedagem, seguro, vistos e a viagem em si."
+      - "Ainda fora da conta: **GYN↔GRU dos seis**, **hospedagem de 8 noites**, seguro viagem, vistos e a viagem em si."
   - tipo: hospedagem
     titulo: "Hospedagem"
     icone: "🏨"
     checklist:
       - "**Nova York** — 8 noites, 31/05 a 08/06/2027 · *a definir bairro e reservar*"
+    destaque: "Pendência aberta · seis pessoas, oito noites"
     notas:
-      - "**Seis pessoas muda a conta da hospedagem.** Dois quartos de hotel por 8 noites em Manhattan costumam perder feio para um apartamento inteiro. Vale comparar Airbnb/apart-hotel cedo — imóvel bom para 6 em NY esgota com antecedência."
-      - "Pontos Esfera dão 5% OFF na Esfera Viagens, e o Clube Pro já está pago — vale comparar na hora de reservar."
+      - "**Seis pessoas muda a conta.** Dois ou três quartos de hotel por 8 noites em Manhattan costumam perder feio para um apartamento inteiro. Vale comparar Airbnb/apart-hotel cedo — imóvel bom para 6 em Nova York esgota com antecedência, e 2027 já está abrindo."
+      - "Pensar a divisão: são três núcleos (Christopher & Ana Claudia · Luci & Ulisses · Marcelo & Sabrina), o que favorece um apartamento de 3 quartos sobre quartos de hotel separados."
+      - "Pontos Esfera dão 5% OFF na Esfera Viagens e o Clube Pro já está pago — vale comparar na hora de reservar. Hotel também costuma acumular direto no programa além do cartão (foi assim que a Localiza rendeu 5.027 milhas de graça em setembro)."
   - tipo: checklist
     titulo: "Próximos passos · em ordem de urgência"
     icone: "✅"
     itens:
-      - texto: "🛒 **Visto e passaporte dos seis**"
-        detalhe: "O mais urgente da lista, e o único que nenhuma milha resolve. Levantar quem tem visto americano vigente e passaporte com validade para junho/2027, e quem precisa entrar na fila. Descobrir isso em março, com o bilhete travado, seria o pior momento possível"
+      - texto: "🛂 **Visto e passaporte dos seis**"
+        detalhe: "Ver a lista nominal acima. O mais urgente, e o único que nenhuma milha resolve"
       - texto: "❓ **Descobrir se a quitação aceita pagamento parcial**"
         detalhe: "Está nos Termos do Viaje Fácil. Se der para abater as 729.000 conforme as milhas chegam, cada compra vira progresso travado e o risco do plano despenca. Se for tudo-ou-nada em 01/04, qualquer atraso de transferência no fim de março derruba a operação"
       - texto: "✈️ **Resolver GYN ↔ GRU para seis pessoas**"
-        detalhe: "12 trechos que não existem. Milhas, dinheiro ou estrada — e chegar em Guarulhos com folga, não no mesmo dia do voo das 22h30"
+        detalhe: "12 trechos que não existem. Milhas, dinheiro ou estrada — e chegar em Guarulhos na véspera, não no dia do voo das 22h30"
+      - texto: "🏨 **Reservar hospedagem para 6, 8 noites**"
+        detalhe: "Apartamento de 3 quartos contra quartos de hotel. Começar cedo — imóvel bom para grupo esgota"
       - texto: "💳 **Comprar o lote grande na Black Friday**"
         detalhe: "~157.000 milhas em novembro, metade do que falta. Monitorar a partir de 01/11 e não deixar para a última semana"
-      - texto: "🏨 **Reservar hospedagem para 6**"
-        detalhe: "Comparar apartamento inteiro contra dois quartos de hotel. Começar cedo"
       - texto: "🗺️ **Montar o roteiro de 8 dias**"
-        detalhe: "A lista de atrações abaixo já existe, mas foi feita pensando em 14 dias e 2 pessoas. Refazer para 8 dias e um grupo de 6"
+        detalhe: "A lista de atrações abaixo nasceu quando a viagem era de 14 dias para o casal. Refazer para 8 dias e um grupo de 6"
       - texto: "🎫 **Inserir o localizador aqui na emissão**"
         detalhe: "Ele só nasce quando o bilhete for pago, até 01/04/2027"
   - tipo: checklist
@@ -148,4 +170,4 @@ secoes:
       - { texto: "**Rockefeller Center**", detalhe: "Top of the Rock" }
       - { texto: "**B&H Photo Video**", detalhe: "a megaloja de foto/eletrônicos (atenção: fecha sexta à tarde e sábado)" }
       - { texto: "**The Vessel (Hudson Yards)**", detalhe: 'a "colmeia" · dá para emendar com o High Line' }
-      - { texto: "*Refazer esta lista para 8 dias e 6 pessoas*", detalhe: "a seleção atual nasceu quando a viagem era de 14 dias para o casal" }
+      - { texto: "*Refazer esta lista para 8 dias e 6 pessoas*", detalhe: "a seleção atual nasceu quando a viagem era de 14 dias para o casal — e passeio em grupo de 6 tem ritmo diferente" }
