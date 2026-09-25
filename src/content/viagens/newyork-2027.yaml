@@ -2,42 +2,143 @@
 titulo: "Nova York"
 tituloCard: "Nova York"
 emoji: "🗽"
-subtitulo: "A grande viagem de 2027"
+subtitulo: "A grande viagem de 2027 · reservada"
 rota:
-  origem: "GYN"
-  origemNome: "Goiânia"
+  origem: "GRU"
+  origemNome: "São Paulo"
   destino: "JFK"
   destinoNome: "Nova York"
-dataInicio: 2027-03-01
-dataCard: "mar/abr/mai 2027"
-dataDisplay: "março, abril ou maio de 2027 (a definir)"
-pax: "Marcelo & Sabrina · econômica"
+dataInicio: 2027-05-31
+dataCard: "mai/jun 2027"
+dataDisplay: "31 de maio a 8 de junho de 2027"
+pax: "6 passageiros · econômica"
 status: planejando
-statusLabel: "Planejando"
+statusLabel: "Reservado · a quitar"
 cor: "#1d4ed8"
-resumoCard: "2 passageiros, econômica. Data a definir."
+resumoCard: "Reservado! 6 passageiros, direto GRU–JFK. Faltam 421.709 milhas até 01/04/27."
 bilhete: 6
 heroMeta:
-  - { rotulo: "DURAÇÃO", valor: "~14 DIAS" }
-footer: "Página em construção · a grande viagem 🗽"
+  - { rotulo: "DURAÇÃO", valor: "8 DIAS" }
+  - { rotulo: "STATUS", valor: "RESERVADO" }
+  - { rotulo: "QUITAR ATÉ", valor: "01/04/2027" }
+footer: "Assento travado · agora é juntar milha 🗽"
 secoes:
   - tipo: ficha
     titulo: "Visão geral"
     icone: "🧭"
     cartoes:
-      - entradas:
+      - titulo: "A viagem"
+        entradas:
           - { rotulo: "Destino", valor: "Nova York (EUA)" }
-          - { rotulo: "Duração prevista", valor: "~14 dias" }
-          - { rotulo: "Passageiros", valor: "2 (Marcelo & Sabrina), econômica" }
-          - { rotulo: "Janela", valor: "março / abril / maio 2027 — a definir" }
+          - { rotulo: "Datas", valor: "31/05/2027 a 08/06/2027" }
+          - { rotulo: "Duração", valor: "8 dias" }
+          - { rotulo: "Passageiros", valor: "6 · econômica" }
+      - titulo: "A reserva"
+        subtitulo: "Viaje Fácil Smiles"
+        entradas:
+          - { rotulo: "Situação", valor: "**Assentos travados**, bilhete não emitido" }
+          - { rotulo: "Custo em milhas", valor: "**729.000** (121.500 por viajante)" }
+          - { rotulo: "Prazo de emissão", valor: "**01/04/2027** · 60 dias antes do voo" }
+          - { rotulo: "Já pago", valor: "R$ 3.218,94" }
+        total: "Faltam 421.709 milhas"
+    lembretes:
+      - "⚠️ **A quitação NÃO entra em débito automático** — tem de ser feita na mão, em *Meus Voos → Viaje Fácil → Pagar*."
+      - "⏰ Perder o prazo de **01/04/2027** derruba a reserva. Meta interna: **fechar até 15/03** para ter folga."
     notas:
-      - '💡 A estratégia de milhas/pontos desta viagem é conduzida à parte, na página do Notion **"✈️ Viagens e Milhas"** (fonte de verdade de saldos e resgates). Esta página guarda só o roteiro.'
+      - '📊 O financiamento desta viagem é acompanhado **todo dia** no [painel de milhas](/ferias/milhas) — saldos, janelas de bônus e cronograma de compra. A página do Notion **"✈️ Viagens e Milhas"** segue como fonte dos pisos.'
+      - '📋 O plano que originou esta busca está em [/consultoria](/ferias/consultoria) — foi a consultoria do Matheus que apontou abril/maio de 2027 e o Viaje Fácil.'
+  - tipo: voos
+    titulo: "Voos"
+    icone: "✈️"
+    trechos:
+      - titulo: "Ida · segunda, 31 de maio"
+        pernas:
+          - de: "GRU"
+            deHora: "22h30"
+            deNome: "São Paulo · 31/05/27"
+            para: "JFK"
+            paraHora: "07h10"
+            paraNome: "Nova York · 01/06/27"
+            voo: "American Airlines · direto · 9h40 · 57.000 milhas/viajante"
+      - titulo: "Volta · segunda, 7 de junho"
+        pernas:
+          - de: "JFK"
+            deHora: "20h20"
+            deNome: "Nova York · 07/06/27"
+            para: "GRU"
+            paraHora: "06h55"
+            paraNome: "São Paulo · 08/06/27"
+            voo: "American Airlines · direto · 9h35 · 64.500 milhas/viajante"
+    notas:
+      - "**Tarifa reembolsável.** Cancelamento custa **US$ 180 por viajante**, cobrado no ato — e as milhas voltam."
+      - "A ida tem tag **Outlet Clube Smiles**; a volta não. Conferir as regras de remarcação da tarifa outlet antes de mexer em qualquer data."
+      - "🚨 **O bilhete parte de GUARULHOS e o grupo está em Goiânia.** Faltam os trechos **GYN→GRU** e **GRU→GYN** para seis pessoas — 12 pernas que ainda não existem em lugar nenhum. Decidir entre milhas (doméstico sai barato), dinheiro ou estrada, e **reservar com folga na conexão**: chegar em GRU no mesmo dia do voo das 22h30 é risco desnecessário com seis pessoas."
+      - "Sem localizador ainda — ele só nasce quando o bilhete for emitido. Inserir aqui na quitação."
   - tipo: ficha
-    titulo: "Roteiro"
-    icone: "🗺️"
+    titulo: "Como as 729.000 milhas serão pagas"
+    icone: "💰"
     cartoes:
-      - entradas:
-          - { rotulo: "Situação", valor: "A montar. Definir datas, bairros, atrações e eventual bate-volta (ex.: Washington, Boston)." }
+      - titulo: "De onde vem"
+        entradas:
+          - { rotulo: "Saldo Smiles hoje", valor: "307.291" }
+          - { rotulo: "Clube Smiles · 2.000/mês até março", valor: "12.000" }
+          - { rotulo: "Livelo · 33.234 pts numa janela de 80%", valor: "59.821" }
+          - { rotulo: "C6 Átomos · 1:1 (conservador)", valor: "~2.000" }
+          - { rotulo: "**A comprar**", valor: "**347.888**" }
+        total: "729.000 milhas"
+      - titulo: "Quanto custa comprar"
+        subtitulo: "as 347.888 que faltam"
+        entradas:
+          - { rotulo: "Rota Livelo · ponto a R$ 22 + 80%", valor: "R$ 4.251 · *melhor caso*" }
+          - { rotulo: "Smiles direto · teto de R$ 15,80", valor: "R$ 5.497 · **base**" }
+          - { rotulo: "Sem promo · R$ 20 o milheiro", valor: "R$ 6.958 · *pior caso*" }
+        total: "Viagem inteira: ~R$ 8.716 · R$ 1.453 por pessoa"
+    notas:
+      - "🔑 **A rota mais barata provavelmente não é comprar milha Smiles.** O equilíbrio está em **Livelo a R$ 28,44 o milheiro**: abaixo disso, comprar ponto Livelo e transferir a 80% sai mais em conta. **A ordem importa** — comprar o ponto primeiro e esperar a janela de transferência, nunca o contrário. Ponto Livelo não expira com o Clube ativo."
+      - "🗓️ **Três janelas, com peso diferente:** **novembro (Black Friday) — 50%**, ~174.000 milhas · **janeiro** (aniversário GOL/Smiles, Caixa, Clube Azul) — 30%, ~104.000 · **março** (mês do consumidor) — 20%, ~70.000 e o ajuste final. Não há razão para adiar: o prazo é fixo e as milhas não expiram com Clube ativo."
+      - "⚠️ **Manter o Clube Livelo ativo até a última transferência** — é ele que impede os pontos de expirar. Isso reverte a inclinação de não renovar em 02/06/2027."
+      - "⛔ Gasto que cai na **Esfera/Santander vai para Iberia e LATAM, nunca para a Smiles**. Para esta viagem só duas rotas servem: **Livelo** (Bradesco) e **C6 Átomos** (1:1, cartão da Sabrina)."
+  - tipo: gastos
+    titulo: "Gastos"
+    icone: "🧾"
+    linhas:
+      - { categoria: "Voos", descricao: "Taxa de embarque · 6 passageiros", status: pago, valor: 2969.04 }
+      - { categoria: "Voos", descricao: "Viaje Fácil · taxa de serviço (não reembolsável)", status: pago, valor: 249.90 }
+      - { categoria: "Voos", descricao: "Compra de milhas para quitação · previsão base", status: pendente, valor: 5497.00 }
+    totais:
+      - { rotulo: "Pago até agora", valor: 3218.94 }
+      - { rotulo: "Previsão total", valor: 8715.94 }
+    notas:
+      - "R$ 494,84 por pessoa só de taxa de embarque — preço normal para os EUA."
+      - "A previsão de compra varia entre **R$ 4.251 e R$ 6.958** conforme o canal e a promo. Atualizar esta linha a cada lote comprado."
+      - "Ao quitar, voltam **4.000 milhas de bônus** (dobro por ser assinante do Clube). É cashback depois da emissão — **não ajuda a pagar**."
+      - "Ainda fora da conta: GYN↔GRU dos seis, hospedagem, seguro, vistos e a viagem em si."
+  - tipo: hospedagem
+    titulo: "Hospedagem"
+    icone: "🏨"
+    checklist:
+      - "**Nova York** — 8 noites, 31/05 a 08/06/2027 · *a definir bairro e reservar*"
+    notas:
+      - "**Seis pessoas muda a conta da hospedagem.** Dois quartos de hotel por 8 noites em Manhattan costumam perder feio para um apartamento inteiro. Vale comparar Airbnb/apart-hotel cedo — imóvel bom para 6 em NY esgota com antecedência."
+      - "Pontos Esfera dão 5% OFF na Esfera Viagens, e o Clube Pro já está pago — vale comparar na hora de reservar."
+  - tipo: checklist
+    titulo: "Próximos passos · em ordem de urgência"
+    icone: "✅"
+    itens:
+      - texto: "🛒 **Visto e passaporte dos seis**"
+        detalhe: "O mais urgente da lista, e o único que nenhuma milha resolve. Levantar quem tem visto americano vigente e passaporte com validade para junho/2027, e quem precisa entrar na fila. Descobrir isso em março, com o bilhete travado, seria o pior momento possível"
+      - texto: "❓ **Descobrir se a quitação aceita pagamento parcial**"
+        detalhe: "Está nos Termos do Viaje Fácil. Se der para abater as 729.000 conforme as milhas chegam, cada compra vira progresso travado e o risco do plano despenca. Se for tudo-ou-nada em 01/04, qualquer atraso de transferência no fim de março derruba a operação"
+      - texto: "✈️ **Resolver GYN ↔ GRU para seis pessoas**"
+        detalhe: "12 trechos que não existem. Milhas, dinheiro ou estrada — e chegar em Guarulhos com folga, não no mesmo dia do voo das 22h30"
+      - texto: "💳 **Comprar o lote grande na Black Friday**"
+        detalhe: "~174.000 milhas em novembro, metade do que falta. Monitorar a partir de 01/11 e não deixar para a última semana"
+      - texto: "🏨 **Reservar hospedagem para 6**"
+        detalhe: "Comparar apartamento inteiro contra dois quartos de hotel. Começar cedo"
+      - texto: "🗺️ **Montar o roteiro de 8 dias**"
+        detalhe: "A lista de atrações abaixo já existe, mas foi feita pensando em 14 dias e 2 pessoas. Refazer para 8 dias e um grupo de 6"
+      - texto: "🎫 **Inserir o localizador aqui na emissão**"
+        detalhe: "Ele só nasce quando o bilhete for pago, até 01/04/2027"
   - tipo: checklist
     titulo: "Atrações e passeios"
     icone: "🎡"
@@ -46,20 +147,4 @@ secoes:
       - { texto: "**Rockefeller Center**", detalhe: "Top of the Rock" }
       - { texto: "**B&H Photo Video**", detalhe: "a megaloja de foto/eletrônicos (atenção: fecha sexta à tarde e sábado)" }
       - { texto: "**The Vessel (Hudson Yards)**", detalhe: 'a "colmeia" · dá para emendar com o High Line' }
-  - tipo: voos
-    notas:
-      - "A definir — resgate em milhas (ver Notion). Inserir localizador quando emitir."
-  - tipo: hospedagem
-    checklist:
-      - "**Nova York** — ~14 noites · *a definir bairro e reservar*"
-  - tipo: gastos
-    linhas: []
-    totais:
-      - { rotulo: "Total", valor: 0 }
-  - tipo: checklist
-    titulo: "Próximos passos"
-    itens:
-      - { texto: "Definir o mês (mar/abr/mai) e as datas exatas" }
-      - { texto: "Emitir voos com milhas (acompanhar disponibilidade — ver Notion)" }
-      - { texto: "Reservar hospedagem" }
-      - { texto: "Montar roteiro de atrações e passeios" }
+      - { texto: "*Refazer esta lista para 8 dias e 6 pessoas*", detalhe: "a seleção atual nasceu quando a viagem era de 14 dias para o casal" }
