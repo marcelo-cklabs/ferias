@@ -53,37 +53,41 @@ reconciliação fechada, diferença zero).
 |---|---:|---|
 | Clube Smiles · 2.000/mês × 6 | 12.000 | automático, já pago na mensalidade |
 | Livelo · 33.234 pts numa janela de 80% | 59.821 | pontos que já existem |
-| C6 Átomos · 1:1 | ~2.000 | conservador; conferir saldo real |
-| **A comprar** | **347.888** | o grosso do plano |
+| C6 Átomos · 5.381 hoje + ~5.000/mês, 1:1 | ~35.000 | até 63.000 numa janela de 80% |
+| **A comprar** | **314.888** | o grosso do plano |
 
-### Quanto custa comprar as 347.888
+### Quanto custa comprar as 314.888
 
 | Canal | Milheiro | Custo |
 |---|---|---:|
-| Livelo a R$ 22 + transferência 80% | R$ 12,22 efetivo | **R$ 4.251** |
-| Smiles direto, no teto | R$ 15,80 | **R$ 5.497** ← base |
-| Sem promo | R$ 20,00 | **R$ 6.958** |
+| Livelo a R$ 22 + transferência 80% | R$ 12,22 efetivo | **R$ 3.848** |
+| Smiles direto, no teto | R$ 15,80 | **R$ 4.975** ← base |
+| Sem promo | R$ 20,00 | **R$ 6.298** |
 
-**Total da viagem (só passagem): ~R$ 8.716 · cerca de R$ 1.453 por pessoa.**
+**Total da viagem (só passagem): ~R$ 8.194 · cerca de R$ 1.366 por pessoa.**
 Em dinheiro, GRU–JFK ida e volta em econômica custa R$ 4.000 a 6.000 por pessoa.
 
-### O canal preferido não é o óbvio
+### As três rotas que chegam na Smiles
 
-O ponto de equilíbrio é **Livelo a R$ 28,44 o milheiro**. Abaixo disso, comprar ponto Livelo
-e transferir a 80% sai mais barato que comprar milha Smiles direto. Promo de Black Friday
-da Livelo costuma pôr o milheiro em R$ 20–25.
+1. **C6 Átomos — a mais eficiente.** Vai **1:1**, sem intermediário, e o Clube dá teto de 80%
+   em janela de bônus. Rende ~5.000/mês hoje, em três cartões (finais 2360, 5166, 5739).
+2. **Livelo — a mais barata para COMPRAR.** O ponto de equilíbrio é **Livelo a R$ 28,44 o
+   milheiro**: abaixo disso, comprar ponto e transferir a 80% sai mais barato que comprar
+   milha Smiles direto. Promo de Black Friday costuma pôr o milheiro em R$ 20–25.
+   **A ordem importa: comprar o ponto primeiro, esperar a janela depois.** Nunca o contrário
+   — ponto Livelo não expira com o Clube ativo, e janela de 80% apareceu quatro vezes só em
+   setembro de 2026.
+3. **Compra direta de milha Smiles**, ao teto de R$ 15,80.
 
-**A ordem importa: comprar o ponto primeiro, esperar a janela de transferência depois.**
-Nunca o contrário. Ponto Livelo não expira com o Clube ativo, então dá para estocar — e
-janela de 80% apareceu quatro vezes só em setembro de 2026.
+**A Esfera não chega na Smiles** — só transfere para Iberia e LATAM.
 
 ### Cronograma de compra
 
 | Janela | Fatia | Milhas | Por quê |
 |---|---|---:|---|
-| **Novembro** · Black Friday | 50% | ~174.000 | melhor preço do ano nos dois programas |
-| **Janeiro** | 30% | ~104.000 | aniversário GOL/Smiles, Caixa, Clube Azul |
-| **Março** · mês do consumidor | 20% | ~70.000 | mini black friday + ajuste final |
+| **Novembro** · Black Friday | 50% | ~157.000 | melhor preço do ano nos dois programas |
+| **Janeiro** | 30% | ~94.000 | aniversário GOL/Smiles, Caixa, Clube Azul |
+| **Março** · mês do consumidor | 20% | ~63.000 | mini black friday + ajuste final |
 
 Não há razão para adiar: o prazo é fixo e as milhas não expiram com Clube ativo, então
 preço bom agora vence preço incerto depois.
@@ -94,9 +98,9 @@ preço bom agora vence preço incerto depois.
 
 - ⚠️ **A quitação não entra em débito automático.** Tem de ser feita na mão, em
   *Meus Voos → Viaje Fácil → Pagar*. Perder 01/04/2027 derruba a reserva.
-- ⛔ **Gasto na Esfera/Santander não ajuda aqui.** A Esfera só transfere para Iberia e LATAM.
-  Para a Smiles só servem **Livelo** (cartão Bradesco) e **C6 Átomos** (1:1, cartão da Sabrina).
-  Isso conflita com a migração de rota decidida em 31/08 — **decisão em aberto do dono**.
+- ⛔ **Gasto na Esfera/Santander não ajuda aqui.** Para a Smiles só servem **C6 Átomos** e
+  **Livelo**. Isso conflita com a migração de rota decidida em 31/08, que levou o gasto
+  corrente para o Santander — **decisão em aberto do dono**.
 - ⚠️ **Manter o Clube Livelo ativo até a última transferência.** É ele que impede os pontos
   de expirar. Isso reverte a inclinação anterior de não renovar em 02/06/2027.
 - 🎁 As **4.000 milhas de bônus** do Viaje Fácil (dobro por ser Clube) chegam **depois** da
@@ -134,8 +138,8 @@ Em ordem de urgência. As três primeiras podem matar a viagem; as outras só cu
 | `docs/prompt-tarefa-agendada-milhas.md` | o prompt da tarefa diária de milhas |
 
 O painel de milhas é reescrito **todos os dias** pela tarefa agendada do claude.ai. Ele
-acompanha o financiamento desta reserva: saldos, janelas de bônus, próximos lotes de compra.
-Edição manual em `painel.yaml` será sobrescrita na próxima execução.
+acompanha o financiamento desta reserva. Edição manual em `painel.yaml` será sobrescrita na
+próxima execução — mudança de conteúdo aí passa pelo prompt em `docs/`.
 
 ---
 
@@ -143,6 +147,9 @@ Edição manual em `painel.yaml` será sobrescrita na próxima execução.
 
 Este projeto acumulou algumas lições caras. Valem para qualquer trabalho futuro aqui:
 
+- **Print velho não é saldo, é lembrança.** O C6 aparecia com 226 átomos e tinha **5.381** —
+  o número era de 31/08, vinte e quatro vezes defasado, e distorceu o plano de financiamento
+  inteiro. Ficou **um** saldo ainda baseado em print velho: LATAM Pass, 20/08.
 - **Vigência confirmada não é oferta confirmada.** Em 24/09 o painel marcou uma promo da
   American como *agir hoje* com base na vigência correta, mas sem tarifa verificada nas
   datas da meta. Não havia nada aplicável. Desconto de resgate só vira ação com **preço na
@@ -153,10 +160,9 @@ Este projeto acumulou algumas lições caras. Valem para qualquer trabalho futur
 - **O bônus não aparece na origem.** Numa transferência entre programas, o extrato de origem
   só mostra a saída. Quem credita base + bônus é o programa de destino. O e-mail de *pedido
   confirmado* serve para datar a operação, não para encerrá-la.
-- **Hipótese não é dado, mas também não é lixo.** Uma explicação plausibilíssima foi
-  repetida por cinco briefings sem prova, depois abandonada no primeiro dado ambíguo — e
-  estava certa o tempo todo. O que resolve os dois erros é o mesmo gesto: **ir ao detalhe da
-  transação cedo**.
+- **Hipótese não é dado, mas também não é lixo.** Uma explicação plausível foi repetida por
+  cinco briefings sem prova, depois abandonada no primeiro dado ambíguo — e estava certa o
+  tempo todo. O que resolve os dois erros é o mesmo gesto: **ir ao detalhe da transação cedo**.
 - **Saldo provado vs. projeção.** O painel separa o número que o extrato prova do número que
   ele projeta, e só decide sobre o primeiro. Duas reconciliações seguidas fecharam em zero
   com esse método.

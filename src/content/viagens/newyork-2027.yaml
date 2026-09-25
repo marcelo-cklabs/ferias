@@ -83,34 +83,35 @@ secoes:
           - { rotulo: "Saldo Smiles hoje", valor: "307.291" }
           - { rotulo: "Clube Smiles · 2.000/mês até março", valor: "12.000" }
           - { rotulo: "Livelo · 33.234 pts numa janela de 80%", valor: "59.821" }
-          - { rotulo: "C6 Átomos · 1:1 (conservador)", valor: "~2.000" }
-          - { rotulo: "**A comprar**", valor: "**347.888**" }
+          - { rotulo: "C6 Átomos · 5.381 hoje + ~5.000/mês, 1:1", valor: "~35.000" }
+          - { rotulo: "**A comprar**", valor: "**314.888**" }
         total: "729.000 milhas"
       - titulo: "Quanto custa comprar"
-        subtitulo: "as 347.888 que faltam"
+        subtitulo: "as 314.888 que faltam"
         entradas:
-          - { rotulo: "Rota Livelo · ponto a R$ 22 + 80%", valor: "R$ 4.251 · *melhor caso*" }
-          - { rotulo: "Smiles direto · teto de R$ 15,80", valor: "R$ 5.497 · **base**" }
-          - { rotulo: "Sem promo · R$ 20 o milheiro", valor: "R$ 6.958 · *pior caso*" }
-        total: "Viagem inteira: ~R$ 8.716 · R$ 1.453 por pessoa"
+          - { rotulo: "Rota Livelo · ponto a R$ 22 + 80%", valor: "R$ 3.848 · *melhor caso*" }
+          - { rotulo: "Smiles direto · teto de R$ 15,80", valor: "R$ 4.975 · **base**" }
+          - { rotulo: "Sem promo · R$ 20 o milheiro", valor: "R$ 6.298 · *pior caso*" }
+        total: "Viagem inteira: ~R$ 8.194 · R$ 1.366 por pessoa"
     notas:
       - "🔑 **A rota mais barata provavelmente não é comprar milha Smiles.** O equilíbrio está em **Livelo a R$ 28,44 o milheiro**: abaixo disso, comprar ponto Livelo e transferir a 80% sai mais em conta. **A ordem importa** — comprar o ponto primeiro e esperar a janela de transferência, nunca o contrário. Ponto Livelo não expira com o Clube ativo."
-      - "🗓️ **Três janelas, com peso diferente:** **novembro (Black Friday) — 50%**, ~174.000 milhas · **janeiro** (aniversário GOL/Smiles, Caixa, Clube Azul) — 30%, ~104.000 · **março** (mês do consumidor) — 20%, ~70.000 e o ajuste final. Não há razão para adiar: o prazo é fixo e as milhas não expiram com Clube ativo."
+      - "🟢 **O C6 é a rota mais eficiente que existe aqui:** átomo vai **1:1 para a Smiles**, sem intermediário, e o Clube dá teto de 80% em janela de bônus. No ritmo atual (~5.000/mês em três cartões) são ~35.000 milhas até março — **ou até 63.000 se pegar uma janela de 80%**. Conferir campanha antes de transferir, e transferir perto de março para não perder acúmulo."
+      - "🗓️ **Três janelas, com peso diferente:** **novembro (Black Friday) — 50%**, ~157.000 milhas · **janeiro** (aniversário GOL/Smiles, Caixa, Clube Azul) — 30%, ~94.000 · **março** (mês do consumidor) — 20%, ~63.000 e o ajuste final. Não há razão para adiar: o prazo é fixo e as milhas não expiram com Clube ativo."
       - "⚠️ **Manter o Clube Livelo ativo até a última transferência** — é ele que impede os pontos de expirar. Isso reverte a inclinação de não renovar em 02/06/2027."
-      - "⛔ Gasto que cai na **Esfera/Santander vai para Iberia e LATAM, nunca para a Smiles**. Para esta viagem só duas rotas servem: **Livelo** (Bradesco) e **C6 Átomos** (1:1, cartão da Sabrina)."
+      - "⛔ Gasto que cai na **Esfera/Santander vai para Iberia e LATAM, nunca para a Smiles**. Para esta viagem só duas rotas servem: **C6 Átomos** e **Livelo**."
   - tipo: gastos
     titulo: "Gastos"
     icone: "🧾"
     linhas:
       - { categoria: "Voos", descricao: "Taxa de embarque · 6 passageiros", status: pago, valor: 2969.04 }
       - { categoria: "Voos", descricao: "Viaje Fácil · taxa de serviço (não reembolsável)", status: pago, valor: 249.90 }
-      - { categoria: "Voos", descricao: "Compra de milhas para quitação · previsão base", status: pendente, valor: 5497.00 }
+      - { categoria: "Voos", descricao: "Compra de milhas para quitação · previsão base", status: pendente, valor: 4975.00 }
     totais:
       - { rotulo: "Pago até agora", valor: 3218.94 }
-      - { rotulo: "Previsão total", valor: 8715.94 }
+      - { rotulo: "Previsão total", valor: 8193.94 }
     notas:
       - "R$ 494,84 por pessoa só de taxa de embarque — preço normal para os EUA."
-      - "A previsão de compra varia entre **R$ 4.251 e R$ 6.958** conforme o canal e a promo. Atualizar esta linha a cada lote comprado."
+      - "A previsão de compra varia entre **R$ 3.848 e R$ 6.298** conforme o canal e a promo. Atualizar esta linha a cada lote comprado."
       - "Ao quitar, voltam **4.000 milhas de bônus** (dobro por ser assinante do Clube). É cashback depois da emissão — **não ajuda a pagar**."
       - "Ainda fora da conta: GYN↔GRU dos seis, hospedagem, seguro, vistos e a viagem em si."
   - tipo: hospedagem
@@ -132,7 +133,7 @@ secoes:
       - texto: "✈️ **Resolver GYN ↔ GRU para seis pessoas**"
         detalhe: "12 trechos que não existem. Milhas, dinheiro ou estrada — e chegar em Guarulhos com folga, não no mesmo dia do voo das 22h30"
       - texto: "💳 **Comprar o lote grande na Black Friday**"
-        detalhe: "~174.000 milhas em novembro, metade do que falta. Monitorar a partir de 01/11 e não deixar para a última semana"
+        detalhe: "~157.000 milhas em novembro, metade do que falta. Monitorar a partir de 01/11 e não deixar para a última semana"
       - texto: "🏨 **Reservar hospedagem para 6**"
         detalhe: "Comparar apartamento inteiro contra dois quartos de hotel. Começar cedo"
       - texto: "🗺️ **Montar o roteiro de 8 dias**"
