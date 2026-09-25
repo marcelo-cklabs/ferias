@@ -47,6 +47,33 @@ secoes:
     notas:
       - '📊 O financiamento desta viagem é acompanhado **todo dia** no [painel de milhas](/ferias/milhas) — saldos, janelas de bônus e cronograma de compra. A página do Notion **"✈️ Viagens e Milhas"** segue como fonte dos pisos.'
       - '📋 O plano que originou esta busca está em [/consultoria](/ferias/consultoria) — foi a consultoria do Matheus que apontou abril/maio de 2027 e o Viaje Fácil.'
+  - tipo: ficha
+    titulo: "Rateio · quem paga o quê"
+    icone: "🤝"
+    cartoes:
+      - titulo: "Os quatro"
+        subtitulo: "Christopher, Ana Claudia, Luci e Ulisses · pagamento único"
+        entradas:
+          - { rotulo: "Passagens", valor: "486.000 milhas (121.500 cada)" }
+          - { rotulo: "Milhas a R$ 15,80/milheiro", valor: "R$ 7.678,80" }
+          - { rotulo: "Taxa de embarque + Viaje Fácil", valor: "R$ 2.145,96 (4 × R$ 536,49)" }
+          - { rotulo: "**Por pessoa**", valor: "**R$ 2.456,19**" }
+        total: "A receber: R$ 9.824,76"
+      - titulo: "Marcelo & Sabrina"
+        subtitulo: "as passagens saem do estoque"
+        entradas:
+          - { rotulo: "Passagens", valor: "243.000 milhas (121.500 cada)" }
+          - { rotulo: "De onde saem", valor: "do saldo Smiles que já existia" }
+          - { rotulo: "Taxa de embarque + Viaje Fácil", valor: "R$ 1.072,98 (2 × R$ 536,49)" }
+          - { rotulo: "**Resultado de caixa**", valor: "**+R$ 1.630,82**" }
+        total: "Sem desembolso líquido"
+    notas:
+      - "💡 **Por que o rateio é limpo:** a tarifa da Smiles é **por pessoa**, não um bolo dividido — 57.000 na ida + 64.500 na volta = **121.500 por viajante**. Cada um consome exatamente a sua."
+      - "🏷️ **Por que R$ 15,80 o milheiro:** é o teto de compra de milha Smiles usado no painel e na consultoria, e é um preço verificável na tela da própria Smiles. Não é número inventado — dá para mostrar de onde veio."
+      - "⚖️ **O que esse preço ressarce.** Das 729.000, **414.112 são milhas acumuladas do Marcelo** (estoque de 307.291 + Clube + Livelo + C6) e 314.888 serão compradas. Marcelo e Sabrina consomem 243.000, então **171.112 milhas acumuladas vão para os outros quatro** — e é por elas que o caixa fecha em +R$ 1.630,82, depois de descontada a parte dele na taxa. Se as milhas fossem cobradas só pelo desembolso, ele doaria essas 171.112 (~R$ 2.700) e ainda pagaria a própria taxa."
+      - "📉 **Referência para eles:** GRU–JFK ida e volta em econômica, direto, custa **R$ 4.000 a 6.000 por pessoa** em dinheiro. R$ 2.456,19 é aproximadamente metade."
+      - "🗓️ **Quando cobrar.** Os R$ 2.145,96 da taxa já saíram do bolso do Marcelo em 25/09 — esses cabem cobrar agora. Os R$ 7.678,80 das milhas podem vir até **15/03/2027**, ou em duas parcelas casadas com as compras de novembro e março, o que evita o Marcelo financiar ~R$ 5.000 por seis meses."
+      - "🚩 **Combinar antes o que acontece se alguém desistir.** A tarifa é reembolsável, mas o cancelamento custa **US$ 180 por viajante** e a taxa do Viaje Fácil (R$ 249,90, ou R$ 41,65 por pessoa) **não volta**. Definir agora quem arca com isso evita conversa ruim depois."
   - tipo: checklist
     titulo: "Passageiros · visto e passaporte"
     icone: "🛂"
@@ -93,6 +120,7 @@ secoes:
       - "**Tarifa reembolsável.** Cancelamento custa **US$ 180 por viajante**, cobrado no ato — e as milhas voltam."
       - "A ida tem tag **Outlet Clube Smiles**; a volta não. Conferir as regras de remarcação da tarifa outlet antes de mexer em qualquer data."
       - "🚨 **O bilhete parte de GUARULHOS e o grupo está em Goiânia.** Faltam **GYN→GRU** e **GRU→GYN** para seis pessoas — 12 pernas que ainda não existem em lugar nenhum. Decidir entre milhas (doméstico sai barato e o LATAM Pass tem 19.478 paradas), dinheiro ou estrada. **Chegar em GRU na véspera, não no dia:** pousar no mesmo dia do voo das 22h30 com seis pessoas é risco desnecessário, e um atraso no doméstico custaria as 729.000."
+      - "Esse trecho entra no rateio também — decidir se vai no mesmo pagamento único ou à parte."
       - "Sem localizador ainda — ele só nasce quando o bilhete for emitido. Inserir aqui na quitação."
   - tipo: ficha
     titulo: "Como as 729.000 milhas serão pagas"
@@ -112,11 +140,12 @@ secoes:
           - { rotulo: "Rota Livelo · ponto a R$ 22 + 80%", valor: "R$ 3.848 · *melhor caso*" }
           - { rotulo: "Smiles direto · teto de R$ 15,80", valor: "R$ 4.975 · **base**" }
           - { rotulo: "Sem promo · R$ 20 o milheiro", valor: "R$ 6.298 · *pior caso*" }
-        total: "Viagem inteira: ~R$ 8.194 · R$ 1.366 por pessoa"
+        total: "Desembolso bruto: ~R$ 8.194"
     notas:
       - "🔑 **A rota mais barata provavelmente não é comprar milha Smiles.** O equilíbrio está em **Livelo a R$ 28,44 o milheiro**: abaixo disso, comprar ponto Livelo e transferir a 80% sai mais em conta. **A ordem importa** — comprar o ponto primeiro e esperar a janela de transferência, nunca o contrário. Ponto Livelo não expira com o Clube ativo."
       - "🟢 **O C6 é a rota mais eficiente que existe aqui:** átomo vai **1:1 para a Smiles**, sem intermediário, e o Clube dá teto de 80% em janela de bônus. No ritmo atual (~5.000/mês em três cartões) são ~35.000 milhas até março — **ou até 63.000 se pegar uma janela de 80%**. Conferir campanha antes de transferir, e transferir perto de março para não perder acúmulo."
       - "🗓️ **Três janelas, com peso diferente:** **novembro (Black Friday) — 50%**, ~157.000 milhas · **janeiro** (aniversário GOL/Smiles, Caixa, Clube Azul) — 30%, ~94.000 · **março** (mês do consumidor) — 20%, ~63.000 e o ajuste final. Não há razão para adiar: o prazo é fixo e as milhas não expiram com Clube ativo."
+      - "💡 **Comprar mais barato que R$ 15,80 vira margem do Marcelo, não desconto do rateio** — o preço combinado com os outros quatro está travado. Pelo cenário da rota Livelo, a diferença chega a ~R$ 1.100."
       - "⚠️ **Manter o Clube Livelo ativo até a última transferência** — é ele que impede os pontos de expirar. Isso reverte a inclinação de não renovar em 02/06/2027."
       - "⛔ Gasto que cai na **Esfera/Santander vai para Iberia e LATAM, nunca para a Smiles**. Para esta viagem só duas rotas servem: **C6 Átomos** e **Livelo**."
   - tipo: gastos
@@ -126,11 +155,14 @@ secoes:
       - { categoria: "Voos", descricao: "Taxa de embarque · 6 passageiros", status: pago, valor: 2969.04 }
       - { categoria: "Voos", descricao: "Viaje Fácil · taxa de serviço (não reembolsável)", status: pago, valor: 249.90 }
       - { categoria: "Voos", descricao: "Compra de milhas para quitação · previsão base", status: pendente, valor: 4975.00 }
+      - { categoria: "Rateio", descricao: "Reembolso dos 4 · 486.000 milhas a R$ 15,80 + taxa", status: pendente, valor: -9824.76 }
     totais:
-      - { rotulo: "Pago até agora", valor: 3218.94 }
-      - { rotulo: "Previsão total", valor: 8193.94 }
+      - { rotulo: "Desembolso previsto", valor: 8193.94 }
+      - { rotulo: "A receber dos 4", valor: -9824.76 }
+      - { rotulo: "Resultado de caixa", valor: -1630.82 }
     notas:
-      - "R$ 494,84 por pessoa só de taxa de embarque — preço normal para os EUA."
+      - "R$ 494,84 por pessoa só de taxa de embarque — preço normal para os EUA. Com o Viaje Fácil rateado, dá R$ 536,49."
+      - "O **resultado de caixa positivo não é lucro**: é o ressarcimento das 171.112 milhas acumuladas do Marcelo que vão para os outros quatro, menos a parte dele na taxa."
       - "A previsão de compra varia entre **R$ 3.848 e R$ 6.298** conforme o canal e a promo. Atualizar esta linha a cada lote comprado."
       - "Ao quitar, voltam **4.000 milhas de bônus** (dobro por ser assinante do Clube). É cashback depois da emissão — **não ajuda a pagar**."
       - "Ainda fora da conta: **GYN↔GRU dos seis**, **hospedagem de 8 noites**, seguro viagem, vistos e a viagem em si."
@@ -142,7 +174,7 @@ secoes:
     destaque: "Pendência aberta · seis pessoas, oito noites"
     notas:
       - "**Seis pessoas muda a conta.** Dois ou três quartos de hotel por 8 noites em Manhattan costumam perder feio para um apartamento inteiro. Vale comparar Airbnb/apart-hotel cedo — imóvel bom para 6 em Nova York esgota com antecedência, e 2027 já está abrindo."
-      - "Pensar a divisão: são três núcleos (Christopher & Ana Claudia · Luci & Ulisses · Marcelo & Sabrina), o que favorece um apartamento de 3 quartos sobre quartos de hotel separados."
+      - "São três núcleos (Christopher & Ana Claudia · Luci & Ulisses · Marcelo & Sabrina), o que favorece um apartamento de 3 quartos sobre quartos de hotel separados — e facilita o rateio, que aí sai por casal."
       - "Pontos Esfera dão 5% OFF na Esfera Viagens e o Clube Pro já está pago — vale comparar na hora de reservar. Hotel também costuma acumular direto no programa além do cartão (foi assim que a Localiza rendeu 5.027 milhas de graça em setembro)."
   - tipo: checklist
     titulo: "Próximos passos · em ordem de urgência"
@@ -150,6 +182,8 @@ secoes:
     itens:
       - texto: "🛂 **Visto e passaporte dos seis**"
         detalhe: "Ver a lista nominal acima. O mais urgente, e o único que nenhuma milha resolve"
+      - texto: "🤝 **Fechar o rateio com a família e cobrar a taxa**"
+        detalhe: "R$ 9.824,76 no total, R$ 2.456,19 por pessoa. Os R$ 2.145,96 da taxa já saíram do bolso em 25/09 — esses cabem cobrar agora. E combinar o que acontece se alguém desistir"
       - texto: "❓ **Descobrir se a quitação aceita pagamento parcial**"
         detalhe: "Está nos Termos do Viaje Fácil. Se der para abater as 729.000 conforme as milhas chegam, cada compra vira progresso travado e o risco do plano despenca. Se for tudo-ou-nada em 01/04, qualquer atraso de transferência no fim de março derruba a operação"
       - texto: "✈️ **Resolver GYN ↔ GRU para seis pessoas**"
