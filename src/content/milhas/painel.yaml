@@ -6,15 +6,15 @@ saldos:
     tipo: terminal
     nota: "✅ **Saldo reconfirmado na tela em 28/09: 317.378** (extrato dos últimos 30 dias sem lançamento novo desde o C6 de 25/09). Faltam **411.622** para as 729.000 · 🟢 **O C6 creditou NO MESMO DIA, base e bônus juntos:** +10.087 sobre os 307.291 de ontem. A conta fecha exata em **5.604 × 1,8** — ou seja foram **5.604 átomos**, não 5.381: o saldo do C6 subiu ~223 durante o dia, e 5.604,89 − 5.604 são os 0,89 que sobraram. Dois números independentes batendo · Antes disso, extrato conferido linha a linha em 20/09, diferença zero: 314.664 (31/08) − 14.400 (Bagagem GOL) + 2.000 Clube + 5.027 Localiza = 307.291 · nº 158648965, categoria **Prata** · 65.869 vencem **mai/2027**, ou seja **depois** da emissão — não são risco · **0 milhas expiradas** na conta, conferido em 25/09 · **Clube Plano 2.000 credita 2.000/mês**, o que soma 12.000 até março"
   - programa: "C6 Átomos"
-    saldo: 0
+    saldo: 162
     unidade: "átomos"
     tipo: flexivel
-    nota: "✅ **Operação fechada e conferida no destino: 5.604 átomos → 10.087 milhas**, sendo 4.483 de bônus puro. Solicitado às **11h49 de 25/09**, com ~12h de folga sobre o fim da janela, e **creditado no mesmo dia** — o app do C6 prometia 5 dias úteis e o bônus até 09/10; os dois vieram juntos em horas. Sobraram **0,89 átomos** · 🔑 **A fonte continua viva:** três cartões (finais **2360**, **5166** e **5739**) rendendo **~5.000/mês** e, pelo visto de hoje, talvez mais. De agora até março são **~30.000 átomos**, que viram 30.000 milhas no 1:1 ou **~54.000** numa nova janela de 80% — setembro sozinho deu quatro dessas · **Próxima transferência: esperar janela de bônus, nunca mandar no 1:1 seco.** E **ler o saldo no dia da operação**, não confiar no número da véspera: hoje a diferença de um dia foram 223 átomos"
+    nota: "📸 **Lido no app em 28/09 às 19h20: 162,19 átomos** (acumulados no mês: 2.728,89, incluindo os transferidos em 25/09) — pouco demais para a janela de 70% que fecha em 29/09 · ✅ **Operação fechada e conferida no destino: 5.604 átomos → 10.087 milhas**, sendo 4.483 de bônus puro. Solicitado às **11h49 de 25/09**, com ~12h de folga sobre o fim da janela, e **creditado no mesmo dia** — o app do C6 prometia 5 dias úteis e o bônus até 09/10; os dois vieram juntos em horas. Sobraram **0,89 átomos** · 🔑 **A fonte continua viva:** três cartões (finais **2360**, **5166** e **5739**) rendendo **~5.000/mês** e, pelo visto de hoje, talvez mais. De agora até março são **~30.000 átomos**, que viram 30.000 milhas no 1:1 ou **~54.000** numa nova janela de 80% — setembro sozinho deu quatro dessas · **Próxima transferência: esperar janela de bônus, nunca mandar no 1:1 seco.** E **ler o saldo no dia da operação**, não confiar no número da véspera: hoje a diferença de um dia foram 223 átomos"
   - programa: "Livelo"
-    saldo: 23713
+    saldo: 713
     unidade: "pts"
     tipo: flexivel
-    nota: "📸 **Reconfirmado no extrato de 28/09 às 17h02: 23.713**, sem pontos a expirar, 9.521 a receber a partir de 29/09 · 🟢 **Extrato de 24/09 às 22h48, reconciliação bateu na vírgula:** 23.438 (20/09) + 275 dos quatro créditos Mercado Livre (12+153+40+70) = **23.713** · Sem pontos a expirar (Clube Classic até 02/06/2027) · ⏳ **Pontos a receber escorregaram pela TERCEIRA vez: 9.521 a partir de 29/09** (eram 9.645 em 22/09, e antes 19/09 — valor e data pioram juntos). Projeção **33.234** · 🔑 **A Livelo é peça central do financiamento, mas não pelo saldo:** é a rota mais barata de COMPRA. Ponto Livelo comprado a R$ 22 e transferido a 80% põe o milheiro Smiles em **R$ 12,22**, contra R$ 15,80 comprando Smiles direto · ⚠️ **Manter o Clube ativo até a última transferência** · 🎯 **A próxima janela Livelo→Smiles ≥70% é o gatilho mais valioso do painel** — é ela que transforma os 33.234 em 59.821. A última morreu em **18/09 às 23h59**"
+    nota: "🚀 **28/09: 23.000 transferidos para a Smiles na campanha de 70%** (pedido L02067416098635, transferência imediata do Clube, *em processamento*). Sobraram **713**; se os **9.521 a receber** caírem até 29/09, viram 10.234 e dá para uma **segunda transferência de 10.000** (mínimo) ainda na campanha · 📸 **Extrato de 28/09 às 17h02: 23.713**, sem pontos a expirar, 9.521 a receber a partir de 29/09 · 🟢 **Extrato de 24/09 às 22h48, reconciliação bateu na vírgula:** 23.438 (20/09) + 275 dos quatro créditos Mercado Livre (12+153+40+70) = **23.713** · Sem pontos a expirar (Clube Classic até 02/06/2027) · ⏳ **Pontos a receber escorregaram pela TERCEIRA vez: 9.521 a partir de 29/09** (eram 9.645 em 22/09, e antes 19/09 — valor e data pioram juntos). Projeção **33.234** · 🔑 **A Livelo é peça central do financiamento, mas não pelo saldo:** é a rota mais barata de COMPRA. Ponto Livelo comprado a R$ 22 e transferido a 80% põe o milheiro Smiles em **R$ 12,22**, contra R$ 15,80 comprando Smiles direto · ⚠️ **Manter o Clube ativo até a última transferência** · 🎯 **A próxima janela Livelo→Smiles ≥70% é o gatilho mais valioso do painel** — é ela que transforma os 33.234 em 59.821. A última morreu em **18/09 às 23h59**"
   - programa: "Esfera"
     saldo: 2514
     unidade: "pts"
@@ -36,6 +36,7 @@ saldos:
     tipo: terminal
     nota: "📸 **Lido na tela em 28/09: 18.000 Avios**, creditados em 22/09 (*Avios acumulados en Santander*) — é a **base** da transferência de 36.000 Esfera. **Faltam os 4.500 de bônus** (1.800 da promo + 2.700 do Clube Pro) para fechar os 22.500 esperados; conferir entre 29/09 e 01/10 · Iberia Club Clásica, nº 177196664 · Frente **Europa**: não soma nas 729.000"
 alertas:
+  - "🚀 **LOTE 2 EXECUTADO — Livelo→Smiles com 70% de bônus, em 28/09.** Campanha Smiles *bancos 09/2026* (cadastro e transferência das 10h de 28/09 às 23h59 de 29/09; 70% para Clube Smiles, 40% para os demais; bônus até 15/10, válido 12 meses; teto de 300.000 de bônus por CPF). **Participação confirmada ANTES da transferência.** Enviados **23.000 pontos** (pedido Livelo L02067416098635, imediata do Clube). **Esperado: 23.000 de base em até 2h + 16.100 de bônus até 15/10 = 39.100 milhas.** A tela da Livelo mostra *40% aplicado* (+9.200) — é o padrão dela; se o bônus vier a 40% e não a 70%, **contestar com o print do cadastro**. Faltam para NY, depois do crédito: **~372.500**"
   - "🎫 **RESERVA FEITA — a meta saiu do radar e virou compromisso com prazo.** Viaje Fácil confirmado em *Meus Voos*: **GRU 31/05/27 22h30 → JFK 01/06/27 07h10** e **JFK 07/06/27 20h20 → GRU 08/06/27 06h55**, American, direto, **cabine econômica, 6 passageiros**. **Total a pagar: 729.000 milhas. Emitir até 01/04/2027.** Já desembolsado: **R$ 3.218,94** (taxa de embarque R$ 2.969,04 + serviço Viaje Fácil R$ 249,90). Ao quitar voltam **4.000 milhas de bônus** — cashback depois da emissão, **não ajudam a pagar**"
   - "✅ **LOTE 1 FECHADO E CONFERIDO NO DESTINO — 10.087 milhas, das quais 4.483 de graça.** O gatilho foi detectado às 7h, a transferência saiu às **11h49** e o crédito caiu **no mesmo dia**, base e bônus juntos, contra os 5 dias úteis do app e o prazo de 09/10 do regulamento. Saldo Smiles na tela: **317.378**. Cadastro feito na página da campanha **antes** de transferir (CPF 005.481.071-06, *Participação confirmada*) — a regra que custou ~31.500 milhas em 07/07 foi respeitada. **Primeiro lote do plano no bolso, e não custou um centavo**"
   - "✅ **REATIVAÇÃO: MORREU, e a pergunta de cinco dias está fechada.** A tela da campanha, logada, diz **0 milhas expiradas**. Não havia lote nenhum ali. **O motivo é boa notícia:** Clube Smiles ativo desde 2022 protege o saldo, e as perdas por expiração do histórico eram todas **LATAM Pass** (−3.723 e −442 em set/2025, −3.500 em jan/2026), nunca Smiles. **Enquanto o Clube estiver ativo, reativação não é um canal para esta meta** — o piso de 200% fica no painel só para o caso de o Clube cair. **Sobra uma única janela antes da Black Friday: a Nomad, até 30/09**"
@@ -71,7 +72,7 @@ meta:
   gatilhos:
     - "🔴 PRAZO FINAL · quitar 729.000 milhas até 01/04/2027 (fechar até 15/03)"
     - "✅ lote 1 feito e creditado · 5.604 átomos → 10.087 milhas no mesmo dia"
-    - "🎯 próxima janela Livelo→Smiles ≥70% · transforma 33.234 em 59.821 · agir na mesma manhã"
+    - "✅ janela Livelo→Smiles 70% aberta e usada em 28/09 · 23.000 → 39.100 esperadas · 2ª transferência de 10.000 se os 9.521 caírem até 29/09 23h59"
     - "conta Nomad nova até 30/09 · até 48.000 milhas · já existe conta no CPF?"
     - "Black Friday · maior lote de compra, ~155.000 milhas"
     - "LATAM Pass · anotar a nova data de expiração das 19.478"
@@ -90,6 +91,13 @@ pisos:
   - "GYN↔GRU conexão NY: ≤ R$ 400 por pessoa/trecho, direto, 6 assentos (base 25/09: R$ 499 ida · R$ 484 volta)"
   - "GYN↔MCZ direto Azul set/27: queda ≥ 15% sobre o menor já visto (base 25/09: R$ 2.984 ou 36.000 pts por pessoa/trecho)"
 oportunidades:
+  - titulo: "Livelo → Smiles · segunda transferência na campanha de 70%"
+    bonus: "70%"
+    prazo: "29/09 às 23h59 (página oficial da Smiles)"
+    detalhe: "🎯 **Só se os 9.521 pontos a receber caírem na Livelo até amanhã.** Com os 713 que sobraram viram **10.234**, e o mínimo de transferência é **10.000** — que a 70% dão **17.000 milhas**. O cadastro na campanha já está feito (vale para as duas transferências). Usar de novo a transferência imediata do Clube, gratuita. **Se os 9.521 escorregarem pela quarta vez, não há o que fazer** — ficam para a próxima janela."
+    url: "https://www.smiles.com.br/portal/campanhas/bancos-09-2026"
+    recomendacao: "AGIR HOJE"
+    tag: "🎯 META EUA"
   - titulo: "Conta Nomad nova → até 48.000 milhas Smiles"
     bonus: "24 milhas por dólar convertido (teto 48.000 no Clube)"
     prazo: "30/09 — conta aberta até lá"
