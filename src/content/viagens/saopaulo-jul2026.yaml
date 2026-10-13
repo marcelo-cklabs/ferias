@@ -132,7 +132,7 @@ secoes:
         pernas:
           - { de: "CGH", deHora: "20:40", deNome: "Congonhas", para: "GYN", paraHora: "22:25", paraNome: "Goiânia", voo: "G3-1438" }
     notas:
-      - "2 passageiros: Marcelo José Amador Filho e Sabrina Oliveira · Econômica, tarifa LIGHT — **sem bagagem despachada** · Thaynara viaja com bilhete próprio."
+      - "2 passageiros: Marcelo e Sabrina · Econômica, tarifa LIGHT — **sem bagagem despachada** · Thaynara viaja com bilhete próprio."
   - tipo: ficha
     titulo: "Carro · Movida"
     icone: "🚗"

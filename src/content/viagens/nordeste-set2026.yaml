@@ -82,7 +82,7 @@ secoes:
           - { de: "SSA", deHora: "14:55", deNome: "Salvador", para: "GYN", paraHora: "17:00", paraNome: "Goiânia", voo: "G3-1904" }
         conexao: "conexão em Salvador · 1h05"
     notas:
-      - "2 passageiros: Marcelo José Amador Filho e Sabrina Oliveira · Tarifa reembolsável (Smiles)."
+      - "2 passageiros: Marcelo e Sabrina · Tarifa reembolsável (Smiles)."
       - "🔄 A GOL remarcou o trecho **Salvador → Goiânia** em 14/08/2026: saía 14:45 e chegava 16:50, agora sai **14:55** e chega **17:00**. Reserva segue confirmada, sem ação necessária."
   - tipo: ficha
     titulo: "Carro · Localiza"
@@ -107,7 +107,7 @@ secoes:
           - { rotulo: "Chegada", valor: "sex 04/09 · fim de tarde" }
           - { rotulo: "Saída", valor: "seg 07/09 · 12:00" }
       - titulo: "Casa Akua · São Miguel dos Milagres"
-        subtitulo: "Airbnb · casa inteira · anfitrião Marcos Batista"
+        subtitulo: "Airbnb · casa inteira · anfitrião Marcos"
         entradas:
           - { rotulo: "Check-in", valor: "seg 07/09 · a partir das 14:00" }
           - { rotulo: "Checkout", valor: "qua 09/09 · até 11:00" }

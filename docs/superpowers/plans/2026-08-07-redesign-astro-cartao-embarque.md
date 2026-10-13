@@ -421,7 +421,7 @@ secoes:
           - { de: "SSA", deHora: "14:45", deNome: "Salvador", para: "GYN", paraHora: "16:50", paraNome: "Goiânia", voo: "G3-1904" }
         conexao: "conexão em Salvador · 55min"
     notas:
-      - "2 passageiros: Marcelo José Amador Filho e Sabrina Oliveira · Tarifa reembolsável (Smiles)."
+      - "2 passageiros: Marcelo e Sabrina · Tarifa reembolsável (Smiles)."
   - tipo: ficha
     titulo: "Carro · Localiza"
     icone: "🚗"
