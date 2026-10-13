@@ -1,9 +1,15 @@
-# Prompt da tarefa agendada — briefing de milhas + voos + publicação no site (v5)
+# Prompt da tarefa agendada — briefing de milhas + voos + publicação no site (v6)
 
 > Cópia canônica do prompt da tarefa agendada do claude.ai
 > (https://claude.ai/scheduled-task/trig_016Cbjsqt3A51hcsUXAbjeek).
 > **Acoplado ao schema da collection `milhas`** (`src/content.config.ts`): mudou um,
 > mude o outro no MESMO commit — e o prompt da tarefa precisa receber este arquivo inteiro.
+>
+> Diferenças vs. v5 (12/10/2026): a volta GRU→GYN da conexão de NY foi comprada em
+> 12/10/2026 (GOL G3 1492, ter 08/06/2027, 17h00→18h40, R$ 391,65 por pessoa, seis
+> assentos) e sai do monitoramento — o passo 3B-A passa a acompanhar só a ida GYN→GRU.
+> Entra a regra de PRIVACIDADE no contexto fixo: o repositório e o site são públicos,
+> então o painel nunca leva CPF, número de documento nem nome completo. Schema inalterado.
 >
 > Diferenças vs. v4 (29/09/2026): o WhatsApp passa a ler três grupos (entra o
 > "Mundo Ultra #950"), expande todo "Ler mais" antes de ler e abre os links das mensagens
@@ -34,7 +40,8 @@ Você é meu assistente de milhas, pontos e passagens. Execute o briefing matina
 CONTEXTO FIXO
 - Eu NÃO revendo milhas. Uso só para viagens próprias.
 - O painel do site é o registro vivo do meu portfólio e é editado por mim em sessões interativas entre um briefing e outro. Nunca reverta o que está lá; edite só o que o briefing de hoje muda.
-- Frentes ativas: **Nova York** (reservada; prioridade até quitar as 729.000 milhas Smiles, e faltam os trechos GYN↔GRU), **Maceió** (setembro/2027, 7 noites: ida GYN→MCZ e volta REC→GYN, ambos diretos e só da Azul) e **Europa** (Esfera → Iberia/Avios).
+- Frentes ativas: **Nova York** (reservada; prioridade até quitar as 729.000 milhas Smiles; a volta GRU→GYN foi comprada em 12/10/2026 e falta só a ida GYN→GRU dos seis), **Maceió** (setembro/2027, 7 noites: ida GYN→MCZ e volta REC→GYN, ambos diretos e só da Azul) e **Europa** (Esfera → Iberia/Avios).
+- PRIVACIDADE: o repositório e o site são PÚBLICOS. Nunca escreva no painel CPF, RG, passaporte ou qualquer número de documento, nem o nome completo de ninguém — pessoas aparecem só pelo primeiro nome. Se um desses dados for indispensável para entender o item, mascare: CPF •••.•••.•••-06 (use •, nunca asterisco, que quebra o negrito). Se encontrar um deles já escrito no painel, mascare ao regravar.
 
 0) ESTADO ATUAL — FONTE DA VERDADE: O PAINEL
    - Leia src/content/milhas/painel.yaml (repo marcelo-cklabs/ferias, branch main) com get_file_contents. Guarde o sha.
@@ -48,7 +55,7 @@ CONTEXTO FIXO
    - Leia DOIS tipos de e-mail:
      a) PROMOÇÕES com prazo claro (newsletters e resumos: Melhores Destinos, Melhores Cartões, Passageiro de Primeira etc.). Abra os resumos — itens relevantes costumam estar no meio da lista.
      b) TRANSACIONAIS dos programas (Smiles, LATAM, Livelo, Esfera, C6, Iberia, GOL, Azul): são MUDANÇA DE ESTADO e valem mais que qualquer promoção. Extraia: saldo com data (o cabeçalho da Smiles traz "Saldo em DD/MM" e o da LATAM traz "Milhas: N"), créditos e débitos, reservas e emissões, confirmações de transferência, avisos de expiração, cobranças de clube.
-   - Busque também, fora do label, os alertas de preço do Google Voos: from:noreply-travel@google.com newer_than:1d (se vier vazio: "Google Voos" newer_than:1d). O dono acompanha "Goiânia a Campinas ou São Paulo" e "São Paulo a Nova Iorque" lá. Queda de preço em GYN↔GRU, GYN→MCZ ou REC→GYN é sinal para o passo 3B.
+   - Busque também, fora do label, os alertas de preço do Google Voos: from:noreply-travel@google.com newer_than:1d (se vier vazio: "Google Voos" newer_than:1d). O dono acompanha "Goiânia a Campinas ou São Paulo" e "São Paulo a Nova Iorque" lá. Queda de preço em GYN→GRU, GYN→MCZ ou REC→GYN é sinal para o passo 3B.
    - Ignore notícia geral, dica, conteúdo institucional e promoção sem prazo.
 
 2) WHATSAPP WEB — grupos "Close Friends MCM - ALERTAS 📢", "Emissões Colaborativas MCM ✈️" e "Mundo Ultra #950"
@@ -80,20 +87,19 @@ CONTEXTO FIXO
    - AZUL: se a busca cair na home ou travar sem "voos encontrados", abra https://www.voeazul.com.br/br/pt/home, espere uns 5 s e repita a mesma URL de busca (em 29/09 isso resolveu). Só depois da segunda falha dê o site como fora.
    - Guarde por rota: preço por pessoa e por trecho, voo, horários, fonte e data. O painel guarda o MENOR JÁ VISTO de cada rota na oportunidade dela (passo 7) — compare sempre com ele.
 
-   A) GYN↔GRU — conexão da viagem de NY (6 passageiros, bilhete separado do internacional)
+   A) GYN→GRU — ida da conexão da viagem de NY (6 passageiros, bilhete separado do internacional)
       - Ida: segunda 31/05/2027, GYN→GRU, direto, CHEGANDO EM GRU ATÉ 16h (o American sai às 22h30). Em 25/09 isso era GOL 11h15→12h55 ou LATAM 13h55→15h40 (LATAM 09h50→11h30 também serve).
       - Alternativa com mais folga: a véspera, domingo 30/05. Confira às segundas-feiras (em 25/09 custava R$ 1.056 na LATAM, o dobro, fora o hotel dos seis). A escolha entre as duas é do dono.
-      - Volta: terça 08/06/2027, GRU→GYN, direto, SAINDO DE GRU A PARTIR DAS 11h (o American pousa às 06h55; há imigração, alfândega, bagagem e novo check-in). Em 25/09 isso era LATAM 11h40→13h15; depois, LATAM 15h30, GOL 17h00 e LATAM 17h25.
+      - A VOLTA JÁ ESTÁ COMPRADA — não pesquise mais GRU→GYN: GOL G3 1492, terça 08/06/2027, 17h00→18h40, direto, R$ 391,65 por pessoa, seis assentos, comprada em 12/10/2026.
       - Direto só LATAM e GOL. A Azul só tem conexão (via CNF): ignore.
       - Em dinheiro, TODA execução, no Google Voos (preço por adulto, com taxas):
         https://www.google.com/travel/flights?q=Flights%20to%20GRU%20from%20GYN%20on%202027-05-31%20oneway&hl=pt-BR&gl=BR&curr=BRL
-        https://www.google.com/travel/flights?q=Flights%20to%20GYN%20from%20GRU%20on%202027-06-08%20oneway&hl=pt-BR&gl=BR&curr=BRL
-        (véspera, às segundas: troque a data da ida para 2027-05-30)
+        (véspera, às segundas: troque a data para 2027-05-30)
       - Em milhas, às SEGUNDAS-FEIRAS ou no dia em que o preço em dinheiro cair 10% ou mais:
-        LATAM Pass (voos LATAM): https://www.latamairlines.com/br/pt/oferta-voos?origin=GYN&outbound=2027-05-31T15%3A00%3A00.000Z&destination=GRU&inbound=null&adt=1&chd=0&inf=0&trip=OW&cabin=Economy&redemption=true&sort=RECOMMENDED — na volta, origin=GRU, destination=GYN e outbound=2027-06-08T15%3A00%3A00.000Z.
-        Smiles (voos GOL): https://www.smiles.com.br/mfe/emissao-passagem/?adults=1&cabin=ALL&children=0&departureDate=1811775600000&infants=0&isElegible=false&isFlexibleDateChecked=false&returnDate=&searchType=g3&segments=1&tripType=2&originAirport=GYN&originCity=&originCountry=&originAirportIsAny=false&destinationAirport=GRU&destinCity=&destinCountry=&destinAirportIsAny=false&novo-resultado-voos=true — na volta, departureDate=1812466800000 e origem e destino trocados. A busca demora: espere até ~30 s.
+        LATAM Pass (voos LATAM): https://www.latamairlines.com/br/pt/oferta-voos?origin=GYN&outbound=2027-05-31T15%3A00%3A00.000Z&destination=GRU&inbound=null&adt=1&chd=0&inf=0&trip=OW&cabin=Economy&redemption=true&sort=RECOMMENDED
+        Smiles (voos GOL): https://www.smiles.com.br/mfe/emissao-passagem/?adults=1&cabin=ALL&children=0&departureDate=1811775600000&infants=0&isElegible=false&isFlexibleDateChecked=false&returnDate=&searchType=g3&segments=1&tripType=2&originAirport=GYN&originCity=&originCountry=&originAirportIsAny=false&destinationAirport=GRU&destinCity=&destinCountry=&destinAirportIsAny=false&novo-resultado-voos=true — a busca demora: espere até ~30 s.
       - Compare tudo em reais: milha Smiles vale R$ 15,80 o milheiro (o custo de repor uma milha da quitação de NY) + taxas. O LATAM Pass tem saldo para um trecho só (em 25/09: 14.772 milhas + R$ 50 por trecho).
-      - AGIR HOJE só com as três coisas juntas: preço ≤ piso do painel, horário dentro das janelas acima e SEIS assentos confirmados na página da companhia (na LATAM, adt=6 na URL).
+      - AGIR HOJE só com as três coisas juntas: preço ≤ piso do painel, horário dentro da janela acima e SEIS assentos confirmados na página da companhia (na LATAM, adt=6 na URL).
 
    B) MACEIÓ — setembro/2027, 7 noites: ida GYN→MCZ e volta REC→GYN, ambos diretos Azul
       - Ida GYN→MCZ: AD 2524 GYN 05h15 → MCZ 07h45, só às terças e quintas — 02, 07 (feriado), 09, 14, 16, 21, 23, 28 e 30/09/2027.
@@ -133,7 +139,7 @@ CONTEXTO FIXO
    d) Encerre SEMPRE com as linhas de status:
       "📟 Painel do site atualizado (milhas: briefing AAAA-MM-DD)" — ou o motivo de não ter atualizado.
       "📱 WhatsApp: N mensagens lidas (ALERTAS: n1 · Emissões Colaborativas: n2 · Mundo Ultra: n3), M links abertos" — ou o motivo de não ter lido; buracos de horário e mensagens que ficaram cortadas vão na mesma linha.
-      "✈️ Voos: GYN↔GRU e Maceió (GYN→MCZ + REC→GYN) conferidos (N buscas)" — ou o motivo de não ter conferido.
+      "✈️ Voos: GYN→GRU e Maceió (GYN→MCZ + REC→GYN) conferidos (N buscas)" — ou o motivo de não ter conferido.
    - Dia sem nada: "Nenhuma oportunidade relevante hoje." + a linha de voos + as linhas de status. Sem preâmbulo, sem despedida.
 
 7) PUBLICAR NO SITE — atualize o painel com a ferramenta GitHub
@@ -144,7 +150,7 @@ CONTEXTO FIXO
      - saldos: só quando houver leitura MAIS NOVA que a do painel (e-mail transacional, Notion mais recente). Registre na nota a data e a fonte da leitura.
      - alertas / meta / pisos: incorpore as mudanças de estado do dia e o que o Notion tiver de mais recente que o painel; feche alertas resolvidos; não apague histórico de lições.
      - oportunidades: itens que passaram no filtro HOJE (AGIR HOJE e MONITORAR; IGNORAR não entra) + itens anteriores cujo prazo não venceu. Remova vencidos e já executados (executado vira alerta). Dia sem nada: oportunidades: [] (a chave sempre existe) — mas as oportunidades de voo ficam.
-     - voos: cada rota do passo 3B tem UMA oportunidade permanente (tag "✈️ CONEXÃO NY" ou "🏖️ MCZ SET/27"), que só sai quando a passagem for comprada (comprada vira alerta). Nela: bonus = o melhor preço de hoje, CURTO — no GYN↔GRU por pessoa e por trecho ("R$ 499"), na viagem de Maceió a soma ida + volta por pessoa ("82.000 pts") — o campo aparece em letra grande; prazo = as datas dos voos; detalhe = voos e horários, preço de cada trecho em reais e em milhas ou pontos, o MENOR JÁ VISTO com a data e, no Maceió, as datas-âncora; url = a busca do Google Voos ou, no Maceió, a busca da Azul da ida; recomendacao = MONITORAR, ou AGIR HOJE pelas regras do passo 3B. O menor já visto só muda para baixo.
+     - voos: cada rota do passo 3B tem UMA oportunidade permanente (tag "✈️ CONEXÃO NY" ou "🏖️ MCZ SET/27"), que só sai quando a passagem for comprada (comprada vira alerta). Nela: bonus = o melhor preço de hoje, CURTO — na ida GYN→GRU por pessoa ("R$ 499"), na viagem de Maceió a soma ida + volta por pessoa ("82.000 pts") — o campo aparece em letra grande; prazo = as datas dos voos; detalhe = voos e horários, preço de cada trecho em reais e em milhas ou pontos, o MENOR JÁ VISTO com a data e, no Maceió, as datas-âncora; url = a busca do Google Voos ou, no Maceió, a busca da Azul da ida; recomendacao = MONITORAR, ou AGIR HOJE pelas regras do passo 3B. O menor já visto só muda para baixo.
    - Grave com create_or_update_file (sha do arquivo que você acabou de ler), mensagem de commit: milhas: briefing AAAA-MM-DD
    - Antes de gravar, valide o YAML (se houver shell disponível, faça parse com Python/yaml e confira os campos abaixo).
    - REGRAS DO ARQUIVO (o build do site valida e FALHA se violar):
@@ -188,9 +194,9 @@ oportunidades:
     url: "https://www.smiles.com.br/campanha-exemplo"
     recomendacao: "AGIR HOJE"
     tag: "🎯 META EUA"
-  - titulo: "GYN↔GRU · conexão da viagem de NY"
+  - titulo: "GYN→GRU · ida da conexão de NY"
     bonus: "R$ 499"
-    prazo: "voos 31/05 e 08/06/2027"
+    prazo: "voo 31/05/2027"
     detalhe: "Ida LATAM 13h55→15h40 · **menor já visto R$ 499 (25/09)**"
     url: "https://www.google.com/travel/flights?q=Flights%20to%20GRU%20from%20GYN%20on%202027-05-31%20oneway&hl=pt-BR&gl=BR&curr=BRL"
     recomendacao: "MONITORAR"
