@@ -117,7 +117,7 @@ secoes:
     notas:
       - "2 passageiros: **Marcelo** (Smiles 158648965) e **Leandro** (Smiles 589033712) · emitido em 16/09/2026."
       - "Tarifa **LIGHT** · econômica (classe N) · Boeing 737 MAX. Não inclui bagagem despachada — o que combina com o plano de ir só com bagagem de mão."
-      - "🪑 **Check-in feito em 26/10** · assentos GOL+ Conforto na fila 15: ida **15D Leandro · 15E Marcelo**; volta **15D Marcelo · 15E Leandro**."
+      - "🪑 **Check-in feito em 26/10** · assentos GOL+ Conforto na fila 15: ida **15D Leandro · 15E Marcelo**; volta **15D Marcelo · 15E Leandro** · R$ 194,00 por pessoa (ida + volta)."
       - "Bilhetes eletrônicos: Marcelo **1272312012992** · Leandro **1272312012987**."
       - "⚠️ A ida pousa no **próprio dia do show**: qualquer atraso grande come a margem. Vale acompanhar o status do voo na véspera."
   - tipo: hospedagem
@@ -142,14 +142,14 @@ secoes:
       - { categoria: "Show", descricao: "Ingressos Iron Maiden (2× meia, Cadeira N1 — Setor 103)", status: pago, valor: 870.00 }
       - { categoria: "Show", descricao: "Reembolso do Leandro — metade dos ingressos", status: recebido, valor: -435.00 }
       - { categoria: "Voos", descricao: "GOL GYN⇄CGH (GBNQTZ, 2 pax) — reserva fechada em 16/09, autorização 440570", status: pago, valor: 3077.68 }
-      - { categoria: "Voos", descricao: "Assentos GOL+ Conforto do Leandro (15D na ida, 15E na volta) — 26/10, 1× no Mastercard final 0203", status: pago, valor: 194.00 }
+      - { categoria: "Voos", descricao: "Assentos GOL+ Conforto na fila 15, ida e volta — 2 pax × R$ 194,00 · 26/10, 1× no Mastercard final 0203 (virtual do Santander Unlimited)", status: pago, valor: 388.00 }
       - { categoria: "Hospedagem", descricao: "Airbnb Studio na Consolação (HMY5SHCXKY) — 1 noite, 27–28/10", status: pago, valor: 198.00 }
     totais:
-      - { rotulo: "Total lançado", valor: 3904.68 }
+      - { rotulo: "Total lançado", valor: 4098.68 }
       - { rotulo: "Parte do Leandro nos voos (Crédito GOL)", valor: -1500.00 }
-      - { rotulo: "Custo do Marcelo hoje", valor: 2404.68 }
+      - { rotulo: "Custo do Marcelo hoje", valor: 2598.68 }
       - { rotulo: "A receber do Leandro — Airbnb, assentos e resto da passagem", valor: -331.84 }
-      - { rotulo: "Custo final previsto", valor: 2072.84 }
+      - { rotulo: "Custo final previsto", valor: 2266.84 }
     notas:
       - "Por ingresso: R$ 345,00 (meia) + taxa ADM R$ 21,00 + taxa de serviço R$ 69,00 = R$ 435,00 · entrega grátis · pedido 1740356209."
       - "✈️ **Voos, R$ 3.077,68 no total — R$ 1.538,84 por passageiro** (tarifa R$ 1.426,28 + taxa de embarque R$ 112,56). A passagem do Leandro saiu em **R$ 1.500,00 de Crédito GOL + R$ 38,84 no cartão final 5739**; a do Marcelo, R$ 1.538,84 no mesmo cartão — daí os **R$ 1.577,68** (1×) na fatura. Os R$ 38,84 são do Leandro e entram no acerto."
