@@ -153,10 +153,10 @@ secoes:
     notas:
       - "Por ingresso: R$ 345,00 (meia) + taxa ADM R$ 21,00 + taxa de serviço R$ 69,00 = R$ 435,00 · entrega grátis · pedido 1740356209."
       - "✈️ **Voos, R$ 3.077,68 no total — R$ 1.538,84 por passageiro** (tarifa R$ 1.426,28 + taxa de embarque R$ 112,56). A passagem do Leandro saiu em **R$ 1.500,00 de Crédito GOL + R$ 38,84 no cartão final 5739**; a do Marcelo, R$ 1.538,84 no mesmo cartão — daí os **R$ 1.577,68** (1×) na fatura. Os R$ 38,84 são do Leandro e entram no acerto."
-      - "🤝 **Acerto com o Leandro:** os ingressos estão quites (ele já devolveu **R$ 435,00**). Falta **R$ 331,84**: metade do Airbnb (R$ 99,00) + os assentos dele (R$ 194,00) + o resto da passagem que o Crédito GOL não cobriu (R$ 38,84)."
+      - "🤝 **Acerto com o Leandro:** a metade dos ingressos (**R$ 435,00**) já foi devolvida. Falta **R$ 331,84**: metade do Airbnb (R$ 99,00) + assentos GOL+ Conforto do Leandro (R$ 194,00) + o resto da passagem que o Crédito GOL não cobriu (R$ 38,84)."
   - tipo: checklist
     titulo: "Próximos passos"
     itens:
-      - { texto: "Receber do Leandro R$ 331,84", detalhe: "Metade do Airbnb R$ 99,00 + assentos dele R$ 194,00 + resto da passagem R$ 38,84." }
+      - { texto: "Receber do Leandro R$ 331,84", detalhe: "Metade do Airbnb R$ 99,00 + assentos R$ 194,00 + resto da passagem R$ 38,84." }
       - { texto: "Resolver a volta do show", detalhe: "~6 km até a Consolação, show acaba perto das 23h e o metrô fecha por volta da meia-noite" }
       - { texto: "Baixar os ingressos em PDF (Ticketdirect) — pedido 1740356209" }
