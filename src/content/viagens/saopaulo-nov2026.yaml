@@ -99,15 +99,16 @@ secoes:
       - { categoria: "Hospedagem", descricao: "Airbnb 4 noites, Ibirapuera, 19–23/11 (HMAWZKDF5S) · 6× no Visa", status: pago, valor: 2788.70 }
       - { categoria: "Voos", descricao: "GOL GYN ⇄ CGH, 19–23/11 (WXBUIZ) · 6 passageiros · comprado na Smiles em 08/08 no Visa final 7238", status: pago, valor: 5117.04 }
       - { categoria: "Reembolso", descricao: "Thaynara — ingresso dela (03/07)", status: recebido, valor: -616.00 }
+      - { categoria: "Reembolso", descricao: "Edilson — rateio (03/09) · valor cobre mais que a cota dele; alocação a confirmar", status: recebido, valor: -3300.00 }
     totais:
-      - { rotulo: "Líquido até agora (pago − reembolso recebido)", valor: 9753.74 }
-      - { rotulo: "A receber — rateio do Airbnb (Thaynara, Edilson e Geovanka · 3× R$ 464,78)", valor: -1394.35 }
-      - { rotulo: "A receber — rateio dos voos (Thaynara, Edilson e Geovanka · 3× R$ 852,84)", valor: -2558.52 }
+      - { rotulo: "Líquido até agora (pago − reembolsos recebidos)", valor: 6453.74 }
+      - { rotulo: "A receber — saldo do rateio (Airbnb + voos, após o pagamento do Edilson)", valor: -652.87 }
       - { rotulo: "Custo final previsto — Marcelo (cobre as cotas de Sabrina e Israel)", valor: 5800.87 }
     notas:
       - "Ingressos: R$ 616,00 cada (meia, lote 2) · sem taxas adicionais · 4 ingressos em 2 pedidos de 2 (#78264953 no Visa Bradesco + 1 no Mastercard C6), aprovados em 03/07/2026. Thaynara já reembolsou o ingresso dela (R$ 616,00 · 03/07); de Sabrina e Israel não haverá reembolso."
       - "Airbnb: R$ 665,00 × 4 noites − desconto de longa estadia + taxas = R$ 2.788,70 · rateio entre os 6 = R$ 464,78 por pessoa. Entram no rateio Thaynara, Edilson e Geovanka (a receber R$ 1.394,35); as cotas de Sabrina e Israel ficam por conta do Marcelo."
       - "Voos: **R$ 852,84 por pessoa** (bilhete ida R$ 2.220,84 + volta R$ 2.220,84 + taxas de embarque R$ 302,52 na ida e R$ 372,84 na volta) × 6 = R$ 5.117,04, pago 100% em dinheiro — **0 milhas**. Rateio aplicado pelo mesmo critério do Airbnb: Thaynara, Edilson e Geovanka devolvem a cota (R$ 2.558,52); Sabrina e Israel por conta do Marcelo. *Critério a confirmar.*"
+      - "**Edilson pagou R$ 3.300,00 em 03/09** (PIX na conta Santander). O rateio previsto para ele era R$ 1.317,62 (Airbnb R$ 464,78 + voos R$ 852,84), então o pagamento cobre bem mais que a cota dele — provavelmente inclui a Geovanka, e talvez parte da Thaynara. *Alocação a confirmar.* Do total de R$ 3.952,87 a receber, restam **R$ 652,87**."
       - "Desembolso bruto do Marcelo: R$ 10.369,74 (ingressos + Airbnb + voos)."
   - tipo: checklist
     titulo: "Próximos passos"
@@ -116,6 +117,5 @@ secoes:
       - { texto: "Verificar a forma de entrega dos ingressos (e-ticket / retirada)" }
       - { texto: "Marcar os assentos dos 6 passageiros", detalhe: "Nenhum assento foi escolhido na compra e não há bagagem despachada contratada — avaliar se vale pagar." }
       - { texto: "Combinar o transporte para Congonhas na volta", detalhe: "Voo às 07:25; contar com saída do Airbnb por volta das 05:00." }
-      - { texto: "Receber o rateio do Airbnb — R$ 464,78 de Thaynara, Edilson e Geovanka (R$ 1.394,35 no total)" }
-      - { texto: "Receber o rateio dos voos — R$ 852,84 de Thaynara, Edilson e Geovanka (R$ 2.558,52 no total)" }
+      - { texto: "Fechar a conta do rateio — faltam R$ 652,87", detalhe: "Edilson pagou R$ 3.300,00 em 03/09, acima da cota dele (R$ 1.317,62). Definir quanto cobre a Geovanka e a Thaynara para saber quem ainda deve." }
       - { texto: "Pegar o endereço exato e a senha do Wi-Fi com o anfitrião (Guilherme) mais perto da data" }
