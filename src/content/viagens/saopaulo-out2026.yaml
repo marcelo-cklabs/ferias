@@ -13,7 +13,7 @@ dataCard: "27–28 out 2026"
 dataDisplay: "27 – 28 de outubro de 2026"
 pax: "Marcelo & Leandro"
 status: confirmada
-statusLabel: "Tudo reservado"
+statusLabel: "Check-in feito"
 cor: "#7f1d1d"
 resumoCard: "Run for Your Lives Tour, Allianz Parque. Ingressos, voos e studio na Consolação — tudo fechado."
 bilhete: 3
@@ -21,7 +21,7 @@ heroMeta:
   - { rotulo: "LOC", valor: "GBNQTZ" }
   - { rotulo: "LUGAR", valor: "PORTÃO A · SETOR 103 · FILEIRA E" }
   - { rotulo: "PEDIDO", valor: "1740356209" }
-footer: "Ingressos, voos e hospedagem garantidos 🤘"
+footer: "Ingressos, voos e hospedagem garantidos · check-in feito 🤘"
 secoes:
   - tipo: ficha
     titulo: "O show"
@@ -49,7 +49,7 @@ secoes:
             titulo: "Voo Goiânia → São Paulo"
             tag: "✈️ Voo"
             endereco: "GYN (Santa Genoveva) → CGH (Congonhas) · chega 11:50"
-            meta: "GOL · G3-1433 · localizador GBNQTZ · direto, 1h45 · **sem bagagem despachada**"
+            meta: "GOL · G3-1433 · localizador GBNQTZ · direto, 1h45 · assentos 15D e 15E · **sem bagagem despachada**"
           - hora: "12:15"
             titulo: "Uber ou táxi de Congonhas para o Centro"
             tag: "🚕 Transporte"
@@ -102,7 +102,7 @@ secoes:
             titulo: "Voo São Paulo → Goiânia"
             tag: "✈️ Voo"
             endereco: "CGH (Congonhas) → GYN (Santa Genoveva) · chega 11:20"
-            meta: "GOL · G3-1432 · localizador GBNQTZ · direto, 1h45"
+            meta: "GOL · G3-1432 · localizador GBNQTZ · direto, 1h45 · assentos 15D e 15E"
   - tipo: voos
     titulo: "Voos · GOL"
     trechos:
@@ -116,8 +116,8 @@ secoes:
           - { de: "CGH", deHora: "09:35", deNome: "São Paulo", para: "GYN", paraHora: "11:20", paraNome: "Goiânia", voo: "G3-1432" }
     notas:
       - "2 passageiros: **Marcelo** (Smiles 158648965) e **Leandro** (Smiles 589033712) · emitido em 16/09/2026."
-      - "Tarifa **LIGHT** · econômica (classe N) · Boeing 737-800. Não inclui bagagem despachada — o que combina com o plano de ir só com bagagem de mão."
-      - "🪑 **Assentos ainda não marcados** nos dois trechos — escolher no app da GOL."
+      - "Tarifa **LIGHT** · econômica (classe N) · Boeing 737 MAX. Não inclui bagagem despachada — o que combina com o plano de ir só com bagagem de mão."
+      - "🪑 **Check-in feito em 26/10** · assentos GOL+ Conforto na fila 15: ida **15D Leandro · 15E Marcelo**; volta **15D Marcelo · 15E Leandro**."
       - "Bilhetes eletrônicos: Marcelo **1272312012992** · Leandro **1272312012987**."
       - "⚠️ A ida pousa no **próprio dia do show**: qualquer atraso grande come a margem. Vale acompanhar o status do voo na véspera."
   - tipo: hospedagem
@@ -142,21 +142,21 @@ secoes:
       - { categoria: "Show", descricao: "Ingressos Iron Maiden (2× meia, Cadeira N1 — Setor 103)", status: pago, valor: 870.00 }
       - { categoria: "Show", descricao: "Reembolso do Leandro — metade dos ingressos", status: recebido, valor: -435.00 }
       - { categoria: "Voos", descricao: "GOL GYN⇄CGH (GBNQTZ, 2 pax) — reserva fechada em 16/09, autorização 440570", status: pago, valor: 3077.68 }
+      - { categoria: "Voos", descricao: "Assentos GOL+ Conforto do Leandro (15D na ida, 15E na volta) — 26/10, 1× no Mastercard final 0203", status: pago, valor: 194.00 }
       - { categoria: "Hospedagem", descricao: "Airbnb Studio na Consolação (HMY5SHCXKY) — 1 noite, 27–28/10", status: pago, valor: 198.00 }
     totais:
-      - { rotulo: "Total lançado", valor: 3710.68 }
+      - { rotulo: "Total lançado", valor: 3904.68 }
       - { rotulo: "Parte do Leandro nos voos (Crédito GOL)", valor: -1500.00 }
-      - { rotulo: "Custo do Marcelo hoje", valor: 2210.68 }
-      - { rotulo: "A receber — metade do Airbnb", valor: -99.00 }
-      - { rotulo: "Custo final previsto", valor: 2111.68 }
+      - { rotulo: "Custo do Marcelo hoje", valor: 2404.68 }
+      - { rotulo: "A receber do Leandro — Airbnb, assentos e resto da passagem", valor: -331.84 }
+      - { rotulo: "Custo final previsto", valor: 2072.84 }
     notas:
       - "Por ingresso: R$ 345,00 (meia) + taxa ADM R$ 21,00 + taxa de serviço R$ 69,00 = R$ 435,00 · entrega grátis · pedido 1740356209."
-      - "✈️ **Voos, R$ 3.077,68 no total:** a parte do Leandro (**R$ 1.500,00**) saiu em **Crédito GOL** e a do Marcelo (**R$ 1.577,68**) foi 1× no cartão final **5739**. Só a parte do Marcelo entra no custo acima."
-      - "🤝 **Acerto com o Leandro:** os dois ingressos saíram no cartão do Marcelo e ele **já devolveu a metade dele (R$ 435,00)**. O voo dele foi coberto pelo Crédito GOL. Falta só a **metade do Airbnb — R$ 99,00**."
+      - "✈️ **Voos, R$ 3.077,68 no total — R$ 1.538,84 por passageiro** (tarifa R$ 1.426,28 + taxa de embarque R$ 112,56). A passagem do Leandro saiu em **R$ 1.500,00 de Crédito GOL + R$ 38,84 no cartão final 5739**; a do Marcelo, R$ 1.538,84 no mesmo cartão — daí os **R$ 1.577,68** (1×) na fatura. Os R$ 38,84 são do Leandro e entram no acerto."
+      - "🤝 **Acerto com o Leandro:** os ingressos estão quites (ele já devolveu **R$ 435,00**). Falta **R$ 331,84**: metade do Airbnb (R$ 99,00) + os assentos dele (R$ 194,00) + o resto da passagem que o Crédito GOL não cobriu (R$ 38,84)."
   - tipo: checklist
     titulo: "Próximos passos"
     itens:
-      - { texto: "Marcar os assentos dos dois trechos no app da GOL" }
-      - { texto: "Receber do Leandro a metade do Airbnb — R$ 99,00" }
+      - { texto: "Receber do Leandro R$ 331,84", detalhe: "Metade do Airbnb R$ 99,00 + assentos dele R$ 194,00 + resto da passagem R$ 38,84." }
       - { texto: "Resolver a volta do show", detalhe: "~6 km até a Consolação, show acaba perto das 23h e o metrô fecha por volta da meia-noite" }
       - { texto: "Baixar os ingressos em PDF (Ticketdirect) — pedido 1740356209" }
