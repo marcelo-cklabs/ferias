@@ -12,16 +12,16 @@ dataInicio: 2026-10-27
 dataCard: "27–28 out 2026"
 dataDisplay: "27 – 28 de outubro de 2026"
 pax: "Marcelo & Leandro"
-status: confirmada
-statusLabel: "Check-in feito"
+status: realizada
+statusLabel: "Finalizada"
 cor: "#7f1d1d"
-resumoCard: "Run for Your Lives Tour, Allianz Parque. Ingressos, voos e studio na Consolação — tudo fechado."
+resumoCard: "Realizada. Iron Maiden no Allianz Parque · acerto com o Leandro quitado · R$ 2.266,68 de custo, fora os gastos em SP."
 bilhete: 3
 heroMeta:
   - { rotulo: "LOC", valor: "GBNQTZ" }
   - { rotulo: "LUGAR", valor: "PORTÃO A · SETOR 103 · FILEIRA E" }
   - { rotulo: "PEDIDO", valor: "1740356209" }
-footer: "Ingressos, voos e hospedagem garantidos · check-in feito 🤘"
+footer: "Viagem finalizada em 28/10/2026 · gastos em SP ainda a lançar 🤘"
 secoes:
   - tipo: ficha
     titulo: "O show"
@@ -39,7 +39,7 @@ secoes:
     notas:
       - "🎟️ Ingressos garantidos. Baixar os PDFs (Ticketdirect) antes da viagem."
   - tipo: roteiro
-    titulo: "Roteiro dia a dia (provisório)"
+    titulo: "Roteiro planejado"
     dias:
       - data: "Ter 27/10"
         diaSemana: "Chegada & show"
@@ -119,7 +119,6 @@ secoes:
       - "Tarifa **LIGHT** · econômica (classe N) · Boeing 737 MAX. Não inclui bagagem despachada — o que combina com o plano de ir só com bagagem de mão."
       - "🪑 **Check-in feito em 26/10** · assentos GOL+ Conforto na fila 15: ida **15D Leandro · 15E Marcelo**; volta **15D Marcelo · 15E Leandro** · R$ 194,00 por pessoa (ida + volta)."
       - "Bilhetes eletrônicos: Marcelo **1272312012992** · Leandro **1272312012987**."
-      - "⚠️ A ida pousa no **próprio dia do show**: qualquer atraso grande come a margem. Vale acompanhar o status do voo na véspera."
   - tipo: hospedagem
     cartoes:
       - titulo: "Studio no centro de São Paulo, próximo ao metrô"
@@ -135,7 +134,7 @@ secoes:
         total: "R$ 198,00"
     notas:
       - "⏰ O voo pousa 11:50 e o check-in só abre às 15:00 — mas **a viagem é sem bagagem**, então o vão vira Bar Brahma e Galeria do Rock, e o studio fica para o fim da tarde."
-      - "🎸 Do Viaduto Nove de Julho até o Allianz Parque são ~6 km. O show deve acabar perto das 23h e o metrô fecha por volta da meia-noite — vale já contar com carro na volta."
+      - "🎸 Do Viaduto Nove de Julho até o Allianz Parque são ~6 km. A volta do show ficou por conta do Leandro."
       - "Cancelamento gratuito até **15:00 de 22/10**; depois **não é reembolsável**. Sem pets · silêncio das 22:00 às 08:00 · o anúncio não informa detector de monóxido de carbono."
   - tipo: gastos
     linhas:
@@ -144,19 +143,17 @@ secoes:
       - { categoria: "Voos", descricao: "GOL GYN⇄CGH (GBNQTZ, 2 pax) — reserva fechada em 16/09, autorização 440570", status: pago, valor: 3077.68 }
       - { categoria: "Voos", descricao: "Assentos GOL+ Conforto na fila 15, ida e volta — 2 pax × R$ 194,00 · 26/10, 1× no Mastercard final 0203 (virtual do Santander Unlimited)", status: pago, valor: 388.00 }
       - { categoria: "Hospedagem", descricao: "Airbnb Studio na Consolação (HMY5SHCXKY) — 1 noite, 27–28/10", status: pago, valor: 198.00 }
+      - { categoria: "Reembolso", descricao: "Leandro — metade do Airbnb, assentos e resto da passagem (PIX de 26/10)", status: recebido, valor: -332.00 }
     totais:
-      - { rotulo: "Total lançado", valor: 4098.68 }
+      - { rotulo: "Total lançado (pago − reembolsos recebidos)", valor: 3766.68 }
       - { rotulo: "Parte do Leandro nos voos (Crédito GOL)", valor: -1500.00 }
-      - { rotulo: "Custo do Marcelo hoje", valor: 2598.68 }
-      - { rotulo: "A receber do Leandro — Airbnb, assentos e resto da passagem", valor: -331.84 }
-      - { rotulo: "Custo final previsto", valor: 2266.84 }
+      - { rotulo: "Custo final do Marcelo (fora os gastos em SP)", valor: 2266.68 }
     notas:
       - "Por ingresso: R$ 345,00 (meia) + taxa ADM R$ 21,00 + taxa de serviço R$ 69,00 = R$ 435,00 · entrega grátis · pedido 1740356209."
       - "✈️ **Voos, R$ 3.077,68 no total — R$ 1.538,84 por passageiro** (tarifa R$ 1.426,28 + taxa de embarque R$ 112,56). A passagem do Leandro saiu em **R$ 1.500,00 de Crédito GOL + R$ 38,84 no cartão final 5739**; a do Marcelo, R$ 1.538,84 no mesmo cartão — daí os **R$ 1.577,68** (1×) na fatura. Os R$ 38,84 são do Leandro e entram no acerto."
-      - "🤝 **Acerto com o Leandro:** a metade dos ingressos (**R$ 435,00**) já foi devolvida. Falta **R$ 331,84**: metade do Airbnb (R$ 99,00) + assentos GOL+ Conforto do Leandro (R$ 194,00) + o resto da passagem que o Crédito GOL não cobriu (R$ 38,84)."
+      - "🤝 **Acerto com o Leandro quitado.** A metade dos ingressos (R$ 435,00) veio antes; o resto, **R$ 332,00 por PIX em 26/10**, cobre os R$ 331,84 devidos — metade do Airbnb (R$ 99,00) + assentos GOL+ Conforto do Leandro (R$ 194,00) + o resto da passagem que o Crédito GOL não cobriu (R$ 38,84) — arredondados para cima. Os gastos em SP não foram divididos, e a volta do show ficou por conta do Leandro."
+      - "💳 **Gastos em SP ainda fora da conta.** Foram no cartão **Santander Unlimited**, que ainda não aparece no Open Finance — assim como os assentos, no virtual final 0203. No extrato consultado em 28/10 (conta Santander, Santander 6094, C6 e Bradesco Visa) não há gasto identificado da viagem."
   - tipo: checklist
-    titulo: "Próximos passos"
+    titulo: "Pendências pós-viagem"
     itens:
-      - { texto: "Receber do Leandro R$ 331,84", detalhe: "Metade do Airbnb R$ 99,00 + assentos R$ 194,00 + resto da passagem R$ 38,84." }
-      - { texto: "Resolver a volta do show", detalhe: "~6 km até a Consolação, show acaba perto das 23h e o metrô fecha por volta da meia-noite" }
-      - { texto: "Baixar os ingressos em PDF (Ticketdirect) — pedido 1740356209" }
+      - { texto: "Lançar os gastos em SP feitos no cartão Santander Unlimited", detalhe: "O cartão ainda não aparece no Open Finance — conferir na fatura, junto com os assentos GOL+ Conforto (R$ 388,00 no virtual final 0203)." }
