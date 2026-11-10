@@ -13,15 +13,16 @@ dataCard: "19–23 nov 2026"
 dataDisplay: "19 – 23 de novembro de 2026"
 pax: "Marcelo, Sabrina, Edilson, Geovanka, Thaynara & Israel"
 status: confirmada
-statusLabel: "Voos + ingressos + Airbnb OK"
+statusLabel: "Tudo reservado"
 cor: "#92400e"
-resumoCard: "Best of Blues and Rock (show 22/11). Grupo de 6; voos GOL, ingressos e Airbnb no Ibirapuera confirmados."
+resumoCard: "Best of Blues and Rock (show 22/11). Grupo de 6; voos GOL, ingressos, Airbnb no Ibirapuera e carro Movida confirmados."
 bilhete: 4
 heroMeta:
   - { rotulo: "SHOW", valor: "DOM 22/11 · ARENA (GRAMADO)" }
   - { rotulo: "LOC", valor: "WXBUIZ" }
   - { rotulo: "AIRBNB", valor: "HMAWZKDF5S" }
-footer: "Voos, ingressos e Airbnb garantidos · rateio pago · falta alugar o carro 🎸"
+  - { rotulo: "CARRO", valor: "MOVIDA CGH · MV4HN1NAWQ2BR" }
+footer: "Voos, ingressos, Airbnb e carro garantidos · rateio pago 🎸"
 secoes:
   - tipo: ficha
     titulo: "O show"
@@ -43,8 +44,8 @@ secoes:
       - data: "Qui 19/11"
         diaSemana: "Chegada"
         local: "São Paulo"
-        texto: "Voo **G3-1437**, Goiânia → Congonhas, **17:00 → 18:45** (direto). Retirada do carro alugado e check-in no Airbnb na sequência (self check-in por fechadura inteligente, a partir das 15:00)."
-        tags: ["✈️ GYN 17:00 → CGH 18:45", "🚗 Retira carro", "🏨 Check-in Airbnb"]
+        texto: "Voo **G3-1437**, Goiânia → Congonhas, **17:00 → 18:45** (direto). Retirada do carro na **Movida do aeroporto** às **19:00** e check-in no Airbnb na sequência (self check-in por fechadura inteligente, a partir das 15:00)."
+        tags: ["✈️ GYN 17:00 → CGH 18:45", "🚗 Retira carro 19:00", "🏨 Check-in Airbnb"]
       - data: "Sex 20/11"
         diaSemana: "Livre"
         local: "São Paulo"
@@ -63,8 +64,8 @@ secoes:
       - data: "Seg 23/11"
         diaSemana: "Volta"
         local: "Volta"
-        texto: "Voo **G3-1430**, Congonhas → Goiânia, **07:25 → 09:10** (direto). Saída do Airbnb de madrugada e devolução do carro antes do embarque — o check-out vai bem antes do limite das 11:00."
-        tags: ["✈️ CGH 07:25 → GYN 09:10", "🚗 Devolve carro", "🏨 Check-out antecipado"]
+        texto: "Voo **G3-1430**, Congonhas → Goiânia, **07:25 → 09:10** (direto). Saída do Airbnb de madrugada e devolução do carro na Movida de Congonhas às **06:00**, quando a loja abre — o check-out vai bem antes do limite das 11:00."
+        tags: ["✈️ CGH 07:25 → GYN 09:10", "🚗 Devolve carro 06:00", "🏨 Check-out antecipado"]
   - tipo: voos
     titulo: "Voos · GOL"
     trechos:
@@ -80,7 +81,29 @@ secoes:
       - "Diretos (1h45 cada), cabine econômica, **tarifa reembolsável** · 6 passageiros: Marcelo, Sabrina, Israel, Thaynara, Edilson e Geovanka. O localizador Smiles e o da GOL são o mesmo: **WXBUIZ**."
       - "Sem marcação de assentos (decidido não pagar) e sem bagagem despachada contratada."
       - "⏰ A volta sai **07:25 de Congonhas**: contar com saída do Airbnb ainda de madrugada e com a devolução dos carros antes do embarque."
-      - "🚗 **Dois carros alugados:** o Marcelo aluga um de 5 lugares; Edilson e Geovanka alugam o deles."
+      - "🚗 **Dois carros alugados:** o do Marcelo está reservado na Movida de Congonhas (ver *Carro · Movida*); Edilson e Geovanka alugam o deles."
+  - tipo: ficha
+    titulo: "Carro · Movida"
+    icone: "🚗"
+    cartoes:
+      - titulo: "Reserva Movida · Congonhas"
+        subtitulo: "(4 diárias · 19–23/11)"
+        entradas:
+          - { rotulo: "Código", valor: "MV4HN1NAWQ2BR" }
+          - { rotulo: "Status", valor: "Confirmada em 09/11 · a pagar na retirada" }
+          - { rotulo: "Loja", valor: "Congonhas — estacionamento do aeroporto (Estapar), piso desembarque · Av. Washington Luís, s/n" }
+          - { rotulo: "Retirada", valor: "qui 19/11 · 19:00 · loja aberta das 06:00 às 23:00" }
+          - { rotulo: "Devolução", valor: "seg 23/11 · 06:00 · na abertura da loja" }
+          - { rotulo: "Diárias", valor: "4× R$ 161,08 = R$ 644,32" }
+          - { rotulo: "Proteção", valor: "Proteção padrão (LDW) · 4× R$ 54,95 = R$ 219,80" }
+          - { rotulo: "Taxa de locação", valor: "R$ 129,62" }
+          - { rotulo: "Parceria", valor: "Livelo" }
+        total: "R$ 993,74"
+    lembretes:
+      - "**CNH física** e cartão de crédito **no nome do motorista** (Marcelo) — a Movida faz pré-autorização de caução na retirada (no carro de julho foram R$ 500,00)."
+      - "O voo pousa **18:45** e a retirada é às **19:00**. Se atrasar, avisar a Movida — a loja fica aberta até **23:00** na quinta."
+      - "Devolução às **06:00**, quando a loja abre: sair do Airbnb por volta das **05:30** e seguir direto para o embarque das **07:25** (sem bagagem despachada)."
+      - "Cadastro em dia no app ou no site da Movida agiliza a retirada (dica do próprio e-mail da reserva)."
   - tipo: hospedagem
     cartoes:
       - titulo: "Maestro Ibirapuera — Airbnb"
@@ -101,23 +124,24 @@ secoes:
       - { categoria: "Show", descricao: "Ingressos Eddie Vedder (4× meia — Arena Gramado, Lote 2) · 2 pedidos parcelados 2× R$ 616,00 (Visa Bradesco + Mastercard C6)", status: pago, valor: 2464.00 }
       - { categoria: "Hospedagem", descricao: "Airbnb 4 noites, Ibirapuera, 19–23/11 (HMAWZKDF5S) · 6× no Visa", status: pago, valor: 2788.70 }
       - { categoria: "Voos", descricao: "GOL GYN ⇄ CGH, 19–23/11 (WXBUIZ) · 6 passageiros · comprado na Smiles em 08/08 no Visa final 7238", status: pago, valor: 5117.04 }
+      - { categoria: "Carro", descricao: "Movida Congonhas, 19–23/11 (MV4HN1NAWQ2BR) · 4 diárias + proteção padrão + taxa de locação · a pagar na retirada", status: pendente, valor: 993.74 }
       - { categoria: "Reembolso", descricao: "Thaynara — ingresso dela (03/07)", status: recebido, valor: -616.00 }
       - { categoria: "Reembolso", descricao: "Thaynara — cota do rateio, Airbnb + voos (07/09)", status: recebido, valor: -1318.00 }
       - { categoria: "Reembolso", descricao: "Edilson — rateio, cotas do Edilson e da Geovanka (03/09)", status: recebido, valor: -3300.00 }
     totais:
       - { rotulo: "Líquido até agora (pago − reembolsos recebidos)", valor: 5135.74 }
       - { rotulo: "Diferença com o Edilson — pago acima das 2 cotas (a confirmar)", valor: 664.76 }
-      - { rotulo: "Custo final previsto — Marcelo (cobre as cotas de Sabrina e Israel)", valor: 5800.50 }
+      - { rotulo: "Custo final previsto — Marcelo (cobre as cotas de Sabrina e Israel + carro)", valor: 6794.24 }
     notas:
       - "Ingressos: R$ 616,00 cada (meia, lote 2) · sem taxas adicionais · 4 ingressos em 2 pedidos de 2 (#78264953 no Visa Bradesco + 1 no Mastercard C6), aprovados em 03/07/2026. Thaynara já reembolsou o ingresso dela (R$ 616,00 · 03/07); de Sabrina e Israel não haverá reembolso."
       - "Airbnb: R$ 665,00 × 4 noites − desconto de longa estadia + taxas = R$ 2.788,70 · rateio entre os 6 = R$ 464,78 por pessoa. Entram no rateio Thaynara, Edilson e Geovanka (R$ 1.394,35); as cotas de Sabrina e Israel ficam por conta do Marcelo."
       - "Voos: **R$ 852,84 por pessoa** (bilhete ida R$ 2.220,84 + volta R$ 2.220,84 + taxas de embarque R$ 302,52 na ida e R$ 372,84 na volta) × 6 = R$ 5.117,04, pago 100% em dinheiro — **0 milhas**. Rateio pelo mesmo critério do Airbnb: Thaynara, Edilson e Geovanka pagam a cota (R$ 2.558,52); Sabrina e Israel por conta do Marcelo."
       - "🤝 **Rateio pago.** A cota individual é R$ 1.317,62 (Airbnb R$ 464,78 + voos R$ 852,84). **Thaynara** pagou R$ 1.318,00 em 07/09 (PIX). **Edilson** pagou R$ 3.300,00 em 03/09 (PIX na conta Santander), cobrindo a própria cota e a da **Geovanka** (R$ 2.635,24) — sobram **R$ 664,76** acima das duas cotas, *a confirmar com o Edilson*."
-      - "Desembolso bruto do Marcelo: R$ 10.369,74 (ingressos + Airbnb + voos)."
+      - "🚗 Carro Movida: **R$ 993,74**, a pagar na retirada — entra no custo do Marcelo (Edilson e Geovanka pagam o carro deles). Combustível e estacionamentos ficam fora desta conta."
+      - "Desembolso bruto do Marcelo: R$ 10.369,74 já pagos (ingressos + Airbnb + voos) + R$ 993,74 do carro na retirada = **R$ 11.363,48**."
   - tipo: checklist
     titulo: "Próximos passos"
     itens:
-      - { texto: "Alugar o carro de 5 lugares para 19–23/11", detalhe: "Edilson e Geovanka alugam o deles. Na volta o voo sai 07:25 de Congonhas — devolver o carro antes do embarque, saindo do Airbnb por volta das 05:00." }
       - { texto: "Levar o comprovante de meia-entrada dos 4 titulares", detalhe: "Marcelo, Sabrina, Israel e Thaynara — a comprovação é obrigatória na entrada." }
       - { texto: "Acompanhar o horário do Eddie Vedder no dia 22/11", detalhe: "Por enquanto só há portões 13h30 e início dos shows 15h30, sujeitos a alteração." }
       - { texto: "Pegar com o anfitrião (Guilherme) o endereço exato, a senha do Wi-Fi e onde estacionar os dois carros" }
