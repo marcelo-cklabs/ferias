@@ -16,3 +16,7 @@ dist/
 
 # Worktrees locais do Claude Code
 .claude/worktrees/
+
+# Recibos e comprovantes em PDF ficam fora do git (repo publico: nomes completos e dados pessoais)
+*.pdf
+*.PDF
