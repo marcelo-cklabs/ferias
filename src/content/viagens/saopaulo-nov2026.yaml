@@ -49,7 +49,15 @@ secoes:
       - data: "Sex 20/11"
         diaSemana: "Livre"
         local: "São Paulo"
-        texto: "Dia livre na cidade. *A detalhar (programação, restaurantes, passeios).*"
+        texto: "Dia livre na cidade. Almoço com o grupo no **Shihoma** ao meio-dia; resto do dia *a detalhar (programação, passeios).*"
+        itens:
+          - hora: "12:00"
+            titulo: "Almoço · Shihoma"
+            tag: "🍝 Almoço"
+            status: "reservada"
+            endereco: "Rua Medeiros de Albuquerque, 431 — Jardim das Bandeiras"
+            enderecoUrl: "https://www.google.com/maps/search/?api=1&query=Rua+Medeiros+de+Albuquerque+431+S%C3%A3o+Paulo"
+            meta: "Mesa para 6 · cód. **1a5ZAyb1** (Get In) · tolerância de 15 min · **confirmar pelo link** que chega por e-mail/SMS perto do horário"
         tags: ["🏨 Airbnb Ibirapuera"]
       - data: "Sáb 21/11"
         diaSemana: "Livre"
@@ -144,5 +152,6 @@ secoes:
     itens:
       - { texto: "Levar o comprovante de meia-entrada dos 4 titulares", detalhe: "Marcelo, Sabrina, Israel e Thaynara — a comprovação é obrigatória na entrada." }
       - { texto: "Acompanhar o horário do Eddie Vedder no dia 22/11", detalhe: "Por enquanto só há portões 13h30 e início dos shows 15h30, sujeitos a alteração." }
+      - { texto: "Confirmar a reserva do Shihoma (sex 20/11, 12:00, mesa para 6)", detalhe: "O link de confirmação do Get In chega por e-mail e SMS perto do horário. Pré-autorização de R$ 50 por pessoa no cartão, cobrada se não comparecer ou cancelar com menos de 6h de antecedência — alteração só direto com o restaurante." }
       - { texto: "Pegar com o anfitrião (Guilherme) o endereço exato, a senha do Wi-Fi e onde estacionar os dois carros" }
       - { texto: "Conferir com o Edilson os R$ 664,76 pagos acima das cotas dele e da Geovanka" }
