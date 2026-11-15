@@ -23,6 +23,7 @@ heroMeta:
   - { rotulo: "DURAÇÃO", valor: "7 NOITES" }
   - { rotulo: "STATUS", valor: "MONITORANDO" }
   - { rotulo: "PASSAGEIROS", valor: "4" }
+  - { rotulo: "CARRO", valor: "MCZ→REC" }
 footer: "Radar ligado · esperando o preço cair 🏖️"
 secoes:
   - tipo: ficha
@@ -35,6 +36,7 @@ secoes:
           - { rotulo: "Datas", valor: "qui 09/09/2027 a qui 16/09/2027" }
           - { rotulo: "Duração", valor: "7 noites" }
           - { rotulo: "Passageiros", valor: "Marcelo, Sabrina, **Matheus** e **Samara** (sobrinhos)" }
+          - { rotulo: "Carro", valor: "Retira em Maceió, devolve em Recife (one-way, como em 2026)" }
       - titulo: "O monitoramento"
         subtitulo: "tarefa agendada diária"
         entradas:
@@ -60,9 +62,8 @@ secoes:
     notas:
       - "**Nada comprado ainda.** O localizador entra aqui na emissão."
       - "A ida direta GYN→MCZ sai às **terças e quintas**. A volta direta REC→GYN sai **todo dia**, às 15h30 (**AD 4682**) ou às 21h15 (**AD 4006**, chega 00h05)."
-      - "Datas fechadas em 15/11/2026. A tarefa agendada ainda busca a âncora antiga, **ter 14/09 → ter 21/09**, e precisa ser avisada da troca."
+      - "Datas fechadas em 15/11/2026. A tarefa agendada já monitora **09 → 16/09**."
       - "Em pontos, a ida é o trecho barato. Em reais é o contrário: a volta por Recife custa cerca de um terço da ida."
-      - "🧒 Sobrinhos menores de idade viajando sem os pais precisam de **autorização de viagem** (voo doméstico: até 16 anos, autorização dos pais com firma reconhecida, ou documento equivalente). Conferir a idade de cada um na compra."
 
   - tipo: gastos
     titulo: "Gastos"
@@ -75,13 +76,11 @@ secoes:
     titulo: "Próximos passos"
     icone: "✅"
     itens:
-      - texto: "🔁 **Avisar a tarefa agendada: 09 → 16/09, 4 passageiros**"
-        detalhe: "Ela ainda busca 14/09 → 21/09 com *passageiros a definir*. Trocar as âncoras e pedir 4 assentos na mesma tarifa. O menor já visto também recomeça nas datas novas"
       - texto: "💳 **Decidir: pontos Azul ou dinheiro**"
         detalhe: "Comprar pontos Azul só compensa com bônus alto (320% com Clube Azul, milheiro ~R$ 16,67). Sem Clube, o custo em pontos fica perto do preço em reais"
-      - texto: "🪪 **Documentos dos sobrinhos**"
-        detalhe: "RG de cada um e, se menores de 16 anos, autorização de viagem dos pais"
-      - texto: "🏨 **Hospedagem e carro**"
-        detalhe: "Na viagem de 2026, o casal ficou no apartamento do pai, na Ponta Verde. Ver se dá para repetir com 4 pessoas. Carro one-way MCZ→REC, como na Localiza em 2026"
+      - texto: "🚗 **Reservar o carro one-way Maceió → Recife**"
+        detalhe: "Retirada no aeroporto de Maceió em 09/09, depois do pouso das 07h45. Devolução no aeroporto de Recife em 16/09, com folga para o voo das 15h30. Carro com porta-malas para 4 adultos e bagagem. Em 2026: Localiza SUV, 8 diárias, **R$ 1.636,49**, limite de **200 km/dia**"
+      - texto: "🏨 **Hospedagem para 4 pessoas, 7 noites**"
+        detalhe: "Em 2026, o casal ficou no apartamento do pai, na Ponta Verde. Ver se dá para repetir com 4 pessoas. Como a volta é por Recife, as últimas noites ficam no caminho (Porto de Galinhas, por exemplo)"
       - texto: "🗺️ **Montar o roteiro de 7 noites**"
         detalhe: "Base: o roteiro de [Nordeste set/2026](/viagens/nordeste-set2026.html) (Maceió, Milagres, Maragogi e Porto de Galinhas)"
