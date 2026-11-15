@@ -33,6 +33,7 @@ secoes:
           - { rotulo: "Datas", valor: "31/05/2027 a 08/06/2027" }
           - { rotulo: "Duração", valor: "8 dias" }
           - { rotulo: "Passageiros", valor: "6 · econômica" }
+          - { rotulo: "Hotel", valor: "Hotel St. James · Midtown · 01 a 07/06" }
       - titulo: "A reserva"
         subtitulo: "Viaje Fácil Smiles"
         entradas:
@@ -77,6 +78,13 @@ secoes:
           - { rotulo: "Ulisses", valor: "**R$ 657,32** · assento 01C (corredor, R$ 104,00)" }
           - { rotulo: "Cada bilhete", valor: "passagem R$ 378,32 + assento + mala despachada R$ 175,00" }
         total: "A receber: R$ 2.631,28"
+      - titulo: "Os quatro · hotel"
+        subtitulo: "Hotel St. James · um quarto por casal · reservado em 14/11/2026"
+        entradas:
+          - { rotulo: "Ana Claudia & Christopher", valor: "**R$ 7.659,44** · quarto King" }
+          - { rotulo: "Luci & Ulisses", valor: "**R$ 7.659,44** · quarto King" }
+          - { rotulo: "Cada quarto", valor: "6 diárias de R$ 1.095,21 + R$ 1.088,18 de impostos" }
+        total: "A receber: R$ 15.318,88"
       - titulo: "Marcelo & Sabrina"
         subtitulo: "as passagens saem do estoque"
         entradas:
@@ -86,8 +94,9 @@ secoes:
           - { rotulo: "Caixa do internacional", valor: "+R$ 1.630,82" }
           - { rotulo: "Ida Goiânia → GRU", valor: "− R$ 1.141,64 · Marcelo R$ 479,32 (sem mala) + Sabrina R$ 662,32" }
           - { rotulo: "Volta GRU → Goiânia", valor: "− R$ 1.177,30 · Marcelo R$ 504,65 (sem mala) + Sabrina R$ 672,65" }
-          - { rotulo: "**Resultado de caixa**", valor: "**− R$ 688,12**" }
-        total: "Desembolso líquido: R$ 688,12"
+          - { rotulo: "Hotel · quarto do casal", valor: "− R$ 7.659,44" }
+          - { rotulo: "**Resultado de caixa**", valor: "**− R$ 8.347,56**" }
+        total: "Desembolso líquido: R$ 8.347,56"
     notas:
       - "💡 **Por que o rateio é limpo:** a tarifa da Smiles é **por pessoa**, não um bolo dividido — 57.000 na ida + 64.500 na volta = **121.500 por viajante**. Cada um consome exatamente a sua."
       - "🏷️ **Por que R$ 15,80 o milheiro:** é o teto de compra de milha Smiles usado no painel e na consultoria, e é um preço verificável na tela da própria Smiles. Não é número inventado — dá para mostrar de onde veio."
@@ -97,8 +106,9 @@ secoes:
       - "✈️ **A volta GRU → Goiânia entra à parte.** Os seis bilhetes saíram em 12/10/2026 no cartão do Marcelo (Mastercard C6 final 5739, em **3×**), e cada um dos quatro devolve **o próprio bilhete**, no valor que está no recibo dele — **R$ 2.703,60** no total."
       - "✅ **Volta quitada de uma vez.** Em 10/11/2026 a Ana Claudia pagou os R$ 2.703,60 dos quatro, inclusive as parcelas que ainda iam vencer. O 3× segue só na fatura do Marcelo (vencimentos esperados em 05/11/2026, 05/12/2026 e 05/01/2027)."
       - "✈️ **A ida Goiânia → GRU segue a mesma regra da volta.** Os seis bilhetes saíram em 14/11/2026 no cartão do Marcelo (Mastercard final 0203, em **3×**), e cada um dos quatro devolve **o próprio bilhete**, no valor do recibo dele — **R$ 2.631,28** no total, ainda a receber."
-      - "🧾 **Somando o internacional, a ida e a volta, a parte dos quatro é R$ 15.159,64** (Ana Claudia R$ 3.798,16 · Christopher R$ 3.783,16 · Luci R$ 3.789,16 · Ulisses R$ 3.789,16). **R$ 4.849,56 já foram pagos** em 10/11/2026, a taxa e a volta, e **faltam R$ 10.310,08**: R$ 2.631,28 da ida GYN→GRU e R$ 7.678,80 das milhas."
-      - "🚩 **Combinar antes o que acontece se alguém desistir.** A tarifa é reembolsável, mas o cancelamento custa **US$ 180 por viajante** e a taxa do Viaje Fácil (R$ 249,90, ou R$ 41,65 por pessoa) **não volta**. Definir agora quem arca com isso evita conversa ruim depois."
+      - "🏨 **O hotel vai por casal.** São três quartos iguais, de **R$ 7.659,44** cada com impostos, pagos de uma vez no cartão do Marcelo (Mastercard final 0203) em 14/11/2026. Os quatro devolvem os dois quartos deles: **R$ 15.318,88**."
+      - "🧾 **Somando o internacional, os domésticos e o hotel, a parte dos quatro é R$ 30.478,52** (Ana Claudia R$ 7.627,88 · Christopher R$ 7.612,88 · Luci R$ 7.618,88 · Ulisses R$ 7.618,88). **R$ 4.849,56 já foram pagos** em 10/11/2026, a taxa e a volta, e **faltam R$ 25.628,96**: R$ 15.318,88 do hotel, R$ 2.631,28 da ida GYN→GRU e R$ 7.678,80 das milhas."
+      - "🚩 **Combinar antes o que acontece se alguém desistir.** A tarifa é reembolsável, mas o cancelamento custa **US$ 180 por viajante** e a taxa do Viaje Fácil (R$ 249,90, ou R$ 41,65 por pessoa) **não volta**. Definir agora quem arca com isso evita conversa ruim depois. O hotel tem regra própria (ver *Hospedagem*)."
   - tipo: checklist
     titulo: "Passageiros · documentos"
     icone: "🛂"
@@ -212,51 +222,70 @@ secoes:
       - { categoria: "Voos", descricao: "GOL GRU→GYN, 08/06 (JTFMFD) · 6 passagens a R$ 391,65 (tarifa R$ 355,90 + embarque R$ 35,75)", status: pago, valor: 2349.90 }
       - { categoria: "Voos", descricao: "GOL GRU→GYN · assentos GOL+ Conforto na fileira 1 · 6 passageiros", status: pago, valor: 656.00 }
       - { categoria: "Voos", descricao: "GOL GRU→GYN · 1ª bagagem despachada · 5 × R$ 175,00 (falta a do Marcelo)", status: pago, valor: 875.00 }
+      - { categoria: "Hospedagem", descricao: "Hotel St. James · 3 quartos King, 6 noites, 01–07/06 (Hoteis.com 72081192290983) · diárias R$ 19.713,78 + impostos R$ 3.264,54", status: pago, valor: 22978.32 }
       - { categoria: "Rateio", descricao: "Reembolso dos 4 · taxa de embarque + Viaje Fácil (4 × R$ 536,49) · pago pela Ana Claudia em 10/11/2026", status: recebido, valor: -2145.96 }
       - { categoria: "Rateio", descricao: "Reembolso dos 4 · volta GRU→GYN, o bilhete de cada um · quitada de uma vez pela Ana Claudia em 10/11/2026", status: recebido, valor: -2703.60 }
+      - { categoria: "Rateio", descricao: "Reembolso dos 4 · hotel, um quarto por casal (2 × R$ 7.659,44)", status: pendente, valor: -15318.88 }
       - { categoria: "Rateio", descricao: "Reembolso dos 4 · ida GYN→GRU, o bilhete de cada um (Ana Claudia R$ 662,32 · Christopher R$ 654,32 · Luci R$ 657,32 · Ulisses R$ 657,32)", status: pendente, valor: -2631.28 }
       - { categoria: "Rateio", descricao: "Reembolso dos 4 · 486.000 milhas a R$ 15,80 · até 15/03/2027", status: pendente, valor: -7678.80 }
     totais:
-      - { rotulo: "Desembolso previsto", valor: 15847.76 }
+      - { rotulo: "Desembolso previsto", valor: 38826.08 }
       - { rotulo: "Já recebido dos 4", valor: -4849.56 }
-      - { rotulo: "A receber dos 4", valor: -10310.08 }
-      - { rotulo: "Resultado de caixa", valor: 688.12 }
+      - { rotulo: "A receber dos 4", valor: -25628.96 }
+      - { rotulo: "Resultado de caixa", valor: 8347.56 }
     notas:
       - "R$ 494,84 por pessoa só de taxa de embarque — preço normal para os EUA. Com o Viaje Fácil rateado, dá R$ 536,49."
       - "✈️ **Volta GRU→GYN: R$ 3.880,90 pagos em 12/10/2026**, no Mastercard C6 final **5739**, em **3×**. Por bilhete: Marcelo **R$ 504,65** (sem mala) · Sabrina **R$ 672,65** · Ana Claudia R$ 679,65 · Christopher R$ 672,65 · Luci R$ 675,65 · Ulisses R$ 675,65. A diferença entre eles é o assento: janela R$ 113,00, corredor R$ 109,00, meio R$ 106,00."
       - "✈️ **Ida GYN→GRU: R$ 3.772,92 pagos em 14/11/2026**, no Mastercard final **0203**, em **3×**. Por bilhete: Marcelo **R$ 479,32** (sem mala) · Sabrina **R$ 662,32** · Ana Claudia R$ 662,32 · Christopher R$ 654,32 · Luci R$ 657,32 · Ulisses R$ 657,32. Assento: janela R$ 109,00, corredor R$ 104,00, meio R$ 101,00."
+      - "🏨 **Hotel: R$ 22.978,32 pagos em 14/11/2026** à Hoteis.com, no Mastercard final **0203**: três quartos de **R$ 7.659,44**. Fica de fora a caução de **US$ 100 por semana**, cobrada pelo hotel no check-in."
       - "🤝 **Recebido em 10/11/2026: R$ 4.849,56**, pagos pela Ana Claudia pelos quatro: a taxa do internacional (R$ 2.145,96) e a volta GRU→GYN inteira (R$ 2.703,60), inclusive as parcelas que ainda iam vencer no cartão. Dos quatro, falta só a parte das milhas, **R$ 7.678,80**."
-      - "👫 **A parte do casal nos domésticos é R$ 2.318,94** (ida R$ 1.141,64 + volta R$ 1.177,30) — é ela que leva o caixa do internacional, +R$ 1.630,82, para um **desembolso líquido de R$ 688,12**. Ainda faltam as malas do Marcelo."
-      - "O **resultado de caixa é o que o casal põe do bolso**: o ressarcimento das 171.112 milhas acumuladas do Marcelo que vão para os outros quatro, menos a parte dele na taxa e os quatro bilhetes domésticos do casal."
+      - "👫 **A parte do casal nos domésticos é R$ 2.318,94** (ida R$ 1.141,64 + volta R$ 1.177,30) — é ela que leva o caixa do internacional, +R$ 1.630,82, para **R$ 688,12** do bolso. Com o quarto do casal no hotel (R$ 7.659,44), o **desembolso líquido vai a R$ 8.347,56**. Ainda faltam as malas do Marcelo."
+      - "O **resultado de caixa é o que o casal põe do bolso**: o ressarcimento das 171.112 milhas acumuladas do Marcelo que vão para os outros quatro, menos a parte dele na taxa, os quatro bilhetes domésticos do casal e o quarto dele no hotel."
       - "A previsão de compra varia entre **R$ 3.848 e R$ 6.298** conforme o canal e a promo. Atualizar esta linha a cada lote comprado."
       - "Ao quitar, voltam **4.000 milhas de bônus** (dobro por ser assinante do Clube). É cashback depois da emissão — **não ajuda a pagar**."
-      - "Ainda fora da conta: as **malas do Marcelo na ida e na volta**, **hospedagem de 8 noites**, seguro viagem e a viagem em si. **Visto não entra: ninguém precisa tirar.**"
+      - "Ainda fora da conta: as **malas do Marcelo na ida e na volta**, a **caução do hotel**, seguro viagem e a viagem em si. **Visto não entra: ninguém precisa tirar.**"
   - tipo: hospedagem
     titulo: "Hospedagem"
     icone: "🏨"
+    cartoes:
+      - titulo: "Hotel St. James · Midtown"
+        subtitulo: "Hoteis.com · 3 quartos Standard, cama King · 6 noites"
+        entradas:
+          - { rotulo: "Check-in", valor: "ter 01/06 · a partir das 15h00" }
+          - { rotulo: "Check-out", valor: "seg 07/06 · até 11h00" }
+          - { rotulo: "Endereço", valor: "[109 W 45th St, New York, NY 10036](https://www.google.com/maps/search/?api=1&query=Hotel%20St.%20James%2C%20109%20W%2045th%20St%2C%20New%20York%2C%20NY%2010036)" }
+          - { rotulo: "Quartos", valor: "um por casal, cada um no nome do titular: **Marcelo** · **Ana Claudia** · **Luci** (2 adultos por quarto)" }
+          - { rotulo: "Itinerário", valor: "72081192290983 · Hoteis.com" }
+          - { rotulo: "Telefone", valor: "+1 212 221-3600" }
+          - { rotulo: "Pagamento", valor: "R$ 22.978,32 · Mastercard final 0203 · pago em 14/11/2026" }
+          - { rotulo: "No hotel", valor: "caução de **US$ 100 por semana** · extras (frigobar, ligações) acertados no check-out" }
+          - { rotulo: "Cancelamento", valor: "grátis até **30/05/2027 às 15h00** (horário de NY), segundo o resumo do e-mail · *ver nota*" }
+        total: "R$ 22.978,32 · R$ 7.659,44 por quarto"
     checklist:
-      - "**Nova York** — 8 noites, 31/05 a 08/06/2027 · *a definir bairro e reservar*"
-    destaque: "Pendência aberta · seis pessoas, oito noites"
+      - "**Nova York** — 6 noites (01–07/06) · ✅ **Hotel St. James** reservado e pago"
+    destaque: "**✅ Hotel reservado e pago.** Três quartos King no Hotel St. James, a uma quadra da Times Square, de 01 a 07/06."
     notas:
-      - "**Seis pessoas muda a conta.** Dois ou três quartos de hotel por 8 noites em Manhattan costumam perder feio para um apartamento inteiro. Vale comparar Airbnb/apart-hotel cedo — imóvel bom para 6 em Nova York esgota com antecedência, e 2027 já está abrindo."
-      - "São três núcleos (Christopher & Ana Claudia · Luci & Ulisses · Marcelo & Sabrina), o que favorece um apartamento de 3 quartos sobre quartos de hotel separados — e facilita o rateio, que aí sai por casal."
-      - "Pontos Esfera dão 5% OFF na Esfera Viagens e o Clube Pro já está pago — vale comparar na hora de reservar. Hotel também costuma acumular direto no programa além do cartão (foi assim que a Localiza rendeu 5.027 milhas de graça em setembro)."
+      - "🛏️ **Por que 6 noites e não 8:** a noite de 31/05 é dentro do avião (GRU 22h30 → JFK 07h10) e a de 07/06 também (JFK 20h20 → GRU 06h55). O hotel cobre de terça 01/06 a segunda 07/06."
+      - "⏰ **Chegada cedo, quarto tarde:** o voo pousa no JFK às **07h10** e o check-in só abre às **15h00**. Pedir ao hotel early check-in ou, no mínimo, guarda-malas, para deixar tudo na recepção e sair andando. Na saída é igual: check-out às **11h00** e voo às **20h20**."
+      - "⚠️ **Conferir a regra de cancelamento.** O resumo do e-mail diz *cancelamento grátis até 30/05/2027 às 15h00*, mas as letras miúdas do mesmo e-mail dizem que cancelar **antes** desse prazo custa a primeira diária com impostos, e **depois**, 100% da reserva. Ver no itinerário completo da Hoteis.com qual vale: a diferença é de ~R$ 1.277 por quarto."
+      - "📍 **Localização:** W 45th St, entre a 6th Ave e a Broadway, a uma quadra da Times Square. O Rockefeller Center (Top of the Rock) fica a ~5 quadras e o Port Authority, de onde sai o ônibus para o Woodbury, a ~10 minutos a pé."
+      - "💳 O e-mail oferece inscrição no programa de fidelidade da Hoteis.com (Hoteis.comCash, 10% de volta a cada 10 diárias). Esta reserva soma 18 diárias (3 quartos × 6 noites), então vale ver se ela ainda credita."
   - tipo: checklist
     titulo: "Próximos passos · em ordem de urgência"
     icone: "✅"
     itens:
       - texto: "🚨 **Conferir o nome da reserva contra o passaporte canadense do Marcelo**"
         detalhe: "Virou o item mais urgente agora que o visto saiu da frente. Grafia diferente entre documento brasileiro e canadense trava o check-in, e corrigir nome em bilhete de milhas é caro. Cinco minutos hoje contra dor de cabeça em maio"
-      - texto: "🤝 **Cobrar da Ana Claudia a ida Goiânia → GRU dos quatro — R$ 2.631,28**"
-        detalhe: "Ana Claudia R$ 662,32 · Christopher R$ 654,32 · Luci R$ 657,32 · Ulisses R$ 657,32, cada um no valor do próprio recibo (reserva QKPAFX, paga em 3× no Mastercard final 0203)"
+      - texto: "🤝 **Cobrar da Ana Claudia a ida Goiânia → GRU e o hotel dos quatro — R$ 17.950,16**"
+        detalhe: "Ida GYN→GRU, **R$ 2.631,28**, cada um no valor do próprio recibo: Ana Claudia R$ 662,32 · Christopher R$ 654,32 · Luci R$ 657,32 · Ulisses R$ 657,32 (reserva QKPAFX). Hotel, **R$ 15.318,88**: os dois quartos deles, de R$ 7.659,44 cada. Os dois saíram no Mastercard final 0203"
       - texto: "🤝 **Fechar com a família a parte das milhas — R$ 7.678,80**"
         detalhe: "A taxa (R$ 2.145,96) e a volta GRU → Goiânia (R$ 2.703,60) já foram pagas pela Ana Claudia, pelos quatro, em 10/11/2026. Faltam as 486.000 milhas a R$ 15,80, até 15/03/2027 ou em duas parcelas casadas com as compras de novembro e março. E combinar o que acontece se alguém desistir"
       - texto: "❓ **Descobrir se a quitação aceita pagamento parcial**"
         detalhe: "Está nos Termos do Viaje Fácil. Se der para abater as 729.000 conforme as milhas chegam, cada compra vira progresso travado e o risco do plano despenca. Se for tudo-ou-nada em 01/04, qualquer atraso de transferência no fim de março derruba a operação"
       - texto: "🧳 **Incluir a mala do Marcelo na ida e na volta**"
         detalhe: "Reservas QKPAFX (GYN→GRU) e JTFMFD (GRU→GYN), tarifa Light sem bagagem — os outros cinco já têm a 1ª mala despachada (R$ 175,00 cada) nas duas. Lançar o valor em *Gastos* quando comprar"
-      - texto: "🏨 **Reservar hospedagem para 6, 8 noites**"
-        detalhe: "Apartamento de 3 quartos contra quartos de hotel. Começar cedo — imóvel bom para grupo esgota"
+      - texto: "🏨 **Acertar com o Hotel St. James a chegada e a saída**"
+        detalhe: "Confirmar a regra de cancelamento (o e-mail se contradiz) e pedir early check-in ou guarda-malas: o voo pousa às 07h10 e o quarto só libera às 15h00. Na saída, check-out às 11h00 e voo às 20h20. Telefone +1 212 221-3600"
       - texto: "💳 **Comprar o lote grande na Black Friday**"
         detalhe: "~157.000 milhas em novembro, metade do que falta. Monitorar a partir de 01/11 e não deixar para a última semana"
       - texto: "🇧🇷 **Checar a validade do RG do Marcelo**"
