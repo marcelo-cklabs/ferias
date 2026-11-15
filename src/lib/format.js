@@ -10,7 +10,8 @@ const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 /**
  * HTML de um [texto](url), ou null quando o destino não é aceito (o trecho
- * segue como texto cru, nunca vira href). Só dois formatos viram link:
+ * segue como texto cru, nunca vira href). `texto` já chega como HTML: escapado
+ * e com a ênfase aplicada. Só dois formatos viram link:
  * - externo `http(s):…` → aba nova;
  * - interno: caminho a partir da raiz do site, SEM o base (`/milhas.html`) →
  *   ganha o base aqui e abre na mesma aba. `//host` e `\` ficam de fora: o
@@ -31,19 +32,42 @@ function linkHtml(texto, url) {
   return `<a href="${BASE}${url}">${texto}</a>`;
 }
 
+const LINK = /\[([^\]]+)\]\(([^)\s]+)\)/g;
+const ITALICO = /\*([^*]+)\*/g;
+/* Conteúdo do negrito: caractere que não é *, ou um *itálico* inteiro. Assim
+   **a *b* c** e **a *b*** (o itálico fecha junto, em ***) viram negrito. As duas
+   alternativas começam por caracteres diferentes: sem backtracking exponencial. */
+const NEGRITO = /\*\*((?:[^*]|\*[^*]+\*)+)\*\*/g;
+
+/** **negrito** (com o *itálico* de dentro já resolvido), depois o *itálico* de fora. */
+function enfase(html) {
+  return html
+    .replace(NEGRITO, (_, dentro) => `<b>${dentro.replace(ITALICO, '<i>$1</i>')}</b>`)
+    .replace(ITALICO, '<i>$1</i>');
+}
+
 /**
- * Markdown inline restrito: escapa HTML, depois [texto](url), **negrito**, *italico*.
- * Regras do link em linkHtml().
+ * Markdown inline restrito: escapa HTML, depois [texto](url), **negrito**, *itálico*.
+ * Ênfase aninhada vale nos dois sentidos: *itálico* dentro de **negrito**
+ * (inclusive fechando em ***) e **negrito** dentro de *itálico*.
+ * Regras do link em linkHtml(). O link pronto entra na ênfase como um marcador
+ * opaco (<0>, <1>…) e só volta no fim: * do href nunca vira tag, e o * do texto
+ * do link não pareia com um * de fora dele (o texto tem a ênfase própria).
  */
 export function mdInline(s) {
   if (s == null) return '';
-  let out = String(s)
+  const html = String(s)
     .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;');
-  out = out.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (trecho, texto, url) => linkHtml(texto, url) ?? trecho);
-  out = out.replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>');
-  out = out.replace(/\*([^*]+)\*/g, '<i>$1</i>');
-  return out;
+  // Depois do escape não sobra "<" cru: os marcadores <0>, <1>… não colidem com o texto.
+  const links = [];
+  const comMarcadores = html.replace(LINK, (trecho, texto, url) => {
+    const a = linkHtml(enfase(texto), url);
+    if (a == null) return trecho;
+    links.push(a);
+    return `<${links.length - 1}>`;
+  });
+  return enfase(comMarcadores).replace(/<(\d+)>/g, (_, i) => links[i]);
 }
 
 /** Inteiro com agrupamento pt-BR: 276117 → "276.117". */
