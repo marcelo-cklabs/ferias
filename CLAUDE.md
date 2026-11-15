@@ -6,13 +6,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Site estático pessoal de planejamento de viagens (Marcelo & Sabrina), construído com **Astro** e publicado no GitHub Pages (`https://marcelo-cklabs.github.io/ferias/`). Todo o conteúdo é em pt-BR. O dono usa o site somente para leitura; todas as edições são feitas via Claude Code — otimize para edições corretas de primeira.
 
-Design "cartão de embarque": home é um mural de tíquetes, cada viagem é um cartão de embarque com carimbos, cupom de gastos e etiquetas de bagagem. Animações são CSS puro e respeitam `prefers-reduced-motion`. **Responsividade é requisito**: qualquer mudança precisa funcionar em 375px, 768px e 1280px sem scroll horizontal.
+Design "cartão de embarque": home é um mural de tíquetes, cada viagem é um cartão de embarque com carimbos, cupom de gastos e etiquetas de bagagem. Animações são CSS puro e respeitam `prefers-reduced-motion`. **Responsividade é requisito**: qualquer mudança precisa funcionar em 375px, 768px e 1280px sem scroll horizontal (`npm run medir` verifica).
 
 ## Comandos
 
 - `npm run dev` — dev server em `http://localhost:4321/ferias/` (note o base path)
 - `npm run build` — build + validação dos dados (zod); DEVE passar antes de qualquer commit
 - `npm run preview` — serve o `dist/` como em produção
+- `npm run medir` — build + mede scroll horizontal (Playwright, `scripts/medir-overflow.cjs`) em todas as páginas a 375/768/1280: no load, no fim das animações de entrada e quadro a quadro, com a página rolada inteira. Sai com erro e aponta o elemento culpado se algo passar do viewport. Rode depois de mexer em layout, CSS ou animação; outras larguras com `npm run medir -- --larguras 320,414`.
 
 ## Arquitetura — o contrato central
 
