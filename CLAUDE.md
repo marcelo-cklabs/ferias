@@ -12,6 +12,7 @@ Design "cartão de embarque": home é um mural de tíquetes, cada viagem é um c
 
 - `npm run dev` — dev server em `http://localhost:4321/ferias/` (note o base path)
 - `npm run build` — build + validação dos dados (zod); DEVE passar antes de qualquer commit
+- `npm test` — tabela de casos do `mdInline` (`test/mdinline.test.js`; o módulo roda via Vite SSR por causa do `import.meta.env.BASE_URL`); DEVE passar antes de commit que mexa em `src/lib/format.js`, e comportamento novo do markdown inline entra como caso na tabela
 - `npm run preview` — serve o `dist/` como em produção
 
 ## Arquitetura — o contrato central
