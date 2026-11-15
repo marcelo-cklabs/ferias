@@ -14,7 +14,8 @@ const { secao, cor } = Astro.props;
       <dl>
         {c.entradas.map((e: any) => (
           <div class="kv">
-            <dt>{e.rotulo}</dt>
+            {/* rotulo tambem passa por mdInline: linha-resumo vem como "**Por pessoa**". */}
+            <dt set:html={mdInline(e.rotulo)} />
             <dd set:html={mdInline(e.valor)} />
           </div>
         ))}

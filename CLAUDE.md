@@ -21,7 +21,8 @@ Design "cartão de embarque": home é um mural de tíquetes, cada viagem é um c
 - Schema dos dados: `src/content.config.ts` (zod). Dado inválido = build falha — esse é o teste do projeto.
 - Seções da página vêm de `secoes[]` no YAML (tipos: `ficha`, `roteiro`, `voos`, `hospedagem`, `gastos`, `checklist`), renderizadas por `src/components/Secoes.astro`.
 - Valores monetários em `gastos` são números (negativo = crédito/reembolso, exibido em verde); a formatação BRL é do componente (`src/lib/format.js`).
-- Campos de texto livre (`texto`, `meta`, `notas`, `descricao`, `valor` de entradas, `destaque`, `detalhe`, itens de checklist) aceitam markdown inline restrito: `**negrito**`, `*itálico*`, `[texto](url)`.
+- Campos de texto livre (`texto`, `meta`, `notas`, `descricao`, `rotulo` e `valor` de entradas de cartão, `destaque`, `detalhe`, itens de checklist) aceitam markdown inline restrito: `**negrito**`, `*itálico*`, `[texto](url)`. Os demais (`titulo`, `subtitulo`, `total`, `heroMeta`, `rotulo` de `totais`) são texto puro: `**` sai literal.
+- Link no markdown inline (`mdInline` em `src/lib/format.js`): externo é `https://…` e abre em aba nova. Interno é o caminho a partir da raiz do site, **sem** o base e **com** `.html`, por exemplo `[painel de milhas](/milhas.html)`, `[NY](/viagens/newyork-2027.html)` ou `[mural](/)`; o helper prefixa `import.meta.env.BASE_URL` e abre na mesma aba. Escrever `/ferias/...` derruba o build, porque sairia `/ferias/ferias/...`. O GitHub Pages também serve a URL sem `.html`, mas `.html` é o arquivo real (`build.format: 'file'`) e não depende de rewrite no servidor. Qualquer outro destino (`javascript:`, relativo, `#ancora`, `//host`) não vira link e fica como texto cru.
 - Tokens de design (cores/fontes/sombras): `src/styles/global.css`. Cor de cada viagem: campo `cor` do YAML.
 - Layout comum (head, favicon, noindex, gate de auth): `src/layouts/Base.astro` — toda página passa por ele.
 - O véu do gate funciona por herança de visibility: NUNCA use `visibility: visible` em componente (vaza conteúdo pré-auth). Os ids `ck-pass`, `ck-form`, `ck-err` e `gate-veil` são reservados do `auth.js`.
@@ -47,7 +48,7 @@ A página `milhas.html` é gerada de `src/content/milhas/painel.yaml` (collectio
 
 ## Deploy
 
-Push na `main` → GitHub Actions (`.github/workflows/pages.yml`) roda `npm ci && npm run build` e publica `dist/` no Pages. Config do Astro: `base: '/ferias'`, `build.format: 'file'` (URLs `viagens/<slug>.html`). Links internos SEMPRE via `import.meta.env.BASE_URL`.
+Push na `main` → GitHub Actions (`.github/workflows/pages.yml`) roda `npm ci && npm run build` e publica `dist/` no Pages. Config do Astro: `base: '/ferias'`, `build.format: 'file'` (URLs `viagens/<slug>.html`). Links internos SEMPRE via `import.meta.env.BASE_URL` e com `.html`: no componente, `${base}/milhas.html`; no YAML, `/milhas.html` (o `mdInline` prefixa o base).
 
 ## Segurança — leia antes de mexer no auth
 

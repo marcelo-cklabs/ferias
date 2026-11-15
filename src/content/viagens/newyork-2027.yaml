@@ -45,8 +45,8 @@ secoes:
       - "⚠️ **A quitação NÃO entra em débito automático** — tem de ser feita na mão, em *Meus Voos → Viaje Fácil → Pagar*."
       - "⏰ Perder o prazo de **01/04/2027** derruba a reserva. Meta interna: **fechar até 15/03** para ter folga."
     notas:
-      - '📊 O financiamento desta viagem é acompanhado **todo dia** no [painel de milhas](/ferias/milhas) — saldos, janelas de bônus e cronograma de compra. A página do Notion **"✈️ Viagens e Milhas"** segue como fonte dos pisos.'
-      - '📋 O plano que originou esta busca está em [/consultoria](/ferias/consultoria) — foi a consultoria do Matheus que apontou abril/maio de 2027 e o Viaje Fácil.'
+      - '📊 O financiamento desta viagem é acompanhado **todo dia** no [painel de milhas](/milhas.html) — saldos, janelas de bônus e cronograma de compra. A página do Notion **"✈️ Viagens e Milhas"** segue como fonte dos pisos.'
+      - '📋 O plano que originou esta busca está em [/consultoria](/consultoria.html) — foi a consultoria do Matheus que apontou abril/maio de 2027 e o Viaje Fácil.'
   - tipo: ficha
     titulo: "Rateio · quem paga o quê"
     icone: "🤝"
