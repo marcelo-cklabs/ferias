@@ -12,7 +12,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <Base title={`${d.titulo} · Férias CK-Labs`}>
   <main class="wrap">
-    <a class="volta mono" href={`${base}/milhas`}>← VOLTAR AO PAINEL DE MILHAS</a>
+    <a class="volta mono" href={`${base}/milhas.html`}>← VOLTAR AO PAINEL DE MILHAS</a>
     <header class="capa">
       <p class="overline mono">CONSULTORIA CONTRATADA · {d.data}</p>
       <h1>{d.titulo}</h1>
@@ -59,8 +59,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   .sub { font-weight: 600; color: var(--muted-3); margin: 0; font-size: clamp(.82rem, 2.5vw, .95rem); }
   .consultor { font-size: .68rem; letter-spacing: .1em; color: var(--muted); margin: 6px 0 0; text-transform: uppercase; }
   .resumo { font-size: .82rem; line-height: 1.6; max-width: 72ch; margin: 14px 0 0; }
-  /* minmax(0, 1fr): com a coluna implícita (auto), as tabelas do Blocos.astro
-     alargavam a página para 409px num viewport de 375. */
+  /* minmax(0, 1fr) e nao a coluna implicita: item de grid tem min-width:auto e a
+     coluna cresceria ate a largura minima do conteudo (tabela larga = scroll
+     horizontal na pagina em 375px). Mesmo motivo em .blocos (Blocos.astro). */
   .secoes { display: grid; grid-template-columns: minmax(0, 1fr); gap: 34px; margin-top: 34px; }
   .conflitos { display: grid; gap: 14px; }
   @media (min-width: 900px) { .conflitos { grid-template-columns: repeat(3, 1fr); } }

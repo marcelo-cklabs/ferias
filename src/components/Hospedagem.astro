@@ -14,7 +14,7 @@ const { secao, cor } = Astro.props;
       {(c.titulo || c.subtitulo) && <h3>{c.titulo} {c.subtitulo && <span class="sub">{c.subtitulo}</span>}</h3>}
       <dl>
         {c.entradas.map((e: any) => (
-          <div class="kv"><dt>{e.rotulo}</dt><dd set:html={mdInline(e.valor)} /></div>
+          <div class="kv"><dt set:html={mdInline(e.rotulo)} /><dd set:html={mdInline(e.valor)} /></div>
         ))}
       </dl>
       {/* total renderiza igual ao Ficha — schema compartilha cartao */}

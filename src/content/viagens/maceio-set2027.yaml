@@ -1,0 +1,86 @@
+# yaml-language-server: $schema=../../../.astro/collections/viagens.schema.json
+titulo: "Maceió com os sobrinhos"
+tituloCard: "Maceió & Recife"
+emoji: "🏖️"
+subtitulo: "Marcelo, Sabrina, Matheus e Samara · ida por Maceió, volta por Recife"
+rota:
+  origem: "GYN"
+  origemNome: "Goiânia"
+  destino: "MCZ"
+  destinoNome: "Maceió"
+  retorno: "REC"
+  retornoNome: "Recife"
+dataInicio: 2027-09-09
+dataCard: "set 2027"
+dataDisplay: "9 a 16 de setembro de 2027"
+pax: "4 passageiros · econômica"
+status: planejando
+statusLabel: "Monitorando passagens"
+cor: "#c2410c"
+resumoCard: "9 a 16/09/2027 · 4 passageiros, diretos Azul GYN→MCZ e REC→GYN. Monitorando o preço."
+bilhete: 7
+heroMeta:
+  - { rotulo: "DURAÇÃO", valor: "7 NOITES" }
+  - { rotulo: "STATUS", valor: "MONITORANDO" }
+  - { rotulo: "PASSAGEIROS", valor: "4" }
+  - { rotulo: "CARRO", valor: "MCZ→REC" }
+footer: "Radar ligado · esperando o preço cair 🏖️"
+secoes:
+  - tipo: ficha
+    titulo: "Visão geral"
+    icone: "🧭"
+    cartoes:
+      - titulo: "A viagem"
+        entradas:
+          - { rotulo: "Destino", valor: "Maceió (AL), volta por Recife (PE)" }
+          - { rotulo: "Datas", valor: "qui 09/09/2027 a qui 16/09/2027" }
+          - { rotulo: "Duração", valor: "7 noites" }
+          - { rotulo: "Passageiros", valor: "Marcelo, Sabrina, **Matheus** e **Samara** (sobrinhos)" }
+          - { rotulo: "Carro", valor: "Retira em Maceió, devolve em Recife (one-way, como em 2026)" }
+      - titulo: "O monitoramento"
+        subtitulo: "tarefa agendada diária"
+        entradas:
+          - { rotulo: "09 → 16/09, por pessoa", valor: "**87.000 pts** (ida 34.000 + volta 53.000) na varredura de 02/11 · em reais ainda não lido" }
+          - { rotulo: "Âncora antiga 14 → 21/09", valor: "**99.000 pts** ou **R$ 3.831,34** em 15/11" }
+          - { rotulo: "Menor já visto", valor: "**82.000 pts** (29/09) ou **R$ 1.661** (05/11, Google Voos), na âncora antiga" }
+          - { rotulo: "Gatilho", valor: "queda ≥ 15% sobre o menor já visto" }
+        total: "4 pessoas em 02/11: 348.000 pts"
+    notas:
+      - "Preços e gatilhos atualizados todo dia no [painel de milhas](/milhas.html) (item *Maceió · set/2027*). Esta página guarda só a foto da decisão."
+      - "Roteiro definido em 29/09/2026: **ida por Maceió e volta por Recife, os dois em voo direto**. O antigo MCZ→GYN (AD 2525) saiu do monitoramento."
+
+  - tipo: voos
+    titulo: "Voos em vista"
+    icone: "✈️"
+    trechos:
+      - titulo: "Ida · quinta, 9 de setembro"
+        pernas:
+          - { de: "GYN", deHora: "05h15", deNome: "Goiânia · 09/09/27", para: "MCZ", paraHora: "07h45", paraNome: "Maceió · 09/09/27", voo: "Azul AD\u00A02524 · direto · a comprar" }
+      - titulo: "Volta · quinta, 16 de setembro"
+        pernas:
+          - { de: "REC", deHora: "15h30", deNome: "Recife · 16/09/27", para: "GYN", paraHora: "18h20", paraNome: "Goiânia · 16/09/27", voo: "Azul AD\u00A04682 · direto · a comprar" }
+    notas:
+      - "**Nada comprado ainda.** O localizador entra aqui na emissão."
+      - "A ida direta GYN→MCZ sai às **terças e quintas**. A volta direta REC→GYN sai **todo dia**, às 15h30 (**AD 4682**) ou às 21h15 (**AD 4006**, chega 00h05)."
+      - "Datas fechadas em 15/11/2026. A tarefa agendada já monitora **09 → 16/09**."
+      - "Em pontos, a ida é o trecho barato. Em reais é o contrário: a volta por Recife custa cerca de um terço da ida."
+
+  - tipo: gastos
+    titulo: "Gastos"
+    icone: "💰"
+    linhas: []
+    notas:
+      - "Nada pago ainda. Lançar aqui passagens, hospedagem e carro à medida que forem fechados."
+
+  - tipo: checklist
+    titulo: "Próximos passos"
+    icone: "✅"
+    itens:
+      - texto: "💳 **Decidir: pontos Azul ou dinheiro**"
+        detalhe: "Comprar pontos Azul só compensa com bônus alto (320% com Clube Azul, milheiro ~R$ 16,67). Sem Clube, o custo em pontos fica perto do preço em reais"
+      - texto: "🚗 **Reservar o carro one-way Maceió → Recife**"
+        detalhe: "Retirada no aeroporto de Maceió em 09/09, depois do pouso das 07h45. Devolução no aeroporto de Recife em 16/09, com folga para o voo das 15h30. Carro com porta-malas para 4 adultos e bagagem. Em 2026: Localiza SUV, 8 diárias, **R$ 1.636,49**, limite de **200 km/dia**"
+      - texto: "🏨 **Hospedagem para 4 pessoas, 7 noites**"
+        detalhe: "Em 2026, o casal ficou no apartamento do pai, na Ponta Verde. Ver se dá para repetir com 4 pessoas. Como a volta é por Recife, as últimas noites ficam no caminho (Porto de Galinhas, por exemplo)"
+      - texto: "🗺️ **Montar o roteiro de 7 noites**"
+        detalhe: "Base: o roteiro de [Nordeste set/2026](/viagens/nordeste-set2026.html) (Maceió, Milagres, Maragogi e Porto de Galinhas)"

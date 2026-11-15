@@ -74,9 +74,8 @@ const normaliza = (linha: string[], n: number) =>
   ))}
 </div>
 <style>
-  /* minmax(0, 1fr), não a coluna implícita (auto): senão o min-content das
-     tabelas sobe pelo grid, alarga a página e o .rolagem nunca chega a rolar.
-     O .secoes da consultoria.astro, que embrulha este grid, tem a mesma regra. */
+  /* minmax(0, 1fr): sem isso a coluna cresce ate a largura minima da tabela e o
+     overflow-x da .rolagem nunca entra em acao (ver .secoes em consultoria.astro). */
   .blocos { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
   .bloco { background: var(--tiquete); border-radius: 12px; box-shadow: var(--sombra-mesa); padding: 16px 20px; }
   .bloco h2 { font-size: 1rem; font-weight: 800; margin: 0 0 8px; display: flex; align-items: baseline; gap: 8px; }
@@ -90,7 +89,9 @@ const normaliza = (linha: string[], n: number) =>
   .rolagem { overflow-x: auto; }
   table { border-collapse: collapse; width: 100%; font-size: .76rem; }
   th, td { text-align: left; padding: 6px 8px; border-bottom: 1px dashed var(--linha); vertical-align: top; }
-  thead th { color: var(--muted); font-weight: 500; font-size: .64rem; letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; }
+  /* Cabecalho pode quebrar linha: com nowrap, "BONUS BOM (MATHEUS)" e afins
+     levavam a tabela a 349px, mais que os 295px uteis do cartao em 375px. */
+  thead th { color: var(--muted); font-weight: 500; font-size: .64rem; letter-spacing: .05em; text-transform: uppercase; }
   tbody th { font-weight: 700; }
   .trechos { display: grid; gap: 12px; }
   @media (min-width: 760px) { .trechos { grid-template-columns: 1fr 1fr; } }

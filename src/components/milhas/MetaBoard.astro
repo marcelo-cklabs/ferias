@@ -16,7 +16,7 @@ const { meta } = Astro.props;
   <p class="situacao" set:html={mdInline(meta.situacao)} />
   {meta.gatilhos.length > 0 && (
     <ul class="gatilhos mono">
-      {meta.gatilhos.map((g) => <li><span aria-hidden="true">📡 </span>{g}</li>)}
+      {meta.gatilhos.map((g) => <li><span aria-hidden="true">📡 </span><span set:html={mdInline(g)} /></li>)}
     </ul>
   )}
 </div>
