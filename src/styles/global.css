@@ -4,6 +4,9 @@
   --ambar: #f59e0b; --muted: #78716c; --muted-2: #a8a29e; --muted-3: #57534e;
   --linha: #e7e5e4; --ok: #15803d; --pend: #b45309;
   --sombra-mesa: 0 5px 0 rgba(28, 25, 23, .12);
+  /* Respiro lateral do .wrap. O .hero (MemberCard) e o .saldos (milhas.astro)
+     sangram exatamente esse valor para recortar animações na borda da tela. */
+  --margem-lateral: 20px;
   /* Tema do painel de milhas (member card escuro/dourado) */
   --card-escuro: #211d1a; --card-escuro-2: #2c2724;
   --dourado: #ca8a04; --gold-fio: #e3b341;
@@ -24,7 +27,7 @@ body {
 a { color: inherit; }
 img, svg { max-width: 100%; }
 .mono { font-family: var(--f-mono); }
-.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px 48px; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 var(--margem-lateral) 48px; }
 :focus-visible { outline: 3px solid var(--ambar); outline-offset: 2px; border-radius: 4px; }
 
 h1, h2, h3 { line-height: 1.15; margin: 0; }

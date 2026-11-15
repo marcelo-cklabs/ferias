@@ -68,7 +68,9 @@
   </div>
 </div>
 <style>
-  .manual { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  /* minmax(0, 1fr): com 1fr (mínimo auto), o min-width da tabela do cupom alarga
+     a coluna em vez de rolar dentro do .rolagem. */
+  .manual { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
   @media (min-width: 900px) {
     .manual { grid-template-columns: 1fr 1fr; }
     .cupom { grid-row: span 2; }

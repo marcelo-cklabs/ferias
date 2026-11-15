@@ -28,7 +28,17 @@ const { atualizadoEm, programas } = Astro.props;
   </div>
 </header>
 <style>
-  .hero { position: relative; max-width: 1080px; margin: 0 auto; padding: 40px 0 8px; }
+  /* O .stamp-verif entra em scale(2.4) e, solto, alarga o documento além do
+     viewport (scroll horizontal no celular), já antes do desbloqueio: pausada,
+     a animação segura o 0% (fill backwards). overflow-x: clip contém sem criar
+     contêiner de rolagem. A sangria de --margem-lateral põe a borda do recorte na
+     borda do .wrap (a da tela, abaixo de 1080px), porque em repouso o carimbo
+     passa 8px da .member e não pode ser cortado. */
+  .hero {
+    position: relative; overflow-x: clip;
+    margin: 0 calc(-1 * var(--margem-lateral));
+    padding: 40px var(--margem-lateral) 8px;
+  }
   .overline { font-size: .68rem; letter-spacing: .3em; color: #92400e; margin: 0; }
   h1 {
     font-family: var(--f-display); font-size: clamp(2rem, 6.5vw, 3.6rem);

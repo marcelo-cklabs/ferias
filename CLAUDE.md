@@ -6,13 +6,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Site estático pessoal de planejamento de viagens (Marcelo & Sabrina), construído com **Astro** e publicado no GitHub Pages (`https://marcelo-cklabs.github.io/ferias/`). Todo o conteúdo é em pt-BR. O dono usa o site somente para leitura; todas as edições são feitas via Claude Code — otimize para edições corretas de primeira.
 
-Design "cartão de embarque": home é um mural de tíquetes, cada viagem é um cartão de embarque com carimbos, cupom de gastos e etiquetas de bagagem. Animações são CSS puro e respeitam `prefers-reduced-motion`. **Responsividade é requisito**: qualquer mudança precisa funcionar em 375px, 768px e 1280px sem scroll horizontal.
+Design "cartão de embarque": home é um mural de tíquetes, cada viagem é um cartão de embarque com carimbos, cupom de gastos e etiquetas de bagagem. Animações são CSS puro e respeitam `prefers-reduced-motion`. **Responsividade é requisito**: qualquer mudança precisa funcionar em 375px, 768px e 1280px sem scroll horizontal (`npm run medir` verifica).
 
 ## Comandos
 
 - `npm run dev` — dev server em `http://localhost:4321/ferias/` (note o base path)
 - `npm run build` — build + validação dos dados (zod); DEVE passar antes de qualquer commit
 - `npm run preview` — serve o `dist/` como em produção
+- `npm run medir` — build + mede scroll horizontal (Playwright, `scripts/medir-overflow.cjs`) em todas as páginas a 375/768/1280: no load, no fim das animações de entrada e quadro a quadro, com a página rolada inteira. Sai com erro e aponta o elemento culpado se algo passar do viewport. Rode depois de mexer em layout, CSS ou animação; outras larguras com `npm run medir -- --larguras 320,414`.
 
 ## Arquitetura — o contrato central
 
@@ -29,6 +30,8 @@ Design "cartão de embarque": home é um mural de tíquetes, cada viagem é um c
 - YAML de viagem NUNCA pode ter as chaves `$schema:` ou `slug:` (o schema strict derruba o build). Validação de editor: comentário `# yaml-language-server` no topo (ver YAMLs existentes).
 - URLs com parênteses em campos de link: escrever `(` `)` como `%28` `%29` (o markdown inline trunca no primeiro parêntese).
 - Animações de entrada novas devem seguir o padrão do gate: `animation-play-state: paused` + regra `:global(html.embarcado) ... { running }` (a classe `embarcado` é adicionada pelo `auth.js` no desbloqueio).
+- Animação de entrada que gira ou escala pode alargar o documento além do viewport (scroll horizontal no celular, já antes do desbloqueio, por causa do fill `backwards`). Recorte num ancestral com `overflow-x: clip` + sangria de `--margem-lateral` (ver `.hero` no `MemberCard.astro` e `.saldos` no `milhas.astro`).
+- Grid de coluna única com tabela (`.rolagem`) dentro usa `grid-template-columns: minmax(0, 1fr)`: a coluna implícita (`auto`) cresce até o min-content da tabela e estoura o viewport em vez de rolar a tabela.
 
 ## Painel de milhas — contrato
 
