@@ -29,6 +29,7 @@ Design "cartão de embarque": home é um mural de tíquetes, cada viagem é um c
 - YAML de viagem NUNCA pode ter as chaves `$schema:` ou `slug:` (o schema strict derruba o build). Validação de editor: comentário `# yaml-language-server` no topo (ver YAMLs existentes).
 - URLs com parênteses em campos de link: escrever `(` `)` como `%28` `%29` (o markdown inline trunca no primeiro parêntese).
 - Animações de entrada novas devem seguir o padrão do gate: `animation-play-state: paused` + regra `:global(html.embarcado) ... { running }` (a classe `embarcado` é adicionada pelo `auth.js` no desbloqueio).
+- `transform` de animação de entrada (escala, rotação) conta na área rolável enquanto roda, inclusive no fill `backwards` antes do gate: perto da borda, ou num card alto, estoura o viewport no mobile mesmo cabendo em repouso. Meça `scrollWidth` frame a frame, não só no fim.
 
 ## Painel de milhas — contrato
 
@@ -39,6 +40,7 @@ A página `milhas.html` é gerada de `src/content/milhas/painel.yaml` (collectio
 - Conteúdo estático da página (Manual de voo, Réguas do Matheus, member card, tier do clube) é hardcoded em `src/pages/milhas.astro` e `src/components/milhas/` — editar lá, não no YAML. As Réguas do Matheus (`ReguasMatheus.astro`) são referência externa do grupo *Milhas com Matheus*: não alimentam os `pisos` do radar.
 - O cartão da home vem de `src/components/milhas/MilhasCard.astro` ("CARTÃO Nº 001", numeração própria — não usa `bilhete` das viagens).
 - Alerta do `painel.yaml` que começa com 🔴 ganha destaque vermelho no radar (convenção de dado, sem mudança de schema — o 🔴 nasce no texto do Notion e sobrevive à reescrita diária da tarefa).
+- O `<main>` da `milhas.astro` fica dentro de `.contencao` (`overflow-x: clip`), que corta na borda do viewport o transbordo das entradas (`stampin` do carimbo, `deal` dos saldos, cujas notas longas deixam o card com até ~1600px de altura). Nessa página, overflow de verdade vira corte em vez de scroll: confira também se algum elemento passa da borda.
 
 ## Checklist de viagem nova
 

@@ -15,46 +15,55 @@ const d = painel.data;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <Base title="Milhas & Pontos · Férias CK-Labs">
-  <main class="wrap">
-    <a class="volta mono" href={`${base}/`}>← VOLTAR AO MURAL</a>
-    <MemberCard atualizadoEm={d.atualizadoEm} programas={d.saldos.length} />
-    <div class="secoes">
-      <section>
-        <SecaoTitulo icone="💳" titulo="Carteira de pontos" />
-        <div class="saldos">
-          {d.saldos.map((s, i) => <SaldoCard s={s} index={i + 1} />)}
-        </div>
-      </section>
-      <section>
-        <SecaoTitulo icone="🎯" titulo="Meta ativa" />
-        <MetaBoard meta={d.meta} />
-      </section>
-      <section>
-        <SecaoTitulo icone="📡" titulo="Radar do dia" />
-        <Radar oportunidades={d.oportunidades} alertas={d.alertas} pisos={d.pisos} atualizadoEm={d.atualizadoEm} />
-      </section>
-      <section>
-        <SecaoTitulo icone="📏" titulo="Réguas do Matheus" />
-        <ReguasMatheus />
-        <a class="atalho" href={`${base}/consultoria.html`}>
-          <span class="ic" aria-hidden="true">📋</span>
-          <span class="txt">
-            <b>Consultoria · Estratégia Marcelo</b>
-            <small>O plano personalizado: cartão, acúmulo, clubes, calendário, preço-teto e a passagem de NY em abr/27</small>
-          </span>
-          <span class="seta mono" aria-hidden="true">→</span>
-        </a>
-      </section>
-      <section>
-        <SecaoTitulo icone="📓" titulo="Manual de voo" />
-        <ManualVoo />
-      </section>
-    </div>
-  </main>
+  <div class="contencao">
+    <main class="wrap">
+      <a class="volta mono" href={`${base}/`}>← VOLTAR AO MURAL</a>
+      <MemberCard atualizadoEm={d.atualizadoEm} programas={d.saldos.length} />
+      <div class="secoes">
+        <section>
+          <SecaoTitulo icone="💳" titulo="Carteira de pontos" />
+          <div class="saldos">
+            {d.saldos.map((s, i) => <SaldoCard s={s} index={i + 1} />)}
+          </div>
+        </section>
+        <section>
+          <SecaoTitulo icone="🎯" titulo="Meta ativa" />
+          <MetaBoard meta={d.meta} />
+        </section>
+        <section>
+          <SecaoTitulo icone="📡" titulo="Radar do dia" />
+          <Radar oportunidades={d.oportunidades} alertas={d.alertas} pisos={d.pisos} atualizadoEm={d.atualizadoEm} />
+        </section>
+        <section>
+          <SecaoTitulo icone="📏" titulo="Réguas do Matheus" />
+          <ReguasMatheus />
+          <a class="atalho" href={`${base}/consultoria.html`}>
+            <span class="ic" aria-hidden="true">📋</span>
+            <span class="txt">
+              <b>Consultoria · Estratégia Marcelo</b>
+              <small>O plano personalizado: cartão, acúmulo, clubes, calendário, preço-teto e a passagem de NY em abr/27</small>
+            </span>
+            <span class="seta mono" aria-hidden="true">→</span>
+          </a>
+        </section>
+        <section>
+          <SecaoTitulo icone="📓" titulo="Manual de voo" />
+          <ManualVoo />
+        </section>
+      </div>
+    </main>
+  </div>
   <footer class="site">ÁREA PRIVADA · CK-LABS · O RADAR VERIFICA GMAIL + WEB TODA MANHÃ <span aria-hidden="true">📡</span></footer>
 </Base>
 
 <style>
+  /* Transform de entrada conta na área rolável enquanto roda, inclusive no fill
+     backwards antes do gate: o stampin do carimbo "Verificado" (scale 2.4) e o deal
+     dos saldo-card (rotate 5deg em cards de até ~1600px de altura) estouravam 375/768px.
+     A div tem a largura toda, então o corte cai na borda do viewport e nada visível muda.
+     clip, não hidden: não cria contêiner de rolagem e deixa o overflow-y visible.
+     Custo: aqui, conteúdo que estoura de verdade é cortado em vez de rolar. */
+  .contencao { overflow-x: clip; }
   .volta {
     display: inline-block; font-size: .7rem; letter-spacing: .12em;
     color: #92400e; text-decoration: none; padding: 22px 0 0; min-height: 44px;
