@@ -1,0 +1,60 @@
+# yaml-language-server: $schema=../../../.astro/collections/viagens.schema.json
+titulo: "Itália com o pai e a mãe"
+tituloCard: "Itália"
+emoji: "🇮🇹"
+subtitulo: "Marcelo, Sabrina, Marcio e Wania · tudo a planejar"
+rota:
+  origem: "GRU"
+  origemNome: "São Paulo"
+  destino: "FCO"
+  destinoNome: "Roma"
+dataInicio: 2028-09-01
+dataCard: "set 2028"
+dataDisplay: "1ª quinzena de setembro de 2028 · datas a fechar"
+pax: "4 passageiros · econômica"
+status: planejando
+statusLabel: "Ideia · a planejar"
+cor: "#166534"
+resumoCard: "Com o pai e a mãe, 1ª quinzena de setembro/2028. Rota, datas e milhas a definir."
+bilhete: 8
+heroMeta:
+  - { rotulo: "QUANDO", valor: "SET 2028" }
+  - { rotulo: "STATUS", valor: "A PLANEJAR" }
+  - { rotulo: "PASSAGEIROS", valor: "4" }
+footer: "Primeiro bilhete do mural para 2028 🇮🇹"
+secoes:
+  - tipo: ficha
+    titulo: "Visão geral"
+    icone: "🧭"
+    cartoes:
+      - titulo: "A viagem"
+        entradas:
+          - { rotulo: "Destino", valor: "Itália · cidades a definir" }
+          - { rotulo: "Quando", valor: "1ª quinzena de setembro de 2028" }
+          - { rotulo: "Passageiros", valor: "Marcelo, Sabrina, **Marcio** (pai) e **Wania** (mãe)" }
+          - { rotulo: "Situação", valor: "Nada reservado" }
+    notas:
+      - "A rota **GRU → Roma (FCO)** é só um marcador: o aeroporto de saída, a porta de entrada (Roma, Milão) e o retorno ainda vão ser escolhidos."
+      - "A emissão em milhas costuma abrir cerca de **330 a 360 dias antes**, ou seja, a partir de setembro/2027, logo depois da viagem de Maceió."
+
+  - tipo: gastos
+    titulo: "Gastos"
+    icone: "💰"
+    linhas: []
+    notas:
+      - "Nada pago ainda."
+
+  - tipo: checklist
+    titulo: "Próximos passos"
+    icone: "✅"
+    itens:
+      - texto: "🗺️ **Escolher as cidades e a duração**"
+        detalhe: "Define a porta de entrada e de saída: open-jaw, entrando por uma cidade e voltando por outra, costuma economizar trem"
+      - texto: "✈️ **Plano de milhas para 4 passageiros**"
+        detalhe: "Começa depois da quitação de NY (01/04/2027). Avaliar programa e cabine e incluir a viagem no [painel de milhas](/milhas.html) quando a meta for definida"
+      - texto: "🛂 **Passaportes dos quatro**"
+        detalhe: "Conferir a validade de cada um. Para entrar no Espaço Schengen, o passaporte precisa valer pelo menos 3 meses depois da volta"
+      - texto: "🇪🇺 **ETIAS**"
+        detalhe: "Brasileiros vão precisar da autorização eletrônica ETIAS para entrar na Europa. Checar o status perto da data"
+      - texto: "🩺 **Seguro-viagem**"
+        detalhe: "Obrigatório no Espaço Schengen (cobertura mínima de €30.000). Atenção à faixa etária dos pais na cotação"
