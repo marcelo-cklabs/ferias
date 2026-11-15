@@ -60,7 +60,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     color: #92400e; text-decoration: none; padding: 22px 0 0; min-height: 44px;
   }
   .volta:hover { text-decoration: underline; }
-  .secoes { display: grid; gap: 34px; margin-top: 34px; }
+  /* minmax(0, 1fr) e não a coluna implícita: item de grid tem min-width: auto e a
+     coluna cresceria até o maior min-content das seções (tabela do Manual de voo,
+     cards do Radar), alargando todas além da tela abaixo de ~358px. Mesmo motivo
+     em .manual (ManualVoo.astro) e no .secoes da consultoria. */
+  .secoes { display: grid; grid-template-columns: minmax(0, 1fr); gap: 34px; margin-top: 34px; }
   .saldos { display: grid; grid-template-columns: 1fr; gap: 14px; }
   @media (min-width: 640px) { .saldos { grid-template-columns: 1fr 1fr; } }
   @media (min-width: 1024px) { .saldos { grid-template-columns: repeat(3, 1fr); } }
