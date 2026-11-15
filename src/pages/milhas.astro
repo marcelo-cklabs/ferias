@@ -60,8 +60,16 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     color: #92400e; text-decoration: none; padding: 22px 0 0; min-height: 44px;
   }
   .volta:hover { text-decoration: underline; }
-  .secoes { display: grid; gap: 34px; margin-top: 34px; }
-  .saldos { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  /* minmax(0, 1fr): com a coluna implícita (auto), o min-content da tabela do
+     cupom (ManualVoo) alargava todas as seções além do .wrap. */
+  .secoes { display: grid; grid-template-columns: minmax(0, 1fr); gap: 34px; margin-top: 34px; }
+  /* O `deal` gira 5° em torno do centro; num cartão alto (a nota da Smiles
+     cresce todo dia) os cantos varrem dezenas de px além da tela. Mesmo recorte
+     com sangria do .hero (MemberCard.astro). */
+  .saldos {
+    display: grid; grid-template-columns: 1fr; gap: 14px;
+    overflow-x: clip; margin-inline: calc(-1 * var(--margem-lateral)); padding-inline: var(--margem-lateral);
+  }
   @media (min-width: 640px) { .saldos { grid-template-columns: 1fr 1fr; } }
   @media (min-width: 1024px) { .saldos { grid-template-columns: repeat(3, 1fr); } }
   /* Atalho para a consultoria: mora sob as reguas porque e a mesma fonte

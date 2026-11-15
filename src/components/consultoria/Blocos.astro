@@ -74,7 +74,10 @@ const normaliza = (linha: string[], n: number) =>
   ))}
 </div>
 <style>
-  .blocos { display: grid; gap: 16px; }
+  /* minmax(0, 1fr), não a coluna implícita (auto): senão o min-content das
+     tabelas sobe pelo grid, alarga a página e o .rolagem nunca chega a rolar.
+     O .secoes da consultoria.astro, que embrulha este grid, tem a mesma regra. */
+  .blocos { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
   .bloco { background: var(--tiquete); border-radius: 12px; box-shadow: var(--sombra-mesa); padding: 16px 20px; }
   .bloco h2 { font-size: 1rem; font-weight: 800; margin: 0 0 8px; display: flex; align-items: baseline; gap: 8px; }
   .ic { font-size: .9rem; }

@@ -28,6 +28,8 @@ Design "cartão de embarque": home é um mural de tíquetes, cada viagem é um c
 - YAML de viagem NUNCA pode ter as chaves `$schema:` ou `slug:` (o schema strict derruba o build). Validação de editor: comentário `# yaml-language-server` no topo (ver YAMLs existentes).
 - URLs com parênteses em campos de link: escrever `(` `)` como `%28` `%29` (o markdown inline trunca no primeiro parêntese).
 - Animações de entrada novas devem seguir o padrão do gate: `animation-play-state: paused` + regra `:global(html.embarcado) ... { running }` (a classe `embarcado` é adicionada pelo `auth.js` no desbloqueio).
+- Animação de entrada que gira ou escala pode alargar o documento além do viewport (scroll horizontal no celular, já antes do desbloqueio, por causa do fill `backwards`). Recorte num ancestral com `overflow-x: clip` + sangria de `--margem-lateral` (ver `.hero` no `MemberCard.astro` e `.saldos` no `milhas.astro`).
+- Grid de coluna única com tabela (`.rolagem`) dentro usa `grid-template-columns: minmax(0, 1fr)`: a coluna implícita (`auto`) cresce até o min-content da tabela e estoura o viewport em vez de rolar a tabela.
 
 ## Painel de milhas — contrato
 
