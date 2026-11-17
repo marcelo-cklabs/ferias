@@ -15,7 +15,7 @@ pax: "6 passageiros · econômica"
 status: confirmada
 statusLabel: "Emitida · APZHTN"
 cor: "#1d4ed8"
-resumoCard: "Emitida! 6 passageiros, direto GRU–JFK, quitada em 17/11/2026. Faltam a ida GYN→GRU e a hospedagem."
+resumoCard: "Emitida! 6 passageiros, direto GRU–JFK, quitada em 17/11/2026. Trechos GOL de/para Goiânia comprados. Falta a hospedagem."
 bilhete: 6
 heroMeta:
   - { rotulo: "DURAÇÃO", valor: "8 DIAS" }
@@ -83,7 +83,7 @@ secoes:
       - "🗓️ **Quando cobrar.** Os R$ 2.145,96 da taxa, que saíram do bolso do Marcelo em 25/09, **já foram pagos** em 10/11/2026, junto com a volta. Faltam os R$ 7.678,80 das milhas. O prazo combinado era **15/03/2027**, mas as milhas foram compradas e o bilhete foi emitido em 17/11/2026: cobrar agora evita o Marcelo financiar os R$ 5.627,16 do Pix por quatro meses."
       - "✈️ **A volta GRU → Goiânia entra à parte.** Os seis bilhetes saíram em 12/10/2026 no cartão do Marcelo (Mastercard C6 final 5739, em **3×**), e cada um dos quatro devolve **o próprio bilhete**, no valor que está no recibo dele — **R$ 2.703,60** no total."
       - "✅ **Volta quitada de uma vez.** Em 10/11/2026 a Ana Claudia pagou os R$ 2.703,60 dos quatro, inclusive as parcelas que ainda iam vencer. O 3× segue só na fatura do Marcelo (vencimentos esperados em 05/11/2026, 05/12/2026 e 05/01/2027)."
-      - "🧾 **Somando o internacional e a volta, a parte dos quatro é R$ 12.528,36** (Ana Claudia R$ 3.135,84 · Christopher R$ 3.128,84 · Luci R$ 3.131,84 · Ulisses R$ 3.131,84). **R$ 4.849,56 já foram pagos** em 10/11/2026, a taxa e a volta, e **faltam R$ 7.678,80**, das milhas. A ida GYN→GRU ainda vai entrar nessa conta."
+      - "🧾 **Somando o internacional e a volta, a parte dos quatro é R$ 12.528,36** (Ana Claudia R$ 3.135,84 · Christopher R$ 3.128,84 · Luci R$ 3.131,84 · Ulisses R$ 3.131,84). **R$ 4.849,56 já foram pagos** em 10/11/2026, a taxa e a volta, e **faltam R$ 7.678,80**, das milhas. A ida GYN→GRU (QKPAFX) ainda vai entrar nessa conta."
       - "🚩 **Combinar o que acontece se alguém desistir.** A tarifa é reembolsável, mas o cancelamento custa **US$ 180 por viajante** e a taxa do Viaje Fácil (R$ 249,90, ou R$ 41,65 por pessoa) **não volta**. Definir agora quem arca com isso evita conversa ruim depois."
   - tipo: checklist
     titulo: "Passageiros · documentos"
@@ -100,17 +100,27 @@ secoes:
       - texto: "✅ **Sabrina**"
         detalhe: "passaporte válido · visto americano válido"
       - texto: "🇨🇦 **Marcelo** — passaporte canadense válido, **e não precisa de visto**"
-        detalhe: 'O Departamento de Estado americano é explícito: *"Citizens of Canada and Bermuda generally do not require visas to enter the United States, for visit, tourism and temporary business travel purposes."* E o Canadá **não** faz parte do Visa Waiver Program, então também **não usa ESTA** — a isenção é por via própria. Entra com o passaporte canadense e pronto. Restam as duas tarefas abaixo, que são de documento, não de fila'
+        detalhe: 'O Departamento de Estado americano é explícito: *"Citizens of Canada and Bermuda generally do not require visas to enter the United States, for visit, tourism and temporary business travel purposes."* E o Canadá **não** faz parte do Visa Waiver Program, então também **não usa ESTA** — a isenção é por via própria. Entra com o passaporte canadense e pronto. Restam as tarefas abaixo, que são de documento, não de fila'
+      - texto: "🚨 **Cadastrar passaporte e visto dos 6 no site da American Airlines**"
+        detalhe: "Reserva **APZHTN**, na área de viagens do aa.com (dados de viagem segura / passaporte). Para cada viajante: número, país emissor e validade do passaporte, e o visto americano (número e validade). **Marcelo** entra com o passaporte **canadense** e sem visto. A AA manda esses dados à imigração americana antes do voo (APIS), e sem eles o check-in online não libera"
       - texto: "🚨 **Conferir o nome da reserva contra o passaporte CANADENSE**"
         detalhe: "A reserva já foi emitida com um nome. Se ele estiver na grafia do documento brasileiro e o embarque for no canadense, dá problema no check-in. Passaporte canadense costuma perder acentos e pode trazer a ordem dos nomes diferente. **Conferir letra por letra agora** — correção de nome em bilhete Smiles é cara quando é possível"
       - texto: "🇧🇷 **RG válido para sair e voltar ao Brasil**"
         detalhe: "A Polícia Federal permite que brasileiro com dupla nacionalidade use o passaporte estrangeiro para sair e entrar no Brasil, **mas exige RG válido junto**, com foto que identifique a pessoa. **CNH e carteira profissional não servem.** Sem o RG, a imigração registra a pessoa como estrangeira e ela cai na Lei de Migração, sujeita a prazo de permanência e multa — no próprio país"
-      - texto: "📇 **Atualizar o número do documento na reserva Smiles**"
-        detalhe: "A companhia manda os dados de passageiro para a imigração americana antes do voo (APIS). O documento informado tem de ser o mesmo com que se embarca — no caso do Marcelo, o canadense"
   - tipo: voos
     titulo: "Voos"
     icone: "✈️"
     trechos:
+      - titulo: "Ida a São Paulo · segunda, 31 de maio"
+        localizador: "QKPAFX"
+        pernas:
+          - de: "GYN"
+            deHora: "11h10"
+            deNome: "Goiânia · 31/05/27"
+            para: "GRU"
+            paraHora: "12h50"
+            paraNome: "São Paulo · 31/05/27"
+            voo: "GOL G3\u00A01491 · direto · 1h40 · Terminal 2"
       - titulo: "Ida · segunda, 31 de maio"
         localizador: "APZHTN"
         pernas:
@@ -144,11 +154,13 @@ secoes:
     notas:
       - "**Tarifa reembolsável.** Cancelamento custa **US$ 180 por viajante**, cobrado no ato — e as milhas voltam. *(Vale para o internacional.)*"
       - "A ida tem tag **Outlet Clube Smiles**; a volta não. Conferir as regras de remarcação da tarifa outlet antes de mexer em qualquer data."
-      - "🚨 **O bilhete parte de GUARULHOS e o grupo está em Goiânia.** A volta **GRU→GYN já está comprada** para os seis (GOL, 08/06 às 17h00). Falta a ida **GYN→GRU** — 6 pernas que ainda não existem em lugar nenhum. Decidir entre milhas (doméstico sai barato e o LATAM Pass tem 19.478 paradas), dinheiro ou estrada. **Chegar em GRU na véspera, não no dia:** pousar no mesmo dia do voo das 22h30 com seis pessoas é risco desnecessário, e um atraso no doméstico custaria as 729.000."
+      - "🎫 **GYN→GRU emitido em 14/11/2026** · GOL **G3 1491**, reserva **QKPAFX**, Boeing 737-800, tarifa **Light**, econômica. Assentos na **fileira 1**: Ana Claudia 01A · Christopher 01B · Ulisses 01C · Luci 01D · Marcelo 01E · Sabrina 01F."
+      - "⏱️ **Folga na ida:** pouso em Guarulhos às **12h50** e o voo da AA sai às **22h30** — cerca de 9h40. São **bilhetes separados**: se o doméstico atrasar ou cancelar, a AA não tem obrigação de remarcar. A folga cobre atraso comum. Num cancelamento, a saída é o próximo voo da GOL no mesmo dia."
+      - "🧳 **Tarifa Light na ida também:** sem mala despachada incluída, para nenhum dos seis."
       - "🎫 **GRU→GYN emitido em 12/10/2026** · GOL **G3 1492**, Boeing 737-800, tarifa **Light**, econômica. Assentos **GOL+ Conforto na fileira 1**: Ana Claudia 01A · Christopher 01B · Luci 01C · Ulisses 01D · Sabrina 01E · Marcelo 01F."
-      - "🧳 **A tarifa Light não leva mala despachada.** Foi comprada a 1ª bagagem (R$ 175,00) para cinco dos seis — **falta a do Marcelo**, que vai incluir na reserva."
+      - "🧳 **A tarifa Light da volta não leva mala despachada.** Foi comprada a 1ª bagagem (R$ 175,00) para cinco dos seis — **falta a do Marcelo**, que vai incluir na reserva."
       - "⏱️ **Folga na volta:** o voo de Nova York pousa em Guarulhos às **06h55** e o da GOL sai às **17h00** do **Terminal 2** — cerca de 10 horas. São **bilhetes separados**: passar pela imigração, retirar as malas e despachar de novo no balcão da GOL."
-      - "A volta GRU→GYN entra no rateio **à parte**: cada um dos quatro devolve o próprio bilhete, e a parte deles **já foi paga** em 10/11/2026 (ver *Rateio*). A ida, quando for comprada, entra também."
+      - "A volta GRU→GYN entra no rateio **à parte**: cada um dos quatro devolve o próprio bilhete, e a parte deles **já foi paga** em 10/11/2026 (ver *Rateio*). A ida (QKPAFX) entra do mesmo jeito, assim que o valor for lançado em *Gastos*."
       - "🎫 **Internacional emitido em 17/11/2026** · localizador **APZHTN**, American Airlines, ida e volta diretas."
   - tipo: ficha
     titulo: "Como as 729.000 milhas foram pagas"
@@ -198,7 +210,7 @@ secoes:
       - "Esse desembolso pequeno já desconta o ressarcimento das **126.000 milhas acumuladas do Marcelo** que vão para os outros quatro. Em troca, o casal viaja usando 243.000 milhas do estoque."
       - "💸 **Compra de milhas fechada em R$ 5.627,16** (Pix, 17/11/2026), dentro da faixa prevista de R$ 3.848 a R$ 6.298. Não há mais lote a comprar para esta viagem."
       - "Na quitação voltaram **4.000 milhas de bônus**, que ficaram no saldo Smiles."
-      - "Ainda fora da conta: **a ida GYN→GRU dos seis**, a **mala do Marcelo na volta**, **hospedagem de 8 noites**, seguro viagem e a viagem em si. **Visto não entra: ninguém precisa tirar.**"
+      - "Ainda fora da conta: **o valor da ida GYN→GRU (QKPAFX)**, as **malas da ida**, a **mala do Marcelo na volta**, **hospedagem de 8 noites**, seguro viagem e a viagem em si. **Visto não entra: ninguém precisa tirar.**"
   - tipo: hospedagem
     titulo: "Hospedagem"
     icone: "🏨"
@@ -213,12 +225,14 @@ secoes:
     titulo: "Próximos passos · em ordem de urgência"
     icone: "✅"
     itens:
+      - texto: "🛂 **Cadastrar passaporte e visto dos 6 no site da AA (APZHTN)**"
+        detalhe: "Agora que o bilhete foi emitido, a documentação vai direto na reserva da American Airlines. Marcelo com o passaporte canadense, sem visto. Ver *Passageiros · documentos*"
       - texto: "🚨 **Conferir o nome da reserva contra o passaporte canadense do Marcelo**"
-        detalhe: "Virou o item mais urgente agora que o bilhete foi emitido. Grafia diferente entre documento brasileiro e canadense trava o check-in, e corrigir nome em bilhete de milhas é caro. Cinco minutos hoje contra dor de cabeça em maio"
+        detalhe: "Fazer junto com o cadastro na AA. Grafia diferente entre documento brasileiro e canadense trava o check-in, e corrigir nome em bilhete de milhas é caro. Cinco minutos hoje contra dor de cabeça em maio"
       - texto: "🤝 **Cobrar da família a parte das milhas — R$ 7.678,80**"
         detalhe: "A taxa (R$ 2.145,96) e a volta GRU → Goiânia (R$ 2.703,60) já foram pagas pela Ana Claudia, pelos quatro, em 10/11/2026. Faltam as 486.000 milhas a R$ 15,80. O bilhete foi emitido em 17/11, então não há motivo para esperar 15/03/2027. E combinar o que acontece se alguém desistir"
-      - texto: "✈️ **Resolver a ida GYN → GRU para seis pessoas**"
-        detalhe: "A volta já está comprada (GOL, 08/06 às 17h00). Faltam os 6 trechos de ida. Milhas, dinheiro ou estrada — e chegar em Guarulhos na véspera, não no dia do voo das 22h30"
+      - texto: "💵 **Lançar o valor da ida GYN → GRU (QKPAFX) e cobrar a parte dos quatro**"
+        detalhe: "Comprada em 14/11/2026, GOL G3 1491 às 11h10, seis passageiros. O e-mail de confirmação não traz o preço"
       - texto: "🧳 **Incluir a mala do Marcelo na volta GRU → Goiânia**"
         detalhe: "Reserva JTFMFD, tarifa Light sem bagagem — os outros cinco já têm a 1ª mala despachada (R$ 175,00 cada). Lançar o valor em *Gastos* quando comprar"
       - texto: "🏨 **Reservar hospedagem para 6, 8 noites**"
