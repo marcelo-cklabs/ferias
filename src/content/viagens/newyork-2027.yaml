@@ -101,6 +101,68 @@ secoes:
       - "✅ **Volta quitada de uma vez.** Em 10/11/2026 a Ana Claudia pagou os R$ 2.703,60 dos quatro, inclusive as parcelas que ainda iam vencer. O 3× segue só na fatura do Marcelo (vencimentos esperados em 05/11/2026, 05/12/2026 e 05/01/2027)."
       - "🧾 **Somando o internacional e a volta, a parte dos quatro é R$ 12.528,36** (Ana Claudia R$ 3.135,84 · Christopher R$ 3.128,84 · Luci R$ 3.131,84 · Ulisses R$ 3.131,84). **R$ 4.850,00 foram pagos** em 10/11/2026, a taxa e a volta (R$ 0,44 a mais, arredondado), e **R$ 5.627,16** em 17/11/2026, das milhas. Somando hotel e ida GYN→GRU, **faltam R$ 19.885,36**."
       - "🚩 **Combinar antes o que acontece se alguém desistir.** A tarifa é reembolsável, mas o cancelamento custa **US$ 180 por viajante** e a taxa do Viaje Fácil (R$ 249,90, ou R$ 41,65 por pessoa) **não volta**. Definir agora quem arca com isso evita conversa ruim depois."
+  - tipo: resumo
+    titulo: "Resumo para a Ana Claudia"
+    icone: "🤝"
+    cabecalho: "NOVA YORK · 31/05 – 08/06/2027"
+    etiqueta: "RATEIO"
+    manchete: "Custo da viagem para os 4"
+    subtitulo: "Ana Claudia, Christopher, Luci e Ulisses"
+    blocos:
+      - titulo: "O QUE A VIAGEM CUSTOU"
+        linhas:
+          - { quando: "25/09", titulo: "Taxas do voo internacional", detalhe: "Taxa de embarque + Viaje Fácil · 4 × R$ 536,49", valor: 2145.96 }
+          - { quando: "12/10", titulo: "Volta Guarulhos → Goiânia", detalhe: "GOL, 08/06 · passagem, assento e mala de cada um", valor: 2703.60 }
+          - { quando: "14/11", titulo: "Hotel St. James · 2 quartos", detalhe: "Midtown, 01 a 07/06 · 6 diárias · 2 × R$ 7.659,44", valor: 15318.88 }
+          - { quando: "14/11", titulo: "Ida Goiânia → Guarulhos", detalhe: "GOL, 31/05 · assento GOL+ Conforto e mala · 4 × R$ 628,82", valor: 2515.28 }
+          - { quando: "17/11", titulo: "Passagens Guarulhos ⇄ Nova York", detalhe: "American, direto · 486.000 milhas (121.500 cada) a R$ 15,80 o milheiro", valor: 7678.80 }
+        total: { rotulo: "Total", valor: 30362.52 }
+      - titulo: "O QUE JÁ FOI PAGO"
+        linhas:
+          - { quando: "10/11/2026", titulo: "Pix · taxas + volta", detalhe: "R$ 2.145,96 das taxas + R$ 2.703,60 da volta (R$ 0,44 a mais, abatido no saldo)", valor: 4850.00, pago: true }
+          - { quando: "17/11/2026", titulo: "Pix · milhas", detalhe: "Valor da compra das milhas, no dia da emissão", valor: 5627.16, pago: true }
+        total: { rotulo: "Já pago", valor: 10477.16, estilo: pago }
+      - titulo: "O QUE FALTA"
+        linhas:
+          - { quando: "Hotel", titulo: "Hotel St. James · 2 quartos", valor: 15318.88 }
+          - { quando: "Ida", titulo: "Goiânia → Guarulhos", valor: 2515.28 }
+          - { quando: "Milhas", titulo: "Saldo das passagens internacionais", detalhe: "R$ 7.678,80 − R$ 5.627,16 − R$ 0,44", valor: 2051.20 }
+        total: { rotulo: "Falta pagar", valor: 19885.36, estilo: grande }
+      - titulo: "COMO PAGAR"
+        opcoes:
+          - { rotulo: "OPÇÃO 1", titulo: "De uma vez, por Pix", valor: "R$ 19.885,36" }
+          - { rotulo: "OPÇÃO 2", titulo: "Em 4 parcelas, até março", valor: "4 × R$ 4.971,34" }
+        linhas:
+          - { quando: "até 05/12/2026", titulo: "1ª parcela", detalhe: "parcela 1 de 4", valor: 4971.34 }
+          - { quando: "até 05/01/2027", titulo: "2ª parcela", detalhe: "parcela 2 de 4", valor: 4971.34 }
+          - { quando: "até 05/02/2027", titulo: "3ª parcela", detalhe: "parcela 3 de 4", valor: 4971.34 }
+          - { quando: "até 05/03/2027", titulo: "4ª parcela", detalhe: "parcela 4 de 4", valor: 4971.34 }
+    nota: "A viagem toda saiu por **R$ 30.362,52** para os 4, cerca de **R$ 7.590,63 por pessoa** com voos, hotel e trechos de Goiânia. Só as passagens para Nova York em dinheiro custariam de R$ 4.000 a R$ 6.000 por pessoa. As parcelas vão até 05/03/2027, dentro do prazo de 15/03 combinado para as milhas, e dá para adiantar qualquer uma."
+    rodape: "VALORES ATÉ 18/11/2026"
+
+  - tipo: resumo
+    titulo: "Resumo do casal"
+    icone: "👫"
+    cabecalho: "NOVA YORK · 31/05 – 08/06/2027"
+    etiqueta: "RESUMO"
+    manchete: "Custo da viagem para nós dois"
+    subtitulo: "Marcelo e Sabrina"
+    blocos:
+      - titulo: "O QUE A VIAGEM CUSTOU"
+        linhas:
+          - { quando: "17/11", titulo: "Passagens Guarulhos ⇄ Nova York", detalhe: "American, direto · 243.000 milhas (121.500 cada), do saldo Smiles que já existia", valor: 0 }
+          - { quando: "25/09", titulo: "Taxas do voo internacional", detalhe: "Taxa de embarque + Viaje Fácil · 2 × R$ 536,49", valor: 1072.98 }
+          - { quando: "12/10", titulo: "Volta Guarulhos → Goiânia", detalhe: "GOL, 08/06 · Marcelo R$ 504,65 (ainda sem mala) + Sabrina R$ 672,65", valor: 1177.30 }
+          - { quando: "14/11", titulo: "Hotel St. James · 1 quarto", detalhe: "Midtown, 01 a 07/06 · 6 diárias", valor: 7659.44 }
+          - { quando: "14/11", titulo: "Ida Goiânia → Guarulhos", detalhe: "GOL, 31/05 · assento GOL+ Conforto e mala · 2 × R$ 628,82", valor: 1257.64 }
+        total: { rotulo: "Total em dinheiro", valor: 11167.36 }
+      - titulo: "O QUE VOLTA PARA NÓS"
+        linhas:
+          - { quando: "Milhas", titulo: "Sobra do que os 4 pagam pelas milhas", detalhe: "Eles pagam R$ 7.678,80 (486.000 a R$ 15,80); a compra das milhas custou R$ 5.627,16", valor: 2051.64, pago: true }
+        total: { rotulo: "Custo líquido do casal", valor: 9115.72, estilo: grande }
+    nota: "**R$ 4.557,86 por pessoa**, com voos, hotel e trechos de Goiânia. As 243.000 milhas não custaram dinheiro novo, mas não eram de graça: compradas a R$ 15,80 o milheiro valeriam **~R$ 3.839**. A Hoteis.com ainda devolve **R$ 1.971,38** em crédito pela reserva do hotel."
+    rodape: "VALORES ATÉ 18/11/2026 · FALTA A MALA DO MARCELO NA VOLTA"
+
   - tipo: checklist
     titulo: "Passageiros · documentos"
     icone: "🛂"
@@ -247,6 +309,9 @@ secoes:
           - { rotulo: "Itinerário Hoteis.com", valor: "72081192290983" }
           - { rotulo: "Total", valor: "**R$ 22.978,32** · pago em 14/11/2026" }
         total: "6 diárias · R$ 7.659,44 por quarto"
+    mapas:
+      - titulo: "Hotel St. James · 109 W. 45th St."
+        src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5135.408190698356!2d-73.98583422272151!3d40.757244634841534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2585562d63e6b%3A0x9cc68708cc6510e5!2sHotel%20St.%20James!5e1!3m2!1sen!2sbr!4v1795020299736!5m2!1sen!2sbr"
     checklist:
       - "✅ **Nova York** — Hotel St. James, 01/06 a 07/06/2027, 3 quartos · reservado na Hoteis.com"
     destaque: "Reservado · seis pessoas, três quartos, seis diárias"
