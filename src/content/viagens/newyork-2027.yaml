@@ -2,7 +2,7 @@
 titulo: "Nova York"
 tituloCard: "Nova York"
 emoji: "🗽"
-subtitulo: "A grande viagem de 2027 · reservada"
+subtitulo: "A grande viagem de 2027 · emitida"
 rota:
   origem: "GRU"
   origemNome: "São Paulo"
@@ -12,16 +12,16 @@ dataInicio: 2027-05-31
 dataCard: "mai/jun 2027"
 dataDisplay: "31 de maio a 8 de junho de 2027"
 pax: "6 passageiros · econômica"
-status: planejando
-statusLabel: "Reservado · a quitar"
+status: confirmada
+statusLabel: "Emitido · hotel reservado"
 cor: "#1d4ed8"
-resumoCard: "Reservado! 6 passageiros, direto GRU–JFK. Faltam 421.709 milhas até 01/04/27."
+resumoCard: "Emitido! 6 passageiros, direto GRU–JFK, Hotel St. James em Midtown."
 bilhete: 6
 heroMeta:
   - { rotulo: "DURAÇÃO", valor: "8 DIAS" }
-  - { rotulo: "STATUS", valor: "RESERVADO" }
-  - { rotulo: "QUITAR ATÉ", valor: "01/04/2027" }
-footer: "Assento travado · agora é juntar milha 🗽"
+  - { rotulo: "STATUS", valor: "EMITIDO" }
+  - { rotulo: "LOCALIZADOR", valor: "APZHTN" }
+footer: "Bilhete emitido, hotel reservado · agora é roteiro 🗽"
 secoes:
   - tipo: ficha
     titulo: "Visão geral"
@@ -31,21 +31,29 @@ secoes:
         entradas:
           - { rotulo: "Destino", valor: "Nova York (EUA)" }
           - { rotulo: "Datas", valor: "31/05/2027 a 08/06/2027" }
-          - { rotulo: "Duração", valor: "8 dias" }
+          - { rotulo: "Duração", valor: "8 dias · 6 noites de hotel" }
           - { rotulo: "Passageiros", valor: "6 · econômica" }
       - titulo: "A reserva"
-        subtitulo: "Viaje Fácil Smiles"
+        subtitulo: "Viaje Fácil Smiles · quitado"
         entradas:
-          - { rotulo: "Situação", valor: "**Assentos travados**, bilhete não emitido" }
+          - { rotulo: "Situação", valor: "**Bilhete emitido** em 17/11/2026" }
+          - { rotulo: "Localizador", valor: "Smiles **APZHTN** · American **KZTKJR**" }
           - { rotulo: "Custo em milhas", valor: "**729.000** (121.500 por viajante)" }
-          - { rotulo: "Prazo de emissão", valor: "**01/04/2027** · 60 dias antes do voo" }
-          - { rotulo: "Já pago", valor: "R$ 3.218,94" }
-        total: "Faltam 421.709 milhas"
+          - { rotulo: "Taxas pagas", valor: "R$ 3.218,94" }
+          - { rotulo: "Bagagem", valor: "1ª mala gratuita para os 6, ida e volta" }
+        total: "Quitado em 17/11/2026"
+      - titulo: "O hotel"
+        subtitulo: "Hotel St. James · Midtown"
+        entradas:
+          - { rotulo: "Estadia", valor: "01/06 a 07/06/2027 · 6 diárias" }
+          - { rotulo: "Quartos", valor: "3 · Standard, uma cama King" }
+          - { rotulo: "Total pago", valor: "**R$ 22.978,32** em 14/11/2026" }
+        total: "Reservado na Hoteis.com"
     lembretes:
-      - "⚠️ **A quitação NÃO entra em débito automático** — tem de ser feita na mão, em *Meus Voos → Viaje Fácil → Pagar*."
-      - "⏰ Perder o prazo de **01/04/2027** derruba a reserva. Meta interna: **fechar até 15/03** para ter folga."
+      - "💺 **Assentos e check-in são com a American**, não com a Smiles — usar o localizador **KZTKJR** no site ou app da American."
+      - "🧳 **O hotel não cobre as duas pontas:** o voo pousa às 07h10 de 01/06 e o check-in é às 15h; no dia 07/06 o check-out é às 11h e o voo sai às 20h20. Pedir ao hotel para guardar as malas nas duas pontas."
     notas:
-      - '📊 O financiamento desta viagem é acompanhado **todo dia** no [painel de milhas](/milhas.html) — saldos, janelas de bônus e cronograma de compra. A página do Notion **"✈️ Viagens e Milhas"** segue como fonte dos pisos.'
+      - '📊 O financiamento das milhas foi acompanhado no [painel de milhas](/milhas.html), que segue com os saldos e a próxima viagem. A página do Notion **"✈️ Viagens e Milhas"** segue como fonte dos pisos.'
       - '📋 O plano que originou esta busca está em [/consultoria](/consultoria.html) — foi a consultoria do Matheus que apontou abril/maio de 2027 e o Viaje Fácil.'
   - tipo: ficha
     titulo: "Rateio · quem paga o quê"
@@ -58,7 +66,8 @@ secoes:
           - { rotulo: "Milhas a R$ 15,80/milheiro", valor: "R$ 7.678,80 · a receber até 15/03/2027" }
           - { rotulo: "Taxa de embarque + Viaje Fácil", valor: "R$ 2.145,96 (4 × R$ 536,49) · ✅ **paga em 10/11/2026**" }
           - { rotulo: "**Por pessoa**", valor: "**R$ 2.456,19**" }
-        total: "A receber: R$ 7.678,80"
+          - { rotulo: "Hotel · 2 dos 3 quartos", valor: "R$ 15.318,88 (R$ 7.659,44 por casal) · *a combinar*" }
+        total: "A receber: R$ 7.678,80 + hotel"
       - titulo: "Os quatro · volta GRU → Goiânia"
         subtitulo: "GOL, 08/06 · cada um paga o próprio bilhete · quitada em 10/11/2026"
         entradas:
@@ -76,17 +85,18 @@ secoes:
           - { rotulo: "Taxa de embarque + Viaje Fácil", valor: "R$ 1.072,98 (2 × R$ 536,49)" }
           - { rotulo: "Caixa do internacional", valor: "+R$ 1.630,82" }
           - { rotulo: "Volta GRU → Goiânia", valor: "− R$ 1.177,30 · Marcelo R$ 504,65 (ainda sem mala) + Sabrina R$ 672,65" }
-          - { rotulo: "**Resultado de caixa**", valor: "**+R$ 453,52**" }
-        total: "Sem desembolso líquido"
+          - { rotulo: "Hotel · 1 dos 3 quartos", valor: "− R$ 7.659,44" }
+        total: "Ver Gastos"
     notas:
       - "💡 **Por que o rateio é limpo:** a tarifa da Smiles é **por pessoa**, não um bolo dividido — 57.000 na ida + 64.500 na volta = **121.500 por viajante**. Cada um consome exatamente a sua."
       - "🏷️ **Por que R$ 15,80 o milheiro:** é o teto de compra de milha Smiles usado no painel e na consultoria, e é um preço verificável na tela da própria Smiles. Não é número inventado — dá para mostrar de onde veio."
       - "⚖️ **O que esse preço ressarce.** Das 729.000, **414.112 são milhas acumuladas do Marcelo** (estoque de 307.291 + Clube + Livelo + C6) e 314.888 serão compradas. Marcelo e Sabrina consomem 243.000, então **171.112 milhas acumuladas vão para os outros quatro** — e é por elas que o caixa **do internacional** fecha em +R$ 1.630,82, depois de descontada a parte dele na taxa. Se as milhas fossem cobradas só pelo desembolso, ele doaria essas 171.112 (~R$ 2.700) e ainda pagaria a própria taxa."
       - "📉 **Referência para eles:** GRU–JFK ida e volta em econômica, direto, custa **R$ 4.000 a 6.000 por pessoa** em dinheiro. R$ 2.456,19 é aproximadamente metade."
       - "🗓️ **Quando cobrar.** Os R$ 2.145,96 da taxa, que saíram do bolso do Marcelo em 25/09, **já foram pagos** em 10/11/2026, junto com a volta. Faltam os R$ 7.678,80 das milhas, que podem vir até **15/03/2027**, ou em duas parcelas casadas com as compras de novembro e março, o que evita o Marcelo financiar ~R$ 5.000 por seis meses."
+      - "🏨 **Hotel: R$ 22.978,32 pagos em 14/11/2026** na conta Hoteis.com do Marcelo, três quartos iguais (um em nome de cada casal). Dividido por quarto dá **R$ 7.659,44 por casal** — a parte dos quatro seria **R$ 15.318,88**. Ainda não combinado com eles."
       - "✈️ **A volta GRU → Goiânia entra à parte.** Os seis bilhetes saíram em 12/10/2026 no cartão do Marcelo (Mastercard C6 final 5739, em **3×**), e cada um dos quatro devolve **o próprio bilhete**, no valor que está no recibo dele — **R$ 2.703,60** no total."
       - "✅ **Volta quitada de uma vez.** Em 10/11/2026 a Ana Claudia pagou os R$ 2.703,60 dos quatro, inclusive as parcelas que ainda iam vencer. O 3× segue só na fatura do Marcelo (vencimentos esperados em 05/11/2026, 05/12/2026 e 05/01/2027)."
-      - "🧾 **Somando o internacional e a volta, a parte dos quatro é R$ 12.528,36** (Ana Claudia R$ 3.135,84 · Christopher R$ 3.128,84 · Luci R$ 3.131,84 · Ulisses R$ 3.131,84). **R$ 4.849,56 já foram pagos** em 10/11/2026, a taxa e a volta, e **faltam R$ 7.678,80**, das milhas. A ida GYN→GRU ainda vai entrar nessa conta."
+      - "🧾 **Somando o internacional e a volta, a parte dos quatro é R$ 12.528,36** (Ana Claudia R$ 3.135,84 · Christopher R$ 3.128,84 · Luci R$ 3.131,84 · Ulisses R$ 3.131,84). **R$ 4.849,56 já foram pagos** em 10/11/2026, a taxa e a volta, e **faltam R$ 7.678,80**, das milhas. Ainda entram nessa conta a **ida GYN→GRU** (comprada em 14/11, valor a lançar) e o **hotel**."
       - "🚩 **Combinar antes o que acontece se alguém desistir.** A tarifa é reembolsável, mas o cancelamento custa **US$ 180 por viajante** e a taxa do Viaje Fácil (R$ 249,90, ou R$ 41,65 por pessoa) **não volta**. Definir agora quem arca com isso evita conversa ruim depois."
   - tipo: checklist
     titulo: "Passageiros · documentos"
@@ -105,16 +115,27 @@ secoes:
       - texto: "🇨🇦 **Marcelo** — passaporte canadense válido, **e não precisa de visto**"
         detalhe: 'O Departamento de Estado americano é explícito: *"Citizens of Canada and Bermuda generally do not require visas to enter the United States, for visit, tourism and temporary business travel purposes."* E o Canadá **não** faz parte do Visa Waiver Program, então também **não usa ESTA** — a isenção é por via própria. Entra com o passaporte canadense e pronto. Restam as duas tarefas abaixo, que são de documento, não de fila'
       - texto: "🚨 **Conferir o nome da reserva contra o passaporte CANADENSE**"
-        detalhe: "A reserva já foi emitida com um nome. Se ele estiver na grafia do documento brasileiro e o embarque for no canadense, dá problema no check-in. Passaporte canadense costuma perder acentos e pode trazer a ordem dos nomes diferente. **Conferir letra por letra agora** — correção de nome em bilhete Smiles é cara quando é possível"
+        detalhe: "O bilhete saiu como **Marcelo Jose Amador Filho** (e-mail da Smiles de 17/11). Se a grafia do passaporte canadense for diferente, dá problema no check-in. Passaporte canadense costuma perder acentos e pode trazer a ordem dos nomes diferente. **Conferir letra por letra agora** — correção de nome em bilhete Smiles é cara quando é possível"
       - texto: "🇧🇷 **RG válido para sair e voltar ao Brasil**"
         detalhe: "A Polícia Federal permite que brasileiro com dupla nacionalidade use o passaporte estrangeiro para sair e entrar no Brasil, **mas exige RG válido junto**, com foto que identifique a pessoa. **CNH e carteira profissional não servem.** Sem o RG, a imigração registra a pessoa como estrangeira e ela cai na Lei de Migração, sujeita a prazo de permanência e multa — no próprio país"
-      - texto: "📇 **Atualizar o número do documento na reserva Smiles**"
+      - texto: "📇 **Atualizar o número do documento na reserva da American (KZTKJR)**"
         detalhe: "A companhia manda os dados de passageiro para a imigração americana antes do voo (APIS). O documento informado tem de ser o mesmo com que se embarca — no caso do Marcelo, o canadense"
   - tipo: voos
     titulo: "Voos"
     icone: "✈️"
     trechos:
+      - titulo: "Ida a Guarulhos · segunda, 31 de maio"
+        localizador: "QKPAFX"
+        pernas:
+          - de: "GYN"
+            deHora: "11h10"
+            deNome: "Goiânia · 31/05/27"
+            para: "GRU"
+            paraHora: "12h50"
+            paraNome: "São Paulo · 31/05/27"
+            voo: "GOL G3 1491 · direto · 1h40 · tarifa Light"
       - titulo: "Ida · segunda, 31 de maio"
+        localizador: "KZTKJR"
         pernas:
           - de: "GRU"
             deHora: "22h30"
@@ -122,8 +143,9 @@ secoes:
             para: "JFK"
             paraHora: "07h10"
             paraNome: "Nova York · 01/06/27"
-            voo: "American Airlines · direto · 9h40 · 57.000 milhas/viajante"
+            voo: "American AA 950 · direto · 9h40 · 57.000 milhas/viajante"
       - titulo: "Volta · segunda, 7 de junho"
+        localizador: "KZTKJR"
         pernas:
           - de: "JFK"
             deHora: "20h20"
@@ -131,7 +153,7 @@ secoes:
             para: "GRU"
             paraHora: "06h55"
             paraNome: "São Paulo · 08/06/27"
-            voo: "American Airlines · direto · 9h35 · 64.500 milhas/viajante"
+            voo: "American AA 951 · direto · 9h35 · 64.500 milhas/viajante"
       - titulo: "Volta a Goiânia · terça, 8 de junho"
         localizador: "JTFMFD"
         pernas:
@@ -141,103 +163,113 @@ secoes:
             para: "GYN"
             paraHora: "18h40"
             paraNome: "Goiânia · 08/06/27"
-            voo: "GOL G3\u00A01492 · direto · 1h40 · R$\u00A0391,65/viajante"
+            voo: "GOL G3 1492 · direto · 1h40 · R$ 391,65/viajante"
     notas:
+      - "🎫 **Internacional emitido em 17/11/2026** (e-mail da Smiles *Confira os detalhes do seu bilhete*): localizador Smiles **APZHTN**, American **KZTKJR**, voos **AA 950** e **AA 951**, cabine econômica, **tarifa reembolsável**, **1ª mala gratuita** para os seis nos dois sentidos. Assento e check-in são feitos direto com a American."
       - "**Tarifa reembolsável.** Cancelamento custa **US$ 180 por viajante**, cobrado no ato — e as milhas voltam. *(Vale para o internacional.)*"
       - "A ida tem tag **Outlet Clube Smiles**; a volta não. Conferir as regras de remarcação da tarifa outlet antes de mexer em qualquer data."
-      - "🚨 **O bilhete parte de GUARULHOS e o grupo está em Goiânia.** A volta **GRU→GYN já está comprada** para os seis (GOL, 08/06 às 17h00). Falta a ida **GYN→GRU** — 6 pernas que ainda não existem em lugar nenhum. Decidir entre milhas (doméstico sai barato e o LATAM Pass tem 19.478 paradas), dinheiro ou estrada. **Chegar em GRU na véspera, não no dia:** pousar no mesmo dia do voo das 22h30 com seis pessoas é risco desnecessário, e um atraso no doméstico custaria as 729.000."
+      - "✅ **Ida GYN→GRU comprada em 14/11/2026** · GOL **G3 1491**, reserva **QKPAFX**, tarifa Light, classe O, assentos **01A a 01F** para os seis, paga no cartão de crédito (e-mail da GOL de 14/11). Pousa em Guarulhos às 12h50: **9h40 de folga** antes do American das 22h30. O e-mail não traz o valor — lançar em *Gastos* quando conferir a fatura."
       - "🎫 **GRU→GYN emitido em 12/10/2026** · GOL **G3 1492**, Boeing 737-800, tarifa **Light**, econômica. Assentos **GOL+ Conforto na fileira 1**: Ana Claudia 01A · Christopher 01B · Luci 01C · Ulisses 01D · Sabrina 01E · Marcelo 01F."
-      - "🧳 **A tarifa Light não leva mala despachada.** Foi comprada a 1ª bagagem (R$ 175,00) para cinco dos seis — **falta a do Marcelo**, que vai incluir na reserva."
+      - "🧳 **A tarifa Light da GOL não leva mala despachada.** Na volta GRU→GYN foi comprada a 1ª bagagem (R$ 175,00) para cinco dos seis — **falta a do Marcelo**. Na ida GYN→GRU (também Light) conferir se as malas já foram incluídas: a franquia gratuita do American não vale para o bilhete da GOL."
       - "⏱️ **Folga na volta:** o voo de Nova York pousa em Guarulhos às **06h55** e o da GOL sai às **17h00** do **Terminal 2** — cerca de 10 horas. São **bilhetes separados**: passar pela imigração, retirar as malas e despachar de novo no balcão da GOL."
-      - "A volta GRU→GYN entra no rateio **à parte**: cada um dos quatro devolve o próprio bilhete, e a parte deles **já foi paga** em 10/11/2026 (ver *Rateio*). A ida, quando for comprada, entra também."
-      - "O internacional segue **sem localizador** — ele só nasce quando o bilhete for emitido. Inserir aqui na quitação."
+      - "Os dois trechos domésticos entram no rateio **à parte**: cada um dos quatro devolve o próprio bilhete. A volta **já foi paga** em 10/11/2026 (ver *Rateio*); a ida entra quando o valor for lançado."
   - tipo: ficha
-    titulo: "Como as 729.000 milhas serão pagas"
+    titulo: "Como as 729.000 milhas foram pagas"
     icone: "💰"
     cartoes:
-      - titulo: "De onde vem"
+      - titulo: "De onde veio"
+        subtitulo: "quitação em 17/11/2026"
         entradas:
-          - { rotulo: "Saldo Smiles hoje", valor: "307.291" }
-          - { rotulo: "Clube Smiles · 2.000/mês até março", valor: "12.000" }
-          - { rotulo: "Livelo · 33.234 pts numa janela de 80%", valor: "59.821" }
-          - { rotulo: "C6 Átomos · 5.381 hoje + ~5.000/mês, 1:1", valor: "~35.000" }
-          - { rotulo: "**A comprar**", valor: "**314.888**" }
-        total: "729.000 milhas"
-      - titulo: "Quanto custa comprar"
-        subtitulo: "as 314.888 que faltam"
+          - { rotulo: "Saldo Smiles em 15/11", valor: "372.167" }
+          - { rotulo: "Livelo Pontos + Dinheiro · 200.000 a 80%", valor: "+360.000" }
+          - { rotulo: "C6 Átomos · 5.004 a 80%", valor: "+9.007" }
+          - { rotulo: "Saldo antes da quitação", valor: "741.174" }
+          - { rotulo: "Quitação do Viaje Fácil", valor: "−729.000" }
+          - { rotulo: "Bônus da quitação", valor: "+4.000" }
+        total: "Saldo final: 16.174 milhas"
+      - titulo: "Quanto custou comprar"
+        subtitulo: "Orange Friday bancos→Smiles 80%, 17/11/2026"
         entradas:
-          - { rotulo: "Rota Livelo · ponto a R$ 22 + 80%", valor: "R$ 3.848 · *melhor caso*" }
-          - { rotulo: "Smiles direto · teto de R$ 15,80", valor: "R$ 4.975 · **base**" }
-          - { rotulo: "Sem promo · R$ 20 o milheiro", valor: "R$ 6.298 · *pior caso*" }
-        total: "Desembolso bruto: ~R$ 8.194"
+          - { rotulo: "Livelo Pontos + Dinheiro", valor: "2.000 pts + **R$ 5.627,16** no Pix" }
+          - { rotulo: "Milhas recebidas", valor: "360.000" }
+          - { rotulo: "Milheiro efetivo", valor: "**R$ 15,63**" }
+          - { rotulo: "Previsão base era", valor: "R$ 4.975 (314.888 a R$ 15,80)" }
+        total: "Desembolso: R$ 5.627,16"
     notas:
-      - "🔑 **A rota mais barata provavelmente não é comprar milha Smiles.** O equilíbrio está em **Livelo a R$ 28,44 o milheiro**: abaixo disso, comprar ponto Livelo e transferir a 80% sai mais em conta. **A ordem importa** — comprar o ponto primeiro e esperar a janela de transferência, nunca o contrário. Ponto Livelo não expira com o Clube ativo."
-      - "🟢 **O C6 é a rota mais eficiente que existe aqui:** átomo vai **1:1 para a Smiles**, sem intermediário, e o Clube dá teto de 80% em janela de bônus. No ritmo atual (~5.000/mês em três cartões) são ~35.000 milhas até março — **ou até 63.000 se pegar uma janela de 80%**. Conferir campanha antes de transferir, e transferir perto de março para não perder acúmulo."
-      - "🗓️ **Três janelas, com peso diferente:** **novembro (Black Friday) — 50%**, ~157.000 milhas · **janeiro** (aniversário GOL/Smiles, Caixa, Clube Azul) — 30%, ~94.000 · **março** (mês do consumidor) — 20%, ~63.000 e o ajuste final. Não há razão para adiar: o prazo é fixo e as milhas não expiram com Clube ativo."
-      - "💡 **Comprar mais barato que R$ 15,80 vira margem do Marcelo, não desconto do rateio** — o preço combinado com os outros quatro está travado. Pelo cenário da rota Livelo, a diferença chega a ~R$ 1.100."
-      - "⚠️ **Manter o Clube Livelo ativo até a última transferência** — é ele que impede os pontos de expirar. Isso reverte a inclinação de não renovar em 02/06/2027."
-      - "⛔ Gasto que cai na **Esfera/Santander vai para Iberia e LATAM, nunca para a Smiles**. Para esta viagem só duas rotas servem: **C6 Átomos** e **Livelo**."
+      - "✅ **Quitado de uma vez, no mesmo dia da compra.** A Orange Friday de 17/11 pagou 80% sobre Livelo e C6, e base e bônus caíram juntos — o plano de três janelas (novembro, janeiro, março) virou uma janela só, quatro meses e meio antes do prazo de 01/04/2027."
+      - "💡 **Comprar mais barato que R$ 15,80 vira margem do Marcelo, não desconto do rateio** — o preço combinado com os outros quatro está travado. Saiu a R$ 15,63."
+      - "📈 **Por que custou mais que a previsão base:** a previsão comprava 314.888 milhas e contava com o Clube Smiles e o C6 rendendo até março. Quitando em novembro, foram compradas 360.000 de uma vez — por isso sobraram 16.174 no saldo."
   - tipo: gastos
     titulo: "Gastos"
     icone: "🧾"
     linhas:
       - { categoria: "Voos", descricao: "Taxa de embarque · 6 passageiros", status: pago, valor: 2969.04 }
       - { categoria: "Voos", descricao: "Viaje Fácil · taxa de serviço (não reembolsável)", status: pago, valor: 249.90 }
-      - { categoria: "Voos", descricao: "Compra de milhas para quitação · previsão base", status: pendente, valor: 4975.00 }
+      - { categoria: "Voos", descricao: "Compra de milhas para quitação · Livelo Pontos + Dinheiro, 360.000 milhas a R$ 15,63 (17/11/2026)", status: pago, valor: 5627.16 }
       - { categoria: "Voos", descricao: "GOL GRU→GYN, 08/06 (JTFMFD) · 6 passagens a R$ 391,65 (tarifa R$ 355,90 + embarque R$ 35,75)", status: pago, valor: 2349.90 }
       - { categoria: "Voos", descricao: "GOL GRU→GYN · assentos GOL+ Conforto na fileira 1 · 6 passageiros", status: pago, valor: 656.00 }
       - { categoria: "Voos", descricao: "GOL GRU→GYN · 1ª bagagem despachada · 5 × R$ 175,00 (falta a do Marcelo)", status: pago, valor: 875.00 }
+      - { categoria: "Hospedagem", descricao: "Hotel St. James · 3 quartos, 6 diárias (01 a 07/06) · Hoteis.com, pago em 14/11/2026", status: pago, valor: 22978.32 }
       - { categoria: "Rateio", descricao: "Reembolso dos 4 · taxa de embarque + Viaje Fácil (4 × R$ 536,49) · pago pela Ana Claudia em 10/11/2026", status: recebido, valor: -2145.96 }
       - { categoria: "Rateio", descricao: "Reembolso dos 4 · volta GRU→GYN, o bilhete de cada um · quitada de uma vez pela Ana Claudia em 10/11/2026", status: recebido, valor: -2703.60 }
       - { categoria: "Rateio", descricao: "Reembolso dos 4 · 486.000 milhas a R$ 15,80 · até 15/03/2027", status: pendente, valor: -7678.80 }
+      - { categoria: "Rateio", descricao: "Reembolso dos 4 · hotel, 2 dos 3 quartos (R$ 7.659,44 por casal) · a combinar", status: pendente, valor: -15318.88 }
     totais:
-      - { rotulo: "Desembolso previsto", valor: 12074.84 }
+      - { rotulo: "Desembolso", valor: 35705.32 }
       - { rotulo: "Já recebido dos 4", valor: -4849.56 }
-      - { rotulo: "A receber dos 4", valor: -7678.80 }
-      - { rotulo: "Resultado de caixa", valor: -453.52 }
+      - { rotulo: "A receber dos 4", valor: -22997.68 }
+      - { rotulo: "Resultado de caixa", valor: 7858.08 }
     notas:
       - "R$ 494,84 por pessoa só de taxa de embarque — preço normal para os EUA. Com o Viaje Fácil rateado, dá R$ 536,49."
       - "✈️ **Volta GRU→GYN: R$ 3.880,90 pagos em 12/10/2026**, no Mastercard C6 final **5739**, em **3×**. Por bilhete: Marcelo **R$ 504,65** (sem mala) · Sabrina **R$ 672,65** · Ana Claudia R$ 679,65 · Christopher R$ 672,65 · Luci R$ 675,65 · Ulisses R$ 675,65. A diferença entre eles é o assento: janela R$ 113,00, corredor R$ 109,00, meio R$ 106,00."
-      - "🤝 **Recebido em 10/11/2026: R$ 4.849,56**, pagos pela Ana Claudia pelos quatro: a taxa do internacional (R$ 2.145,96) e a volta GRU→GYN inteira (R$ 2.703,60), inclusive as parcelas que ainda iam vencer no cartão. Dos quatro, falta só a parte das milhas, **R$ 7.678,80**."
-      - "👫 **A parte do casal na volta é R$ 1.177,30** — é ela que leva o resultado de caixa de R$ 1.630,82 para **R$ 453,52**. Ainda falta somar a mala do Marcelo."
-      - "O **resultado de caixa positivo não é lucro**: é o ressarcimento das 171.112 milhas acumuladas do Marcelo que vão para os outros quatro, menos a parte dele na taxa e os dois bilhetes do casal na volta GRU→GYN."
-      - "A previsão de compra varia entre **R$ 3.848 e R$ 6.298** conforme o canal e a promo. Atualizar esta linha a cada lote comprado."
-      - "Ao quitar, voltam **4.000 milhas de bônus** (dobro por ser assinante do Clube). É cashback depois da emissão — **não ajuda a pagar**."
-      - "Ainda fora da conta: **a ida GYN→GRU dos seis**, a **mala do Marcelo na volta**, **hospedagem de 8 noites**, seguro viagem e a viagem em si. **Visto não entra: ninguém precisa tirar.**"
+      - "🤝 **Recebido em 10/11/2026: R$ 4.849,56**, pagos pela Ana Claudia pelos quatro: a taxa do internacional (R$ 2.145,96) e a volta GRU→GYN inteira (R$ 2.703,60), inclusive as parcelas que ainda iam vencer no cartão. Dos quatro, falta a parte das milhas, **R$ 7.678,80**, e o hotel."
+      - "🏨 **Hotel: R$ 22.978,32** pagos em 14/11/2026 na Hoteis.com, que devolve **R$ 1.971,38 em Hoteis.com Cash** por esta viagem. A divisão por quarto (R$ 7.659,44 por casal) está em *a combinar* — ajustar a linha se o acerto for outro."
+      - "👫 **Resultado de caixa de R$ 7.858,08 = a parte do casal:** o quarto deles no hotel (R$ 7.659,44) + os dois bilhetes da volta GRU→GYN (R$ 1.177,30) + R$ 652,16 a mais na compra das milhas do que a previsão, menos o ressarcimento das 171.112 milhas acumuladas do Marcelo que vão para os outros quatro."
+      - "Ao quitar, voltaram **4.000 milhas de bônus** (dobro por ser assinante do Clube) — já estão no saldo de 16.174."
+      - "Ainda fora da conta: **a ida GYN→GRU dos seis** (QKPAFX, valor a lançar), a **mala do Marcelo na volta**, seguro viagem e a viagem em si. **Visto não entra: ninguém precisa tirar.**"
   - tipo: hospedagem
     titulo: "Hospedagem"
     icone: "🏨"
+    cartoes:
+      - titulo: "Hotel St. James"
+        subtitulo: "109 W. 45th St., New York, NY 10036 · Midtown, perto da Times Square"
+        entradas:
+          - { rotulo: "Check-in", valor: "ter, 01/06/2027 · 15h" }
+          - { rotulo: "Check-out", valor: "seg, 07/06/2027 · 11h" }
+          - { rotulo: "Quartos", valor: "3 · Standard, uma cama King, não fumante" }
+          - { rotulo: "Hóspedes", valor: "6 adultos · um quarto em nome de Marcelo, um de Ana Claudia, um de Luci" }
+          - { rotulo: "Itinerário Hoteis.com", valor: "72081192290983" }
+          - { rotulo: "Total", valor: "**R$ 22.978,32** · pago em 14/11/2026" }
+        total: "6 diárias · R$ 7.659,44 por quarto"
     checklist:
-      - "**Nova York** — 8 noites, 31/05 a 08/06/2027 · *a definir bairro e reservar*"
-    destaque: "Pendência aberta · seis pessoas, oito noites"
+      - "✅ **Nova York** — Hotel St. James, 01/06 a 07/06/2027, 3 quartos · reservado na Hoteis.com"
+    destaque: "Reservado · seis pessoas, três quartos, seis diárias"
     notas:
-      - "**Seis pessoas muda a conta.** Dois ou três quartos de hotel por 8 noites em Manhattan costumam perder feio para um apartamento inteiro. Vale comparar Airbnb/apart-hotel cedo — imóvel bom para 6 em Nova York esgota com antecedência, e 2027 já está abrindo."
-      - "São três núcleos (Christopher & Ana Claudia · Luci & Ulisses · Marcelo & Sabrina), o que favorece um apartamento de 3 quartos sobre quartos de hotel separados — e facilita o rateio, que aí sai por casal."
-      - "Pontos Esfera dão 5% OFF na Esfera Viagens e o Clube Pro já está pago — vale comparar na hora de reservar. Hotel também costuma acumular direto no programa além do cartão (foi assim que a Localiza rendeu 5.027 milhas de graça em setembro)."
+      - "🧳 **Duas pontas descobertas:** o American pousa às **07h10 de 01/06** e o check-in é às **15h**; no dia **07/06** o check-out é às **11h** e o voo sai às **20h20**. Pedir ao hotel para guardar as malas nas duas pontas — e, se der, *early check-in* no dia 1, depois de uma noite inteira de voo."
+      - "📍 Midtown a uma quadra da Times Square: dá para ir a pé ao Rockefeller Center, à B&H e à Bryant Park, e o metrô da 42nd St serve quase tudo."
+      - "💳 A reserva rende **R$ 1.971,38 em Hoteis.com Cash** (a conta mostra 5 de 10 diárias para a próxima recompensa)."
   - tipo: checklist
     titulo: "Próximos passos · em ordem de urgência"
     icone: "✅"
     itens:
       - texto: "🚨 **Conferir o nome da reserva contra o passaporte canadense do Marcelo**"
-        detalhe: "Virou o item mais urgente agora que o visto saiu da frente. Grafia diferente entre documento brasileiro e canadense trava o check-in, e corrigir nome em bilhete de milhas é caro. Cinco minutos hoje contra dor de cabeça em maio"
-      - texto: "🤝 **Fechar com a família a parte das milhas — R$ 7.678,80**"
-        detalhe: "A taxa (R$ 2.145,96) e a volta GRU → Goiânia (R$ 2.703,60) já foram pagas pela Ana Claudia, pelos quatro, em 10/11/2026. Faltam as 486.000 milhas a R$ 15,80, até 15/03/2027 ou em duas parcelas casadas com as compras de novembro e março. E combinar o que acontece se alguém desistir"
-      - texto: "❓ **Descobrir se a quitação aceita pagamento parcial**"
-        detalhe: "Está nos Termos do Viaje Fácil. Se der para abater as 729.000 conforme as milhas chegam, cada compra vira progresso travado e o risco do plano despenca. Se for tudo-ou-nada em 01/04, qualquer atraso de transferência no fim de março derruba a operação"
-      - texto: "✈️ **Resolver a ida GYN → GRU para seis pessoas**"
-        detalhe: "A volta já está comprada (GOL, 08/06 às 17h00). Faltam os 6 trechos de ida. Milhas, dinheiro ou estrada — e chegar em Guarulhos na véspera, não no dia do voo das 22h30"
+        detalhe: "O bilhete saiu como Marcelo Jose Amador Filho. Grafia diferente entre documento brasileiro e canadense trava o check-in, e corrigir nome em bilhete de milhas é caro. Cinco minutos hoje contra dor de cabeça em maio"
+      - texto: "🤝 **Fechar com a família a parte das milhas e do hotel**"
+        detalhe: "Milhas: R$ 7.678,80 (486.000 a R$ 15,80), até 15/03/2027. Hotel: dois dos três quartos, R$ 15.318,88 se a divisão for por quarto. E combinar o que acontece se alguém desistir"
+      - texto: "💺 **Marcar os assentos no American (KZTKJR)**"
+        detalhe: "A Smiles não marca assento em voo de parceira — é pelo site ou app da American, com o localizador da companhia"
+      - texto: "🧾 **Lançar o valor da ida GYN → GRU (QKPAFX)**"
+        detalhe: "Comprada em 14/11 no cartão de crédito; o e-mail da GOL não traz o valor. Conferir na fatura, lançar em *Gastos* e no rateio dos quatro, e ver se as malas estão incluídas (tarifa Light)"
       - texto: "🧳 **Incluir a mala do Marcelo na volta GRU → Goiânia**"
         detalhe: "Reserva JTFMFD, tarifa Light sem bagagem — os outros cinco já têm a 1ª mala despachada (R$ 175,00 cada). Lançar o valor em *Gastos* quando comprar"
-      - texto: "🏨 **Reservar hospedagem para 6, 8 noites**"
-        detalhe: "Apartamento de 3 quartos contra quartos de hotel. Começar cedo — imóvel bom para grupo esgota"
-      - texto: "💳 **Comprar o lote grande na Black Friday**"
-        detalhe: "~157.000 milhas em novembro, metade do que falta. Monitorar a partir de 01/11 e não deixar para a última semana"
+      - texto: "🏨 **Pedir ao hotel guarda de malas em 01/06 e 07/06**"
+        detalhe: "Chegada às 07h10 contra check-in às 15h; check-out às 11h contra voo às 20h20"
       - texto: "🇧🇷 **Checar a validade do RG do Marcelo**"
         detalhe: "É o documento que prova a nacionalidade brasileira na saída, já que o embarque é no passaporte canadense. Sem ele, a PF registra como estrangeiro"
-      - texto: "🗺️ **Montar o roteiro de 8 dias**"
-        detalhe: "A lista de atrações abaixo nasceu quando a viagem era de 14 dias para o casal. Refazer para 8 dias e um grupo de 6"
-      - texto: "🎫 **Inserir o localizador do internacional aqui na emissão**"
-        detalhe: "Ele só nasce quando o bilhete for pago, até 01/04/2027"
+      - texto: "🛡️ **Contratar seguro viagem para os seis**"
+        detalhe: "Saúde nos EUA é cara; ver também o que o cartão já cobre"
+      - texto: "🗺️ **Montar o roteiro de 6 dias em Nova York**"
+        detalhe: "Do dia 1 (chegada de manhã) ao dia 7 (voo à noite). A lista de atrações abaixo nasceu quando a viagem era de 14 dias para o casal — refazer para um grupo de 6"
   - tipo: checklist
     titulo: "Atrações e passeios"
     icone: "🎡"
@@ -246,4 +278,4 @@ secoes:
       - { texto: "**Rockefeller Center**", detalhe: "Top of the Rock" }
       - { texto: "**B&H Photo Video**", detalhe: "a megaloja de foto/eletrônicos (atenção: fecha sexta à tarde e sábado)" }
       - { texto: "**The Vessel (Hudson Yards)**", detalhe: 'a "colmeia" · dá para emendar com o High Line' }
-      - { texto: "*Refazer esta lista para 8 dias e 6 pessoas*", detalhe: "a seleção atual nasceu quando a viagem era de 14 dias para o casal — e passeio em grupo de 6 tem ritmo diferente" }
+      - { texto: "*Refazer esta lista para 6 dias e 6 pessoas*", detalhe: "a seleção atual nasceu quando a viagem era de 14 dias para o casal — e passeio em grupo de 6 tem ritmo diferente" }
