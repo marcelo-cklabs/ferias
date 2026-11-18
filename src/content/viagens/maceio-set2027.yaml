@@ -15,16 +15,16 @@ dataCard: "set 2027"
 dataDisplay: "9 a 16 de setembro de 2027"
 pax: "4 passageiros · econômica"
 status: planejando
-statusLabel: "Monitorando passagens"
+statusLabel: "Ida comprada · volta em dezembro"
 cor: "#c2410c"
-resumoCard: "9 a 16/09/2027 · 4 passageiros, diretos Azul GYN→MCZ e REC→GYN. Monitorando o preço."
+resumoCard: "9 a 16/09/2027 · 4 passageiros. Ida GYN→MCZ comprada (SW3B3D); volta REC→GYN em dezembro."
 bilhete: 7
 heroMeta:
   - { rotulo: "DURAÇÃO", valor: "7 NOITES" }
-  - { rotulo: "STATUS", valor: "MONITORANDO" }
+  - { rotulo: "IDA", valor: "SW3B3D" }
   - { rotulo: "PASSAGEIROS", valor: "4" }
   - { rotulo: "CARRO", valor: "MCZ→REC" }
-footer: "Radar ligado · esperando o preço cair 🏖️"
+footer: "Ida emitida · volta em dezembro, com o bônus da Azul 🏖️"
 secoes:
   - tipo: ficha
     titulo: "Visão geral"
@@ -37,50 +37,80 @@ secoes:
           - { rotulo: "Duração", valor: "7 noites" }
           - { rotulo: "Passageiros", valor: "Marcelo, Sabrina, **Matheus** e **Samara** (sobrinhos)" }
           - { rotulo: "Carro", valor: "Retira em Maceió, devolve em Recife (one-way, como em 2026)" }
-      - titulo: "O monitoramento"
-        subtitulo: "tarefa agendada diária"
+      - titulo: "Os pontos Azul"
+        subtitulo: "Livelo → Azul com 90% de bônus, 17/11/2026"
         entradas:
-          - { rotulo: "09 → 16/09, por pessoa", valor: "**87.000 pts** (ida 34.000 + volta 53.000) na varredura de 02/11 · em reais ainda não lido" }
-          - { rotulo: "Âncora antiga 14 → 21/09", valor: "**99.000 pts** ou **R$ 3.831,34** em 15/11" }
-          - { rotulo: "Menor já visto", valor: "**82.000 pts** (29/09) ou **R$ 1.661** (05/11, Google Voos), na âncora antiga" }
-          - { rotulo: "Gatilho", valor: "queda ≥ 15% sobre o menor já visto" }
-        total: "4 pessoas em 02/11: 348.000 pts"
+          - { rotulo: "Comprados", valor: "208.000 pts por 20.800 Livelo + **R$ 5.228,50** no Pix" }
+          - { rotulo: "Bônus a cair", valor: "187.200 (90%, Clube Livelo) + 1.000 da 1ª transferência, por volta de **10/12**" }
+          - { rotulo: "Ida", valor: "✅ **184.000 pts** · 4 × 46.000 · emitida em 18/11" }
+          - { rotulo: "Volta", valor: "**212.000 pts** pela tarifa de 16/11 · 4 × 53.000" }
+        total: "396.200 pts para 396.000 de passagens"
     notas:
-      - "Preços e gatilhos atualizados todo dia no [painel de milhas](/milhas.html) (item *Maceió · set/2027*). Esta página guarda só a foto da decisão."
-      - "Roteiro definido em 29/09/2026: **ida por Maceió e volta por Recife, os dois em voo direto**. O antigo MCZ→GYN (AD 2525) saiu do monitoramento."
+      - "Preço da volta acompanhado todo dia no [painel de milhas](/milhas.html) (item *Maceió · set/2027*). Esta página guarda a foto da decisão."
+      - "Roteiro definido em 29/09/2026: **ida por Maceió e volta por Recife, os dois em voo direto**. Datas fechadas em 15/11/2026."
+      - "⚠️ O bônus de campanha da Azul vale **6 meses**: os 187.200 que caem em dezembro precisam ser usados até ~junho/2027. Por isso a volta sai em dezembro, logo que eles caírem."
 
   - tipo: voos
-    titulo: "Voos em vista"
+    titulo: "Voos"
     icone: "✈️"
     trechos:
       - titulo: "Ida · quinta, 9 de setembro"
+        localizador: "SW3B3D"
         pernas:
-          - { de: "GYN", deHora: "05h15", deNome: "Goiânia · 09/09/27", para: "MCZ", paraHora: "07h45", paraNome: "Maceió · 09/09/27", voo: "Azul AD\u00A02524 · direto · a comprar" }
+          - { de: "GYN", deHora: "05h15", deNome: "Goiânia · 09/09/27", para: "MCZ", paraHora: "07h45", paraNome: "Maceió · 09/09/27", voo: "Azul AD 2524 · direto · 46.000 pts/pessoa" }
       - titulo: "Volta · quinta, 16 de setembro"
         pernas:
-          - { de: "REC", deHora: "15h30", deNome: "Recife · 16/09/27", para: "GYN", paraHora: "18h20", paraNome: "Goiânia · 16/09/27", voo: "Azul AD\u00A04682 · direto · a comprar" }
+          - { de: "REC", deHora: "21h15", deNome: "Recife · 16/09/27", para: "GYN", paraHora: "00h05", paraNome: "Goiânia · 17/09/27", voo: "Azul AD 4006 · direto · a comprar em dezembro" }
     notas:
-      - "**Nada comprado ainda.** O localizador entra aqui na emissão."
-      - "A ida direta GYN→MCZ sai às **terças e quintas**. A volta direta REC→GYN sai **todo dia**, às 15h30 (**AD 4682**) ou às 21h15 (**AD 4006**, chega 00h05)."
-      - "Datas fechadas em 15/11/2026. A tarefa agendada já monitora **09 → 16/09**."
+      - "✅ **Ida emitida em 18/11/2026** · reserva **SW3B3D** · 4 passageiros · **184.000 pts + R$ 558,68** no cartão Visa (assentos R$ 182,00, bagagem R$ 201,68 e taxas)."
+      - "💺 Assentos marcados: Marcelo **1E** e Sabrina **1F**. **Matheus e Samara ainda sem assento.** Bagagem despachada só na reserva do Marcelo (*+1 adicional*)."
+      - "🎫 A Samara está **sem número Azul Fidelidade** na reserva — cadastrar para ela pontuar o voo."
+      - "🔜 **Volta a comprar em dezembro**, quando o bônus da Livelo cair (~10/12). A volta direta REC→GYN sai **todo dia**: às 21h15 (**AD 4006**, chega 00h05, o mais barato em 16/11: 53.000 pts ou R$ 888,79) ou às 15h30 (**AD 4682**, 53.000 pts ou R$ 1.013,04)."
       - "Em pontos, a ida é o trecho barato. Em reais é o contrário: a volta por Recife custa cerca de um terço da ida."
+
+  - tipo: hospedagem
+    titulo: "Hospedagem"
+    icone: "🏠"
+    cartoes:
+      - titulo: "Apartamento do pai · Ponta Verde"
+        subtitulo: "Maceió · 3 noites · cortesia da família, como em 2026"
+        entradas:
+          - { rotulo: "Chegada", valor: "qui 09/09 · de manhã, depois do pouso das 07h45" }
+          - { rotulo: "Saída", valor: "dom 12/09" }
+          - { rotulo: "Hóspedes", valor: "4" }
+    checklist:
+      - "**Maceió** — 3 noites (09–12/09) · ✅ **apartamento do pai** (Ponta Verde)"
+      - "**12 a 16/09** — 4 noites no caminho para Recife · *a definir*"
+    destaque: "Maceió resolvido · faltam 4 noites até Recife"
+    notas:
+      - "Em 2026 o caminho foi São Miguel dos Milagres (2 noites, Casa Akua) e Porto de Galinhas (3 noites, Encanto das Ondas) — ver [Nordeste set/2026](/viagens/nordeste-set2026.html). Agora são 4 adultos, então precisa de acomodação para 4."
+      - "Se a volta for o AD 4006 das 21h15, o dia 16 inteiro fica livre antes de devolver o carro no aeroporto de Recife."
 
   - tipo: gastos
     titulo: "Gastos"
     icone: "💰"
-    linhas: []
+    linhas:
+      - { categoria: "Voos", descricao: "Pontos Azul para ida e volta · Livelo → Azul 90% (208.000 + 187.200 de bônus) · Pix de 17/11/2026", status: pago, valor: 5228.50 }
+      - { categoria: "Voos", descricao: "Ida GYN→MCZ (SW3B3D, 4 pax) · 184.000 pts + assentos, bagagem e taxas no cartão", status: pago, valor: 558.68 }
+    totais:
+      - { rotulo: "Pago até agora", valor: 5787.18 }
     notas:
-      - "Nada pago ainda. Lançar aqui passagens, hospedagem e carro à medida que forem fechados."
+      - "Os R$ 5.228,50 compraram os pontos da viagem inteira: 184.000 já usados na ida e ~212.000 reservados para a volta. Dá ~R$ 13,20 por mil pontos Azul."
+      - "Ainda entram aqui: taxas e extras da volta, o carro one-way e a hospedagem de 12 a 16/09."
 
   - tipo: checklist
     titulo: "Próximos passos"
     icone: "✅"
     itens:
-      - texto: "💳 **Decidir: pontos Azul ou dinheiro**"
-        detalhe: "Comprar pontos Azul só compensa com bônus alto (320% com Clube Azul, milheiro ~R$ 16,67). Sem Clube, o custo em pontos fica perto do preço em reais"
+      - texto: "✈️ **Comprar a volta REC → GYN em dezembro**"
+        detalhe: "Assim que os 187.200 de bônus caírem na Azul (~10/12). Pela tarifa de 16/11 são 212.000 pts para 4 no AD 4006 das 21h15. O bônus vence em 6 meses"
+      - texto: "💺 **Marcar os assentos de Matheus e Samara na ida**"
+        detalhe: "Reserva SW3B3D · Marcelo e Sabrina já estão em 1E e 1F"
+      - texto: "🎫 **Cadastrar a Samara no Azul Fidelidade**"
+        detalhe: "Ela está sem número na reserva da ida — com o número, os pontos do voo caem para ela"
+      - texto: "🏨 **Hospedagem para 4 de 12 a 16/09**"
+        detalhe: "4 noites entre Maceió e Recife. Em 2026: São Miguel dos Milagres e Porto de Galinhas"
       - texto: "🚗 **Reservar o carro one-way Maceió → Recife**"
-        detalhe: "Retirada no aeroporto de Maceió em 09/09, depois do pouso das 07h45. Devolução no aeroporto de Recife em 16/09, com folga para o voo das 15h30. Carro com porta-malas para 4 adultos e bagagem. Em 2026: Localiza SUV, 8 diárias, **R$ 1.636,49**, limite de **200 km/dia**"
-      - texto: "🏨 **Hospedagem para 4 pessoas, 7 noites**"
-        detalhe: "Em 2026, o casal ficou no apartamento do pai, na Ponta Verde. Ver se dá para repetir com 4 pessoas. Como a volta é por Recife, as últimas noites ficam no caminho (Porto de Galinhas, por exemplo)"
+        detalhe: "Retirada no aeroporto de Maceió em 09/09, depois do pouso das 07h45. Devolução no aeroporto de Recife em 16/09, com folga para o voo. Carro com porta-malas para 4 adultos e bagagem. Em 2026: Localiza SUV, 8 diárias, **R$ 1.636,49**, limite de **200 km/dia**"
       - texto: "🗺️ **Montar o roteiro de 7 noites**"
         detalhe: "Base: o roteiro de [Nordeste set/2026](/viagens/nordeste-set2026.html) (Maceió, Milagres, Maragogi e Porto de Galinhas)"
