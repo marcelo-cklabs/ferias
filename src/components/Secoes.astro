@@ -5,6 +5,7 @@ import Roteiro from './Roteiro.astro';
 import Voos from './Voos.astro';
 import Hospedagem from './Hospedagem.astro';
 import CupomGastos from './CupomGastos.astro';
+import Resumo from './Resumo.astro';
 interface Props { secoes: any[]; cor: string; tituloCard: string }
 const { secoes, cor, tituloCard } = Astro.props;
 ---
@@ -16,7 +17,8 @@ const { secoes, cor, tituloCard } = Astro.props;
     case 'voos': return <Voos secao={secao} cor={cor} />;
     case 'hospedagem': return <Hospedagem secao={secao} cor={cor} />;
     case 'gastos': return <CupomGastos secao={secao} cor={cor} tituloCard={tituloCard} />;
-    /* Os 6 tipos do union estao plugados: nao ha `default: return null`. Tipo novo
+    case 'resumo': return <Resumo secao={secao} cor={cor} />;
+    /* Os 7 tipos do union estao plugados: nao ha `default: return null`. Tipo novo
        no schema sem case aqui DERRUBA o build (SSG) em vez de sumir com a secao
        em silencio. Nao trocar por null/fallback. */
     default: throw new Error(`Secoes.astro: tipo de secao sem case no dispatcher: "${secao.tipo}"`);
