@@ -63,11 +63,12 @@ secoes:
         subtitulo: "Christopher, Ana Claudia, Luci e Ulisses · a Ana Claudia paga pelos quatro"
         entradas:
           - { rotulo: "Passagens", valor: "486.000 milhas (121.500 cada)" }
-          - { rotulo: "Milhas a R$ 15,80/milheiro", valor: "R$ 7.678,80 · a receber até 15/03/2027" }
+          - { rotulo: "Milhas a R$ 15,80/milheiro", valor: "R$ 7.678,80 · ✅ R$ 5.627,16 pagos em 17/11/2026 · faltam R$ 2.051,64" }
           - { rotulo: "Taxa de embarque + Viaje Fácil", valor: "R$ 2.145,96 (4 × R$ 536,49) · ✅ **paga em 10/11/2026**" }
           - { rotulo: "**Por pessoa**", valor: "**R$ 2.456,19**" }
-          - { rotulo: "Hotel · 2 dos 3 quartos", valor: "R$ 15.318,88 (R$ 7.659,44 por casal) · *a combinar*" }
-        total: "A receber: R$ 7.678,80 + hotel"
+          - { rotulo: "Hotel · 2 dos 3 quartos", valor: "R$ 15.318,88 (R$ 7.659,44 por casal)" }
+          - { rotulo: "Ida GYN → GRU · 4 dos 6 bilhetes", valor: "R$ 2.515,28 (4 × R$ 628,82, divisão igual)" }
+        total: "A receber: R$ 19.885,80"
       - titulo: "Os quatro · volta GRU → Goiânia"
         subtitulo: "GOL, 08/06 · cada um paga o próprio bilhete · quitada em 10/11/2026"
         entradas:
@@ -86,17 +87,19 @@ secoes:
           - { rotulo: "Caixa do internacional", valor: "+R$ 1.630,82" }
           - { rotulo: "Volta GRU → Goiânia", valor: "− R$ 1.177,30 · Marcelo R$ 504,65 (ainda sem mala) + Sabrina R$ 672,65" }
           - { rotulo: "Hotel · 1 dos 3 quartos", valor: "− R$ 7.659,44" }
+          - { rotulo: "Ida GYN → GRU · 2 dos 6 bilhetes", valor: "− R$ 1.257,64" }
         total: "Ver Gastos"
     notas:
       - "💡 **Por que o rateio é limpo:** a tarifa da Smiles é **por pessoa**, não um bolo dividido — 57.000 na ida + 64.500 na volta = **121.500 por viajante**. Cada um consome exatamente a sua."
       - "🏷️ **Por que R$ 15,80 o milheiro:** é o teto de compra de milha Smiles usado no painel e na consultoria, e é um preço verificável na tela da própria Smiles. Não é número inventado — dá para mostrar de onde veio."
       - "⚖️ **O que esse preço ressarce.** Das 729.000, **414.112 são milhas acumuladas do Marcelo** (estoque de 307.291 + Clube + Livelo + C6) e 314.888 serão compradas. Marcelo e Sabrina consomem 243.000, então **171.112 milhas acumuladas vão para os outros quatro** — e é por elas que o caixa **do internacional** fecha em +R$ 1.630,82, depois de descontada a parte dele na taxa. Se as milhas fossem cobradas só pelo desembolso, ele doaria essas 171.112 (~R$ 2.700) e ainda pagaria a própria taxa."
       - "📉 **Referência para eles:** GRU–JFK ida e volta em econômica, direto, custa **R$ 4.000 a 6.000 por pessoa** em dinheiro. R$ 2.456,19 é aproximadamente metade."
-      - "🗓️ **Quando cobrar.** Os R$ 2.145,96 da taxa, que saíram do bolso do Marcelo em 25/09, **já foram pagos** em 10/11/2026, junto com a volta. Faltam os R$ 7.678,80 das milhas, que podem vir até **15/03/2027**, ou em duas parcelas casadas com as compras de novembro e março, o que evita o Marcelo financiar ~R$ 5.000 por seis meses."
-      - "🏨 **Hotel: R$ 22.978,32 pagos em 14/11/2026** na conta Hoteis.com do Marcelo, três quartos iguais (um em nome de cada casal). Dividido por quarto dá **R$ 7.659,44 por casal** — a parte dos quatro seria **R$ 15.318,88**. Ainda não combinado com eles."
+      - "🗓️ **O que já veio.** Os R$ 2.145,96 da taxa, que saíram do bolso do Marcelo em 25/09, **foram pagos** em 10/11/2026, junto com a volta (Pix de **R$ 4.850,00**). Em **17/11/2026**, dia da compra das milhas, a Ana Claudia mandou **R$ 5.627,16** por Pix — exatamente o valor pago pelas 360.000 milhas. Das milhas dos quatro (R$ 7.678,80) faltam **R$ 2.051,64**."
+      - "🏨 **Hotel: R$ 22.978,32 pagos em 14/11/2026** na conta Hoteis.com do Marcelo, três quartos iguais (um em nome de cada casal). Mesma divisão da viagem: Marcelo paga o quarto dele e da Sabrina, **R$ 7.659,44**, e a Ana Claudia paga os outros dois, **R$ 15.318,88**."
+      - "✈️ **Ida GYN → GRU: R$ 3.772,92 pagos em 14/11/2026** no cartão de crédito final 0203, pelos seis bilhetes da reserva QKPAFX, com assento GOL+ Conforto e mala despachada de 23 kg. O site da GOL não mostra o valor por passageiro, então a divisão é igual: **R$ 628,82 por bilhete**, R$ 2.515,28 da parte dos quatro. Ajustar se o recibo mostrar diferença de assento."
       - "✈️ **A volta GRU → Goiânia entra à parte.** Os seis bilhetes saíram em 12/10/2026 no cartão do Marcelo (Mastercard C6 final 5739, em **3×**), e cada um dos quatro devolve **o próprio bilhete**, no valor que está no recibo dele — **R$ 2.703,60** no total."
       - "✅ **Volta quitada de uma vez.** Em 10/11/2026 a Ana Claudia pagou os R$ 2.703,60 dos quatro, inclusive as parcelas que ainda iam vencer. O 3× segue só na fatura do Marcelo (vencimentos esperados em 05/11/2026, 05/12/2026 e 05/01/2027)."
-      - "🧾 **Somando o internacional e a volta, a parte dos quatro é R$ 12.528,36** (Ana Claudia R$ 3.135,84 · Christopher R$ 3.128,84 · Luci R$ 3.131,84 · Ulisses R$ 3.131,84). **R$ 4.849,56 já foram pagos** em 10/11/2026, a taxa e a volta, e **faltam R$ 7.678,80**, das milhas. Ainda entram nessa conta a **ida GYN→GRU** (comprada em 14/11, valor a lançar) e o **hotel**."
+      - "🧾 **Somando o internacional e a volta, a parte dos quatro é R$ 12.528,36** (Ana Claudia R$ 3.135,84 · Christopher R$ 3.128,84 · Luci R$ 3.131,84 · Ulisses R$ 3.131,84). **R$ 4.850,00 foram pagos** em 10/11/2026, a taxa e a volta (R$ 0,44 a mais, arredondado), e **R$ 5.627,16** em 17/11/2026, das milhas. Somando hotel e ida GYN→GRU, **faltam R$ 19.885,80**."
       - "🚩 **Combinar antes o que acontece se alguém desistir.** A tarifa é reembolsável, mas o cancelamento custa **US$ 180 por viajante** e a taxa do Viaje Fácil (R$ 249,90, ou R$ 41,65 por pessoa) **não volta**. Definir agora quem arca com isso evita conversa ruim depois."
   - tipo: checklist
     titulo: "Passageiros · documentos"
@@ -168,11 +171,11 @@ secoes:
       - "🎫 **Internacional emitido em 17/11/2026** (e-mail da Smiles *Confira os detalhes do seu bilhete*): localizador Smiles **APZHTN**, American **KZTKJR**, voos **AA 950** e **AA 951**, cabine econômica, **tarifa reembolsável**, **1ª mala gratuita** para os seis nos dois sentidos. Assento e check-in são feitos direto com a American."
       - "**Tarifa reembolsável.** Cancelamento custa **US$ 180 por viajante**, cobrado no ato — e as milhas voltam. *(Vale para o internacional.)*"
       - "A ida tem tag **Outlet Clube Smiles**; a volta não. Conferir as regras de remarcação da tarifa outlet antes de mexer em qualquer data."
-      - "✅ **Ida GYN→GRU comprada em 14/11/2026** · GOL **G3 1491**, reserva **QKPAFX**, tarifa Light, classe O, assentos **01A a 01F** para os seis, paga no cartão de crédito (e-mail da GOL de 14/11). Pousa em Guarulhos às 12h50: **9h40 de folga** antes do American das 22h30. O e-mail não traz o valor — lançar em *Gastos* quando conferir a fatura."
+      - "✅ **Ida GYN→GRU comprada em 14/11/2026** · GOL **G3 1491**, reserva **QKPAFX**, tarifa Light, assentos **GOL+ Conforto** na fileira 1 (Marcelo 1E), 1 mala despachada de 23 kg, **R$ 3.772,92** pelos seis no cartão de crédito (Minhas Viagens da GOL, lido em 18/11). Pousa em Guarulhos às 12h50: **9h40 de folga** antes do American das 22h30."
       - "🎫 **GRU→GYN emitido em 12/10/2026** · GOL **G3 1492**, Boeing 737-800, tarifa **Light**, econômica. Assentos **GOL+ Conforto na fileira 1**: Ana Claudia 01A · Christopher 01B · Luci 01C · Ulisses 01D · Sabrina 01E · Marcelo 01F."
-      - "🧳 **A tarifa Light da GOL não leva mala despachada.** Na volta GRU→GYN foi comprada a 1ª bagagem (R$ 175,00) para cinco dos seis — **falta a do Marcelo**. Na ida GYN→GRU (também Light) conferir se as malas já foram incluídas: a franquia gratuita do American não vale para o bilhete da GOL."
+      - "🧳 **A tarifa Light da GOL não leva mala despachada.** Na volta GRU→GYN foi comprada a 1ª bagagem (R$ 175,00) para cinco dos seis — **falta a do Marcelo**. Na ida GYN→GRU a mala despachada de 23 kg já está na reserva (conferido no Marcelo; os demais seguem a mesma compra)."
       - "⏱️ **Folga na volta:** o voo de Nova York pousa em Guarulhos às **06h55** e o da GOL sai às **17h00** do **Terminal 2** — cerca de 10 horas. São **bilhetes separados**: passar pela imigração, retirar as malas e despachar de novo no balcão da GOL."
-      - "Os dois trechos domésticos entram no rateio **à parte**: cada um dos quatro devolve o próprio bilhete. A volta **já foi paga** em 10/11/2026 (ver *Rateio*); a ida entra quando o valor for lançado."
+      - "Os dois trechos domésticos entram no rateio **à parte**: cada um dos quatro devolve o próprio bilhete. A volta **já foi paga** em 10/11/2026 (ver *Rateio*); a ida está lançada em *Gastos*, a receber."
   - tipo: ficha
     titulo: "Como as 729.000 milhas foram pagas"
     icone: "💰"
@@ -209,24 +212,26 @@ secoes:
       - { categoria: "Voos", descricao: "GOL GRU→GYN, 08/06 (JTFMFD) · 6 passagens a R$ 391,65 (tarifa R$ 355,90 + embarque R$ 35,75)", status: pago, valor: 2349.90 }
       - { categoria: "Voos", descricao: "GOL GRU→GYN · assentos GOL+ Conforto na fileira 1 · 6 passageiros", status: pago, valor: 656.00 }
       - { categoria: "Voos", descricao: "GOL GRU→GYN · 1ª bagagem despachada · 5 × R$ 175,00 (falta a do Marcelo)", status: pago, valor: 875.00 }
+      - { categoria: "Voos", descricao: "GOL GYN→GRU, 31/05 (QKPAFX) · 6 passagens com assento GOL+ Conforto e mala despachada · cartão final 0203", status: pago, valor: 3772.92 }
       - { categoria: "Hospedagem", descricao: "Hotel St. James · 3 quartos, 6 diárias (01 a 07/06) · Hoteis.com, pago em 14/11/2026", status: pago, valor: 22978.32 }
-      - { categoria: "Rateio", descricao: "Reembolso dos 4 · taxa de embarque + Viaje Fácil (4 × R$ 536,49) · pago pela Ana Claudia em 10/11/2026", status: recebido, valor: -2145.96 }
-      - { categoria: "Rateio", descricao: "Reembolso dos 4 · volta GRU→GYN, o bilhete de cada um · quitada de uma vez pela Ana Claudia em 10/11/2026", status: recebido, valor: -2703.60 }
-      - { categoria: "Rateio", descricao: "Reembolso dos 4 · 486.000 milhas a R$ 15,80 · até 15/03/2027", status: pendente, valor: -7678.80 }
-      - { categoria: "Rateio", descricao: "Reembolso dos 4 · hotel, 2 dos 3 quartos (R$ 7.659,44 por casal) · a combinar", status: pendente, valor: -15318.88 }
+      - { categoria: "Rateio", descricao: "Reembolso dos 4 · taxa de embarque + Viaje Fácil (R$ 2.145,96) e volta GRU→GYN (R$ 2.703,60) · Pix da Ana Claudia em 10/11/2026", status: recebido, valor: -4850.00 }
+      - { categoria: "Rateio", descricao: "Reembolso dos 4 · milhas · Pix da Ana Claudia em 17/11/2026, o valor da compra das 360.000", status: recebido, valor: -5627.16 }
+      - { categoria: "Rateio", descricao: "Reembolso dos 4 · saldo das milhas (R$ 7.678,80 − R$ 5.627,16)", status: pendente, valor: -2051.64 }
+      - { categoria: "Rateio", descricao: "Reembolso dos 4 · hotel, 2 dos 3 quartos (R$ 7.659,44 por casal)", status: pendente, valor: -15318.88 }
+      - { categoria: "Rateio", descricao: "Reembolso dos 4 · ida GYN→GRU, 4 × R$ 628,82 (divisão igual)", status: pendente, valor: -2515.28 }
     totais:
-      - { rotulo: "Desembolso", valor: 35705.32 }
-      - { rotulo: "Já recebido dos 4", valor: -4849.56 }
-      - { rotulo: "A receber dos 4", valor: -22997.68 }
-      - { rotulo: "Resultado de caixa", valor: 7858.08 }
+      - { rotulo: "Desembolso", valor: 39478.24 }
+      - { rotulo: "Já recebido dos 4", valor: -10477.16 }
+      - { rotulo: "A receber dos 4", valor: -19885.80 }
+      - { rotulo: "Resultado de caixa", valor: 9115.28 }
     notas:
       - "R$ 494,84 por pessoa só de taxa de embarque — preço normal para os EUA. Com o Viaje Fácil rateado, dá R$ 536,49."
       - "✈️ **Volta GRU→GYN: R$ 3.880,90 pagos em 12/10/2026**, no Mastercard C6 final **5739**, em **3×**. Por bilhete: Marcelo **R$ 504,65** (sem mala) · Sabrina **R$ 672,65** · Ana Claudia R$ 679,65 · Christopher R$ 672,65 · Luci R$ 675,65 · Ulisses R$ 675,65. A diferença entre eles é o assento: janela R$ 113,00, corredor R$ 109,00, meio R$ 106,00."
-      - "🤝 **Recebido em 10/11/2026: R$ 4.849,56**, pagos pela Ana Claudia pelos quatro: a taxa do internacional (R$ 2.145,96) e a volta GRU→GYN inteira (R$ 2.703,60), inclusive as parcelas que ainda iam vencer no cartão. Dos quatro, falta a parte das milhas, **R$ 7.678,80**, e o hotel."
-      - "🏨 **Hotel: R$ 22.978,32** pagos em 14/11/2026 na Hoteis.com, que devolve **R$ 1.971,38 em Hoteis.com Cash** por esta viagem. A divisão por quarto (R$ 7.659,44 por casal) está em *a combinar* — ajustar a linha se o acerto for outro."
-      - "👫 **Resultado de caixa de R$ 7.858,08 = a parte do casal:** o quarto deles no hotel (R$ 7.659,44) + os dois bilhetes da volta GRU→GYN (R$ 1.177,30) + R$ 652,16 a mais na compra das milhas do que a previsão, menos o ressarcimento das 171.112 milhas acumuladas do Marcelo que vão para os outros quatro."
+      - "🤝 **Recebido da Ana Claudia, pelos quatro:** **R$ 4.850,00** em 10/11/2026 (Pix), a taxa do internacional (R$ 2.145,96) e a volta GRU→GYN inteira (R$ 2.703,60), inclusive as parcelas que ainda iam vencer no cartão · **R$ 5.627,16** em 17/11/2026 (Pix), o valor da compra das milhas. Faltam o saldo das milhas, o hotel e a ida GYN→GRU: **R$ 19.885,80**."
+      - "🏨 **Hotel: R$ 22.978,32** pagos em 14/11/2026 na Hoteis.com, que devolve **R$ 1.971,38 em Hoteis.com Cash** por esta viagem. Mesma divisão da viagem: o casal paga o próprio quarto e a Ana Claudia paga os outros dois."
+      - "👫 **Resultado de caixa de R$ 9.115,28 = a parte do casal:** o quarto deles no hotel (R$ 7.659,44) + os dois bilhetes da ida GYN→GRU (R$ 1.257,64) e da volta GRU→GYN (R$ 1.177,30) + R$ 652,16 a mais na compra das milhas do que a previsão, menos o ressarcimento das 171.112 milhas acumuladas do Marcelo que vão para os outros quatro (e R$ 0,44 de arredondamento no Pix de 10/11)."
       - "Ao quitar, voltaram **4.000 milhas de bônus** (dobro por ser assinante do Clube) — já estão no saldo de 16.174."
-      - "Ainda fora da conta: **a ida GYN→GRU dos seis** (QKPAFX, valor a lançar), a **mala do Marcelo na volta**, seguro viagem e a viagem em si. **Visto não entra: ninguém precisa tirar.**"
+      - "Ainda fora da conta: a **mala do Marcelo na volta**, seguro viagem e a viagem em si. **Visto não entra: ninguém precisa tirar.**"
   - tipo: hospedagem
     titulo: "Hospedagem"
     icone: "🏨"
@@ -254,12 +259,10 @@ secoes:
     itens:
       - texto: "🚨 **Conferir o nome da reserva contra o passaporte canadense do Marcelo**"
         detalhe: "O bilhete saiu como Marcelo Jose Amador Filho. Grafia diferente entre documento brasileiro e canadense trava o check-in, e corrigir nome em bilhete de milhas é caro. Cinco minutos hoje contra dor de cabeça em maio"
-      - texto: "🤝 **Fechar com a família a parte das milhas e do hotel**"
-        detalhe: "Milhas: R$ 7.678,80 (486.000 a R$ 15,80), até 15/03/2027. Hotel: dois dos três quartos, R$ 15.318,88 se a divisão for por quarto. E combinar o que acontece se alguém desistir"
+      - texto: "🤝 **Receber da Ana Claudia o que falta dos quatro**"
+        detalhe: "Já vieram R$ 4.850,00 (10/11) e R$ 5.627,16 (17/11). Faltam R$ 19.885,80: saldo das milhas R$ 2.051,64, hotel R$ 15.318,88 e ida GYN→GRU R$ 2.515,28. E combinar o que acontece se alguém desistir"
       - texto: "💺 **Marcar os assentos no American (KZTKJR)**"
         detalhe: "A Smiles não marca assento em voo de parceira — é pelo site ou app da American, com o localizador da companhia"
-      - texto: "🧾 **Lançar o valor da ida GYN → GRU (QKPAFX)**"
-        detalhe: "Comprada em 14/11 no cartão de crédito; o e-mail da GOL não traz o valor. Conferir na fatura, lançar em *Gastos* e no rateio dos quatro, e ver se as malas estão incluídas (tarifa Light)"
       - texto: "🧳 **Incluir a mala do Marcelo na volta GRU → Goiânia**"
         detalhe: "Reserva JTFMFD, tarifa Light sem bagagem — os outros cinco já têm a 1ª mala despachada (R$ 175,00 cada). Lançar o valor em *Gastos* quando comprar"
       - texto: "🏨 **Pedir ao hotel guarda de malas em 01/06 e 07/06**"
