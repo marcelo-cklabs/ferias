@@ -1,0 +1,115 @@
+---
+import { mdInline, formatBRL } from '../lib/format.js';
+import SecaoTitulo from './SecaoTitulo.astro';
+interface Props { secao: any; cor: string }
+const { secao, cor } = Astro.props;
+---
+{/* Resumo de conta no formato "folha de rateio": faixa colorida, manchete,
+    blocos quando/o quê/valor com total, opções de pagamento e nota. Feito para
+    virar print e ser mandado no WhatsApp. Linhas em grid (não <table>) para
+    empilhar em 375px sem scroll horizontal. */}
+<section style={`--cor:${cor}`}>
+  <SecaoTitulo icone={secao.icone} titulo={secao.titulo} />
+  <article class="folha">
+    <header class="faixa mono"><span>{secao.cabecalho}</span><span>{secao.etiqueta}</span></header>
+    <div class="corpo">
+      <h3 class="manchete">{secao.manchete}</h3>
+      {secao.subtitulo && <p class="subt">{secao.subtitulo}</p>}
+      {secao.blocos.map((b: any) => (
+        <div class="bloco">
+          <h4 class="mono">{b.titulo}</h4>
+          {(b.opcoes?.length ?? 0) > 0 && (
+            <div class="opcoes">
+              {b.opcoes.map((o: any) => (
+                <div class="opcao">
+                  <span class="k mono">{o.rotulo}</span>
+                  <span class="t">{o.titulo}</span>
+                  <span class="n mono">{o.valor}</span>
+                </div>
+              ))}
+            </div>
+          )}
+          <div class="cab mono" aria-hidden="true"><span>QUANDO</span><span>O QUÊ</span><span>VALOR</span></div>
+          <ul role="list">
+            {b.linhas.map((l: any) => (
+              <li class:list={['linha', { pago: l.pago }]}>
+                <span class="quando mono">{l.quando}</span>
+                <span class="oque">
+                  <span class="t" set:html={mdInline(l.titulo)} />
+                  {l.detalhe && <span class="d" set:html={mdInline(l.detalhe)} />}
+                </span>
+                <span class="valor mono">{formatBRL(l.valor)}</span>
+              </li>
+            ))}
+          </ul>
+          {b.total && (
+            <p class:list={['total', b.total.estilo]}>
+              <span class="l">{b.total.rotulo}</span><span class="n mono">{formatBRL(b.total.valor)}</span>
+            </p>
+          )}
+        </div>
+      ))}
+      {secao.nota && <p class="nota" set:html={mdInline(secao.nota)} />}
+    </div>
+    {secao.rodape && <footer class="rodape mono">{secao.rodape}</footer>}
+  </article>
+</section>
+<style>
+  .folha {
+    background: var(--tiquete); border-radius: 18px; overflow: hidden;
+    box-shadow: 0 6px 0 rgba(28, 25, 23, .12);
+  }
+  .faixa {
+    background: var(--cor); color: #fff; display: flex; justify-content: space-between;
+    flex-wrap: wrap; gap: 4px 16px; padding: 14px clamp(16px, 4vw, 32px);
+    font-weight: 700; letter-spacing: .22em; font-size: clamp(.62rem, 1.9vw, .82rem);
+  }
+  .corpo { padding: clamp(18px, 4vw, 30px) clamp(16px, 4vw, 34px) 8px; }
+  .manchete { font-family: var(--f-display); font-weight: 400; font-size: clamp(1.35rem, 4.6vw, 2rem); }
+  .subt { color: var(--muted); margin: 4px 0 0; font-size: clamp(.85rem, 2.4vw, 1rem); }
+  .bloco { margin-top: 26px; }
+  h4 { font-size: .7rem; letter-spacing: .2em; color: var(--cor); margin: 0 0 4px; }
+  .cab, .linha {
+    display: grid; grid-template-columns: minmax(0, 9.5rem) minmax(0, 1fr) auto;
+    column-gap: 14px;
+  }
+  .cab {
+    font-weight: 700; color: var(--muted); letter-spacing: .14em; font-size: .66rem;
+    padding: 8px 0; border-bottom: 3px solid var(--tinta);
+  }
+  .cab span:last-child { text-align: right; }
+  ul { list-style: none; margin: 0; padding: 0; }
+  .linha { padding: 14px 0; border-bottom: 2px dashed var(--linha); align-items: start; }
+  .quando { font-weight: 700; font-size: .82rem; }
+  .oque { display: grid; gap: 3px; min-width: 0; }
+  .t { font-weight: 700; font-size: .98rem; line-height: 1.3; }
+  .d { color: var(--muted); font-size: .84rem; line-height: 1.45; }
+  .valor { font-weight: 700; font-size: 1rem; text-align: right; white-space: nowrap; }
+  .pago .valor { color: var(--ok); }
+  .total { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin: 14px 0 0; }
+  .total .l { font-weight: 800; font-size: 1.15rem; }
+  .total .n { font-weight: 700; font-size: clamp(1.15rem, 3.6vw, 1.6rem); white-space: nowrap; }
+  .total.pago .n { color: var(--ok); }
+  .total.grande .n { font-size: clamp(1.35rem, 4.6vw, 2.1rem); }
+  .opcoes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 12px; margin: 10px 0 18px; }
+  .opcao { border: 2px solid var(--tinta); border-radius: 12px; padding: 12px 16px; display: grid; gap: 4px; }
+  .opcao .k { font-size: .62rem; letter-spacing: .16em; color: var(--muted); font-weight: 700; }
+  .opcao .n { font-weight: 700; font-size: 1.3rem; }
+  .nota {
+    background: #f5f5f4; border-radius: 12px; padding: 14px 18px; margin: 24px 0 22px;
+    color: var(--muted-3); font-size: .88rem; line-height: 1.6;
+  }
+  .nota :global(b) { color: var(--tinta); }
+  .rodape {
+    border-top: 3px dashed var(--linha); padding: 12px clamp(16px, 4vw, 34px) 16px;
+    color: var(--muted); letter-spacing: .12em; font-size: .68rem;
+  }
+  /* Celular: data em cima, texto e valor lado a lado embaixo. */
+  @media (max-width: 560px) {
+    .cab { display: none; }
+    h4 { padding-bottom: 6px; border-bottom: 3px solid var(--tinta); }
+    .linha { grid-template-columns: minmax(0, 1fr) auto; row-gap: 4px; }
+    .quando { grid-column: 1 / -1; font-size: .72rem; color: var(--muted); }
+    .t { font-size: .92rem; } .d { font-size: .8rem; } .valor { font-size: .92rem; }
+  }
+</style>

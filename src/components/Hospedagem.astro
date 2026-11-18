@@ -21,6 +21,13 @@ const { secao, cor } = Astro.props;
       {c.total && <p class="total mono">{c.total}</p>}
     </article>
   ))}
+  {(secao.mapas?.length ?? 0) > 0 && secao.mapas.map((m: any) => (
+    <figure class="mapa">
+      <iframe src={m.src} title={`Mapa: ${m.titulo}`} loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <figcaption class="mono">{m.titulo}</figcaption>
+    </figure>
+  ))}
   {/* role="list": list-style:none faz o VoiceOver descartar a semantica de lista. */}
   {(secao.checklist?.length ?? 0) > 0 && (
     <ul class="areservar" role="list">
@@ -49,6 +56,14 @@ const { secao, cor } = Astro.props;
     margin: 10px 0 0; text-align: right; font-weight: 700; font-size: 1rem;
     border-top: 2px dashed var(--linha); padding-top: 8px;
   }
+  /* Mapa responsivo: largura do container, proporção fixa — nunca o 600x450 do
+     código de incorporação, que estoura 375px. */
+  .mapa {
+    margin: 0 0 12px; background: var(--tiquete); border-radius: 12px;
+    box-shadow: var(--sombra-mesa); border-left: 4px solid var(--cor); overflow: hidden;
+  }
+  .mapa iframe { display: block; width: 100%; aspect-ratio: 4 / 3; max-height: 420px; border: 0; }
+  .mapa figcaption { font-size: .68rem; letter-spacing: .1em; color: var(--muted); padding: 8px 14px; text-transform: uppercase; }
   .areservar { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
   .areservar li {
     background: var(--tiquete); border-radius: 10px; box-shadow: var(--sombra-mesa);

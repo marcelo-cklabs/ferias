@@ -67,14 +67,59 @@ const secaoVoos = z.object({
   notas: z.array(z.string()).optional(),
 }).strict();
 
+// Mapa embutido: só o src de "Incorporar um mapa" do Google Maps (o iframe é
+// montado no componente). Outro domínio derruba o build.
+const mapaEmbed = z.object({
+  titulo: z.string(),
+  src: z.string().url().startsWith('https://www.google.com/maps/embed?'),
+}).strict();
+
 const secaoHospedagem = z.object({
   tipo: z.literal('hospedagem'),
   titulo: z.string().default('Hospedagem'),
   icone: z.string().default('🏨'),
   cartoes: z.array(cartao).optional(),
+  mapas: z.array(mapaEmbed).optional(),
   checklist: z.array(z.string()).optional(),
   destaque: z.string().optional(),
   notas: z.array(z.string()).optional(),
+}).strict();
+
+// Resumo de conta para mandar a alguém (rateio, custo de um casal): blocos de
+// linhas quando/o quê/valor com total, opções de pagamento e uma nota.
+const linhaResumo = z.object({
+  quando: z.string(),
+  titulo: z.string(),
+  detalhe: z.string().optional(),
+  valor: z.number(),
+  pago: z.boolean().optional(),
+}).strict();
+
+const opcaoResumo = z.object({ rotulo: z.string(), titulo: z.string(), valor: z.string() }).strict();
+
+// `opcoes` (caixas lado a lado, ex. "à vista" × "parcelado") saem antes das linhas.
+const blocoResumo = z.object({
+  titulo: z.string(),
+  opcoes: z.array(opcaoResumo).optional(),
+  linhas: z.array(linhaResumo).min(1),
+  total: z.object({
+    rotulo: z.string(),
+    valor: z.number(),
+    estilo: z.enum(['normal', 'pago', 'grande']).default('normal'),
+  }).strict().optional(),
+}).strict();
+
+const secaoResumo = z.object({
+  tipo: z.literal('resumo'),
+  titulo: z.string(),
+  icone: z.string().default('🧾'),
+  cabecalho: z.string(),
+  etiqueta: z.string(),
+  manchete: z.string(),
+  subtitulo: z.string().optional(),
+  blocos: z.array(blocoResumo).min(1),
+  nota: z.string().optional(),
+  rodape: z.string().optional(),
 }).strict();
 
 const linhaGasto = z.object({
@@ -125,7 +170,7 @@ const viagens = defineCollection({
     heroMeta: z.array(kv).default([]),
     footer: z.string(),
     secoes: z.array(z.discriminatedUnion('tipo', [
-      secaoFicha, secaoRoteiro, secaoVoos, secaoHospedagem, secaoGastos, secaoChecklist,
+      secaoFicha, secaoRoteiro, secaoVoos, secaoHospedagem, secaoGastos, secaoChecklist, secaoResumo,
     ])),
   }).strict(),
 });
